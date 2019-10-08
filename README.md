@@ -4,5 +4,5 @@ npm i -g gulp
 ```
 
 ```shell
-fractal start --sync
+gulp
 ```
