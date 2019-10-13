@@ -1,0 +1,31 @@
+// [Breakpoints]
+$small-only: '(max-width: 35.98em)';
+$medium: '(min-width: 36em)';
+$medium-only: '(min-width: 36em) and (max-width: 59.98em)';
+$regular: '(min-width: 60em)';
+$regular-only: '(min-width: 60em) and (max-width: 84.98em)';
+$large: '(min-width: 85em)';
+$large-only: '(min-width: 85em) and (max-width: 104.98em)';
+$x-large: '(min-width: 105em)';
+
+@import 'breakpoints';
+
+:root {
+    --text-base-size: 1rem;
+    --text-base-line-height: 1.62;
+
+    --fonts-primary: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+    --colors-default: #707070;
+    --colors-alt: #5E2891;
+    --colors-white: #FFFFFF;
+    --colors-gray: #3B3D3C;
+    --colors-orange: #F4821F;
+    --colors-dark-blue: #062342;
+    --colors-green: #CCDB2B;
+    --colors-purple: #5E2891;
+
+    @include breakpoint($regular) {
+        --text-base-size: 1.25rem;
+    }
+}

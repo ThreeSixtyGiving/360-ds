@@ -1,0 +1,26 @@
+.anchor {
+  color: var(--colors-alt);
+  text-decoration: none;
+  font-weight: 500;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  background-image: linear-gradient(to bottom, rgba(#5E2891, 0.1) 0%, rgba(#5E2891, 0.1) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 1px 0;
+  transition: background-size 0.13s ease-in-out;
+
+  &:hover, &:focus {
+    color: var(--colors-alt);
+    text-decoration: none;
+    background-size: 1px 2.35ex;
+  }
+
+  &:active {
+    color: var(--colors-orange);
+    background-image: linear-gradient(to bottom, rgba(#F4821F, 0.1) 0%, rgba(#F4821F, 0.1) 100%);
+    background-size: 1px 2.35ex;
+    text-decoration: none;
+  }
+
+}

@@ -1,0 +1,22 @@
+p {
+    line-height: 1.62;
+    margin: 0 0 1.62ex 0;
+
+    &.intro {
+        font-size: 1.5em;
+        font-weight: 300;
+        margin-bottom: 2ex;
+        line-height: 1.5;
+    }
+
+    @include breakpoint($regular) {
+        line-height: 1.65;
+        margin-bottom: 1.65ex;
+
+        &.intro {
+            font-size: 1.6em;
+            margin-bottom: 3ex;
+            line-height: 1.37;
+        }
+    }
+}
