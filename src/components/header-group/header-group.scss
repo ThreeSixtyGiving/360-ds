@@ -1,0 +1,31 @@
+.header-group {
+
+    &__title {
+        color: var(--colors-dark-blue);
+        font-size: 3.6em;
+        font-weight: 200;
+        line-height: 1.2;
+        margin: 0 0 0.8rem 0;
+    }
+
+    &__subtitle {
+        color: var(--colors-dark-blue);
+        font-size: 1.6em;
+        font-weight: 500;
+        line-height: 1.375;
+        margin: 0 0 5.5rem 0;
+    }
+
+    &__excerpt {
+        color: var(--colors-gray);
+        font-weight: 300;
+        line-height: 1.65;
+        margin: 1ex 0;
+    }
+
+    @include breakpoint($medium-max) {
+        br {
+            display: none;
+        }
+    }
+}
