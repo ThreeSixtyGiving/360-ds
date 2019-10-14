@@ -1,0 +1,164 @@
+$navigation-bar-height: 56px;
+
+.navigation-bar {
+    position: fixed;
+    width: 100%;
+    height: $navigation-bar-height;
+    background-color: rgba(#062342, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 98;
+
+    &__button {
+        display: flex;
+        width: $navigation-bar-height;
+        height: $navigation-bar-height;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        pointer-events: all;
+        transition: background-color 0.13s ease-in-out;
+
+        @include breakpoint ($medium-max) {
+            background-color: rgba(#062342, 0.05);
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        width: calc(100% - #{$navigation-bar-height});
+        height: 100%;
+        left: $navigation-bar-height;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 99;
+        pointer-events: none;
+
+        @include breakpoint ($regular) {
+            position: static;
+            flex: 1;
+            width: 100%;
+
+            &--mobile-only {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+        line-height: 1.2;
+        font-weight: 500;
+        color: var(--colors-white);
+        margin: 0;
+        margin-left: -($navigation-bar-height);
+        
+        @include breakpoint($regular) {
+            margin-left: 0;
+        }
+    }
+
+    &__options {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+
+        & > li {
+            display: inline-block;
+            height: 100%;
+
+            & > a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 0 2.1em;
+                line-height: ($navigation-bar-height - 1);
+                font-weight: 500;
+                color: var(--colors-white);
+                pointer-events: all;
+                transition: background-color 0.13s ease-in-out;
+    
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+
+            &:hover {
+                .navigation-dropdown__list {
+                    pointer-events: all;
+                    transform: none;
+                    opacity: 1;
+                }
+            }
+        }
+
+        @include breakpoint($regular) {
+            display: block;
+        }
+    }
+}
+
+.navigation-dropdown {
+    position: relative;
+
+    &__list {
+        pointer-events: none;
+        position: absolute;
+        width: 334px;
+        right: 0;
+        background-color: var(--colors-white);
+        list-style: none;
+        padding: 0.33em 0;
+        border: 0.5px solid rgba(#062342, 0.2);
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+        z-index: 101;
+        transform: translateY(-11px) perspective(8192px) rotateX(34deg);
+        opacity: 0;
+        transition: transform 0.13s ease-in-out, opacity 0.13s ease-in-out;
+
+        & > li {
+
+            a {
+                display: block;
+                padding: 1em 1.6em;
+                color: var(--colors-dark-blue);
+                font-weight: 500;
+
+                &:hover {
+                    background-color: rgba(#062342, 0.05);
+                }
+            }
+
+            & + li {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: 1.6em;
+                    top: 0;
+                    width: calc(100% - 3.2em);
+                    height: 1px;
+                    background-color: rgba(#062342, 0.2);
+                }
+            }
+        }
+    }
+}
