@@ -8,3 +8,7 @@ npm i -g @frctl/fractal
 ```shell
 gulp
 ```
+
+```shell
+fractal build
+```
