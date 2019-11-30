@@ -9,13 +9,13 @@
   "author": "Arthur A. Bergamaschi <arthurbergmz@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0",
     "@frctl/fractal": "^1.2.0",
     "@frctl/nunjucks": "^2.0.1",
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1"
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0"
   }
 }

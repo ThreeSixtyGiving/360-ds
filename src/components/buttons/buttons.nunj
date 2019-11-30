@@ -39,4 +39,5 @@
 <div style="margin: 64px 8px;">
     <a href="#" class="button button--block">Primary button</a>
     <button class="button button--block button--secondary">Secondary button</button>
+    <button class="button button--block button--orange js-hello-world">Hello, world!</button>
 </div>

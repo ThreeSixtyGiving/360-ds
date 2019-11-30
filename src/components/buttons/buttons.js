@@ -1,8 +1,3 @@
-// General JavaScript file
-// 
-// Example of usage: define global variables
-// 
-
 const helloWorldButtons = document.querySelectorAll('.js-hello-world')
 
 // for each helloWorldButton

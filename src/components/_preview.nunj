@@ -9,6 +9,6 @@
 </head>
 <body>
     {{ yield | safe }}
-    <script src="assets/js/components.js"></script>
+    <script src="{{ 'assets/js/components.js' | path }}"></script>
 </body>
 </html>
