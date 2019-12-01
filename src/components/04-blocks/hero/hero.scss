@@ -1,0 +1,77 @@
+.hero-section {
+  border-bottom: 1px solid rgba($base-color, .2);
+}
+
+.hero {
+  padding-top: 36px;
+  padding-bottom: 40px;
+
+  @include breakpoint($medium) { 
+    padding-top: 88px;
+    padding-bottom: 88px; 
+  }
+
+  &__logo {
+    img { max-width: 320px; }
+  }
+
+  &__lead {
+    @include big_lead;
+    border-left: 4px solid $base-color;
+    padding-left: 32px;
+
+    @include breakpoint($medium) { margin: 0; }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__blurb { font-size: 1.25rem; }
+  &__title + &__blurb { margin-top: 16px; }
+}
+
+// Hero Grid
+.hero { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint($medium) {
+    flex-direction: row;
+
+    &__logo {
+      flex: 3;
+    }
+
+    &__lead { 
+      margin-left: 40px; 
+      flex: 4;
+    }
+  }
+}
+
+
+// Variations
+.hero {
+  &--orange {
+    .hero__lead { border-left-color: $orange; }
+    .hero__title { color: $orange; }
+  }
+
+  &--teal {
+    .hero__lead { border-left-color: $teal; }
+    .hero__title { color: $teal; }
+  }
+
+  &--yellow {
+    .hero__lead { border-left-color: $yellow; }
+    .hero__title { color: $yellow; }
+  }
+
+  &--red {
+    .hero__lead { border-left-color: $red; }
+    .hero__title { color: $red; }
+  }
+}

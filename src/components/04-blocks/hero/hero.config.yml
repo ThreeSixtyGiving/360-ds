@@ -1,0 +1,7 @@
+title: "Hero Block"
+status: wip
+context:
+  logo: "main" # main, insights, standards, resources, challenge, registry, map, grantnav
+  colour: "orange" # orange, teal, yellow, red, black
+  title: "This is the title of the Hero" # This is the title
+  lead: "360 Resources is a repository of resources to help Data Champions make better informed decisions by leveraging other people’s experiences." # This is the lead text  
