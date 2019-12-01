@@ -1,0 +1,42 @@
+.subscribe-section {
+  background-color: $yellow;
+  padding: 24px;
+
+  &__wrapper {
+    @include wrapper;
+    @include breakpoint($large) { max-width: 700px; }
+  }
+
+  &__form {
+    display: flex;
+    width: 100%;
+
+    input[type="text"] { 
+      border-radius: 3px 0 0 3px;
+      flex: 1;
+      padding: 12px 24px;
+      width: 100%;
+      border: 0;
+      letter-spacing: .3px;
+      color: $white;
+      background-color: rgba($base-color, .1);
+      @include placeholder { color: rgba($base-color, .9); }
+
+      &:focus { background-color: rgba($base-color, .2); }
+      &:hover { background-color: rgba($base-color, .3); }
+    }
+
+    input[type="submit"] {
+      all: inherit;
+      color: $base-color;
+      display: inline-block;
+      width: 90px;
+      background-color: rgba($base-color, .15);
+      border-radius: 0 3px 3px 0;
+      text-align: center;
+
+      &:focus { background-color: rgba($base-color, .2); }
+      &:hover { background-color: rgba($base-color, .3); }
+    }
+  }
+}
