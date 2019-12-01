@@ -33,7 +33,8 @@ $base-color: $black;
     --text-base-line-height: 1.62;
 
     --fonts-primary: 'Roboto', sans-serif;
-        
+    
+    // Maintaining these Variables here, for the Fractal internal use. 
     --colors-default: $black;
     --colors-white: #FFFFFF;
     --colors-orange: $orange;
@@ -45,7 +46,8 @@ $base-color: $black;
     --colors-black: --colors-default;
 
     @include breakpoint($regular) {
-        --text-base-size: 1.25rem;
+        // Edited this variable from 1.25rem.
+        --text-base-size: 1rem;
     }
 }
 
@@ -83,7 +85,7 @@ $base-color: $black;
   &:-ms-input-placeholder { @content }
 }
 
-.small-only { @include breakpoint($medium-up) { display: none !important; } }
+.small-only { @include breakpoint($medium) { display: none !important; } }
 .medium-up { @include breakpoint($small-only) { display: none !important; } }
 
 
