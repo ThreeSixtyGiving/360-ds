@@ -6,6 +6,7 @@ const nunj = require('@frctl/nunjucks')({})
 
 // Set engine to nunjucks
 fractal.components.engine(nunj);
+fractal.components.set("ext", ".nunj");
 
 /* Set the title of the project */
 fractal.set('project.title', '360Giving Design System - Components');

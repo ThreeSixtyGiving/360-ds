@@ -38,11 +38,13 @@ gulp.task('js', function() {
 
 gulp.task('watch', gulp.series('sass', 'js', function () {
    gulp.watch([
+        'src/components/_preview.scss',
         'src/components/**/*.scss',
         'assets/scss/**/*.scss'
         ], gulp.series('sass'))
 
     gulp.watch([
+        'src/components/_preview.js',
         'src/components/**/*.js'
         ], gulp.series('js'))
 }))
