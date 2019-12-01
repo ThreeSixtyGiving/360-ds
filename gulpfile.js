@@ -28,6 +28,11 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('public/components/preview/assets/css'))
 })
 
+gulp.task('images', function() {
+    return gulp.src('assets/images/**/*.*')
+    .pipe(gulp.dest('public/components/preview/assets/images/'))
+})
+
 gulp.task('js', function() {
     return gulp.src('src/components/**/*.js')
     .pipe(customPlumber('Error running Javascript bundler'))
@@ -59,4 +64,4 @@ gulp.task('fractal:start', gulp.series(function(){
     });
 }));
 
-gulp.task('default', gulp.series('sass', 'js', 'fractal:start', 'watch'));
+gulp.task('default', gulp.series('sass', 'images', 'js', 'fractal:start', 'watch'));
