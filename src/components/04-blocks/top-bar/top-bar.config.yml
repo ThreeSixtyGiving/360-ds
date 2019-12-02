@@ -1,0 +1,35 @@
+title: "Top-bar Block"
+status: wip
+context:
+  # The logo portion is not implemented yet, but the idea is for us to be able to control which logo 
+  # will be placed by setting this variable in the component context.
+  logo: "main" # main, insights, standards, resources, challenge, registry, map, grantnav
+  state:  # expanded
+  contextual_menu:
+    - name: About
+      url: '/about.html'
+    - name: Test
+      url: 'http://ccm.design'
+    - name: About
+      url: '/about.html'
+      status: disabled
+    - name: Test
+      url: 'http://ccm.design'
+  offcanvas_menu:
+    - name: Test
+      url: 'http://ccm.design'
+      status: disabled
+    - name: Test
+      url: 'http://ccm.design'
+    - title: Menu Group Title
+    - name: Test
+      url: 'http://ccm.design'
+    - name: Test
+      url: 'http://ccm.design'
+    - name: Test
+      url: 'http://ccm.design'
+    - title: Menu Group Title
+    - name: Test
+      url: 'http://ccm.design'
+
+

@@ -1,0 +1,109 @@
+.top-bar {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid rgba($base-color, .2);
+
+  &__menu-trigger {
+    flex: 0;
+    all: inherit;
+    padding: 8px;
+    border: 0;
+  }
+
+  &__menu {
+    flex: 1; 
+    text-align: right;
+  }
+}
+
+.contextual-menu {
+  @include breakpoint($small-only) { display: none; }
+  &__button {
+    display: inline-block;
+    padding: 8px 24px;
+    transition: all .5s;
+
+    &:hover {
+      background-color: $base-color;
+      color: $white;
+    }
+  }
+
+  &__button + &__button { margin-left: -4px; }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: .3;
+  }
+}
+
+// Styles for the OFF-CANVAS-MENU
+
+.off-canvas-menu {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  left: -300px;
+  width: 280px;
+  transition: all .4s ease;
+  display: block;
+ 
+  @include breakpoint($medium-up) { 
+    width: 350px;
+    left: -370px;
+  }
+
+  padding: 48px 32px;
+  background-color: darken($base-color, 4);
+  box-shadow: 4px 4px 16px rgba($base-color, .2);
+
+
+  &__list { 
+    border-bottom: 1px solid rgba($white, .2);
+    padding-bottom: 24px; 
+    margin-bottom: 24px;
+    list-style-type: none;
+    padding: 0;
+
+  }
+  
+  &__trigger {
+    // Resetting Button Styles
+    background-color: transparent;
+    border: 0;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px;
+    color: rgba($white, .4);
+
+  }
+
+  &__item {
+    padding-bottom: 8px;
+    color: rgba($white, .6);
+
+    &:hover a { color: $yellow; }
+  }
+
+  &__heading {
+    color: $white;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: .4;
+  }
+}
+
+.off-canvas-menu__contextual {
+  @include breakpoint($medium-up) { display: none; }
+}
+
+.off-canvas-menu--expanded {
+  left: 0;
+}
