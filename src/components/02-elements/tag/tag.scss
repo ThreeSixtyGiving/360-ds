@@ -1,0 +1,49 @@
+.tag {
+  color: $base-color;
+  border: 2px solid $base-color;
+  display: inline-block;
+  padding: 2px 24px 4px;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.tag--large {
+  padding: 4px 24px 6px;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $base-color;
+    color: $white;
+  }
+
+  &.tag--data-wrangling:hover { background-color: $teal; }
+  &.tag--data-literacy:hover { background-color: $orange; }
+  &.tag--human-centered-design:hover { background-color: $red; }
+}
+
+.tag--selected {
+  cursor: pointer;
+  background-color: $base-color;
+  color: $white;
+
+  &.tag--data-wrangling { background-color: $teal; color: $white; }
+  &.tag--data-literacy { background-color: $orange; color: $white; }
+  &.tag--human-centered-design { background-color: $red; color: $white; }
+}
+
+.tag--data-wrangling {
+  color: $teal;
+  border-color: $teal;
+}
+
+.tag--data-literacy {
+  color: $orange;
+  border-color: $orange;
+}
+
+.tag--human-centered-design {
+  color: $red;
+  border-color: $red;
+}
