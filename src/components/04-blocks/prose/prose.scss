@@ -1,0 +1,61 @@
+.prose {
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1, 
+  .h1 { margin-bottom: 32px; }
+
+  h2, h3, h4,
+  .h2, .h3, .h4, .intro {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+
+  &__intro {
+    margin-bottom: 56px;
+  }
+}
+
+.prose h1, 
+.h1 {
+  @include h1;
+}
+
+.intro {
+  @include big-lead;
+}
+
+.prose h2,
+.h2 {
+  @include h2;
+}
+
+.prose h3,
+.h3 {
+  @include h3;
+}
+
+.prose h4,
+.h4 {
+  @include h4;
+}
+
+.prose h5,
+.h5 {
+  @include h5;
+}
+
+.prose h6,
+.h6 {
+  @include h6;
+}
+
+.prose p,
+.p {
+  @include text;
+
+  > a {
+    font-weight: 400;
+    color: $teal;
+  }
+}
