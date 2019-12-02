@@ -23,3 +23,11 @@ fractal.web.set('static.path', __dirname + '/public');
 fractal.web.set('builder.dest', __dirname + '/build');
 
 fractal.components.set('default.status', 'wip');
+
+const mandelbrot = require('@frctl/mandelbrot');
+
+const myCustomisedTheme = mandelbrot({
+    skin: "navy"
+});
+
+fractal.web.theme(myCustomisedTheme);
