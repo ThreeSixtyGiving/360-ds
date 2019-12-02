@@ -1,0 +1,10 @@
+title: "Filters Block"
+status: wip
+context:
+  filters: 
+    - category: Data Literacy
+      slug: data-literacy
+    - category: Data Wrangling
+      slug: data-wrangling
+    - category: Human Centered Design
+      slug: human-centered-design

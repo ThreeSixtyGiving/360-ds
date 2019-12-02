@@ -1,0 +1,99 @@
+.filter-section {
+  border-top: 1px solid rgba($base-color, .2);
+  border-bottom: 1px solid rgba($base-color, .2);
+
+  @include breakpoint($small-only) {
+    overflow-x: scroll;
+    scroll-snap-align: center;
+    scroll-snap-type: x proximity;
+  }
+
+  &__panel { display: flex; }
+  &__search { 
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__buttons { 
+    flex: 3; 
+    text-align: right;
+  }
+}
+
+.search-field {
+  padding: 8px 16px;
+  width: 100%;
+  border: 1px solid rgba($base-color, .2);
+  color: rgba($base-color, .7);
+  background-color: transparent;
+
+  &::-webkit-input-placeholder { color: rgba($base-color, .4); }
+  &:-moz-placeholder { color: rgba($base-color, .4); }
+  &::-moz-placeholder { color: rgba($base-color, .4); }
+  &:-ms-input-placeholder { color: rgba($base-color, .4); }
+
+  &:focus { border: 1px solid $orange; }
+}
+
+.filters {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @include breakpoint($small-only) {
+    width: max-content;
+    padding-right: 20px;
+
+    .filter + .filter { margin-left: 8px; }
+  }
+
+  @include breakpoint($medium-up) { 
+    // text-align: center; 
+
+    .filter + .filter { margin-left: 24px; }
+  }
+}
+
+.filter {
+  color: $base-color;
+  border: 2px solid $base-color;
+  display: inline-block;
+  padding: 8px 24px 10px;
+  border-radius: 24px;
+  font-size: .8rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $base-color;
+    color: $white;
+  }
+
+  &.filter--data-wrangling:hover { background-color: $teal; }
+  &.filter--data-literacy:hover { background-color: $orange; }
+  &.filter--human-centered-design:hover { background-color: $red; }
+}
+
+.filter--selected {
+  cursor: pointer;
+  background-color: $base-color;
+  color: $white;
+
+  &.filter--data-wrangling { background-color: $teal; color: $white; }
+  &.filter--data-literacy { background-color: $orange; color: $white; }
+  &.filter--human-centered-design { background-color: $red; color: $white; }
+}
+
+.filter--data-wrangling {
+  color: $teal;
+  border-color: $teal;
+}
+
+.filter--data-literacy {
+  color: $orange;
+  border-color: $orange;
+}
+
+.filter--human-centered-design {
+  color: $red;
+  border-color: $red;
+}
