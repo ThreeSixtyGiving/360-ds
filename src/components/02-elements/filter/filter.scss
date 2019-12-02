@@ -1,0 +1,45 @@
+.filter {
+  color: $base-color;
+  border: 1px solid $base-color;
+  display: inline-block;
+  border-radius: 24px;
+  font-size: 1rem;
+  padding: 4px 24px 6px;
+  font-weight: 600;
+  letter-spacing: .3px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $base-color;
+    color: $white;
+  }
+
+  &.filter--data-wrangling:hover { background-color: $teal; }
+  &.filter--data-literacy:hover { background-color: $orange; }
+  &.filter--human-centered-design:hover { background-color: $red; }
+}
+
+.filter--selected {
+  cursor: pointer;
+  background-color: $base-color;
+  color: $white;
+
+  &.filter--data-wrangling { background-color: $teal; color: $white; }
+  &.filter--data-literacy { background-color: $orange; color: $white; }
+  &.filter--human-centered-design { background-color: $red; color: $white; }
+}
+
+.filter--data-wrangling {
+  color: $teal;
+  border-color: $teal;
+}
+
+.filter--data-literacy {
+  color: $orange;
+  border-color: $orange;
+}
+
+.filter--human-centered-design {
+  color: $red;
+  border-color: $red;
+}
