@@ -1,10 +1,11 @@
-// Menu
-  $('.top-bar__menu-trigger, .off-canvas-menu__trigger').click(function () {
-    const offCanvasMenu = $('.off-canvas-menu')
-    offCanvasMenu.toggleClass('off-canvas-menu--expanded')
-    if (offCanvasMenu[0].hasAttribute('aria-hidden')) {
-      offCanvasMenu.removeAttr('aria-hidden')
+document.querySelectorAll('.top-bar__menu-trigger, .off-canvas-menu__trigger').forEach(function(el) {
+  el.onclick = function(){
+    const offCanvasMenu = document.querySelector('.off-canvas-menu');
+    offCanvasMenu.classList.toggle('off-canvas-menu--expanded');
+    if (offCanvasMenu.hasAttribute('aria-hidden')) {
+      offCanvasMenu.removeAttribute('aria-hidden')
     } else {
-      offCanvasMenu.attr('aria-hidden', '')
+      offCanvasMenu.setAttribute('aria-hidden', '')
     }
-  })
+  };
+});
