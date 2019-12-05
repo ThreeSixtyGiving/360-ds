@@ -1,18 +1,11 @@
-.prose {
-  max-width: 800px;
-  margin: 0 auto;
+.prose p,
+.prose li,
+.p {
+  @include text;
 
-  h1, 
-  .h1 { margin-bottom: 32px; }
-
-  h2, h3, h4,
-  .h2, .h3, .h4, .intro {
-    margin-top: 40px;
-    margin-bottom: 16px;
-  }
-
-  &__intro {
-    margin-bottom: 56px;
+  > a {
+    font-weight: 400;
+    color: $teal;
   }
 }
 
@@ -50,12 +43,49 @@
   @include h6;
 }
 
-.prose p,
-.p {
-  @include text;
+.prose {
+  ul {
+    margin-left: 0;
+    padding-left: 0;
 
-  > a {
-    font-weight: 400;
-    color: $teal;
+    li {
+      list-style-type: none;
+      padding-bottom: 12px;
+      padding-left: 16px;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-left: 6px solid $teal;
+        border-bottom: 6px solid transparent;
+        border-top: 6px solid transparent;
+        position: absolute;
+        left: 0;
+        top: 6px;
+      }
+    }
   }
+
+  ol {
+    margin-left: 16px;
+    padding-left: 0;
+
+    li { padding-bottom: 12px; }
+  }
+}
+
+.prose {
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1 { margin-bottom: 32px; }
+
+  h2, h3, h4, .intro {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+
+  &__intro { margin-bottom: 56px; }
 }
