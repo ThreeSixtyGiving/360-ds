@@ -1,0 +1,65 @@
+{% extends '@layout' %}
+
+{% block main_content %}
+  
+<div class="prose layout__content-inner">
+  <div class="accordion">
+    <section class="prose__section grid grid--three-columns">
+      <div class="grid__1">
+        <button class="accordion__trigger button button--small button--yellow">More Information</button>
+      </div>
+      <div class="grid__2">
+        <p>This registry lists all of the organisations that currently publish data about their grants to the 360Giving data standard.</p>
+        <p>This registry is useful if you want to see a full list of funders who publish to the standard, or if you want to access the data in a machine-readable format to use in research, tools or websites. You can find examples of what can be created using this open grants data on the <a href="http://www.threesixtygiving.org/data/find-data/" target="_blank">Tools & Projects</a> page.</p>
+      </div>
+    </section>
+
+    <section class="prose__section accordion__extra grid grid--three-columns" aria-hidden>
+      <div class="grid__1">&nbsp;</div>
+      <div class="grid__2">
+        <p>Under each organisation, you can find:</p>  
+        <ul>
+          <li>a short description of the data they have published</li>
+          <li>the date they last published</li>
+          <li>links to download the data and visit their original data source</li>
+          <li>the licence they have published the data with (which affects how you can use it)</li>
+          <li>the value of the grants they have published data about</li>
+        </ul>
+
+        <p><strong>Developers: For a JSON feed of published datasets visit <a href="http://standard.threesixtygiving.org/en/latest/getdata/" target="_blank">standard.threesixtygiving.org</a></strong></p>
+        <p>If you want to explore the grants data by location, sector or recipient, head to <a href="https://grantnav.threesixtygiving.org/" target="_blank">GrantNav</a>. You can use GrantNav to search, compare and download the data for free.</p>
+        <p>If you are a funder and would like to understand how to publish your grants data openly with the 360Giving data standard, visit our <a href="https://www.threesixtygiving.org/support/" target="_blank">support page</a> or <a href="http://www.threesixtygiving.org/contact/" target="_blank">get in touch.</a></p>
+        <p><small>* Funders make grants in different currencies. Grants are listed in the currency in which they were made.</small></p>
+      </div>
+    </section>
+  </div>
+
+  <section class="card-list-section">
+    {% for i in range(10) %}
+    
+    {% render '@registry-card' %}
+
+    {% endfor %}
+  </section>
+</div>    
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

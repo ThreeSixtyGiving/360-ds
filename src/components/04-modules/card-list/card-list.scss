@@ -1,0 +1,6 @@
+.card-list {
+  list-style-type: none;
+  padding: 0;
+
+  &__item + &__item { margin-top: 24px; }
+}
