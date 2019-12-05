@@ -14,3 +14,7 @@ gulp
 ```shell
 fractal build
 ```
+
+If you are using MacOS Catalina, you might need to use the `--unsafe` command. 
+
+https://github.com/nodejs/node-gyp/issues/1236#issuecomment-327668264
