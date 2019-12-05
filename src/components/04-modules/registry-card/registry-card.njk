@@ -1,0 +1,102 @@
+<article class="registry-card" title="{{ title }}">
+  <div class="registry-card__pub-logo">
+      <a href="{{ publisher.website }}" target="_blank">
+      {% if publisher.logo %}
+        <img src="{{ publisher.logo }}" alt="{{ publisher.name }}">
+      {% endif %}
+      </a>
+  </div>
+  <div class="registry-card__content">
+    <h3 class="registry-card__pub-name">{{ publisher.name }}</h3>
+    
+    <ul class="registry-card__list">
+
+      <li class="registry-card__item ">
+        <table class="registry-grant">
+          {# {% for grant in registry_list %} #}
+            {% if grant.publisher.prefix == publisher.prefix %}
+            <tr class="registry-grant__line registry-grant--title-line">
+              <!-- @DAVID
+                Initially, I imagined this would print just the date range of the grants
+                since this is a more relevant information then the title of the grant/file, 
+                which often is basically referring to this date range. This wans't implemented
+                because I believe we would need to massage the data a little in order 
+                to get these dates in a structured format.
+                <td class="registry-grant__date-range">Records from Apr ’12 to Dec ‘18</td> 
+              -->
+              <td class="registry-grant__title" colspan="3">{{ grant.title }}</td>
+            </tr>
+
+            <tr class="registry-grant__line registry-grant--amounts-line">
+              <td class="registry-grant__pub-date">Published in {{ grant.issued }}</td>
+
+              <td class="registry-grant__records">Records
+                <!-- @DAVID - I wasn't able to find where this information is coming from -->
+                <span class="registry-grant__grant-n">XXX</span>
+              </td>
+              <td class="registry-grant__amount">
+                <!-- @DAVID
+                  I wasn't able to find where this information is coming from.
+                  This is true for both the "grant amount" and the "currency".
+                -->
+                £ <span class="registry-grant__amount-n">XX,XXX,XXX</span>
+              </td>
+              
+            </tr>
+            <tr class="registry-grant__line  registry-grant--data-line">
+              <td class="registry-grant__download">
+                <a class="registry-grant__file registry-grant--xls"  href="{{ grant.distribution.downloadURL }}" download title="Excel Spreadsheet - 260Kb<!-- FileSize Variable -->">XLS - 260Kb</a>
+                {# commenting these other options out 
+                <a class="registry-grant__file registry-grant--csv"  href="{{ grant.distribution.downloadURL }}" download title="JSON - <!-- FileSize Variable -->">CSV - 260Kb</a>
+                <a class="registry-grant__file registry-grant--json" href="{{ grant.distribution.downloadURL }}" download title="Comma Separated Values - <!-- FileSize Variable -->">JSON - 260Kb</a>
+                <a class="registry-grant__file registry-grant--ods"  href="{{ grant.distribution.downloadURL }}" download title="Open Document Spreadsheet - <!-- FileSize Variable -->">OSD - 260Kb</a>
+                #}
+              </td>
+
+          <!-- if validated -->
+          <!-- <td class="registry-grant__validation registry-grant--validated">
+                    Data Validated
+                <i class="material-icons">check_circle_outline</i>
+              </td> -->
+          <!-- if not validaded -->
+              <td class="registry-grant__validation registry-grant--invalid">
+                Data Invalid
+                <i class="material-icons">highlight_off</i>
+              </td>
+
+
+              <td class="registry-grant__license">
+                {% if grant.license_name %}
+                Licence
+                <a href="{{grant.license}}" target="_blank">
+                
+                {% if grant.license_name == "Creative Commons Attribution 4.0 International (CC BY 4.0)" %}
+                  <img class="license license--cc" src="/images/licenses/creative-commons-main.svg" alt="{{grant.license_name}}">
+                
+                {% elif grant.license_name == "Creative Commons Attribution 4.0" %}
+                  <img class="license license--cc" src="/images/licenses/creative-commons-main.svg" alt="{{grant.license_name}}">
+                
+                {% elif grant.license_name == "Creative Commons Attribution Share-Alike 4.0" %}
+                  <img class="license license--cc" src="/images/licenses/creative-commons-main.svg" alt="{{grant.license_name}}">
+                  <img class="license license--cc" src="/images/licenses/Cc-sa.svg" alt="{{grant.license_name}}">
+                
+                {% elif grant.license_name == "CCO" %}
+                  <img class="license license--cc" src="/images/licenses/Cc-zero.svg" alt="{{grant.license_name}}">
+                
+                {% elif grant.license_name == "Open Data Commons Public Domain Dedication and Licence 1.0" %}
+                  <img class="license license--pddl" src="/images/licenses/pddl.svg" alt="{{grant.license_name}}">
+                
+                {% elif grant.license_name == "Open Government Licence 3.0 (United Kingdom)" %}
+                  <img class="license license--ogl" src="/images/licenses/UKOpenGovernmentLicence.svg" alt="{{grant.license_name}}">  
+                {% endif %}
+                </a>
+                {% endif %}
+              </td>
+            </tr>
+          {% endif %}
+        {# {% endfor %} #}
+        </table>
+      </li>
+    </ul>
+  </div>
+</article>

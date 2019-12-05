@@ -1,0 +1,126 @@
+.registry-card {
+  display: flex;
+  &__content { flex: 1; }
+  }
+
+.registry-card {
+  background: $white;
+  box-shadow: 0px 4px 8px #1536341A;
+  position: relative;
+  padding: 16px 24px 16px 24px;  
+  
+  @include breakpoint($large) {
+    padding: 32px 40px 16px 40px;
+  }
+
+  &:before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $teal;
+  }
+
+  &__pub-logo { width: 132px; }
+
+  &__pub-name {
+    font-size: 1.5rem;
+    color: $base-color;
+    font-weight: 300;
+  }
+  
+  &__content { margin-left: 32px; }
+  &__list {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.registry-grant {
+  width: 100%;
+
+  &, td { border: 0; }
+  td { padding: 0; }
+
+  &__line {
+    font-style: normal;
+    font-weight: 300;
+  }
+  
+  &--title-line td { 
+    padding-top: 12px; 
+    font-weight: 400;
+    padding-bottom: 4px;
+  }
+
+  &--amounts-line td { 
+    line-height: 1;
+    border-bottom: 0;
+  }
+
+  &--data-line {
+    border-bottom: 1px solid rgba($black, .1); 
+    td { padding: 8px 0 16px; }
+
+    &:last-child { border-bottom: 0; }
+  }
+
+  &__records,
+  &__validation { width: 35%; }
+
+  &__spacer { padding-left: 24px; }
+  
+  &__pub-date,
+  &__download { width: 40%; }
+
+   &__title { width: 100%; }
+  
+  &__amount,
+  &__license { 
+    width: 100%; 
+    text-align: right;
+  }
+
+  &__license {
+    a { margin-left: 32px; }
+  }
+
+  &__validation > i { vertical-align: -5px; }
+  &--validated > i { color: $teal; }
+  &--invalid > i { color: $red; }
+
+  &__grant-n,
+  &__amount-n { font-size: 1.6rem; }
+
+  &__grant-n { font-weight: 300; }
+  &__amount-n { font-weight: 400; }
+
+  &__file {
+    padding: 0 12px 0;
+    border-radius: 20px;
+    border: 1px solid currentColor;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  &--xls { color: $orange; }
+  &--csv { color: $teal; }
+  &--json { color: $yellow; }
+  &--ods { color: $red; }
+}
+
+.license {
+  opacity: .4;
+  
+  &--cc { 
+    max-width: 20px; 
+    margin-bottom: -6px;
+  }
+  &--ogl { 
+    margin-bottom: -2px; 
+    max-width: 32px; }
+  &--pddl { max-width: 32px; }
+}
