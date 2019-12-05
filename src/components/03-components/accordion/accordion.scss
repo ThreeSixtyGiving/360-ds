@@ -1,0 +1,12 @@
+.accordion {
+  &__extra {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+  }
+}
+
+.accordion--expanded .accordion__extra {
+  height: auto;
+  max-height: 4000px;
+}
