@@ -1,0 +1,63 @@
+// Basic Structure
+.sidebar-list {
+  text-align: right;
+  padding-left: 0;
+
+  &__item {
+    list-style-type: none;
+    position: relative;
+
+    > .sidebar-list { 
+      max-height: 0; 
+      overflow: hidden;
+    }
+  }
+
+  &__trigger {
+    position: absolute;
+    right: 0;
+  }
+}
+
+// Basic accessibility styles to 
+// make the elements easier to click.
+.sidebar-list__trigger {
+  cursor: pointer;
+  padding: 12px 8px;
+}
+
+.sidebar-list__item {
+  > a {
+    display: block;
+    padding: 8px 4px;
+    margin-right: 32px;
+  }
+
+// Structural Styles for the Expanded State
+  &.sidebar-list--expanded {
+    > .sidebar-list {
+      height: auto;
+      max-height: 1000px;
+    }
+  }
+}
+
+// Cosmetic Styles
+.sidebar-list__item {
+  > .sidebar-list { 
+    background-color: rgba($teal, 0.03);
+    transition: max-height .4s ease-in-out; 
+  }
+
+  .material-icons {
+    font-size: 1.2rem;
+    transition: transform .1s ease-in-out;
+    transform: rotate(0);
+    color: $teal;
+  }
+
+  &.sidebar-list--expanded {
+    > .sidebar-list { box-shadow: inset 0 0 4px rgba($teal, .1); }
+    > .sidebar-list__trigger > .material-icons { transform: rotate(45deg); }
+  }
+}

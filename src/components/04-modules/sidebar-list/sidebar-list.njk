@@ -1,0 +1,58 @@
+<ul class="sidebar-list">
+{% for i in list %}
+<li class="sidebar-list__item" aria-hidden>
+  
+  {% if i.children %}
+  <span class="sidebar-list__trigger">
+    <i class="material-icons">add</i>
+  </span>
+  {% endif %}
+
+  <a href="{{i.url}}">{{i.name}}</a>
+  
+  {% if i.children %}
+  <ul class="sidebar-list">
+  {% for j in i.children %}
+    <li class="sidebar-list__item" aria-hidden>
+      {% if j.children %}
+      <span class="sidebar-list__trigger">
+        <i class="material-icons">add</i>
+      </span>
+      {% endif %}
+
+      <a href="{{j.url}}">{{j.name}}</a>
+      {% if j.children %}
+      <ul class="sidebar-list">
+      
+      {% for k in j.children %}
+        <li class="sidebar-list__item" aria-hidden>
+          {% if k.children %}
+          <span class="sidebar-list__trigger">
+            <i class="material-icons">add</i>
+          </span>
+          {% endif %}
+          
+          <a href="{{k.url}}">{{k.name}}</a>
+
+          {% if k.children %}
+          <ul class="sidebar-list">
+          {% for l in k.children %}
+            <li class="sidebar-list__item" aria-hidden>
+              <a href="{{l.url}}">{{l.name}}</a>
+            </li>
+          {% endfor %} {# Closes l in k #}
+          </ul>
+          {% endif %} {# Close if k.children #}
+        </li>
+        {% endfor %} {# Closes k in j  #}
+      </ul>
+      {% endif %} {# Closes if j.children  #}
+    </li>
+  {% endfor %} {# Closes j in i #}
+  </ul>
+
+  {% endif %} {# Closes if i.children #}
+</li>
+{% endfor %} {# Closes i in list #}
+</ul>
+  
