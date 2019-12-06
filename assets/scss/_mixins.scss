@@ -81,6 +81,7 @@
   font-size: 1rem;
   font-weight: 300;
   color: rgba($base-color, 1);
+  margin-bottom: 0;
   & + & { margin-top: 12px; }
 
   @include breakpoint($medium) { font-size: .9rem; }

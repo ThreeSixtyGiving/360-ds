@@ -1,3 +1,7 @@
+.prose { 
+  * + * { margin-top: 8px; }
+}
+
 .prose p,
 .prose li,
 .p {
@@ -50,7 +54,7 @@
 
     li {
       list-style-type: none;
-      padding-bottom: 12px;
+      padding-bottom: 0;
       padding-left: 16px;
       position: relative;
 
@@ -88,4 +92,10 @@
   }
 
   &__intro { margin-bottom: 56px; }
+  &__section { padding-bottom: 24px; }
+
+  .box {
+    margin-bottom: 16px;
+  }
 }
+
