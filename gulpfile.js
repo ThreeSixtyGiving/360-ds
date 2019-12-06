@@ -64,6 +64,5 @@ gulp.task('fractal:start', gulp.series(function(){
     });
 }));
 
-gulp.task('build', gulp.series('sass', 'images', 'js', 'fractal build'));
 
 gulp.task('default', gulp.series('sass', 'images', 'js', 'fractal:start', 'watch'));
