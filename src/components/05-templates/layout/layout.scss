@@ -34,7 +34,7 @@
       "footer";
 
     @include breakpoint($medium) {
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: 320px 1fr;
       grid-template-rows: auto 1fr auto;
       grid-template-areas: 
         "header header"
