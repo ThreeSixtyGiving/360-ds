@@ -30,6 +30,7 @@ gulp.task('sass', function() {
 
 gulp.task('images', function() {
     return gulp.src('assets/images/**/*.*')
+    .pipe(gulp.dest('public/images/'))
     .pipe(gulp.dest('public/components/preview/assets/images/'))
 })
 
