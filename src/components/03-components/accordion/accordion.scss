@@ -1,4 +1,8 @@
 .accordion {
+  &__trigger {
+    cursor: pointer;
+  }
+
   &__extra {
     max-height: 0;
     overflow: hidden;
