@@ -1,4 +1,7 @@
 .grid {
+  @include wrapper;
+
+
   @include breakpoint($medium) { 
     display: grid;
     grid-gap: 16px;
