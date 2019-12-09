@@ -1,0 +1,12 @@
+<div class="sidebar-content{% if colour %} sidebar-content--{{colour}}{% endif %}">
+  {% if heading %}<h3 class="sidebar-content__heading">{{heading}}</h3>{% endif %}
+  {% if text %}<p class="sidebar-content__text">{{text}}</p>{% endif %}
+  {% if image %}
+    <figure class="sidebar-content__image" >
+      <img src="{{ image }}"
+           alt="{{ caption }}">
+      <figcaption>{{caption}}</figcaption>
+  </figure>
+  {% endif %}
+</div>  
+

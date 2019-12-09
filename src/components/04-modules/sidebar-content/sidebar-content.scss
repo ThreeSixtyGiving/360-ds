@@ -1,0 +1,29 @@
+.sidebar-content {
+  padding: 16px 32px;
+  text-align: right;
+
+  &__heading {
+    font-size: 1rem;
+    font-weight: bold;
+    color: currentColor;
+  }
+
+  &__text { 
+    font-size: .9rem; 
+    color: $base-color;
+  }
+
+  &__image { padding: 16px 0; }
+  &__image figcaption { 
+    padding-top: 8px;
+    font-size: .8rem; 
+    color: $base-color;
+    font-size: italic;
+
+  }
+}
+
+.sidebar-content--orange .sidebar-content__heading { color: $orange; }
+.sidebar-content--teal .sidebar-content__heading   { color:   $teal; }
+.sidebar-content--yellow .sidebar-content__heading { color: $yellow; }
+.sidebar-content--red .sidebar-content__heading    { color:    $red; }
