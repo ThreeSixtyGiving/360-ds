@@ -1,0 +1,61 @@
+<div class="code-block">
+<pre>
+  <code>
+    "Documents": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "An identifier for this document.",
+          "weight": 0.001,
+          "title": "Identifier"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The document title",
+          "weight": 1.05,
+          "title": "Title"
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "description": "The URL of the document.",
+          "weight": 11.01,
+          "title": "Web Address"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "A description of the document",
+          "weight": 9,
+          "title": "Description"
+        },
+        "documentType": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "A document category. For example, 'Application Form', 'Photo' or 'Project Report'. In future, 360Giving will provide a codelist of document types.",
+          "weight": 0.8,
+          "title": "Document Type"
+        },
+        "dateModified": {
+          "format": "date-time",
+          "type": "string",
+          "description": "What was this information last modified? A full date-time should be given. Usually this can be generated automatically by the software managing or exporting this data.",
+          "weight": 25,
+          "title": "Last Modified"
+        }
+      }
+    }
+  </code>
+</pre>
+</div>

@@ -18,6 +18,7 @@
   @include h1;
 }
 
+.prose .intro, // adding specificity 0020 to be higher than the 0011 of .prose p {...}(line 5)
 .intro {
   @include big-lead;
 }

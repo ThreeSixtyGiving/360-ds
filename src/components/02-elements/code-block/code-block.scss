@@ -1,0 +1,15 @@
+// We are using https://highlightjs.org/static/demo/ for syntax highlighting.
+
+
+.code-block {
+  padding: 0 16px;
+  margin-top: 24px;
+  background-color: rgba($black, .03);
+  border: 1px solid rgba($black, .1);
+
+  &--wrap { 
+    pre, code { white-space: pre-wrap; } 
+  }
+}
+
+.hljs.bash { background-color: transparent !important;}
