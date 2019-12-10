@@ -1,10 +1,10 @@
 <div class="prose">
-    {% render '@table' %}
-
     <section class="prose__section prose__intro">
         <h1 class="h1">Spreadsheet format</h1>
         <p class="intro">To produce 360Giving data in a spreadsheet, it is possible to start with an empty spreadsheet and construct the column titles (and any additional sheets), using the information given below.</p>
     </section>
+
+    {% render '@code-block' %}
 
     <section class="prose__section">
         <h2>Spreadsheet template</h2>
@@ -23,6 +23,7 @@
         <h3>Spreadsheet</h3>
         <p>Data placed in a spreadsheet can make use of easy to read, user-friendly column titles, and is ideal for recording one grant per row. This is the most common format that publishers choose. More complex representations of data can also be reported if required.</p>
 
+        {% render '@table' %}
 
         <h4>json</h4>
         <p>Data in JSON format is ideal for direct use by developers building visualisations and web apps. The JSON should conform to the 360Giving JSON Schemas. Anyone automating the publication of their data from their internal databases or via an API may favour this format. The column titles used in spreadsheet representations of data are derived directly from the 360Giving JSON Schemas.</p>
