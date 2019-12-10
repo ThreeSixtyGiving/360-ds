@@ -1,0 +1,60 @@
+.table {
+  font-size: .9rem;
+  border: 1px solid rgba($base-color, .2);
+  border-radius: 3px;
+
+  table { margin: 0; }
+  
+  th, td {
+    padding: 8px;
+    vertical-align: top;
+    color: $base-color;
+    display: block;
+    @include breakpoint($medium) { 
+      display: table-cell; 
+      padding: 8px 16px;
+    }
+  }
+
+  th { background-color: rgba($base-color, .1); }
+  tr + tr { border-top: 1px solid rgba($base-color, .2); }
+  
+  th {
+    display: none;
+    @include breakpoint($medium) { display: table-cell; }
+  }
+
+  td {
+    display: block;
+    @include breakpoint($medium) { display: table-cell; }
+  }
+}
+
+.table {
+  @include breakpoint($small-only) {
+    td:before {
+      content: attr(data-header);
+      display: block;
+      font-weight: 400;
+      background-color: rgba($base-color, .1);
+      margin: -8px -8px 4px -8px;
+      padding: 4px 8px;
+    }
+  }
+}
+
+.table--zebra {
+  tr:nth-of-type(even) { background-color: rgba($base-color, .04); }
+}
+
+.table__lead-cell { 
+  font-weight: 500; 
+  min-width: 180px;
+}
+  
+.table__checks { 
+  @include breakpoint($medium) { text-align: center; }
+}
+
+.table--true  { color: $teal; }
+.table--false { color: $red; }
