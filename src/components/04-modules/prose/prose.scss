@@ -93,10 +93,11 @@
   }
 
   &__intro { margin-bottom: 56px; }
-  &__section { padding-bottom: 24px; }
+  &__section + &__section { padding-top: 16px; }
 
   .box {
     margin-bottom: 16px;
+    margin-top: 16px;
   }
 }
 
