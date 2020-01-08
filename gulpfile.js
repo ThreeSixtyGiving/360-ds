@@ -65,5 +65,14 @@ gulp.task('fractal:start', gulp.series(function(){
     });
 }));
 
+gulp.task('fractal:build', function(){
+    const builder = fractal.web.builder();
+    builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
+    builder.on('error', err => logger.error(err.message));
+    return builder.build().then(() => {
+        logger.success('Fractal build completed!');
+    });
+});
 
+gulp.task('build', gulp.series('sass', 'images', 'js', 'fractal:build'));
 gulp.task('default', gulp.series('sass', 'images', 'js', 'fractal:start', 'watch'));
