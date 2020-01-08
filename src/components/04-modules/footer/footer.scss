@@ -57,8 +57,9 @@
 
     & + & { 
       @include breakpoint($medium-up) { margin-left: 48px; }
-      li + li { margin-top: 8px; }
     }
+
+    & li { margin-top: 8px; }
   }
 
   &__heading {
