@@ -42,7 +42,10 @@
   width: 100%;
 
   &, td { border: 0; }
-  td { padding: 0; }
+  td { 
+    padding: 0; 
+    vertical-align: top;
+  }
 
   &__line {
     font-style: normal;
@@ -75,7 +78,7 @@
   &__pub-date,
   &__download { width: 40%; }
 
-   &__title { width: 100%; }
+  &__title { width: 100%; }
   
   &__amount,
   &__license { 
@@ -83,10 +86,8 @@
     text-align: right;
   }
 
-  &__license {
-    a { margin-left: 32px; }
-  }
-
+  &__amount { margin-bottom: 8; }
+  &__license a { margin-left: 32px; }
   &__validation > i { vertical-align: -7px; }
   &--validated > i { color: $teal; }
   &--invalid > i { color: $red; }
