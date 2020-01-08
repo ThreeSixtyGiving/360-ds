@@ -87,7 +87,7 @@
     a { margin-left: 32px; }
   }
 
-  &__validation > i { vertical-align: -5px; }
+  &__validation > i { vertical-align: -7px; }
   &--validated > i { color: $teal; }
   &--invalid > i { color: $red; }
 
@@ -117,10 +117,8 @@
   
   &--cc { 
     max-width: 20px; 
-    margin-bottom: -6px;
   }
   &--ogl { 
-    margin-bottom: -2px; 
     max-width: 32px; }
   &--pddl { max-width: 32px; }
 }
