@@ -9,6 +9,9 @@
 
   &__form {
     display: flex;
+    flex-direction: column;
+    @include breakpoint($medium-up) { flex-direction: row;  }
+    
     width: 100%;
 
     input[type="text"] { 
@@ -24,16 +27,26 @@
 
       &:focus { background-color: rgba($base-color, .2); }
       &:hover { background-color: rgba($base-color, .3); }
+
+
     }
 
     input[type="submit"] {
       all: inherit;
       color: $base-color;
       display: inline-block;
-      width: 90px;
+      width: 100%; 
+      margin-top: 8px;
+      padding: 12px 24px;
       background-color: rgba($base-color, .15);
       border-radius: 0 3px 3px 0;
       text-align: center;
+
+      @include breakpoint($medium-up) { 
+        max-width: 90px; 
+        margin-top: 0;
+
+      }
 
       &:focus { background-color: rgba($base-color, .2); }
       &:hover { background-color: rgba($base-color, .3); }
