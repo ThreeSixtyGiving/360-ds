@@ -120,6 +120,8 @@
     color: rgba($white, .4);
   }
 
+  .edit-github { float:right; }
+
   &__policy-links {
     a { display: inline-block; } // To avoid line-breaks in the links
     @include breakpoint($medium-up) { text-align: right; }
