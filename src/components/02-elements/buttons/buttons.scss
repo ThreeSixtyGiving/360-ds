@@ -6,31 +6,33 @@
   padding: 6px 24px 8px;
   font-size: 1rem;
   font-weight: 400;
-}
 
-.button--small {
+
+&.button--small {
   padding: 2px 16px 2px;
   border-width: 1px;
   font-size: .9rem;
 }
 
-.button--large {
+&.button--large {
   padding: 10px 32px 12px;
   border-width: 3px;
   font-size: 1.3rem;
 }
 
-.button--unstyled {
+&.button--unstyled {
   border: 0;
   padding: 0;
 }
 
-.button--white { color: $white; }
-.button--orange { color: $orange; }
-.button--teal { color: $teal; }
-.button--yellow { color: $yellow; }
-.button--red { color: $red; }
-.button--disabled { 
+&.button--white { color: $white; }
+&.button--orange { color: $orange; }
+&.button--teal { color: $teal; }
+&.button--yellow { color: $yellow; }
+&.button--red { color: $red; }
+&.button--disabled { 
   opacity: .3;
   pointer-events: none;
+}
+
 }
