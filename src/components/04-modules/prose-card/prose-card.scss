@@ -1,0 +1,47 @@
+.prose {
+  
+  .prose-card {
+    background: $white;
+    box-shadow: 0px 4px 8px #1536341A;
+    position: relative;
+    text-align: center; 
+
+    &:before {
+      content: '';
+      width: 4px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $black;
+    }
+  }
+
+  .prose-card {
+    &__content {
+      padding: 16px 24px 16px 24px;  
+      @include breakpoint($large) { padding: 48px 64px 48px 64px; }
+    }
+
+    &__image {
+      padding-bottom: 32px;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    &__text {
+      font-size: 1rem;
+      font-weight: 100;
+    }
+  }
+
+  .prose-card--orange:before { background-color: $orange; }
+  .prose-card--yellow:before { background-color: $yellow; }
+  .prose-card--teal:before   { background-color: $teal; }
+  .prose-card--red:before    { background-color: $red; }
+
+}
