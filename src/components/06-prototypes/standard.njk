@@ -2,9 +2,50 @@
 
 {% block main_content %}
   <div class="layout__content-inner">
-    <div class="grid">
-    {% render '@prose' %}
+    <div class="prose">
+      <section class="prose__section">
+        <h2>Templates</h2>
+        <p>Two standard templates are available.</p>  
+      </section>
+      
+      <div class="prose__section">
+        
+        <section class="grid grid--two-columns">
+          <div class="grid__1">
+            
+            <div class="prose-card prose-card--orange">
+              <div class="prose-card__content">
+                <img class="prose-card__image" src="/images/icon-spreadsheet.svg" alt="">
+                <div class="align-left">
+                  <h3 class="prose-card__title">Spreadsheet Template (Excel)</h3>
+                  <p class="prose-card__text">With user-friendly column headings, summary sheet and tabs for additional information. <br>
+                  <strong>(CSV versions also available.)</strong></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="grid__1">
+        
+            <div class="prose-card prose-card--orange">
+              <div class="prose-card__content">
+                <img class="prose-card__image" src="/images/icon-json.svg" alt="">
+                <div class="align-left">
+                  <h3 class="prose-card__title">360Giving JSON Schemas</h3>
+                  <p class="prose-card__text">Provide the canonical definition of fields, as well as developer-friendly structure for working with 360Giving data.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      
+      </div>
+    
     </div>
+
+    {% render '@prose' %} // Adding another Prose block, just to make sure things work together. 
   </div>
   
 {% endblock %}
