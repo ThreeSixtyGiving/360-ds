@@ -13,7 +13,7 @@ context:
     - name: About
       url: '/about.html'
       status: disabled
-    - name: Test
+    - name: Get the data
       url: 'http://ccm.design'
   offcanvas_menu:
     - name: Test
@@ -29,7 +29,6 @@ context:
     - name: Test
       url: 'http://ccm.design'
     - title: Menu Group Title
-    - name: Test
-      url: 'http://ccm.design'
+    
 
 
