@@ -102,3 +102,23 @@
   }
 }
 
+.prose blockquote {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: rgba($orange, 1);
+  position: relative;
+  z-index: 1;
+  
+  &:before {
+    content: "format_quote";
+    font-size: 10rem;
+    @extend .u-material-icons; 
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    color: rgba($orange, .12);
+    z-index: -1;
+  }
+}
+
+
