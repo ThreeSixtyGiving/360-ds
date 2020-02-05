@@ -1,10 +1,10 @@
-.prose .box,  
 // We need to add this one in order to raise the specificity of the boxes 
 // that will be used inside the Prose module. 
 // Prose elements (headings, ul, p) are at 0011 and 
 // the regular .box is at 0010. With the ".prose .box" we raise 
 // the specificity to 0020 applying the proper overrides.
 
+.prose .box,
 .box {
   background-color: rgba($black, .1);
   position: relative;
@@ -30,6 +30,8 @@
 }
 
 // Check explanation at the top of this file
+.prose .box:only-child { margin-top: 0; }
+
 .prose .box.box--teal,
 .box--teal {
   background-color: rgba($teal, .1);
@@ -57,3 +59,4 @@
   &:before { background-color: $red; }
   .box__heading { color: $red; }
 }
+

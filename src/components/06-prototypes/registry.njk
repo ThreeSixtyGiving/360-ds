@@ -1,44 +1,40 @@
 {% extends '@layout' %}
 
+{% block header %}
+<div class="hero-section">
+  <div class="wrapper">
+    <div class="hero hero--orange">
+      <!-- .hero--orange, .hero--yellow, .hero--red -->
+      <div class="hero__column hero__logo">
+        <a href="/"><img src="/images/360-logos/360giving-registry.svg" alt="360 {{ logo | capitalize }}"></a>
+      </div>
+      <div class="hero__column hero__lead">
+        <h2 class="hero__title">
+        </h2>
+        <p class="hero__blurb">
+          This registry lists all of the organisations that currently publish data about their grants to the 360Giving data standard.
+        </p>
+      </div>  
+    </div>
+  </div>
+</div>
+{% endblock %}
+
 {% block main_content %}
 <div class="layout__content-inner">
 
   <div class="prose">
     <div class="accordion">
-      <section class="prose__section grid grid--three-columns">
+      <section class="prose__section grid grid--two-columns">
         <div class="grid__1">
-          <button class="accordion__trigger button button--small button--yellow">More Information</button>
+          <p>Looking to explore the grants data by location, sector or recipient? <a href="http://grantnav.threesixtygiving.org/" target="_blank">Head to GrantNav.</a></p> 
+          <p>Looking to build tools or do research with the data? <a href="http://standard.threesixtygiving.org/en/latest/getdata">You’ll find the JSON feed is here.</a></p>
         </div>
-        <div class="grid__2">
-          <p>This registry lists all of the organisations that currently publish data about their grants to the 360Giving data standard.</p>
-          <p>This registry is useful if you want to see a full list of funders who publish to the standard, or if you want to access the data in a machine-readable format to use in research, tools or websites. You can find examples of what can be created using this open grants data on the <a href="http://www.threesixtygiving.org/data/find-data/" target="_blank">Tools & Projects</a> page.</p>
+        <div class="grid__1">
           <div class="box box--orange"> 
             <h3 class="box__heading">Grant Data</h3>
-            <p>If you want to explore the grants data by location, sector or recipient, head to <a href="https://grantnav.threesixtygiving.org/" target="_blank">GrantNav</a>. You can use GrantNav to search, compare and download the data for free.</p>
+            <p>Want to publish your grants data openly with the 360Giving standard? Visit our support page or get in touch.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="prose__section accordion__extra grid grid--three-columns" aria-hidden>
-        <div class="grid__1">&nbsp;</div>
-        <div class="grid__2">
-          <p>Under each organisation, you can find:</p>  
-          <ul>
-            <li>a short description of the data they have published</li>
-            <li>the date they last published</li>
-            <li>links to download the data and visit their original data source</li>
-            <li>the licence they have published the data with (which affects how you can use it)</li>
-            <li>the value of the grants they have published data about</li>
-          </ul>
-
-          <div class="box box--teal"> 
-            <h3 class="box__heading">Developers</h3>
-            <p>For a JSON feed of published datasets visit <a href="http://standard.threesixtygiving.org/en/latest/getdata/" target="_blank">standard.threesixtygiving.org</a></p>
-          </div>
-          
-          <p>If you want to explore the grants data by location, sector or recipient, head to <a href="https://grantnav.threesixtygiving.org/" target="_blank">GrantNav</a>. You can use GrantNav to search, compare and download the data for free.</p>
-          <p>If you are a funder and would like to understand how to publish your grants data openly with the 360Giving data standard, visit our <a href="https://www.threesixtygiving.org/support/" target="_blank">support page</a> or <a href="http://www.threesixtygiving.org/contact/" target="_blank">get in touch.</a></p>
-          <p><small>* Funders make grants in different currencies. Grants are listed in the currency in which they were made.</small></p>
         </div>
       </section>
     </div>
