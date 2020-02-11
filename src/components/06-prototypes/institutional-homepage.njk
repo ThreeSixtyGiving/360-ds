@@ -1,0 +1,112 @@
+{% extends '@layout' %}
+
+{% block main_content %}
+
+<div class="cards-section">
+  <section class="grid grid--three-columns">
+    <div class="grid__all">
+      <h2 class="cards-section__tagline">We help organisations openly publish grants data, and help people use it to improve charitable giving. Join the <a href="#">#opengrants</a> movement.</h2>
+    </div>
+    <div class="grid__1">
+      <div class="base-card base-card--orange">
+        <div class="base-card__content">
+          <h2 class="base-card__title">Share</h2>
+          <p class="base-card__text">publish your data in the 360Giving Data Standard</p>
+          <p class="base-card__text">
+            <a href="#" class="button button--orange">Learn More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__1">
+      <div class="base-card base-card--teal">
+        <div class="base-card__content">
+          <h2 class="base-card__title">Explore</h2>
+          <!-- This is intentionally left here as an inline style, 
+               since it is only needed here to adjust the leading so it fits 2 lines -->
+          <p class="base-card__text" style="letter-spacing: -0.1px">Use our tools to search, download and visualise funding data</p>
+          <p class="base-card__text">
+            <a href="#" class="button button--teal">Learn More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__1">
+      <div class="base-card base-card--yellow">
+        <div class="base-card__content">
+          <h2 class="base-card__title">Advocate</h2>
+          <p class="base-card__text">Get behind the open grants movement</p>
+          <p class="base-card__text">
+            <a href="#" class="button button--yellow">Learn More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="cards-section">
+  <h2 class="cards-section__heading">Join Us</h2>
+  <div class="grid grid--four-columns">
+    <div class="grid__1">
+      <div class="base-card base-card--spacious base-card--teal">
+        <div class="base-card__content">
+          <h2 class="base-card__title">115</h2>
+          <p class="base-card__text">Funders</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid__1">
+      <div class="base-card base-card--spacious base-card--teal">
+        <div class="base-card__content">
+          <h2 class="base-card__title">199k</h2>
+          <p class="base-card__text">Recipients</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid__1">
+      <div class="base-card base-card--spacious base-card--teal">
+        <div class="base-card__content">
+          <h2 class="base-card__title">349k</h2>
+          <p class="base-card__text">Grants</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid__1">
+      <div class="base-card base-card--spacious base-card--teal">
+        <div class="base-card__content">
+          <h2 class="base-card__title"><small>£</small>30B</h2>
+          <p class="base-card__text">of Grant Data</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid__all align-center">
+      <a href="#" class="button button--teal">Explore the data</a>
+    </div>
+  </div>
+</section>
+
+<section class="cards-section">
+  <h2 class="cards-section__heading">From the Blog</h2>
+  <ul class="card-list">
+    <li class="card-list__item">{% render '@blog-card' %}</li>
+    <li class="card-list__item">{% render '@blog-card' %}</li>
+    <li class="card-list__item">{% render '@blog-card' %}</li>
+    <li class="card-list__item">{% render '@blog-card' %}</li>
+    <li class="card-list__item">{% render '@blog-card' %}</li>
+  </ul>
+  <div class="align-center">
+    <a href="#" class="button button--teal">More from the blog</a>
+  </div>
+</section>
+
+<div class="base-section">
+  <div class="base-card base-card--none" style="height: 500px; padding: 80px;">
+    <h1 style="opacity: .3;">INSERT HTML HERE</h1>
+  </div>
+</div>
+    
+  
+{% endblock %}
