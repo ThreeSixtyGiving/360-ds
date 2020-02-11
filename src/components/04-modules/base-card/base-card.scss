@@ -1,0 +1,44 @@
+.base-card {
+  background: $white;
+  box-shadow: 0px 4px 8px rgba($black, .15);
+  position: relative;
+  text-align: center; 
+
+  &:before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $black;
+  }
+}
+
+.base-card {
+  &__content {
+    padding: 16px;  
+    @include breakpoint($large) { padding: 16px; }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+}
+
+.base-card--orange:before { background-color: $orange; }
+.base-card--yellow:before { background-color: $yellow; }
+.base-card--teal:before   { background-color: $teal; }
+.base-card--red:before    { background-color: $red; }
+.base-card--none:before   { background-color: transparent; }
+
+.base-card--spacious {
+  @include breakpoint($large) { padding: 24px 16px; }
+}
