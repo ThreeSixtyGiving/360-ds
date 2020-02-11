@@ -1,0 +1,41 @@
+.blog-card {
+  background: $white;
+  box-shadow: 0px 4px 8px rgba($black, .15);
+  display: flex;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $teal;
+  }
+  
+  &__content { 
+    flex: 1;
+    padding: 32px;
+    @include breakpoint($large) { padding: 32px 48px 32px 48px; }
+  }
+
+  &__heading {
+    margin: 0 0 16px 0;
+  }
+  
+  &__image {
+    height: 0;
+    width: 26%;
+    padding-bottom: 26%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__byline {
+    font-size: .8rem;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba($black, .6);
+  }
+}
