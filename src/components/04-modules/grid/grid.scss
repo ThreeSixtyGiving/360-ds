@@ -16,6 +16,9 @@
   &--three-columns { 
     @include breakpoint($medium) { grid-template-columns: repeat(3, 1fr); }
   }
+  &--four-columns { 
+    @include breakpoint($medium) { grid-template-columns: repeat(4, 1fr); }
+  }
 
   &__2 { grid-column: auto / span 2; }
   &__3 { grid-column: auto / span 3; }
