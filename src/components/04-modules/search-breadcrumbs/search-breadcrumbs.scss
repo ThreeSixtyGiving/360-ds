@@ -1,0 +1,20 @@
+.search-breadcrumbs-section {
+  border-bottom: 1px solid rgba($base-color, .2);
+  padding: 16px 0;
+
+  @include breakpoint($small-only) {
+    overflow-x: scroll;
+    scroll-snap-align: center;
+    scroll-snap-type: x proximity;
+  }
+
+  &__panel { display: flex; }
+  
+  &__search { 
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__breadcrumbs { flex: 2; }
+}
