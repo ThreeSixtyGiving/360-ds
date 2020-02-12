@@ -1,0 +1,40 @@
+{% extends '@layout' %}
+
+{% block header %}
+  {% render '@hero' %}
+  <div class="search-breadcrumbs-section">
+  <div class="wrapper search-breadcrumbs-section__panel">
+    <div class="search-breadcrumbs-section__breadcrumbs">
+      <div class="breadcrumbs">
+        <a href="#" class="breadcrumbs__item">360Giving</a>
+        <i class="breadcrumbs__arrow">keyboard_arrow_right</i>
+        <a href="#" class="breadcrumbs__item">Blog</a>
+        <i class="breadcrumbs__arrow">keyboard_arrow_right</i>
+        <a href="#" class="breadcrumbs__item">Technical Blog</a>
+      </div>   
+    </div>
+    
+    <div class="search-breadcrumbs-section__search">
+      <input class="search-field <!-- js-search-filter -->" placeholder="Search" />  
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block main_content %}
+<div class="layout__content-inner">
+  <div class="wrapper">
+
+    <section class="cards-section">
+      <h2 class="cards-section__heading">Technical Blog</h2>
+      <ul class="card-list">
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+      </ul>
+    </section>
+  </div>
+</div>
+{% endblock %}
