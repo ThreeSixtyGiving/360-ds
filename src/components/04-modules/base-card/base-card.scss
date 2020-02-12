@@ -2,7 +2,9 @@
   background: $white;
   box-shadow: 0px 4px 8px rgba($black, .15);
   position: relative;
-  text-align: center; 
+  text-align: center;
+
+  @include breakpoint($touch) { margin-bottom: 16px; }
 
   &:before {
     content: '';
