@@ -1,0 +1,19 @@
+.breadcrumbs {
+  padding: 8px 0;
+
+  &__item,
+  &__arrow {
+    vertical-align: middle;
+    margin-top: -16px;
+    margin-right: 8px;
+  }
+
+  &__item { color: rgba($black, .6); }
+
+  &__arrow {
+    @extend .u-material-icons;
+    margin-bottom: -16px;
+  }
+
+  &--active { color: rgba($black, 1); }
+}
