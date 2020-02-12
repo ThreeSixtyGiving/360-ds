@@ -23,14 +23,15 @@
 // make the elements easier to click.
 .sidebar-list__trigger {
   cursor: pointer;
-  padding: 12px 8px;
+  padding: 12px 16px;
 }
 
 .sidebar-list__item {
   > a {
     display: block;
     padding: 8px 4px;
-    margin-right: 32px;
+    margin-right: 40px;
+    color: $black;
   }
 
 // Structural Styles for the Expanded State
@@ -45,13 +46,13 @@
 // Cosmetic Styles
 .sidebar-list__item {
   > .sidebar-list { 
-    background-color: rgba($teal, 0.03);
-    transition: max-height .4s ease-in-out; 
+    background-color: rgba($teal, 0.075);
+    transition: max-height .4s ease; 
   }
 
   .material-icons {
     font-size: 1.2rem;
-    transition: transform .1s ease-in-out;
+    transition: transform .1s ease;
     transform: rotate(0);
     color: $teal;
   }
