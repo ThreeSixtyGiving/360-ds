@@ -1,0 +1,95 @@
+.media-card {
+  background: $white;
+  box-shadow: 0px 4px 8px rgba($black, .15);
+  display: flex;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__header {
+    display: flex;
+    padding-bottom: 16px;
+    flex-direction: column;
+    @include breakpoint($medium) { 
+      flex-direction: row; 
+      align-items: flex-end;
+    }
+  }
+
+  &__heading,
+  &__subtitle,
+  &__links {
+    line-height: 1;
+    margin: 0;
+    @include breakpoint($medium-max) { margin-bottom: 8px; } 
+  }
+
+  &__heading { 
+    padding-right: 16px; 
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    flex: 1;
+    color: $teal;
+    font-weight: 400;
+  }
+
+  &__links {
+    margin-bottom: -4px;
+  }
+
+  &__link,
+  &__link > svg {
+    max-height: 24px;
+    max-width: 24px;
+    fill: rgba($black, .4);
+    &:hover { fill: rgba($orange, 1); }
+  }
+
+  &__link + &__link {
+    margin-left: 12px;
+  }
+  
+  &__content { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 48px;
+    @include breakpoint($large) { padding: 32px 48px 32px 48px; }
+  }
+   
+  &__image-wrapper {
+    width: 30%;
+    max-width: 320px;
+  }
+
+  &__image {
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__byline {
+    font-size: .8rem;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba($black, .6);
+  }
+}
+
+.media-card--teal:before { background-color: $teal;}
+.media-card--orange:before { background-color: $orange;}
+.media-card--yellow:before { background-color: $yellow;}
+.media-card--red:before { background-color: $red;}
