@@ -1,6 +1,22 @@
 .sidebar-section {
-  height: 100%;
-  box-shadow: 0 8px 8px rgba($black, .2);
-  padding-top: 64px;
-  padding-bottom: 64px;
+  margin-top: 96px;
+  box-shadow: 4px 0 8px rgba($black, .1);
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $black;
+  }
 }
+
+.sidebar-section--orange:before { background-color: $orange; }
+.sidebar-section--teal:before   { background-color: $teal; }
+.sidebar-section--yellow:before { background-color: $yellow; }
+.sidebar-section--red:before    { background-color: $red; }
