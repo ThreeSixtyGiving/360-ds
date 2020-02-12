@@ -1,0 +1,18 @@
+{% extends '@layout' %}
+
+{% block main_content %}
+
+<section class="cards-section">
+  <h2 class="cards-section__heading">Our People</h2>
+  <h2 class="cards-section__tagline">Meet the people working hard behind the scenes to get all this data out and ready for use</h2>
+  <ul class="card-list">
+    <li class="card-list__item">{% render '@media-card' %}</li>
+    <li class="card-list__item">{% render '@media-card' %}</li>
+    <li class="card-list__item">{% render '@media-card' %}</li>
+    <li class="card-list__item">{% render '@media-card' %}</li>
+    <li class="card-list__item">{% render '@media-card' %}</li>
+  </ul>
+  
+</section>
+      
+{% endblock %}

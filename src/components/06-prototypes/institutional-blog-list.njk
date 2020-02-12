@@ -1,0 +1,26 @@
+{% extends '@layout--two-columns' %}
+
+{% block header %}
+  {% render '@hero' %}
+  {% render '@search-breadcrumbs' %}
+{% endblock %}
+
+{% block main_content %}
+<div class="layout__content-inner">
+  <div class="wrapper">
+    <section class="cards-section">
+      <ul class="card-list">
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+        <li class="card-list__item">{% render '@media-card--blog' %}</li>
+      </ul>
+    </section>
+  </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+  {% render '@sidebar-section--blog' %}
+{% endblock %}
