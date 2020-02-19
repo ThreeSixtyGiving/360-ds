@@ -1,6 +1,17 @@
 .prose__section { 
   * + * { margin-top: 8px; }
   .grid > * + * { margin-top: 0; } // Patches a conflict when a .grid is inserted inside a .prose__section
+
+  .media-card {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    &__content {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    h3 { margin: 0; }
+  }
 }
 
 .prose p,

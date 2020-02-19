@@ -14,13 +14,17 @@
         <p>The template is a multi-sheet spreadsheet, and each sheet is described below.</p>
         <p>Many data producers will be able to fit all the information about a single grant on one row of a spreadsheet. In fact most data producers do exactly that, and provide a single sheet with many individual grants.</p>
 
+        {% render '@media-card' %}        
+
+
+
         <ul>
             <li>Where data producers have more complex information, for example where a grant has many beneficiary locations, we call this a One to many relationships. Information about how to create data with One to many relationships is described below.</li>
             <li>The 360Giving Spreadsheet template consists of a ‘grants’ sheet which contains the most common data fields.</li>
             <li>The Additional fields section provides details of all other possible fields that can be reported. (These are derived from the 360Giving JSON Schemas ).</li>
         </ul>
 
-        {% render '@code-block' %}
+        {# {% render '@code-block' %} #}
 
         {% render '@box' %}
 
