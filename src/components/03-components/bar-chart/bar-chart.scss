@@ -1,0 +1,43 @@
+.bar-chart {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  --scale: 127;
+
+  &__item {
+    --value: 0;
+    display: flex;
+    padding-bottom: 8px;
+  }
+
+  &__bar {
+    flex: 4;
+    position: relative;
+    margin-right: 40px;
+
+    > span {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-color: $yellow;
+      width: var(--width);
+    }
+
+    > span:after {
+      counter-reset: value var(--value);
+      content: counter(value);
+      position: absolute;
+      left: calc(100% + 8px);
+    }
+  }
+
+  &__label {
+    flex: 0;
+    min-width: 136px;
+    font-size: 1rem;
+    padding-right: 16px;
+    text-align: right;
+  }
+}
