@@ -1,5 +1,7 @@
 This is a minimalist accordion component, with some accessibility best practices applied.
 
+To work, the `.accordian__trigger` element needs to be placed inside the `.accordian` wrapper.
+
 ```
 .accordion
   # This is wrapper element, and it receives the class toggle
