@@ -28,6 +28,7 @@ $white: white;
 $main-color: $orange;
 $base-color: $black;
 
+
 :root {
     --text-base-size: 1rem;
     --text-base-line-height: 1.62;
@@ -49,6 +50,75 @@ $base-color: $black;
         // Edited this variable from 1.25rem.
         --text-base-size: 1rem;
     }
+}
+
+:root {
+  // $black: #153634;
+  // $orange: #DE6E26;
+  // $teal: #4DACB6;
+  // $yellow: #EFC329;
+  // $red: #BC2C26;
+  // $white: white;
+  
+  // All these variables are HSLA color mode. 
+  // They are intentionally not calling the HSLa() function, 
+  // so we can have the option to call them inside the components
+  // tweaking the alpha value when necessary.
+  // IMPORTANT: Notice that we need the "_hsl.scss" plugin
+  // to override the native HSL functions of sass. 
+  // This prevents a bug between Sass' and Natives HSL function 
+  // implementation and usage.
+
+  // Gray Scale
+  --gray-05-hsl: 0, 0%, 95%;
+  --gray-10-hsl: 0, 0%, 90%;
+  --gray-20-hsl: 0, 0%, 80%;
+  --gray-30-hsl: 0, 0%, 70%;
+  --gray-70-hsl: 0, 0%, 30%;
+  --gray-80-hsl: 0, 0%, 20%;
+  --black-hsl:   0, 0%, 10%;
+  
+  // Secondary Palette
+  --success-green-hsl:  140, 100%, 17%;
+  --error-red-hsl:        5,  81%, 95%;
+  --warning-yellow-hsl:  45, 78%, 98%;
+
+  // Theme Color - Prototype (HSLa)
+  --black-hsl:    243, 75%,  6%;
+  --orange-hsl:    23, 74%, 51%;
+  --teal-hsl:     186, 42%, 51%;
+  --yellow-hsl:    47, 86%, 55%;
+  --red-hsl:        2, 66%, 44%;
+
+  // Hierarchy Prototypes / Alises
+  --default-hsl: var(--black-hsl);
+  --primary-hsl: var(--orange-hsl);
+  --accent-hsl:  var(--teal-hsl);
+  
+  // Color Values for End Users
+  // Already calling the color functions.
+  
+  // Secondary Palette
+  --color-error:   hsla(var(--red-hsl), 1);
+  --color-warning: hsla(var(--yellow-hsl), 1);
+  --color-success: hsla(var(--success-green-hsl), 1);
+
+  // Primary Palette
+  --color-black:    hsla(var(--black-hsl),   1);
+  --color-orange:   hsla(var(--orange-hsl),   1);
+  --color-teal:     hsla(var(--teal-hsl),   1);
+  --color-yellow:   hsla(var(--yellow-hsl), 1);
+  --color-red:      hsla(var(--red-hsl),    1);
+  
+
+  // Color Hierarchy
+  --color-default: hsla(var(--black-hsl),   1);
+  --color-primary: hsla(var(--orange-hsl),   1);
+  --color-accent:  hsla(var(--teal-hsl), 1);
+
+  // Aliases
+  --base-hsl: var(--default-hsl);
+  --color-base: var(--color-default);
 }
 
 .clearfix:after {
