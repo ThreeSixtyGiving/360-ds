@@ -1,8 +1,11 @@
 .accordion-list {
+  list-style: none;
+
   .accordion-list__heading {
     padding: 0;
     margin: 0;
   }
+
   &__item {
     padding-bottom: 24px;
     counter-increment: items;
@@ -24,6 +27,7 @@
       color: $teal;
       background-color: white;
       z-index: 1;
+      transition: all .3s ease;
     }
 
     .accordion--expanded:before {
@@ -42,5 +46,18 @@
     }
 
     &:last-of-type .accordion:after { border: 0; }
+  }
+}
+
+.accordion-list--no-numbers {
+  .accordion:before {
+    content: 'add';
+    @extend .u-material-icons;
+    font-size: 1.8rem;
+    padding: 8px;
+  }
+
+  .accordion--expanded:before {
+    transform: rotate(45deg);
   }
 }
