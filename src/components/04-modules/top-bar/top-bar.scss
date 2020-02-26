@@ -1,102 +1,83 @@
+// Resets
 .top-bar {
-  position: relative;
-  display: flex;
-  border-bottom: 1px solid rgba($base-color, .2);
+  // Resetting styles
+  ul { padding: 0; margin: 0;}
+  li { list-style: none; margin: 0; }
+  a { text-decoration: none; }
+}
 
-  &__menu-trigger {
-    flex: 0;
-    all: inherit;
-    padding: 8px;
-    border: 0;
-  }
+// Component Styles Variables
 
-  &__menu {
-    flex: 1; 
-    text-align: right;
+.top-bar {
+  // Off Canvas panel width 
+  // for mobile screens
+  --panel-width: 280px;
+  
+  @include breakpoint($medium-up) {
+  // for tablet and desktop screens
+  --panel-width: 350px;
   }
 }
 
+// STRUCTURAL STYLES
+
+// Top-Bar - Structure
+.top-bar {
+  display: flex;
+  position: relative;
+  &__menu { flex: 1; }
+  &__menu-trigger { 
+    flex: 0; 
+    line-height: 1; 
+  }
+}
+
+// Contextual Menu - Structure
 .contextual-menu {
   @include breakpoint($small-only) { display: none; }
-  &__button {
-    display: inline-block;
-    padding: 8px 24px;
-    transition: all .5s;
-
-    &:hover {
-      background-color: $base-color;
-      color: $white;
-    }
+  &__item { 
+    display: inline-block; 
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: -moz-middle-with-baseline;
   }
-
-  &__button + &__button { margin-left: -4px; }
-
-  &--disabled {
-    pointer-events: none;
-    opacity: .3;
+  &__item + &__item { margin-left: -5px; }
+  &--disabled { 
+    opacity: .4; 
+    pointer-events: none; 
   }
 }
 
-// Styles for the OFF-CANVAS-MENU
-
+// Off-canvas Menu - Structure
 .off-canvas-menu {
-  position: fixed;
-  z-index: 1000;
   top: 0;
   bottom: 0;
-  left: -300px;
-  width: 280px;
-  transition: all .4s ease;
+  z-index: 1000;
   display: block;
- 
-  @include breakpoint($medium-up) { 
-    width: 350px;
-    left: -370px;
-  }
+  position: fixed;
+  box-sizing: border-box;
+  width: var(--panel-width);
+  left: calc(-1 * var(--panel-width) - 20px);
 
-  padding: 48px 32px;
-  background-color: darken($base-color, 4);
-  box-shadow: 4px 4px 16px rgba($base-color, .2);
-
-
-  &__list { 
-    border-bottom: 1px solid rgba($white, .2);
-    padding-bottom: 24px; 
-    margin-bottom: 24px;
-    list-style-type: none;
-    padding: 0;
-
-  }
+  &__list { list-style-type: none; }
+  &__heading { margin-bottom: 0; }
   
   &__trigger {
-    // Resetting Button Styles
-    background-color: transparent;
-    border: 0;
-
+    cursor: pointer;
     position: absolute;
-    right: 0;
     top: 0;
-    padding: 8px;
-    color: rgba($white, .4);
-
+    right: 0;
+    border: 0; 
   }
+  
+  &--disabled { pointer-events: none; }
 
-  &__item {
-    padding-bottom: 8px;
-    color: rgba($white, .6);
+  &__submenu {
 
-    &:hover a { color: $yellow; }
-  }
-
-  &__heading {
-    color: $white;
-    font-weight: 400;
-    margin-bottom: 0;
-  }
-
-  &--disabled {
-    pointer-events: none;
-    opacity: .4;
+    .submenu__list { 
+      padding-left: 16px;
+      display: block;
+      position: static;
+    }
   }
 }
 
@@ -104,6 +85,133 @@
   @include breakpoint($medium-up) { display: none; }
 }
 
-.off-canvas-menu--expanded {
-  left: 0;
+.off-canvas-menu--expanded { left: 0; }
+
+
+// Submenu Structure
+.submenu { position: relative;
+  &__list { 
+    width: auto;
+    display: none;
+    text-align: left;
+    position: absolute; 
+    white-space: nowrap;
+  }
+  &__item { display: block; } 
+  &__button { 
+    display: inline-block; 
+    box-sizing: border-box;
+  }
+  
+  &__item:not(:first-child) &__button { margin-top: -1px; }
+
+  &:hover &__list { display: block; }
+}
+
+// Top-Bar - Visual Styles
+.top-bar {
+  // Colors Variables
+  // These values should follow this format:
+  // This way, the css variables can 
+  // be used inside the hsla() function
+  --bg-color: var(--teal-hsl);
+  --text-color: var(--black-hsl);
+  --active-color: var(--orange-hsl);
+
+  border-bottom: 1px solid hsla(var(--black-hsl), .2);
+  
+  &__menu-trigger {
+    border: 0;
+    padding: 4px 8px 2px;
+  }
+
+  &__menu {
+    text-align: right;
+  }
+}
+
+// Submenu - Visual Styles
+.submenu {
+  &__list {
+    width: auto; // This makes the submenu items have the same width.
+  }
+
+  &__item {
+    
+  }
+
+  &__button {
+    width: 100%;
+    padding: 8px 24px 8px;
+    border: 1px solid hsla(var(--black-hsl), .1);
+    color: hsla(var(--text-color), 1);
+
+    &:hover {
+      background-color: hsla(var(--bg-color), .1);
+    }
+  }
+}
+
+// Contextual Menu - Visual Styles
+.contextual-menu {
+  &__item {
+
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 8px 24px 8px;
+    transition: all .5s;
+    color: hsla(var(--text-color), 1);
+
+    &:hover {
+      color: hsla(var(--text-color), 1);
+      background-color: hsla(var(--bg-color), .2);
+    }
+  }
+
+  &--active {
+    background-color: hsla(var(--active-color), .1);
+  }
+}
+
+
+// Off-canvas Menu - Visual Styles
+.off-canvas-menu {
+  padding: 48px 32px;
+  transition: all .4s ease;
+  background-color: hsla(var(--bg-color), 1);
+  box-shadow: 4px 4px 16px hsla(var(--bg-color), .2);
+
+  &__list { 
+    padding: 0 0 24px 0;
+    margin-bottom: 24px;
+    border-bottom: 1px solid hsla(var(--text-color), .2);
+  }
+  
+  &__trigger {
+    padding: 8px;
+    background-color: transparent;
+    color: hsla(var(--text-color), .4);
+  }
+
+  &__item a {
+    display: inline-block;
+    padding-bottom: 8px;
+    color: hsla(var(--black-hsl), .6);
+
+    &:hover  { color: hsla(var(--black-hsl), 1); }
+  }
+
+  &__heading {
+    color: var(--colors-white);
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  &__contextual {
+    padding-bottom: 24px;
+  }
+
+  &--disabled { opacity: .4; }
 }

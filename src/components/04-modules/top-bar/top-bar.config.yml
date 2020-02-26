@@ -6,14 +6,26 @@ context:
   logo: "main" # main, insights, standards, resources, challenge, registry, map, grantnav
   state:  # expanded
   contextual_menu:
+    - name: Home
+      url: '#'
+      status: active
     - name: About
-      url: '/about.html'
-    - name: Test
-      url: 'http://ccm.design'
+      url: '#'
+    - name: CCM Design
+      url: 'http://ccmdesign.ca'
+      target: _blank
+      subitems:
+        - name: Button Lael longer
+          url: '#'
+        - name: Button Label longer
+          url: '#'
+        - name: CCM Design
+          url: 'http://ccmdesign.ca'
+          target: _blank
     - name: About
       url: '/about.html'
       status: disabled
-    - name: Get the data
+    - name: Test
       url: 'http://ccm.design'
   offcanvas_menu:
     - name: Test
@@ -29,6 +41,7 @@ context:
     - name: Test
       url: 'http://ccm.design'
     - title: Menu Group Title
-    
+    - name: Test
+      url: 'http://ccm.design'
 
 

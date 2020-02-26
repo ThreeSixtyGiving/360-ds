@@ -2,23 +2,57 @@
   <button class="top-bar__menu-trigger"><i class="material-icons">menu</i></button>
 
   <nav class="top-bar__menu contextual-menu">
-    <a href="/" class="contextual-menu__button">Home</a>
-    {% for item in contextual_menu %}
-    <a href="{{ item.url }}" class="contextual-menu__button{% if item.status %} contextual-menu--{{ item.status }}{% endif %}" title="{{ item.name }}">{{ item.name }}</a>
-    {% endfor %}
+    <ul>
+      {% for item in contextual_menu %}
+      <li class="contextual-menu__item{% if item.subitems %} submenu{% endif %}"><a class="contextual-menu__button{% if item.status %} contextual-menu--{{ item.status }}{% endif %}" href="{{ item.url }}" title="{{ item.name }}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.name }}</a>
+        
+        {% if item.subitems %}
+          <ul class="submenu__list">
+          {% for a in item.subitems %}
+            <li class="submenu__item"><a class="submenu__button{% if a.status %} submenu--{{ a.status }}{% endif %}" href="{{ a.url }}" title="{{ a.name }}"{% if a.target %} target="{{ a.target }}"{% endif %}>{{ a.name }}</a>
+          {% endfor %}
+          </ul>
+        {% endif %}
+
+      </li>
+    {% endfor %}  
+    </ul>
   </nav>
 
   <div class="off-canvas-menu{% if state %} off-canvas-menu--{{ state }}{% endif %}" aria-hidden>
     <button class="off-canvas-menu__trigger"><i class="material-icons">close</i></button>
 
     <nav>
+      <ul class="off-canvas-menu__contextual">
+      {% for item in contextual_menu %}
+        <li class="off-canvas-menu__item{% if item.subitems %} off-canvas-menu__submenu{% endif %}">
+          <a href="{{ item.url }}" 
+             class="{% if item.status %} off-canvas-menu--{{ item.status }}{% endif %}" title="{{ item.name }}"
+             {% if item.target %} target="{{ item.target }}"{% endif %}>
+            {{ item.name }}
+          </a>
+          {% if item.subitems %}
+            <ul class="submenu__list">
+            {% for a in item.subitems %}
+              <li class="submenu__item"><a class="{% if a.status %} submenu--{{ a.status }}{% endif %}" href="{{ a.url }}" title="{{ a.name }}"{% if a.target %} target="{{ a.target }}"{% endif %}>{{ a.name }}</a>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}  
+      </ul>
+      
       <ul class="off-canvas-menu__list">
-        <li class="off-canvas-menu__item"><a href="/">Home</a></li>
         {% for item in offcanvas_menu %}
           {% if item.title %}
-          <li class="off-canvas-menu__item{% if item.status %} off-canvas-menu--{{ item.status }} {% endif %}"><h3 class="off-canvas-menu__heading">{{ item.title }}</h3></li>
+          <li class="off-canvas-menu__item
+          {% if item.status %} off-canvas-menu--{{ item.status }}{% endif %}">
+            <h3 class="off-canvas-menu__heading">{{ item.title }}</h3>
+          </li>
           {% else %}
-          <li class="off-canvas-menu__item{% if item.status %} off-canvas-menu--{{ item.status }} {% endif %}"><a href="{{ item.url }}">{{ item.name }}</a></li>
+          <li class="off-canvas-menu__item{% if item.status %} off-canvas-menu--{{ item.status }}{% endif %}">
+            <a href="{{ item.url }}">{{ item.name }}</a>
+          </li>
           {% endif %}
         {% endfor %}
       </ul>
