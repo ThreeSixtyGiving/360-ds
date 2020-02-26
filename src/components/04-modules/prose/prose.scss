@@ -113,7 +113,8 @@
   }
 }
 
-.prose blockquote {
+.prose blockquote,
+.prose blockquote p {
   font-size: 1.4rem;
   line-height: 1.6;
   color: rgba($orange, 1);
