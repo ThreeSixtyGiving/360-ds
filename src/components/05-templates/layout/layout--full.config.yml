@@ -3,5 +3,5 @@ status: wip
 context:
   layout:
     hero: false
-    modifier: false
+    modifier: full
     columns: single-column

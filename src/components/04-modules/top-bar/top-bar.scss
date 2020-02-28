@@ -25,6 +25,7 @@
 .top-bar {
   display: flex;
   position: relative;
+  z-index: 10000;
   &__menu { flex: 1; }
   &__menu-trigger { 
     flex: 0; 
@@ -166,7 +167,7 @@
 
     &:hover {
       color: hsla(var(--text-color), 1);
-      background-color: hsla(var(--bg-color), .2);
+      background-color: hsla(var(--bg-color), .8);
     }
   }
 

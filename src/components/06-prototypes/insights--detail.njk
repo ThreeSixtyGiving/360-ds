@@ -1,0 +1,61 @@
+{% extends '@layout--full' %}
+
+{% block header %}
+  <div class="base-section">
+    <div class="grid grid--four-columns">
+      <div class="grid__1">
+        <div class="base-card base-card--orange">
+          <div class="base-card__content">
+            <h2 class="base-card__title">593</h2>
+            <p class="base-card__text">Grants</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid__1">
+        <div class="base-card base-card--teal">
+          <div class="base-card__content">
+            <h2 class="base-card__title">265</h2>
+            <p class="base-card__text">Recipients</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid__1">
+        <div class="base-card base-card--yellow">
+          <div class="base-card__content">
+            <h2 class="base-card__title">£8.5</h2>
+            <p class="base-card__text">Million Total</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid__1">
+        <div class="base-card base-card--yellow">
+          <div class="base-card__content">
+            <h2 class="base-card__title">£10k</h2>
+            <p class="base-card__text">Average Grant*</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block main_content %}
+  
+
+{% render '@filter-panel' %}
+
+<div class="layout__content-inner">
+  <div class="grid grid--two-columns">
+    <div class="grid__all">{% render '@chart-card' %}</div>
+    <div class="grid__1">{% render '@chart-card' %}</div>
+    <div class="grid__1">{% render '@chart-card' %}</div>
+    <div class="grid__1">{% render '@chart-card' %}</div>
+    <div class="grid__1">{% render '@chart-card' %}</div>
+  </div>
+</div>
+{% endblock %}
+
+  
