@@ -2,6 +2,19 @@
 
 {% block header %}
   <div class="base-section">
+    <div class="grid grid--single-column">
+      <hgroup class="header-group">
+        <h3 class="header-group__brow">Grants made by</h3>
+        <h2 class="header-group__title">A B Charitable Trust <small>between</small> 2013 and 2019</h2>
+      </hgroup>
+
+      <p class="header-group__excerpt">
+        <strong>From the 360Giving data registry.</strong> | <a href="#">Download original file (xlsx)</a><br>
+        Published by A B Charitable Trust with a Creative Commons Attribution 4.0 International (CC BY 4.0) licence.</p>
+    </div>
+    
+    <div class="spacer-3"></div>
+
     <div class="grid grid--four-columns">
       <div class="grid__1">
         <div class="base-card base-card--orange">
@@ -44,7 +57,6 @@
 
 {% block main_content %}
   
-
 {% render '@filter-panel' %}
 
 <div class="layout__content-inner">
