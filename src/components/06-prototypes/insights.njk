@@ -19,7 +19,34 @@
 
 {% block main_content %}
 <div class="layout__content-inner">
-  <h1>Insights Homepage</h1>
+  <div class="accordion">
+    <div class="intro-section">
+      <h2>Select a 360Giving dataset <br>or upload a file that meets the 360Giving Standard.</h2>  
+      {% render '@progress-bar' %}
 
+      {# <button class="button accordion__trigger">Choose Dataset</button>
+      <button class="button button--teal modal__trigger" data-id="modal-01">Upload Dataset</button> #}
+    </div>
+    <div class="accordion__extra" aria-hidden>
+      <ul class="card-list">
+        {% for i in range(10) %}
+        <li class="card-list__item">
+        {% render '@insights-card' %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="modal-01" class="modal" aria-hidden>
+  <div class="modal__overlay modal__trigger" data-id="modal-01"></div>
+  <div class="modal__window">
+    <button class="modal__close modal__trigger" data-id="modal-01"></button>
+    <div class="modal__content">
+      {% render '@upload-file' %}
+    </div>
+  </div>
 </div>
 {% endblock %}
+
