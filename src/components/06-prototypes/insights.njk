@@ -22,10 +22,15 @@
   <div class="accordion">
     <div class="intro-section">
       <h2>Select a 360Giving dataset <br>or upload a file that meets the 360Giving Standard.</h2>  
-      {% render '@progress-bar' %}
+      
+      <button class="button accordion__trigger">Choose Dataset</button>
+      <button class="button button--teal modal__trigger" data-id="modal-01">Upload Dataset</button>
 
-      {# <button class="button accordion__trigger">Choose Dataset</button>
-      <button class="button button--teal modal__trigger" data-id="modal-01">Upload Dataset</button> #}
+      
+      {# 
+        This is the Progress Bar component that appears once the file is added to the upload-file modal (#modal-01 below)
+        {% render '@progress-bar' %} 
+      #}
     </div>
     <div class="accordion__extra" aria-hidden>
       <ul class="card-list">
@@ -37,6 +42,16 @@
       </ul>
     </div>
   </div>
+  <article class="media-card media-card--orange media-card--self-contained">
+    <div class="media-card__content">
+      <header class="media-card__header">
+        <h3 class="media-card__heading">Data Sources</h3>
+      </header>
+      <p>Charity data is sourced from <a href="https://findthatcharity.uk/" target="_blank">findthatcharity.uk</a> and postcode data from <a href="https://findthatpostcode.uk/" target="_blank">postcodes.findthatcharity.uk</a>. Company data is fetched using Companies House URIs. All external data is used under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank">Open Government Licence</a>.</p>
+      <p><a href="https://insights.threesixtygiving.org/about#data-sources">More about data sources</a></p>
+    </div>
+  </article>
+
 </div>
 
 <div id="modal-01" class="modal" aria-hidden>
