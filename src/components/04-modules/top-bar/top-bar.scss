@@ -25,7 +25,7 @@
 .top-bar {
   display: flex;
   position: relative;
-  z-index: 10000;
+  z-index: 1000;
   &__menu { flex: 1; }
   &__menu-trigger { 
     flex: 0; 
