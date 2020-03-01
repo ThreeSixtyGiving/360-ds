@@ -1,0 +1,37 @@
+<article class="insights-card" title="{{ insights_card.name }}">
+  <div class="insights-card__pub-logo">
+      <a href="{{ insights_card.publisher.website }}" target="_blank">
+      {% if insights_card.publisher.logo %}
+        <img src="{{ insights_card.publisher.logo }}" alt="{{ insights_card.publisher.name }}">
+      {% endif %}
+      </a>
+  </div>
+  <div class="insights-card__content">
+    <h3 class="insights-card__pub-name">{{ insights_card.publisher.name }}</h3>
+    
+    <ul class="insights-card__list">
+      {% for grant in insights_card.datasets %}
+      <li class="insights-card__item ">
+        <a href="grant.url">
+          <table class="grant">
+            <tr class="grant__line grant--title-line">
+              <td class="grant__title" colspan="3">{{ grant.title }}</td>
+            </tr>
+
+            <tr class="grant__line grant--amounts-line">
+              <td class="grant__pub-date">Published in {{ grant.issued | replace("-", "/")}}</td>
+
+              <td class="grant__records">Records
+                <span class="grant__grant-n">{{ grant.records }}</span>
+              </td>
+              <td class="grant__amount">
+                £ <span class="grant__amount-n">{{grant.amount}}</span>
+              </td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>

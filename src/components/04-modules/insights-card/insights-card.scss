@@ -1,0 +1,110 @@
+.insights-card {
+  display: flex;
+  margin-right: 8px;
+  
+  &__content { flex: 1; }
+  }
+
+.insights-card {
+  background: $white;
+  box-shadow: 0px 4px 8px rgba($black, .1);
+  position: relative;
+  padding: 16px 24px 16px 24px;  
+  
+  @include breakpoint($large) {
+    padding: 32px 40px 16px 40px;
+  }
+
+  &:before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $teal;
+  }
+
+  &__pub-logo { width: 132px; }
+
+  &__pub-name {
+    font-size: 1.5rem;
+    color: $base-color;
+    font-weight: 300;
+    padding: 0 16px;
+  }
+  
+  &__content { margin-left: 32px; }
+  &__list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  &__item {
+    
+  }
+
+  &__item > a { 
+    color: $black; 
+    display: block;
+    padding: 8px 16px;
+  }
+
+  &__item > a:hover { background-color: rgba($black, .05); }
+}
+
+.grant {
+  width: 100%;
+  cursor: pointer;
+
+  &, td { border: 0; }
+  td { 
+    padding: 0; 
+    vertical-align: bottom;
+    cursor: pointer;
+  }
+
+  &__line {
+    font-style: normal;
+    font-weight: 300;
+  }
+  
+  &--title-line td { 
+    padding-top: 4px; 
+    font-weight: 400;
+    padding-bottom: 4px;
+  }
+
+  &--amounts-line td { 
+    line-height: 1.3;
+    border-bottom: 0;
+  }
+
+  &--data-line {
+    border-bottom: 1px solid rgba($black, .1); 
+    td { padding: 0 0 8px; }
+
+    &:last-child { border-bottom: 0; }
+  }
+
+  &__records { width: 35%; }
+
+  &__spacer { padding-left: 24px; }
+  
+  &__pub-date { width: 40%; }
+
+  &__title { width: 100%; }
+  
+  &__amount { 
+    width: 100%; 
+    text-align: right;
+  }
+
+  &__amount { margin-bottom: 8; }
+
+  &__grant-n,
+  &__amount-n { font-size: 1.6rem; }
+
+  &__grant-n { font-weight: 300; }
+  &__amount-n { font-weight: 400; }
+}
