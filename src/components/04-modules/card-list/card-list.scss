@@ -4,3 +4,34 @@
 
   &__item + &__item { margin-top: 24px; }
 }
+
+.card-list--linked {
+  margin-left: 40px;
+
+  .card-list__item { position: relative; }
+
+  .card-list__item:before {
+    content: '';
+    width: 4px;
+    height: calc(100% + 32px);
+    position: absolute;
+    top: 48px;
+    left: -40px;
+    background-color: rgba($base-color, .2);
+  }
+
+  .card-list__item:last-of-type::before { height: 0;
+
+  }
+
+  .card-list__item:after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 48px;
+    left: -50px;
+    background-color: $base-color;
+  }
+}

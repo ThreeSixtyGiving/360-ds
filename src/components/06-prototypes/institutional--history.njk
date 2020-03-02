@@ -1,0 +1,20 @@
+{% extends '@layout' %}
+
+{% block header %}
+  {% render '@hero' %}
+{% endblock %}
+
+{% block main_content %}
+  
+  <div class="layout__content-inner">
+  <ul class="card-list card-list--linked">
+    {% for i in range(5) %}
+      <li class="card-list__item">
+      {% render '@media-card' %}
+      </li>
+    {% endfor %}  
+  </ul>
+  
+  </div>
+      
+{% endblock %}
