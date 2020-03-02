@@ -1,6 +1,6 @@
 <article class="registry-card" title="{{ title }}">
   <div class="registry-card__pub-logo">
-      <a href="{{ data.publisher.website }}" target="_blank">
+      <a href="{{ data.publisher.website }}" target="_blank" rel="noreferrer">
       {% if publisher.logo %}
         <img src="{{ data.publisher.logo }}" alt="{{ data.publisher.name }}">
       {% endif %}
@@ -68,7 +68,7 @@
               <td class="registry-grant__license">
                 {% if grant.license_name %}
                 Licence
-                <a href="{{grant.license}}" target="_blank">
+                <a href="{{grant.license}}" target="_blank" rel="noreferrer">
                 
                 {% if grant.license_name == "Creative Commons Attribution 4.0 International (CC BY 4.0)" %}
                   <img class="license license--cc" src="/images/licenses/creative-commons-main.svg" alt="{{grant.license_name}}">
