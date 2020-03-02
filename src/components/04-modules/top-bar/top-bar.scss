@@ -90,7 +90,9 @@
 
 
 // Submenu Structure
-.submenu { position: relative;
+.submenu { 
+  position: relative;
+
   &__list { 
     width: auto;
     display: none;
@@ -133,13 +135,9 @@
 
 // Submenu - Visual Styles
 .submenu {
-  &__list {
-    width: auto; // This makes the submenu items have the same width.
-  }
+  &__list { width: auto; } // This makes the submenu items have the same width. 
 
-  &__item {
-    
-  }
+  &__item { background-color: $white; }
 
   &__button {
     width: 100%;
@@ -147,9 +145,7 @@
     border: 1px solid hsla(var(--black-hsl), .1);
     color: hsla(var(--text-color), 1);
 
-    &:hover {
-      background-color: hsla(var(--bg-color), .1);
-    }
+    &:hover { background-color: hsla(var(--bg-color), .1); }
   }
 }
 
