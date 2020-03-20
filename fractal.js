@@ -27,7 +27,9 @@ fractal.components.set('default.status', 'wip');
 const mandelbrot = require('@frctl/mandelbrot');
 
 const myCustomisedTheme = mandelbrot({
+    favicon: '/images/favicon/favicon.ico',
     skin: "navy"
+
 });
 
 fractal.web.theme(myCustomisedTheme);
