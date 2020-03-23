@@ -99,7 +99,9 @@
     text-align: left;
     position: absolute; 
     white-space: nowrap;
+    
   }
+  &__list:last-child {right: 1px;}
   &__item { display: block; } 
   &__button { 
     display: inline-block; 

@@ -27,6 +27,15 @@ context:
       status: disabled
     - name: Test
       url: 'http://ccm.design'
+      target: _blank
+      subitems:
+        - name: Button Lael longer
+          url: '#'
+        - name: Button Label longer
+          url: '#'
+        - name: CCM Design
+          url: 'http://ccmdesign.ca'
+          target: _blank
   offcanvas_menu:
     - name: Test
       url: 'http://ccm.design'
