@@ -2,23 +2,27 @@
     text-align: right;
     padding-top: 0px;
 
+
+   
+
     &__heading {
       padding: 0 32px 8px;
       margin: 0;
       font-weight: 400;
+      background-color: #ffffff
     }
 
     &__content {
+     
+
+      background-color: #ffffff
+  
 
     }
 
     &__text{
       padding: 102px;
       max-width:700px;
-    }
-
-    p {
-      text-align: justify;
     }
 }
 
@@ -46,16 +50,9 @@
   }
 }
 
-.content{
-  padding: 80px;
-}
-
-.scroll {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.scroll + .sidebar-blog__text {
-  padding-top: 300px;
+div.sidebar-section{
+  top:0;
+  position: sticky;
+  bottom: 0px;
+    
 }
