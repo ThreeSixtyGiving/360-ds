@@ -17,6 +17,12 @@
   }
 }
 
+
+.sidebar-section--fixed{
+  top: 0;
+  position: sticky;
+}
+
 .sidebar-section--orange:before { background-color: $orange; }
 .sidebar-section--teal:before   { background-color: $teal; }
 .sidebar-section--yellow:before { background-color: $yellow; }
