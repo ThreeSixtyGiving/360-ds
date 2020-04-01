@@ -1,0 +1,20 @@
+title: "Logos"
+status: wip
+context:
+  logos:
+    - name: Main Logo
+      file: 360giving-main.svg
+    - name: Challenge
+      file: 360giving-challenge.svg
+    - name: GrantNav
+      file: 360giving-grantnav.svg
+    - name: Insights
+      file: 360giving-insights.svg
+    - name: Map
+      file: 360giving-map.svg
+    - name: Registry
+      file: 360giving-registry.svg
+    - name: Resources
+      file: 360giving-resources.svg
+    - name: Standard
+      file: 360giving-standard.svg

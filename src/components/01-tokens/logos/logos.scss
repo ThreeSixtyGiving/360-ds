@@ -1,0 +1,19 @@
+// This CSS is for the Fractal Platform only. 
+// It has no value for the products themselves. 
+
+#logos {
+  padding: 40px 0;
+  .base-card {
+    &:before {
+      background-color: transparent;
+    }
+  }
+  .button {
+    margin-top: 40px;
+  }
+}
+
+#main_logo {
+  padding: 40px 0 100px;
+  text-align: center;
+}
