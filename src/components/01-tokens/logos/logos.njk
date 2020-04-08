@@ -1,18 +1,30 @@
 <div id="logos" class="wrapper">
   <section id="main_logo">
-    {% set main_logo = logos | first %}
-    <img src="assets/images/360-logos/{{ main_logo.file }}" alt="{{ main_logo.name }}">
+    {% set main_logo = logos.color | first %}
+    <img src="assets/images/360-logos/{{main_logo.name | lower }}/{{ main_logo.file_svg }}" alt="{{ i.name }}">
   </section>
-  <section class="grid grid--three-columns">
-  {% for i in logos %}
-  <div class="grid__1">
+  <section class="wrapper">
+    <h2 class="align-center">Here you can download any of our logos</h2>
+    {% for i in logos.color %}
     <div class="base-card base-card--spacious">
-      <div class="base-card__content">
-        <img src="assets/images/360-logos/{{ i.file }}" alt="{{ i.name }}">
-        <a class="button button--small" href="assets/images/360-logos/{{ i.file }}" download>Download</a>
+      
+      <div class="grid grid--two-columns">
+        <div class="grid__1">
+          <div class="base-card__content">
+            <img src="assets/images/360-logos/{{i.name | lower }}/{{ i.file_svg }}" alt="{{ i.name }}">    
+          </div>
+        </div>
+        <div class="grid__1 negative-logo">
+          <div class="base-card__content">
+            <img src="assets/images/360-logos/{{i.name | lower }}/{{ i.file_svg_white }}" alt="{{ i.name }}">    
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <a class="button button--small" href="assets/images/360-logos/{{i.name | lower }}/{{ i.file_zip }}" download>Download</a>
       </div>
     </div>
-  </div>
-  {% endfor %}
+    {% endfor %}
   </section>
 </div>

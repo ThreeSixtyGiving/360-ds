@@ -3,17 +3,34 @@
 
 #logos {
   padding: 40px 0;
-  .base-card {
-    &:before {
-      background-color: transparent;
-    }
+
+  .wrapper {
+    max-width: 700px;
   }
-  .button {
-    margin-top: 40px;
+
+  .base-card {
+    &:before { background-color: transparent; }
+    img { height: 100px; }
+    padding: 0 0 24px 0;
+    margin-bottom: 16px;
+    &__content {
+      padding: 48px;
+    }
+
+  }
+
+  .button { margin-top: 24px; }
+
+  .negative-logo {
+    background-color: $black;
   }
 }
 
 #main_logo {
   padding: 40px 0 100px;
   text-align: center;
+
+  > img {
+    max-width: 400px;
+  }
 }

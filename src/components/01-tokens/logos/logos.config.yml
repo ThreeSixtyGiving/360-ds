@@ -2,19 +2,48 @@ title: "Logos"
 status: wip
 context:
   logos:
-    - name: Main Logo
-      file: 360giving-main.svg
-    - name: Challenge
-      file: 360giving-challenge.svg
-    - name: GrantNav
-      file: 360giving-grantnav.svg
-    - name: Insights
-      file: 360giving-insights.svg
-    - name: Map
-      file: 360giving-map.svg
-    - name: Registry
-      file: 360giving-registry.svg
-    - name: Resources
-      file: 360giving-resources.svg
-    - name: Standard
-      file: 360giving-standard.svg
+    color:
+      - name: Main
+        file_svg: 360giving-logo.svg
+        file_svg_white: 360giving-logo-white.svg
+        file_zip: 360giving-logo-package.zip
+      
+      - name: Icon
+        file_svg: 360giving-icon.svg
+        file_svg_white: 360giving-icon-white.svg
+        file_zip: 360giving-icon-logo-package.zip
+
+      - name: Challenge
+        file_svg: 360challenge-color.svg
+        file_svg_white: 360challenge-white.svg
+        file_zip: 360challenge-logo-package.zip
+      
+      - name: GrantNav
+        file_svg: 360grantnav-color.svg
+        file_svg_white: 360grantnav-white.svg
+        file_zip: 360grantnav-logo-package.zip
+      
+      - name: Insights
+        file_svg: 360insights-color.svg
+        file_svg_white: 360insights-white.svg
+        file_zip: 360insights-logo-package.zip
+      
+      - name: Map
+        file_svg: 360map-color.svg
+        file_svg_white: 360map-white.svg
+        file_zip: 360map-logo-package.zip
+      
+      - name: Registry
+        file_svg: 360registry-color.svg
+        file_svg_white: 360registry-white.svg
+        file_zip: 360registry-logo-package.zip
+      
+      - name: Resources
+        file_svg: 360resources-color.svg
+        file_svg_white: 360resources-white.svg
+        file_zip: 360resources-logo-package.zip
+      
+      - name: Standard
+        file_svg: 360standard-color.svg
+        file_svg_white: 360standard-white.svg
+        file_zip: 360standard-logo-package.zip
