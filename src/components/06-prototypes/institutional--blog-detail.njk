@@ -8,7 +8,43 @@
 {% block main_content %}
   
   <div class="layout__content-inner">
-  {% render '@prose' %}
+  
+  <div class="prose">
+    <hgroup class="prose__long-heading">
+      <h1>COVID19 Update</h1>
+      <h2>We’ve updated our ‘who funds who’ data and visualisation to support collaboration</h2>
+      <p class="prose__author">By <a href="#">Anna Scott</a> on March 25, 2020</p>
+    </hgroup>
+
+    <section class="prose__intro">
+      <p>We have updated our data and ‘who funds who’ visualisation to help funders clearly see which other funders share their recipients. We hope it will help funders to coordinate better on their responses to the coronavirus crisis.</p>
+    </section>
+    
+    <section class="prose__section">
+      <p>This is an abridged version of a blogpost we published in 2018, when we first launched our ‘Funding playground’ visualisation based on grants awarded in 2017.</p>
+
+      <p>With over 120 funders now publishing data on who they fund in the 360Giving Data Standard, we are able to explore the network of UK grants, and answer a critical question in crises such as this – who funds who?</p>
+
+      <p>We want to support funders to understand who else gives grants to their grantees, in order that they can coordinate more easily in their response to the coronavirus crisis. </p>
+
+      <p>We have updated our chord diagram visualisation to help funders to see this at a glance, using the Flourish tool. This type of visualisation shows all the entities (in this case funders) in a ring, with lines showing connections (in this case shared grant recipients) between them. If you hover over the individual lines, you can see the number of shared grantees. </p>
+
+      <p>This updated version of the diagram shows connections based on all 360Giving data on grants awarded since January 2018.</p>
+
+      <iframe scrolling="no" frameborder="0" src="https://public.flourish.studio/visualisation/1676257/embed?auto=1" style="width: 100%; height: 800px;"></iframe>
+    </section>
+    
+    <section class="prose__section">
+      <h3>Contact us for your bespoke list</h3>
+      <p>This visualisation shows links between funders but just as important is knowing which are the particular recipients you share. If you are a funder that publishes data in the 360Giving Data Standard, and would like a list of your recipients together with the list of other funders who give grants to them, please contact us at <a href="#">info@threesixtygiving.org.</a></p>
+
+      <p>Have you used any tools (including <a href="#">GrantNav</a> or <a href="#">360Insights</a>) to better understand the grants you have made or received? We would love to share your examples with the rest of the community. Share them at <a href="#">labs@threesixtygiving.org</a>.</p>
+
+      <p>This is an abridged version of a blogpost we published in 2018, when we first launched our Funding playground visualisation based on grants awarded in 2017.</p>
+    </section>
+
   </div>
+
+</div>
       
 {% endblock %}

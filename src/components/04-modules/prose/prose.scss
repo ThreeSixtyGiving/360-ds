@@ -25,13 +25,19 @@
   }
 }
 
+.prose__author {
+  font-style: italic;
+  padding-bottom: 32px;
+}
+
 .prose h1, 
 .h1 {
   @include h1;
 }
 
 .prose .intro, // adding specificity 0020 to be higher than the 0011 of .prose p {...}(line 5)
-.intro {
+.intro,
+.prose__intro p {
   @include big-lead;
 }
 
@@ -130,6 +136,20 @@
     top: -50px;
     color: rgba($orange, .12);
     z-index: -1;
+  }
+}
+
+.prose {
+  .prose__long-heading {
+    h1 {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: $teal;
+    }
   }
 }
 
