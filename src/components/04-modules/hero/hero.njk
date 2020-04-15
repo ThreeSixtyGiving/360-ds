@@ -3,7 +3,11 @@
     <div class="hero {% if colour %}hero--{{colour}}{% endif %}">
       <!-- .hero--orange, .hero--yellow, .hero--red -->
       <div class="hero__column hero__logo">
-        <a href="/"><img src="{{ '/images/360-logos/360giving-' }}{{logo}}.svg" alt="360 {{ logo | capitalize }}"></a>
+        {% if logo %}
+        <a href="/"><img src="/images/360-logos/{{logo}}/360{{logo}}-color.svg" alt="360 Giving"></a>
+        {% else %}
+        <a href="/"><img src="/images/360-logos/main/360giving-logo.svg" alt="360 Giving"></a>
+        {% endif %}
       </div>
       <div class="hero__column hero__lead">
         <h2 class="hero__title">
