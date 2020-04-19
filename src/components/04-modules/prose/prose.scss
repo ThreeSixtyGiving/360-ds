@@ -121,12 +121,14 @@
 
 .prose blockquote,
 .prose blockquote p {
-  font-size: 1.4rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: rgba($orange, 1);
   position: relative;
   z-index: 1;
-  
+}
+
+.prose blockquote {
   &:before {
     content: "format_quote";
     font-size: 10rem;
@@ -137,6 +139,10 @@
     color: rgba($orange, .12);
     z-index: -1;
   }
+}
+
+.prose blockquote {
+  p + p { padding-top: 16px; }
 }
 
 .prose {
