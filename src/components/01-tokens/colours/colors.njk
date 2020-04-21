@@ -1,0 +1,30 @@
+<h1 class="align-center">Colour Swatches</h1>
+
+<ul class="card-list wrapper">
+{% for color in main_colors %}
+<li class="card-list__item">
+  <article class="media-card media-card--none media-card--minimal swatch">
+    <div class="media-card__image-wrapper">
+      <div class="swatch__color" style="background-color: {{ color.values.hex }}">
+        <h4>{{ color.name }}</h4>
+      </div>
+    </div>
+    <div class="media-card__content">
+  <pre class="css"><code>hex: {{color.values.hex}}
+hsla({{color.values.hsl}}, 1)
+rgba({{color.values.rgba}})
+  Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}
+ Alias | {% for a in color.alias %}{{ a }}{% endfor %}</code></pre>
+    </div>
+  </article>
+</li>
+{% endfor %}
+<li class="card-list__item ">
+  <div class="base-card base-card--none base-card--spacious tints">
+    <h1>Color Shades and Tints</h1>
+    <img src="assets/images/colors@4x-100.jpg" alt="">  
+  </div>
+</li>
+</ul>
+
+

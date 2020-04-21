@@ -1,0 +1,27 @@
+// These styles are for the Pattern Library only.
+
+.swatch {
+  padding-right: 8px;
+  
+  &__color { 
+    height: calc(100% - 16px);
+    margin: 8px 0 8px 8px;
+    padding: 24px 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  p { margin: 16px 0 0; }
+  
+  pre {
+    padding: 0;
+    margin: 8px 0;
+    height: 100%;
+    background-color: #F0F0F0;
+  }
+
+  code { padding: 16px 32px; }
+}
+
+.tints { padding: 32px; }

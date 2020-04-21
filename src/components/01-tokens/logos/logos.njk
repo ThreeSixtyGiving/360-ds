@@ -2,7 +2,13 @@
   <section id="main_logo">
     {% set main_logo = logos.color | first %}
     <img src="assets/images/360-logos/{{main_logo.name | lower }}/{{ main_logo.file_svg }}" alt="{{ i.name }}">
+    <div>
+      <a class="button" href="https://docs.google.com/document/d/1loMbnGxp55srntK_kNJ4uJkuHja_OM9kKhhP6bCIMU4/edit#heading=h.rrgrsd7d40zx">Full Branding Guidelines Document</a>
+    </div>
   </section>
+
+  
+
   <section class="wrapper">
     <h2 class="align-center">Here you can download any of our logos</h2>
     {% for i in logos.color %}
@@ -27,4 +33,5 @@
     </div>
     {% endfor %}
   </section>
+
 </div>

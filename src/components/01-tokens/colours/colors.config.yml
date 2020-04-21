@@ -1,0 +1,90 @@
+title: "Colours"
+status: Ready
+context:
+  main_colors:
+    - name: Black
+      values:
+        hex: "#153634"
+        rgba: "21, 54, 52"
+        hsl: "243, 75%,  6%"
+      vars:
+        css_hsl: --black-hsl
+        css_hsla: --color-black
+        sass: "$black"
+        alias: 
+          - "--color-default"
+
+    - name: Orange
+      values:
+        hex: "#DE6E26"
+        rgba: "222, 110, 38"
+        hsl: "23, 74%, 51%"        
+      vars:
+        css_hsl: --orange-hsl
+        css_hsla: --color-orange
+        sass: "$orange"
+      alias: 
+        - "--color-primary"
+
+    - name: Teal
+      values:
+        hex: "#4DACB6"
+        rgba: "77, 172, 182"
+        hsl: "186, 42%, 51%"  
+      vars:
+        css_hsl: --teal-hsl
+        css_hsla: --color-teal
+        sass: "$teal"
+      alias: 
+        - "--color-accent"
+
+    - name: Yellow
+      values:
+        hex: "#EFC329"
+        rgba: "239, 195, 41"
+        hsl: "47, 86%, 55%"
+      vars:
+        css_hsl: --yellow-hsl
+        css_hsla: --color-yellow
+        sass: "$yellow"
+
+    - name: Red
+      values:
+        hex: "#BC2C26"
+        rgba: "188, 44, 38"
+        hsl: "2, 66%, 44%"
+      vars:
+        css_hsl: --red-hsl
+        css_hsla: --color-red
+        sass: "$red"
+
+  secondary_colors:
+    - name: Success Green
+      values:
+        hex: ""
+        rgba: ""
+        hsl: "140, 100%, 17%"
+      vars:
+        css_hsl: --success-green-hsl
+        css_hsla: 
+        sass: ""
+
+    - name: Error Red
+      values:
+        hex: ""
+        rgba: ""
+        hsl: "5,  81%, 95%"
+      vars:
+        css_hsl: --error-red-hsl
+        css_hsla: 
+        sass: ""
+
+    - name: Warning Yellow
+      values:
+        hex: ""
+        rgba: ""
+        hsl: "45, 78%, 98%"
+      vars:
+        css_hsl: --warning-yellow-hsl
+        css_hsla: 
+        sass: ""

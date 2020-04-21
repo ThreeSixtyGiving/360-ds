@@ -97,3 +97,9 @@
 
 .media-card--self-contained { margin-right: 8px; }
 
+.media-card--minimal {
+  .media-card__content {
+    padding: 0;
+    @include breakpoint($large) { padding: 0; }
+  }
+}
