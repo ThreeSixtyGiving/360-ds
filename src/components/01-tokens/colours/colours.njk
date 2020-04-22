@@ -1,0 +1,74 @@
+<h1 class="align-center">Colour Swatches</h1>
+
+<ul class="card-list wrapper">
+
+{% for color in main_colors %}
+<li class="card-list__item">
+  <article class="media-card media-card--none media-card--minimal swatch">
+    <div class="media-card__image-wrapper">
+      <div class="swatch__color" style="background-color: {{ color.values.hex }}">
+        <h4>{{ color.name }}</h4>
+      </div>
+    </div>
+    <div class="media-card__content">
+  <pre class="css"><code>hex: {color.values.hex}}
+hsla({{color.values.hsl}}, 1)
+rgba({{color.values.rgba}})
+ Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}
+Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
+    </div>
+  </article>
+</li>
+{% endfor %}
+
+<li class="card-list__item ">
+  <div class="base-card base-card--none base-card--spacious tints">
+    <h2 class="align-center">Colour Shades and Tints</h2>
+    
+    <div class="color-variants">
+      {% for color in main_colors %}
+      <div class="color-variants__col">
+        {% for shade in color.shades %}
+        <div class="color-variants__item color-variants--shades" style="background-color: {{shade}}">{{shade}}</div>
+        {% endfor %}
+        
+        <div class="color-variants__item color-variants--main" style="background-color: {{color.values.hex}}">{{color.values.hex}}</div>
+
+        {% for tint in color.tints %}
+        <div class="color-variants__item color-variants--tints" style="background-color: {{tint}}">{{tint}}</div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</li>
+</ul>
+
+<h1 class="align-center" style="padding-top: 64px;">Secondary Colours</h1>
+
+<ul class="card-list wrapper" style="padding-bottom: 64px;">
+{% for color in secondary_colors %}
+<li class="card-list__item">
+  <article class="media-card media-card--none media-card--minimal swatch">
+    <div class="media-card__image-wrapper">
+      <div class="swatch__color" style="background-color: hsla({{ color.values.hsl }}, 1)">
+        <h4>{{ color.name }}</h4>
+      </div>
+    </div>
+    <div class="media-card__content">
+  <pre class="css"><code>hex: {color.values.hex}}
+hsla({{color.values.hsl}}, 1)
+rgba({{color.values.rgba}})
+ Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}
+Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
+    </div>
+  </article>
+</li>
+{% endfor %}
+</ul>
+
+{# 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js">
+  new ClipboardJS('.js-clipboard');
+</script>
+ #}

@@ -1,5 +1,5 @@
 title: "Colours"
-status: Ready
+status: WIP
 context:
   main_colors:
     - name: Black
@@ -11,8 +11,17 @@ context:
         css_hsl: --black-hsl
         css_hsla: --color-black
         sass: "$black"
-        alias: 
-          - "--color-default"
+      alias: 
+        - "--color-default"
+      shades:
+        - "#050E0D"
+        - "#0B1B1A"
+        - "#102927"
+      tints:
+        - "#506867"
+        - "#8A9B99"
+        - "#C5CDCC"
+        
 
     - name: Orange
       values:
@@ -25,6 +34,14 @@ context:
         sass: "$orange"
       alias: 
         - "--color-primary"
+      shades:
+        - "#381C0A"
+        - "#6F3713"
+        - "#A7531D"
+      tints:
+        - "#E6925C"
+        - "#EFB793"
+        - "#F7DBC9"
 
     - name: Teal
       values:
@@ -37,6 +54,14 @@ context:
         sass: "$teal"
       alias: 
         - "--color-accent"
+      shades:
+        - "#132B2D"
+        - "#27565B"
+        - "#3A8188"
+      tints:
+        - "#7AC1C8"
+        - "#A6D6DA"
+        - "#D3EAED"
 
     - name: Yellow
       values:
@@ -47,6 +72,14 @@ context:
         css_hsl: --yellow-hsl
         css_hsla: --color-yellow
         sass: "$yellow"
+      shades:
+        - "#3C310A"
+        - "#786114"
+        - "#B3921F"
+      tints:
+        - "#F3D25E"
+        - "#F7E194"
+        - "#FBF0C9"
 
     - name: Red
       values:
@@ -57,34 +90,42 @@ context:
         css_hsl: --red-hsl
         css_hsla: --color-red
         sass: "$red"
+      shades:
+        - "#2F0B0A"
+        - "#5E1613"
+        - "#8D211D"
+      tints:
+        - "#CD615C"
+        - "#DE9593"
+        - "#EECAC9"
 
   secondary_colors:
     - name: Success Green
       values:
-        hex: ""
-        rgba: ""
+        hex: "#00571d"
+        rgba: "0, 87, 29, 1"
         hsl: "140, 100%, 17%"
       vars:
         css_hsl: --success-green-hsl
-        css_hsla: 
+        css_hsla: --color-success
         sass: ""
 
     - name: Error Red
       values:
-        hex: ""
-        rgba: ""
-        hsl: "5,  81%, 95%"
+        hex: "#BC2C26"
+        rgba: "188, 44, 38"
+        hsl: "2, 66%, 44%"
       vars:
         css_hsl: --error-red-hsl
-        css_hsla: 
+        css_hsla: --color-error
         sass: ""
 
     - name: Warning Yellow
       values:
-        hex: ""
-        rgba: ""
-        hsl: "45, 78%, 98%"
+        hex: "#EFC329"
+        rgba: "239, 195, 41"
+        hsl: "47, 86%, 55%"
       vars:
         css_hsl: --warning-yellow-hsl
-        css_hsla: 
+        css_hsla: --color-warning
         sass: ""

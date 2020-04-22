@@ -24,4 +24,26 @@
   code { padding: 16px 32px; }
 }
 
-.tints { padding: 32px; }
+// .tints { padding: 32px; }
+
+.color-variants {
+  display: flex;
+  font-weight: 400;
+
+  &__col {
+    flex: 1;
+    margin: 8px;
+  }
+
+  &__item {
+    padding: 24px 0;
+    color: white;
+  }
+} 
+
+.color-variants--tints { color: $black; }
+
+.color-variants--main {
+  margin: 8px 0;
+  font-weight: bold;
+}
