@@ -131,6 +131,7 @@
 .prose blockquote {
   &:before {
     content: "format_quote";
+    transform: scaleX(-1);
     font-size: 10rem;
     @extend .u-material-icons; 
     position: absolute;
