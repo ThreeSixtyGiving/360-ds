@@ -33,6 +33,7 @@
 .prose h1, 
 .h1 {
   @include h1;
+  line-height: 1.3;
 }
 
 .prose .intro, // adding specificity 0020 to be higher than the 0011 of .prose p {...}(line 5)
@@ -147,17 +148,20 @@
 }
 
 .prose {
-  .prose__long-heading {
-    h1 {
+    h2 {
+      color: $teal;
+      font-weight: bold;
+      font-size: 1.3rem;
       margin-bottom: 0;
     }
 
-    h2 {
+    h2 + h1 {
+      margin-bottom: 1.5rem;
       margin-top: 0;
-      font-size: 1.5rem;
-      color: $teal;
+      font-size: 2.2rem;
+      line-height: 1.5;
+      
     }
-  }
 }
 
 .prose--wp {
