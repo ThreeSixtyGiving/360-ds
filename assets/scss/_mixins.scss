@@ -10,16 +10,13 @@
 }
 
 @mixin big_lead {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   color: rgba($base-color, .6);
 
-  @include breakpoint($medium) { 
-    font-size: 1.2rem; 
-  }
   @include breakpoint($large) { 
-    font-size: 1.3rem; 
-    line-height: 1.5;
+    font-size: 1.7rem; 
+    line-height: 1.6;
   }
 }
 
@@ -83,14 +80,13 @@
 }
 
 @mixin text {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 300;
   color: rgba($base-color, 1);
   margin-bottom: 0;
-  & + & { margin-top: 12px; }
+  // & + & { margin-top: 1rem; }
 
-  @include breakpoint($medium) { font-size: .9rem; }
-  @include breakpoint($large) { font-size: 1rem; }
+  @include breakpoint($large) { font-size: 1.2rem; }
 }
 
 @mixin small_text {
