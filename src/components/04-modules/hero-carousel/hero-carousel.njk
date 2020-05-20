@@ -1,68 +1,32 @@
 <div class="carousel">
+  {% for slide in slides %}
   <div class="hero-section">
     <div class="wrapper">
-      <div class="hero {% if colour %}hero--{{colour}}{% endif %}">
+      <div class="hero {% if colour %}hero--{{color}}{% endif %}">
         <!-- .hero--orange, .hero--yellow, .hero--red -->
+        {% if slide.logo %}
         <div class="hero__column hero__logo">
-          {% if logo %}
-          <a href="/"><img src="/images/360-logos/{{logo}}/360{{logo}}-color.svg" alt="360 Giving"></a>
-          {% else %}
-          <a href="/"><img src="/images/360-logos/main/360giving-logo.svg" alt="360 Giving"></a>
-          {% endif %}
+          <a href="/"><img src="/images/360-logos/{{slide.logo}}/360{{slide.logo}}-color.svg" alt="360 {{slide.logo | capitalize }}"></a>
         </div>
+        {% elif slide.image %}
+        <div class="hero__column hero__image">
+          <img src="{{ slide.image.url }}" alt="{{ slide.image.title }}">
+        </div>
+        {% else %}
+        <div class="hero__column hero__logo">
+          <a href="/"><img src="/images/360-logos/main/360giving-logo.svg" alt="360 Giving"></a>
+        </div>
+        {% endif %}
         <div class="hero__column hero__lead">
           <h2 class="hero__title">
-            {% if title %}{{title}}{% else %}See your grantmaking in new ways{% endif %}
+            {% if slide.title %}{{slide.title}}{% else %}See your grantmaking in new ways{% endif %}
           </h2>
           <p class="hero__blurb">
-            {% if blurb %}{{blurb}}{% else %}360 Resources is a repository of resources to help Data Champions make better informed decisions by leveraging other people’s experiences.{% endif %}
+            {% if slide.blurb %}{{slide.blurb}}{% else %}360 Resources is a repository of resources to help Data Champions make better informed decisions by leveraging other people’s experiences.{% endif %}
           </p>
         </div>  
       </div>
     </div>
   </div>
-  <div class="hero-section">
-    <div class="wrapper">
-      <div class="hero {% if colour %}hero--{{colour}}{% endif %}">
-        <!-- .hero--orange, .hero--yellow, .hero--red -->
-        <div class="hero__column hero__logo">
-          {% if logo %}
-          <a href="/"><img src="/images/360-logos/{{logo}}/360{{logo}}-color.svg" alt="360 Giving"></a>
-          {% else %}
-          <a href="/"><img src="/images/360-logos/main/360giving-logo.svg" alt="360 Giving"></a>
-          {% endif %}
-        </div>
-        <div class="hero__column hero__lead">
-          <h2 class="hero__title">
-            {% if title %}{{title}}{% else %}See your grantmaking in new ways{% endif %}
-          </h2>
-          <p class="hero__blurb">
-            {% if blurb %}{{blurb}}{% else %}360 Resources is a repository of resources to help Data Champions make better informed decisions by leveraging other people’s experiences.{% endif %}
-          </p>
-        </div>  
-      </div>
-    </div>
-  </div>
-  <div class="hero-section">
-    <div class="wrapper">
-      <div class="hero {% if colour %}hero--{{colour}}{% endif %}">
-        <!-- .hero--orange, .hero--yellow, .hero--red -->
-        <div class="hero__column hero__logo">
-          {% if logo %}
-          <a href="/"><img src="/images/360-logos/{{logo}}/360{{logo}}-color.svg" alt="360 Giving"></a>
-          {% else %}
-          <a href="/"><img src="/images/360-logos/main/360giving-logo.svg" alt="360 Giving"></a>
-          {% endif %}
-        </div>
-        <div class="hero__column hero__lead">
-          <h2 class="hero__title">
-            {% if title %}{{title}}{% else %}See your grantmaking in new ways{% endif %}
-          </h2>
-          <p class="hero__blurb">
-            {% if blurb %}{{blurb}}{% else %}360 Resources is a repository of resources to help Data Champions make better informed decisions by leveraging other people’s experiences.{% endif %}
-          </p>
-        </div>  
-      </div>
-    </div>
-  </div>  
+  {% endfor %}
 </div>

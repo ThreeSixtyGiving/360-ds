@@ -1,7 +1,16 @@
 title: "Hero Carousel Block"
 status: wip
 context:
-  logo: # insights, standards, resources, challenge, registry, map, grantnav
-  colour: "orange" # orange, teal, yellow, red, black
-  title: "This is the title of the Hero" # This is the title
-  lead: "360 Resources is a repository of resources to help Data Champions make better informed decisions by leveraging other people’s experiences." # This is the lead text  
+  slides:
+    - title: "This is the title of the Hero" # This is the title
+      image:
+        url: https://previews.dropbox.com/p/thumb/AAxaM9aIXKMn9E3xXPXskzhfCXrUvCRBqNC3tQfvbl6fbwTwDmDPp7vw1vdl2HFj_6mqEbHBlPV7qTzghLjBTvrzvqitbC-j4PboAm-0qs-itmSJoxittZXtb3wDca_jpdNNLNKU2U35SR4a31Yr50mEuPoFo-oe4KcPRqQTkwSj-grTgadrNJXFm6548qBcSB3l4WYj-z2MJ9fj7DTkq4J1XK6MqV5_AJ37IN3RfnIz3HGWtkldy_KFkPYmuJFgvNzGM1YMBS21vvT7rhGHwgh2bHIp1MMexDV_F4Gvuc1u-xjDvmyAmIk2_lru6nOVuwLlcwXtcoO8hbclE1iqCELTAMa_a8ysxjUQ8xMuB7GmaoYl5udPLzi090sT1LMdudQUV2QeXvPo5uA9BiS_MKYT9S3HytPJOjSaRcOxiqmZCw/p.jpeg?fv_content=true&size_mode=5
+        title: Funders
+      color: "teal" # orange, teal, yellow, red, black
+      lead: "360 Resources is a repository of resources to help Data Champions make better informed decisions by leveraging other people’s experiences." # This is the lead text  
+
+    - title: "This is the title of the Hero" # This is the title
+      logo: insights # insights, standard, resources, challenge, registry, map, grantnav
+      color: "orange" # orange, teal, yellow, red, black
+      lead: "360 Resources is a repository of resources to help Data Champions make better informed decisions by leveraging other people’s experiences." # This is the lead text  
+
