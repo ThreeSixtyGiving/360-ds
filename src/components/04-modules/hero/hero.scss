@@ -13,10 +13,13 @@
 
   &__logo {
     img { 
+      margin: 0 auto;
       max-width: 320px; 
       max-height: 150px;
     }
   }
+
+  // &__image img {}
 
   &__lead {
     @include big_lead;
@@ -44,7 +47,8 @@
   @include breakpoint($medium) {
     flex-direction: row;
 
-    &__logo {
+    &__logo,
+    &__image {
       flex: 3;
     }
 
