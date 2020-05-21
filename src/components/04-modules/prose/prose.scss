@@ -74,12 +74,34 @@
     padding-top: 1.4rem;
     padding-left: 0;
   }
+  
+  ol {
+    list-style: none;
+    counter-reset: ol-counter;
 
-  ol { margin-left: 16px; }
+    li {
+      counter-increment: ol-counter;
+      position: relative;
 
+      &::before {
+        position: absolute;
+        left: -44px;
+        content: counter(ol-counter);
+        font-weight: 400;
+        color: $teal;
+        border: 1px solid $teal;
+        background-color: $white;
+        padding: 1px 2px;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+        text-align: center;
+      }
+    }
+  }
+  
   ul {
     margin-left: 0;
-    
 
     li {
       list-style-type: none;
