@@ -191,13 +191,13 @@
   &__trigger {
     padding: 8px;
     background-color: transparent;
-    color: hsla(var(--text-color), .4);
+    color: hsla(var(--text-color), .7);
   }
 
   &__item a {
     display: inline-block;
     padding-bottom: 8px;
-    color: hsla(var(--black-hsl), .6);
+    color: hsla(var(--black-hsl), .7);
 
     &:hover  { color: hsla(var(--black-hsl), 1); }
   }
