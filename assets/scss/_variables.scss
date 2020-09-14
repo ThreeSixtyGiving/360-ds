@@ -16,7 +16,7 @@ $touch: $medium-max;
 
 @import 'breakpoints';
 
-// Colours Absolute
+// Colours Absolute - Base
 $black: #153634;
 $orange: #DE6E26;
 $teal: #4DACB6;
@@ -90,6 +90,11 @@ $base-color: $black;
   --yellow-hsl:    47, 86%, 55%;
   --red-hsl:        2, 66%, 44%;
 
+  // Accessible Colours
+  --orange-dark-hsl: 23, 73%, 44%;
+  --teal-dark-hsl: 186, 42%, 40%;
+  --yellow-dark-hsl: 47, 86%, 33%;
+
   // Hierarchy Prototypes / Alises
   --default-hsl: var(--black-hsl);
   --primary-hsl: var(--orange-hsl);
@@ -105,11 +110,14 @@ $base-color: $black;
 
   // Primary Palette
   --color-black:    hsla(var(--black-hsl),   1);
-  --color-orange:   hsla(var(--orange-hsl),   1);
+  --color-orange:   hsla(var(--orange-hsl),  1);
   --color-teal:     hsla(var(--teal-hsl),   1);
   --color-yellow:   hsla(var(--yellow-hsl), 1);
   --color-red:      hsla(var(--red-hsl),    1);
   
+  --color-orange-dark: hsla(var(--orange-dark-hsl), 1);
+  --color-teal-dark:   hsla(var(--teal-dark-hsl),   1);
+  --color-yellow-dark: hsla(var(--yellow-dark-hsl), 1);
 
   // Color Hierarchy
   --color-default: hsla(var(--black-hsl),   1);

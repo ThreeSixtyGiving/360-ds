@@ -1,6 +1,8 @@
 .button {
-  border: 2px solid currentColor;
-  color: $base-color;
+  --border-color: $base-color;
+  --text-color: $base-color;
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
   display: inline-block;
   border-radius: 3px;
   padding: 6px 24px 8px;
@@ -25,11 +27,26 @@
   padding: 0;
 }
 
-&.button--white { color: $white; }
-&.button--orange { color: $orange; }
-&.button--teal { color: $teal; }
-&.button--yellow { color: $yellow; }
-&.button--red { color: $red; }
+&.button--white { 
+  --border-color: $white;
+  --text-color: $white;
+}
+&.button--orange { 
+  --border-color: var(--color-orange);
+  --text-color: var(--color-orange-dark);
+}
+&.button--teal { 
+  --border-color: var(--color-teal);
+  --text-color: var(--color-teal-dark);
+}
+&.button--yellow { 
+  --border-color: var(--color-yellow);
+  --text-color: var(--color-yellow-dark);
+}
+&.button--red { 
+  --border-color: var(--color-red);
+  --text-color: var(--color-red);
+}
 &.button--disabled { 
   opacity: .3;
   pointer-events: none;
