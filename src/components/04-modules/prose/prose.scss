@@ -28,6 +28,7 @@
 .prose__author {
   font-style: italic;
   padding-bottom: 32px;
+  a { color: hsla(var(--teal-dark-hsl), 1);}
 }
 
 .prose h1, 
@@ -37,7 +38,7 @@
 }
 
 .prose .intro,
-.prose > p:first-of-type, // adding specificity 0020 to be higher than the 0011 of .prose p {...}(line 5)
+// .prose > p:not[class="prose__author"]:first-of-type, // adding specificity 0020 to be higher than the 0011 of .prose p {...}(line 5)
 .intro,
 .prose__intro p {
   @include big-lead;
