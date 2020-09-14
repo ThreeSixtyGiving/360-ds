@@ -86,8 +86,10 @@
     font-size: .8rem;
     font-style: italic;
     font-weight: 400;
-    color: rgba($black, .6);
+    color: rgba($black, .7);
   }
+
+  &__byline > a { color: hsla(var(--teal-dark-hsl), 1); }
 }
 
 .media-card--teal:before { background-color: $teal;}
