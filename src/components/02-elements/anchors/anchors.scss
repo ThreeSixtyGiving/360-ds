@@ -1,6 +1,6 @@
 a {
   font-weight: 400;
-  color: $teal;
+  color: hsla(var(--teal-dark-hsl), 1);
 
   &:hover { color: $orange; }
   &:active { color: $yellow; }

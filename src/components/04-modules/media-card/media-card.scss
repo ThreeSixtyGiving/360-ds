@@ -89,7 +89,7 @@
     color: rgba($black, .7);
   }
 
-  &__byline > a { color: hsla(var(--teal-dark-hsl), 1); }
+  // &__byline > a { color: hsla(var(--teal-dark-hsl), 1); }
 }
 
 .media-card--teal:before { background-color: $teal;}
