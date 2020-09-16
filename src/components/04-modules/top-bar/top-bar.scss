@@ -58,6 +58,7 @@
   box-sizing: border-box;
   width: var(--panel-width);
   left: calc(-1 * var(--panel-width) - 20px);
+  overflow-y: scroll;
 
   &__list { list-style-type: none; }
   &__heading { margin-bottom: 0; }
@@ -139,7 +140,7 @@
 .submenu {
   &__list { width: auto; } // This makes the submenu items have the same width. 
 
-  &__item { background-color: $white; }
+  // &__item { background-color: $white; }
 
   &__button {
     width: 100%;

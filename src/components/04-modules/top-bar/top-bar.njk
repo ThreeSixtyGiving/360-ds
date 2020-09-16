@@ -4,16 +4,29 @@
   <nav class="top-bar__menu contextual-menu">
     <ul>
       {% for item in contextual_menu %}
-      <li class="contextual-menu__item{% if item.subitems %} submenu{% endif %}"><a class="contextual-menu__button{% if item.status %} contextual-menu--{{ item.status }}{% endif %}" href="{{ item.url }}" title="{{ item.name }}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.name }}</a>
+      <li class="contextual-menu__item{% if item.subitems %} submenu{% endif %}">
+        <a class="contextual-menu__button{% if item.status %} contextual-menu--{{ item.status }}{% endif %}"
+           ref="{{ item.url }}"
+           title="{{ item.name }}"
+           {% if item.target %} target="{{ item.target }}"{% endif %}>
+           {{ item.name }}
+          {% if item.target %}<span class="screen-reader-only">(opens in a new tab)</span>{% endif %}
+        </a>
         
         {% if item.subitems %}
           <ul class="submenu__list">
           {% for a in item.subitems %}
-            <li class="submenu__item"><a class="submenu__button{% if a.status %} submenu--{{ a.status }}{% endif %}" href="{{ a.url }}" title="{{ a.name }}"{% if a.target %} target="{{ a.target }}"{% endif %}>{{ a.name }}</a>
+            <li class="submenu__item">
+              <a class="submenu__button{% if a.status %} submenu--{{ a.status }}{% endif %}" 
+                 href="{{ a.url }}" 
+                 title="{{ a.name }}"
+                 {% if a.target %} target="{{ a.target }}"{% endif %}>
+                 {{ a.name }}
+                {% if a.target %}<span class="screen-reader-only">(opens in a new tab)</span>{% endif %}
+              </a>
           {% endfor %}
           </ul>
         {% endif %}
-
       </li>
     {% endfor %}  
     </ul>
@@ -26,15 +39,24 @@
       <ul class="off-canvas-menu__contextual">
       {% for item in contextual_menu %}
         <li class="off-canvas-menu__item{% if item.subitems %} off-canvas-menu__submenu{% endif %}">
-          <a href="{{ item.url }}" 
-             class="{% if item.status %} off-canvas-menu--{{ item.status }}{% endif %}" title="{{ item.name }}"
+          <a href="{{ item.url }}"
+             class="{% if item.status %} off-canvas-menu--{{ item.status }}{% endif %}"
+             title="{{ item.name }}"
              {% if item.target %} target="{{ item.target }}"{% endif %}>
             {{ item.name }}
+            {% if item.target %}<span class="screen-reader-only">(opens in a new tab)</span>{% endif %}
           </a>
           {% if item.subitems %}
             <ul class="submenu__list">
             {% for a in item.subitems %}
-              <li class="submenu__item"><a class="{% if a.status %} submenu--{{ a.status }}{% endif %}" href="{{ a.url }}" title="{{ a.name }}"{% if a.target %} target="{{ a.target }}"{% endif %}>{{ a.name }}</a>
+              <li class="submenu__item">
+                <a class="{% if a.status %} submenu--{{ a.status }}{% endif %}"
+                   href="{{ a.url }}"
+                   title="{{ a.name }}"
+                   {% if a.target %} target="{{ a.target }}"{% endif %}>
+                  {{ a.name }}
+                  {% if a.target %}<span class="screen-reader-only">(opens in a new tab)</span>{% endif %}
+              </a>
             {% endfor %}
             </ul>
           {% endif %}
@@ -51,7 +73,14 @@
           </li>
           {% else %}
           <li class="off-canvas-menu__item{% if item.status %} off-canvas-menu--{{ item.status }}{% endif %}">
-            <a href="{{ item.url }}">{{ item.name }}</a>
+            <a href="{{ item.url }}"
+               {% if item.target %} target="{{ item.target }}"{% endif %}>
+              {{ item.name }}
+              {% if item.target %}<span class="screen-reader-only">(opens in a new tab)</span>{% endif %}
+            </a>
+            {% if item.description %}
+            <p>{{ item.description | safe }}</p>
+            {% endif %}
           </li>
           {% endif %}
         {% endfor %}
