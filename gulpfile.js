@@ -35,7 +35,7 @@ gulp.task('images', function() {
 })
 
 gulp.task('js', function() {
-    return gulp.src('src/components/**/*.js')
+    return gulp.src(['assets/js/*.js', 'src/components/**/*.js'])
     .pipe(customPlumber('Error running Javascript bundler'))
     .pipe(concat('components.js'))
     .pipe(gulp.dest('public/js'))
