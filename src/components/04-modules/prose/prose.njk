@@ -5,6 +5,10 @@
     </section>
 
     <section class="prose__section">
+        <p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Fuga nesciunt culpa pariatur assumenda corrupti consectetur quibusdam reprehenderit commodi dolore natus praesentium repudiandae possimus sunt, eos, beatae quod maiores, incidunt soluta!</p>
+
+        {% render '@prose-figure' %}
+
         <ol>
             <li>Where data producers have more complex information, for example where a grant has many beneficiary locations, we call this a One to many relationships. Information about how to create data with One to many relationships is described below.</li>
             <li>The 360Giving Spreadsheet template consists of a ‘grants’ sheet which contains the most common data fields.</li>
@@ -25,13 +29,18 @@
 
         {% render '@media-card' %}        
 
-
-
         <ul>
             <li>Where data producers have more complex information, for example where a grant has many beneficiary locations, we call this a One to many relationships. Information about how to create data with One to many relationships is described below.</li>
             <li>The 360Giving Spreadsheet template consists of a ‘grants’ sheet which contains the most common data fields.</li>
             <li>The Additional fields section provides details of all other possible fields that can be reported. (These are derived from the 360Giving JSON Schemas ).</li>
         </ul>
+
+        <h5>This is a heading 5</h5>
+        <p>Data in JSON format is ideal for direct use by developers building visualisations and web apps. The JSON should conform to the 360Giving JSON Schemas. Anyone automating the publication of their data from their internal databases or via an API may favour this format. The column titles used in spreadsheet representations of data are derived directly from the 360Giving JSON Schemas.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Fuga nesciunt culpa pariatur assumenda corrupti consectetur quibusdam reprehenderit commodi dolore natus praesentium repudiandae possimus sunt, eos, beatae quod maiores, incidunt soluta!</p>
+        
+        <p>Ea incidunt maxime sunt ipsa repellat dolorem, aperiam quas nemo natus tempore enim id totam blanditiis error rerum debitis vel laboriosam doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea incidunt maxime sunt ipsa repellat dolorem, aperiam quas nemo natus tempore enim id totam blanditiis error rerum debitis vel laboriosam doloribus.</p>
+
 
         {# {% render '@code-block' %} #}
 
