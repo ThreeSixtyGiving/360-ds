@@ -137,12 +137,9 @@
 
 // Submenu - Visual Styles
 .submenu {
-  &__list { 
-    width: auto; // This makes the submenu items have the same width. 
-    background-color: $white;
-  }
+  &__list { width: auto; }// This makes the submenu items have the same width.
 
-  // &__item { background-color: $white; }
+  
 
   &__button {
     width: 100%;
@@ -155,10 +152,8 @@
 }
 
 // Contextual Menu - Visual Styles
-.contextual-menu {
-  &__item {
-
-  }
+.contextual-menu { 
+  // &__item { }
 
   &__button {
     display: inline-block;
@@ -172,9 +167,9 @@
     }
   }
 
-  &--active {
-    background-color: hsla(var(--active-color), .1);
-  }
+  &--active { background-color: hsla(var(--active-color), .1); }
+  
+  .submenu__list { background-color: var(--colors-white); }
 }
 
 
