@@ -17,9 +17,10 @@
     display: flex;
     padding-bottom: 16px;
     flex-direction: column;
+
     @include breakpoint($medium) { 
       flex-direction: row; 
-      align-items: flex-end;
+      align-items: baseline;
     }
   }
 
