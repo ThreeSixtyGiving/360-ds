@@ -81,7 +81,7 @@
 
 @mixin text {
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba($base-color, 1);
   margin-bottom: 0;
   // & + & { margin-top: 1rem; }
@@ -91,6 +91,6 @@
 
 @mixin small_text {
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba($base-color, .8);
 }
