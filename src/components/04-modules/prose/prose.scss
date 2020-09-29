@@ -1,5 +1,5 @@
 .prose__section { 
-  * + * { margin-top: 1rem; }
+  > * + * { margin-top: 1rem; }
   .grid > * + * { margin-top: 0; } // Patches a conflict when a .grid is inserted inside a .prose__section
 
   .media-card {
@@ -74,17 +74,22 @@
     padding-bottom: 1.4rem;
     padding-top: 1.4rem;
     padding-left: 0;
+
+    li + li { margin-top: 1rem;}
   }
   
   ol {
     list-style: none;
     counter-reset: ol-counter;
 
+
+
     li {
       counter-increment: ol-counter;
       position: relative;
 
       &::before {
+        font-size: 85%;
         position: absolute;
         left: -44px;
         content: counter(ol-counter);
