@@ -100,7 +100,6 @@
     text-align: left;
     position: absolute; 
     white-space: nowrap;
-    
   }
   &__list:last-child {right: 1px;}
   &__item { display: block; } 
@@ -138,7 +137,10 @@
 
 // Submenu - Visual Styles
 .submenu {
-  &__list { width: auto; } // This makes the submenu items have the same width. 
+  &__list { 
+    width: auto; // This makes the submenu items have the same width. 
+    background-color: $white;
+  }
 
   // &__item { background-color: $white; }
 
