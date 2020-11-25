@@ -29,16 +29,17 @@
 .color-variants {
   display: flex;
   font-weight: 400;
+}
 
-  &__col {
-    flex: 1;
-    margin: 8px;
-  }
+.color-variants__col {
+  flex: 1;
+  margin: 8px;
+}
 
-  &__item {
-    padding: 24px 0;
-    color: white;
-  }
+.color-variants__item {
+  padding: 24px 0;
+  color: white;
+  position: relative;
 } 
 
 .color-variants--tints { color: $black; }
@@ -47,3 +48,4 @@
   margin: 8px 0;
   font-weight: bold;
 }
+

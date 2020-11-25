@@ -24,6 +24,17 @@ $yellow: #EFC329;
 $red: #BC2C26;
 $white: white;
 
+// Text Safe Colors
+$teal-dark: #3A8188;
+$orange-dark: #A7531D;
+$yellow-dark: #B3921F;
+
+// Secondary Colors
+$success: #00571d;
+$warning: #EFC329;
+$error: #BC2C26;
+
+
 // Colours Relative
 $main-color: $orange;
 $base-color: $black;
@@ -91,9 +102,10 @@ $base-color: $black;
   --red-hsl:        2, 66%, 44%;
 
   // Accessible Colours
+  --teal-dark-hsl: 185, 40%, 38%;
   --orange-dark-hsl: 23, 73%, 44%;
-  --teal-dark-hsl: 186, 42%, 40%;
-  --yellow-dark-hsl: 47, 86%, 33%;
+  
+--yellow-dark-hsl: 47, 86%, 33%;
 
   // Hierarchy Prototypes / Alises
   --default-hsl: var(--black-hsl);
