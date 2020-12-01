@@ -1,6 +1,6 @@
 .filter-section {
-  border-top: 1px solid rgba($base-color, .2);
-  border-bottom: 1px solid rgba($base-color, .2);
+  border-top: 1px solid hsla(var(--base-hsl), .2);
+  border-bottom: 1px solid hsla(var(--base-hsl), .2);
 
   @include breakpoint($small-only) {
     overflow-x: scroll;
@@ -24,16 +24,16 @@
 .search-field {
   padding: 8px 16px;
   width: 100%;
-  border: 1px solid rgba($base-color, .2);
-  color: rgba($base-color, .7);
+  border: 1px solid hsla(var(--base-hsl), .2);
+  color: hsla(var(--base-hsl), 1);
   background-color: transparent;
 
-  &::-webkit-input-placeholder { color: rgba($base-color, .4); }
-  &:-moz-placeholder { color: rgba($base-color, .4); }
-  &::-moz-placeholder { color: rgba($base-color, .4); }
-  &:-ms-input-placeholder { color: rgba($base-color, .4); }
+  &::-webkit-input-placeholder { color: hsla(var(--base-hsl), .7); }
+  &:-moz-placeholder { color: hsla(var(--base-hsl), .7); }
+  &::-moz-placeholder { color: hsla(var(--base-hsl), .7); }
+  &:-ms-input-placeholder { color: hsla(var(--base-hsl), .7); }
 
-  &:focus { border: 1px solid $orange; }
+  &:focus { border: 1px solid hsla(var(--orange-hsl), 1); }
 }
 
 .filters {
@@ -48,52 +48,6 @@
   }
 
   @include breakpoint($medium-up) { 
-    // text-align: center; 
-
     .filter + .filter { margin-left: 24px; }
   }
-}
-
-.filter {
-  color: $base-color;
-  border: 2px solid $base-color;
-  display: inline-block;
-  padding: 8px 24px 10px;
-  border-radius: 24px;
-  font-size: .8rem;
-
-  &:hover {
-    cursor: pointer;
-    background-color: $base-color;
-    color: $white;
-  }
-
-  &.filter--data-wrangling:hover { background-color: $teal; }
-  &.filter--data-literacy:hover { background-color: $orange; }
-  &.filter--human-centered-design:hover { background-color: $red; }
-}
-
-.filter--selected {
-  cursor: pointer;
-  background-color: $base-color;
-  color: $white;
-
-  &.filter--data-wrangling { background-color: $teal; color: $white; }
-  &.filter--data-literacy { background-color: $orange; color: $white; }
-  &.filter--human-centered-design { background-color: $red; color: $white; }
-}
-
-.filter--data-wrangling {
-  color: $teal;
-  border-color: $teal;
-}
-
-.filter--data-literacy {
-  color: $orange;
-  border-color: $orange;
-}
-
-.filter--human-centered-design {
-  color: $red;
-  border-color: $red;
 }
