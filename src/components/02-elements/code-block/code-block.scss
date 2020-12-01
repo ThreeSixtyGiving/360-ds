@@ -4,8 +4,8 @@
 .code-block {
   padding: 0 16px;
   margin-top: 24px;
-  background-color: rgba($black, .03);
-  border: 1px solid rgba($black, .1);
+  background-color: hsla(var(--base-hsl), .03);
+  border: 1px solid hsla(var(--base-hsl), .1);
 
   &--wrap { 
     pre, code { white-space: pre-wrap; } 
