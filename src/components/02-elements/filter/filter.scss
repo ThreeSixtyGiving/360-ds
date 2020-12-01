@@ -14,7 +14,7 @@
   &:hover {
     cursor: pointer;
     background-color: hsla(var(--filter-hsl), 1);
-    color: white;
+    color: hsla(var(--white-hsl), 1);
   }
 
   &.filter--data-wrangling:hover { --filter-hsl: var(--teal-hsl); }
@@ -24,7 +24,7 @@
 
 .filter--selected {
   cursor: pointer;
-  color: white;
+  color: hsla(var(--white-hsl), 1);
   background-color: hsla(var(--filter-hsl), 1);
 
   &.filter--data-wrangling { --filter-hsl: var(--teal-hsl); }

@@ -29,8 +29,8 @@
   }
 
   &.button--white { 
-    --border-color: white;
-    --text-color: white;
+    --border-color: hsla(var(--white-hsl), 1);
+    --text-color: hsla(var(--white-hsl), 1);
   }
 
   &.button--orange { 

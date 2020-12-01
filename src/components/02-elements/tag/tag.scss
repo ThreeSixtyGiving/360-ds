@@ -13,12 +13,13 @@
   background-color: hsla(var(--tag-bg-hsl), 1);
 }
 
+.tag:hover { cursor: pointer; }
+
 .tag--large {
   padding: 4px 24px 6px;
   font-weight: 600;
 
   &:hover {
-    cursor: pointer;
     --tag-text-hsl:   var(--white-hsl);
     --tag-bg-hsl:     var(--base-hsl);
   }
