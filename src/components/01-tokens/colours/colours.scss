@@ -1,4 +1,7 @@
 // Colours Absolute - Base
+// We are moving away from the SASS Variables for Colors
+// Leaving them here temporarily as a safety measure.
+
 $black: #153634;
 $orange: #DE6E26;
 $teal: #4DACB6;
@@ -20,20 +23,6 @@ $error: #BC2C26;
 // Colours Relative
 $main-color: $orange;
 $base-color: $black;
-
-
-:root { 
-  // Maintaining these Variables here, for the Fractal internal use. 
-  --colors-default: $black;
-  --colors-white: #FFFFFF;
-  --colors-orange: $orange;
-  --colors-teal: $teal;
-  --colors-yellow: $yellow;
-  --colors-red: $red;
-
-  --colors-alt: --colors-teal;
-  --colors-black: --colors-default;
-}
 
 :root {
   // $black: #153634;
@@ -67,7 +56,7 @@ $base-color: $black;
   --warning-yellow-hsl:  45, 78%, 98%;
 
   // Theme Color - Prototype (HSLa)
-  --black-hsl:    243, 75%,  6%;
+  --base-hsl:     243, 75%,  6%;
   --orange-hsl:    23, 74%, 51%;
   --teal-hsl:     186, 42%, 51%;
   --yellow-hsl:    47, 86%, 55%;
@@ -79,7 +68,7 @@ $base-color: $black;
   --yellow-dark-hsl: 47, 86%, 33%;
 
   // Hierarchy Prototypes / Alises
-  --default-hsl: var(--black-hsl);
+  --default-hsl: var(--base-hsl);
   --primary-hsl: var(--orange-hsl);
   --accent-hsl:  var(--teal-hsl);
   
@@ -92,8 +81,8 @@ $base-color: $black;
   --color-success: hsla(var(--success-green-hsl), 1);
 
   // Primary Palette
-  --color-black:    hsla(var(--black-hsl),   1);
-  --color-orange:   hsla(var(--orange-hsl),  1);
+  --color-base:     hsla(var(--base-hsl),   1);
+  --color-orange:   hsla(var(--orange-hsl), 1);
   --color-teal:     hsla(var(--teal-hsl),   1);
   --color-yellow:   hsla(var(--yellow-hsl), 1);
   --color-red:      hsla(var(--red-hsl),    1);
@@ -103,11 +92,9 @@ $base-color: $black;
   --color-yellow-dark: hsla(var(--yellow-dark-hsl), 1);
 
   // Color Hierarchy
-  --color-default: hsla(var(--black-hsl),   1);
-  --color-primary: hsla(var(--orange-hsl),   1);
-  --color-accent:  hsla(var(--teal-hsl), 1);
-
-  // Aliases
-  --base-hsl: var(--default-hsl);
-  --color-base: var(--color-default);
+  --color-default: hsla(var(--base-hsl),   1);
+  --color-primary: hsla(var(--orange-hsl), 1);
+  --color-accent:  hsla(var(--teal-hsl),   1);
 }
+
+

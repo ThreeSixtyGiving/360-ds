@@ -1,5 +1,18 @@
 // These styles are for the Pattern Library only.
 
+:root { 
+  // Maintaining these Variables here, for the Fractal internal use. 
+  --colors-default: var(--color-base);
+  --colors-white: #FFFFFF;
+  --colors-orange: var(--color-orange);
+  --colors-teal: var(--color-teal);
+  --colors-yellow: var(--color-yellow);
+  --colors-red: var(--color-red);
+
+  --colors-alt: var(--colors-teal);
+  --colors-black: var(--colors-default);
+}
+
 .swatch {
   padding-right: 8px;
   
