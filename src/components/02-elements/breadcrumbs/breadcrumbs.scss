@@ -1,6 +1,8 @@
 .breadcrumbs {
   padding: 8px 0;
 
+  a { color: var(--color-teal-dark);}
+
   &__item,
   &__arrow {
     vertical-align: middle;

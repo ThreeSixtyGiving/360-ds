@@ -31,22 +31,27 @@
   --border-color: $white;
   --text-color: $white;
 }
+
 &.button--orange { 
   --border-color: var(--color-orange);
   --text-color: var(--color-orange-dark);
 }
+
 &.button--teal { 
   --border-color: var(--color-teal);
   --text-color: var(--color-teal-dark);
 }
+
 &.button--yellow { 
   --border-color: var(--color-yellow);
   --text-color: var(--color-yellow-dark);
 }
+
 &.button--red { 
   --border-color: var(--color-red);
   --text-color: var(--color-red);
 }
+
 &.button--disabled { 
   opacity: .3;
   pointer-events: none;
