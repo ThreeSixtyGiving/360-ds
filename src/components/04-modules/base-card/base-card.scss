@@ -3,6 +3,7 @@
   box-shadow: 0px 4px 8px rgba($black, .15);
   position: relative;
   text-align: center;
+  display: block;
 
   @include breakpoint($touch) { margin-bottom: 16px; }
 
@@ -14,6 +15,7 @@
     top: 0;
     left: 0;
     background-color: $black;
+    transition: all .2s ease;
   }
 }
 
@@ -54,12 +56,30 @@
   }
 }
 
-.base-card--orange:before { background-color: $orange; }
-.base-card--yellow:before { background-color: $yellow; }
-.base-card--teal:before   { background-color: $teal; }
-.base-card--red:before    { background-color: $red; }
-.base-card--none:before   { background-color: transparent; }
+.base-card--orange {
+  &:before { background-color: $orange; }
+}
+
+.base-card--yellow {
+  &:before { background-color: $yellow; }
+}
+
+.base-card--teal {
+  &:before   { background-color: $teal; }
+}
+
+.base-card--red {
+  &:before { background-color: $red; }
+}
+
+.base-card--none:before { background-color: transparent; }
 
 .base-card--spacious {
   @include breakpoint($large) { padding: 24px 16px; }
+}
+
+a.base-card { color: currentColor; }
+
+a.base-card:hover {
+  &:before { width: 12px; }
 }
