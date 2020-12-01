@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   --scale: 127;
+  --bar-bg-color: hsla(var(--yellow-hsl), 1);
 
   &__item {
     --value: 0;
@@ -21,7 +22,7 @@
       left: 0;
       top: 0;
       bottom: 0;
-      background-color: $yellow;
+      background-color: var(--bar-bg-color);
       width: var(--width);
     }
 
