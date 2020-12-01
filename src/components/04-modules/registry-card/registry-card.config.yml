@@ -12,7 +12,7 @@ context:
     publisher:
       name: A B Charitable Trust 
       website: http://abcharitabletrust.org.uk/
-      logo: http://www.threesixtygiving.org/wp-content/uploads/Arcadia-Logo.jpg
+      logo: https://www.threesixtygiving.org/wp-content/uploads/Arcadia-Logo.jpg
       prefix: 360G-ABCT
     distribution:
       downloadURL: http://abcharitabletrust.org.uk/data/abct-data.xlsx,

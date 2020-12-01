@@ -4,7 +4,7 @@ context:
     publisher:
       name: A B Charitable Trust 
       website: http://abcharitabletrust.org.uk/
-      logo: http://www.threesixtygiving.org/wp-content/uploads/Arcadia-Logo.jpg
+      logo: https://www.threesixtygiving.org/wp-content/uploads/Arcadia-Logo.jpg
     datasets:
       - title: Open Programme grants awarded from 2013 until April 2019,
         issued: '2018-06-21'
