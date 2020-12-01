@@ -1,6 +1,6 @@
 .filter-panel {
-  border-top: 1px solid rgba($black, .2);
-  border-bottom: 1px solid rgba($black, .2);
+  border-top: 1px solid hsla(var(--base-hsl),.2);
+  border-bottom: 1px solid hsla(var(--base-hsl),.2);
   padding: 24px 0;
 
   h4 { margin: 0; }
