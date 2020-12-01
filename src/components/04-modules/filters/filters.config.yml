@@ -4,7 +4,10 @@ context:
   filters: 
     - category: Data Literacy
       slug: data-literacy
+      selected: true
     - category: Data Wrangling
       slug: data-wrangling
+      selected: false
     - category: Human Centered Design
       slug: human-centered-design
+      selected: false
