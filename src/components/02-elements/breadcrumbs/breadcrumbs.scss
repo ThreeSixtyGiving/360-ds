@@ -10,13 +10,13 @@
     margin-right: 6px;
   }
 
-  &__item { color: rgba($black, .7); }
+  &__item { color: hsla(var(--black-hsl), .7); }
 
   &__arrow {
     @extend .u-material-icons;
     margin-bottom: -18px;
-    color: rgba($black, .4);
+    color: hsla(var(--base-hsl), .4);
   }
 
-  &__item:last-of-type { color: rgba($black, 1); }
+  &__item:last-of-type { color: hsla(var(--black-hsl), 1); }
 }
