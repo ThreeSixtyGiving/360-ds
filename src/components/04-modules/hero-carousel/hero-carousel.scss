@@ -9,23 +9,23 @@
 }
 
 .slick-dots li{
-    cursor: pointer;
-    display: inline-block;
-    border: 0;
-    width: 20px;
-    height: 4px;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  width: 20px;
+  height: 4px;
 }
 
 .dot {
-    display: block;
-    width: 10px;
-    height: 10px;
-    text-decoration: none;
-    background-color: #de6e26;
-    border-radius: 50%;
-    cursor: pointer;
+  display: block;
+  width: 10px;
+  height: 10px;
+  text-decoration: none;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .slick-active .dot {
-    background-color: #153634;
+  background-color: var(--color-base);
 }
