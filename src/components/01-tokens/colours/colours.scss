@@ -1,51 +1,114 @@
-// These styles are for the Pattern Library only.
+// Colours Absolute - Base
+$black: #153634;
+$orange: #DE6E26;
+$teal: #4DACB6;
+$yellow: #EFC329;
+$red: #BC2C26;
+$white: white;
 
-.swatch {
-  padding-right: 8px;
+// Text Safe Colors
+$teal-dark: #3A8188;
+$orange-dark: #A7531D;
+$yellow-dark: #B3921F;
+
+// Secondary Colors
+$success: #00571d;
+$warning: #EFC329;
+$error: #BC2C26;
+
+
+// Colours Relative
+$main-color: $orange;
+$base-color: $black;
+
+
+:root { 
+  // Maintaining these Variables here, for the Fractal internal use. 
+  --colors-default: $black;
+  --colors-white: #FFFFFF;
+  --colors-orange: $orange;
+  --colors-teal: $teal;
+  --colors-yellow: $yellow;
+  --colors-red: $red;
+
+  --colors-alt: --colors-teal;
+  --colors-black: --colors-default;
+}
+
+:root {
+  // $black: #153634;
+  // $orange: #DE6E26;
+  // $teal: #4DACB6;
+  // $yellow: #EFC329;
+  // $red: #BC2C26;
+  // $white: white;
   
-  &__color { 
-    height: calc(100% - 16px);
-    margin: 8px 0 8px 8px;
-    padding: 24px 10px;
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-  }
+  // All these variables are HSLA color mode. 
+  // They are intentionally not calling the HSLa() function, 
+  // so we can have the option to call them inside the components
+  // tweaking the alpha value when necessary.
+  // IMPORTANT: Notice that we need the "_hsl.scss" plugin
+  // to override the native HSL functions of sass. 
+  // This prevents a bug between Sass' and Natives HSL function 
+  // implementation and usage.
 
-  p { margin: 16px 0 0; }
+  // Gray Scale
+  --gray-05-hsl: 0, 0%, 95%;
+  --gray-10-hsl: 0, 0%, 90%;
+  --gray-20-hsl: 0, 0%, 80%;
+  --gray-30-hsl: 0, 0%, 70%;
+  --gray-70-hsl: 0, 0%, 30%;
+  --gray-80-hsl: 0, 0%, 20%;
+  --black-hsl:   0, 0%, 10%;
   
-  pre {
-    padding: 0;
-    margin: 8px 0;
-    height: 100%;
-    background-color: #F0F0F0;
-  }
+  // Secondary Palette
+  --success-green-hsl:  140, 100%, 17%;
+  --error-red-hsl:        5,  81%, 95%;
+  --warning-yellow-hsl:  45, 78%, 98%;
 
-  code { padding: 16px 32px; }
+  // Theme Color - Prototype (HSLa)
+  --black-hsl:    243, 75%,  6%;
+  --orange-hsl:    23, 74%, 51%;
+  --teal-hsl:     186, 42%, 51%;
+  --yellow-hsl:    47, 86%, 55%;
+  --red-hsl:        2, 66%, 44%;
+
+  // Accessible Colours
+  --teal-dark-hsl: 185, 40%, 38%;
+  --orange-dark-hsl: 23, 73%, 44%;
+  
+--yellow-dark-hsl: 47, 86%, 33%;
+
+  // Hierarchy Prototypes / Alises
+  --default-hsl: var(--black-hsl);
+  --primary-hsl: var(--orange-hsl);
+  --accent-hsl:  var(--teal-hsl);
+  
+  // Color Values for End Users
+  // Already calling the color functions.
+  
+  // Secondary Palette
+  --color-error:   hsla(var(--red-hsl), 1);
+  --color-warning: hsla(var(--yellow-hsl), 1);
+  --color-success: hsla(var(--success-green-hsl), 1);
+
+  // Primary Palette
+  --color-black:    hsla(var(--black-hsl),   1);
+  --color-orange:   hsla(var(--orange-hsl),  1);
+  --color-teal:     hsla(var(--teal-hsl),   1);
+  --color-yellow:   hsla(var(--yellow-hsl), 1);
+  --color-red:      hsla(var(--red-hsl),    1);
+  
+  --color-orange-dark: hsla(var(--orange-dark-hsl), 1);
+  --color-teal-dark:   hsla(var(--teal-dark-hsl),   1);
+  --color-yellow-dark: hsla(var(--yellow-dark-hsl), 1);
+
+  // Color Hierarchy
+  --color-default: hsla(var(--black-hsl),   1);
+  --color-primary: hsla(var(--orange-hsl),   1);
+  --color-accent:  hsla(var(--teal-hsl), 1);
+
+  // Aliases
+  --base-hsl: var(--default-hsl);
+  --color-base: var(--color-default);
 }
-
-// .tints { padding: 32px; }
-
-.color-variants {
-  display: flex;
-  font-weight: 400;
-}
-
-.color-variants__col {
-  flex: 1;
-  margin: 8px;
-}
-
-.color-variants__item {
-  padding: 24px 0;
-  color: white;
-  position: relative;
-} 
-
-.color-variants--tints { color: $black; }
-
-.color-variants--main {
-  margin: 8px 0;
-  font-weight: bold;
-}
-
