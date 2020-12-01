@@ -1,5 +1,5 @@
 .hero-section {
-  border-bottom: 1px solid rgba($base-color, .2);
+  border-bottom: 1px solid hsla(var(--base-hsl), .2);
 }
 
 .hero {
@@ -23,7 +23,7 @@
 
   &__lead {
     @include big_lead;
-    border-left: 4px solid $base-color;
+    border-left: 4px solid hsla(var(--base-hsl), 1);
     padding-left: 32px;
 
     @include breakpoint($medium) { margin: 0; }
@@ -63,22 +63,22 @@
 // Variations
 .hero {
   &--orange {
-    .hero__lead { border-left-color: $orange; }
-    .hero__title { color: $orange; }
+    .hero__lead { border-left-color: hsla(var(--orange-hsl), 1); }
+    .hero__title { color: hsla(var(--orange-dark-hsl), 1); }
   }
 
   &--teal {
-    .hero__lead { border-left-color: $teal; }
-    .hero__title { color: $teal; }
+    .hero__lead { border-left-color: hsla(var(--teal-hsl), 1); }
+    .hero__title { color: hsla(var(--teal-dark-hsl), 1); }
   }
 
   &--yellow {
-    .hero__lead { border-left-color: $yellow; }
-    .hero__title { color: $yellow; }
+    .hero__lead { border-left-color: hsla(var(--yellow-hsl), 1); }
+    .hero__title { color: hsla(var(--yellow-dark-hsl), 1); }
   }
 
   &--red {
-    .hero__lead { border-left-color: $red; }
-    .hero__title { color: $red; }
+    .hero__lead { border-left-color: hsla(var(--red-hsl), 1); }
+    .hero__title { color: hsla(var(--red-hsl), 1); }
   }
 }
