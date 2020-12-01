@@ -2,15 +2,15 @@ title: "Colours"
 status: ready
 context:
   main_colors:
-    - name: Black
+    - name: Base
       values:
         hex: "#153634"
         rgba: "21, 54, 52"
         hsl: "243, 75%,  6%"
       vars:
-        css_hsl: --black-hsl
-        css_hsla: --color-black
-        sass: "$black"
+        css_hsl: --base-hsl
+        css_hsla: --color-base
+        sass: "$base"
       alias: 
         - "--color-default"
       shades:
