@@ -24,6 +24,7 @@
 // Top-Bar - Structure
 .top-bar {
   display: flex;
+  width: 100vw;
   position: relative;
   z-index: 1000;
   &__menu { flex: 1; }
