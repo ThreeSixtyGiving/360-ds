@@ -6,6 +6,7 @@
 }
 
 .card-list--linked {
+  --card-list-links-hsl: var(--base-hsl);
   margin-left: 40px;
 
   .card-list__item { position: relative; }
@@ -17,12 +18,10 @@
     position: absolute;
     top: 48px;
     left: -40px;
-    background-color: rgba($base-color, .2);
+    background-color: hsla(var(--card-list-links-hsl), .2);
   }
 
-  .card-list__item:last-of-type::before { height: 0;
-
-  }
+  .card-list__item:last-of-type::before { height: 0; }
 
   .card-list__item:after {
     content: '';
@@ -32,6 +31,6 @@
     position: absolute;
     top: 48px;
     left: -50px;
-    background-color: $base-color;
+    background-color: hsla(var(--card-list-links-hsl), 1);
   }
 }
