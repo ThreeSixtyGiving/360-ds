@@ -27,8 +27,11 @@ Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
 <li class="card-list__item">
   <article class="media-card media-card--none media-card--minimal swatch">
     <div class="media-card__image-wrapper">
-      <div class="swatch__color" style="background-color: {% if color.text %}{{ color.text.values.hex }}{% else %}{{ color.values.hex }}{% endif %}">
+      <div class="swatch__color" style="background-color: #ffffff; color: {% if color.text %}{{ color.text.values.hex }}{% else %}{{ color.values.hex }}{% endif %}">
         <h4>{{ color.name }}</h4>
+        <p style="margin: 0;font-size: 1.1rem;">
+          Some {{ color.name }} text.
+        </p>
       </div>
     </div>
     <div class="media-card__content">
