@@ -10,7 +10,7 @@
 
     &__text{
       padding: 102px;
-      max-width:700px;
+      max-width: 700px;
     }
 }
 
@@ -21,16 +21,16 @@
 .category {
   padding: 8px 32px;
   display: block;
-  color: rgba($black, .6);
+  color: hsla(var(--base-hsl), .6);
 
   &:hover {
-    background-color: rgba($black, .1);
-    background: linear-gradient(90deg, rgba($black, 0) 0%, rgba($black, .1) 100%);
+    background-color: hsla(var(--base-hsl), .1);
+    background: linear-gradient(90deg, hsla(var(--base-hsl), 0) 0%, hsla(var(--base-hsl), .1) 100%);
   }
 
   &--active {
-    background-color: rgba($teal, .1);
-    background: linear-gradient(90deg, rgba($teal, 0) 0%, rgba($teal, .3) 100%);
+    background-color: hsla(var(--teal-hsl), .1);
+    background: linear-gradient(90deg, hsla(var(--teal-hsl), 0) 0%, hsla(var(--base-hsl), .3) 100%);
   }
 }
 
