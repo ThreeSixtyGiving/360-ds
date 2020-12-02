@@ -5,8 +5,8 @@
   }
 
 .insights-card {
-  background: $white;
-  box-shadow: 0px 4px 8px rgba($black, .1);
+  background: hsla(var(--white-hsl), 1);
+  box-shadow: 0px 4px 8px hsla(var(--base-hsl), .1);
   position: relative;
   padding: 16px 24px 16px 24px;  
   
@@ -21,14 +21,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $teal;
+    background-color: hsla(var(--teal-hsl), 1);
   }
 
   &__pub-logo { width: 132px; }
 
   &__pub-name {
     font-size: 1.5rem;
-    color: $base-color;
+    color: hsla(var(--base-hsl), 1);
     font-weight: 300;
     padding: 0 16px;
   }
@@ -44,12 +44,12 @@
   }
 
   &__item > a { 
-    color: $black; 
+    color: hsla(var(--base-hsl), 1); 
     display: block;
     padding: 8px 16px;
   }
 
-  &__item > a:hover { background-color: rgba($black, .05); }
+  &__item > a:hover { background-color:  hsla(var(--base-hsl), .05); }
 }
 
 .grant {
@@ -80,7 +80,7 @@
   }
 
   &--data-line {
-    border-bottom: 1px solid rgba($black, .1); 
+    border-bottom: 1px solid  hsla(var(--base-hsl), .1); 
     td { padding: 0 0 8px; }
 
     &:last-child { border-bottom: 0; }
