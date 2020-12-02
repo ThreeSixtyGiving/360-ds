@@ -102,7 +102,7 @@
     position: absolute; 
     white-space: nowrap;
   }
-  &__list:last-child {right: 1px;}
+  &__list:last-child { right: 1px; }
   &__item { display: block; } 
   &__button { 
     display: inline-block; 
@@ -121,31 +121,27 @@
   // This way, the css variables can 
   // be used inside the hsla() function
   --bg-color: var(--teal-hsl);
-  --text-color: var(--black-hsl);
+  --text-color: var(--base-hsl);
   --active-color: var(--orange-hsl);
 
-  border-bottom: 1px solid hsla(var(--black-hsl), .2);
+  border-bottom: 1px solid hsla(var(--base-hsl), .2);
   
   &__menu-trigger {
     border: 0;
     padding: 4px 8px 2px;
   }
 
-  &__menu {
-    text-align: right;
-  }
+  &__menu { text-align: right; }
 }
 
 // Submenu - Visual Styles
 .submenu {
-  &__list { width: auto; }// This makes the submenu items have the same width.
-
-  
+  &__list { width: auto; } // This makes the submenu items have the same width.
 
   &__button {
     width: 100%;
     padding: 8px 24px 8px;
-    border: 1px solid hsla(var(--black-hsl), .1);
+    border: 1px solid hsla(var(--base-hsl), .1);
     color: hsla(var(--text-color), 1);
 
     &:hover { background-color: hsla(var(--bg-color), .1); }
@@ -196,20 +192,18 @@
   &__item a {
     display: inline-block;
     padding-bottom: 8px;
-    color: hsla(var(--black-hsl), .7);
+    color: hsla(var(--base-hsl), .7);
 
-    &:hover  { color: hsla(var(--black-hsl), 1); }
+    &:hover  { color: hsla(var(--base-hsl), 1); }
   }
 
   &__heading {
-    color: var(--colors-white);
+    color: hsla(var(--white-hsl), 1);
     font-weight: 400;
     margin-bottom: 8px;
   }
 
-  &__contextual {
-    padding-bottom: 24px;
-  }
+  &__contextual { padding-bottom: 24px; }
 
   &--disabled { opacity: .4; }
 }
