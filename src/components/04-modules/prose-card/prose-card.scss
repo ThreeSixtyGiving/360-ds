@@ -1,8 +1,11 @@
 .prose {
   
   .prose-card {
-    background: $white;
-    box-shadow: 0px 4px 8px #1536341A;
+    --prose-card-border-hsl: var(--base-hsl);
+    --prose-card-text-hsl: var(--base-hsl);
+
+    background: hsla(var(--white-hsl), 1);
+    box-shadow: 0px 4px 8px hsla(var(--base-hsl), .15);
     position: relative;
     text-align: center; 
 
@@ -13,35 +16,45 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-color: $black;
+      background-color: hsla(var(--prose-card-border-hsl, transparent), 1);
     }
   }
 
-  .prose-card {
-    &__content {
-      padding: 16px 24px 16px 24px;  
-      @include breakpoint($large) { padding: 48px 64px 48px 64px; }
-    }
-
-    &__image {
-      padding-bottom: 32px;
-    }
-
-    &__title {
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin: 0;
-    }
-
-    &__text {
-      font-size: 1rem;
-      font-weight: 100;
-    }
+  .prose-card__content {
+    padding: 16px 24px 16px 24px;  
+    @include breakpoint($large) { padding: 48px 64px 48px 64px; }
   }
 
-  .prose-card--orange:before { background-color: $orange; }
-  .prose-card--yellow:before { background-color: $yellow; }
-  .prose-card--teal:before   { background-color: $teal; }
-  .prose-card--red:before    { background-color: $red; }
+  .prose-card__image { padding-bottom: 32px; }
 
+  .prose-card__title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+    color: hsla(var(--prose-card-text-hsl), 1);
+  }
+
+  .prose-card__text {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+}
+
+.prose {
+  .prose-card--orange { 
+    --prose-card-border-hsl: var(--orange-hsl);
+    --prose-card-text-hsl: var(--orange-dark-hsl);
+  }
+  .prose-card--yellow { 
+    --prose-card-border-hsl: var(--yellow-hsl);
+    --prose-card-text-hsl: var(--yellow-dark-hsl);
+  }
+  .prose-card--teal { 
+    --prose-card-border-hsl: var(--teal-hsl);
+    --prose-card-text-hsl: var(--teal-dark-hsl);
+  }
+  .prose-card--red { 
+    --prose-card-border-hsl: var(--red-hsl);
+    --prose-card-text-hsl: var(--red-hsl);
+  }
 }
