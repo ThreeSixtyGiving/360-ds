@@ -40,6 +40,7 @@
   background-color: hsla(var(--base-hsl), .15);
   border-radius: 0 3px 3px 0;
   text-align: center;
+  cursor: pointer;
 
   @include breakpoint($medium-up) { 
     max-width: 90px; 
