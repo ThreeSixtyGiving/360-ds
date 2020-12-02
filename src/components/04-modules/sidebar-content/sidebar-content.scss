@@ -1,29 +1,30 @@
 .sidebar-content {
+  --sidebar-content-heading-hsl: var(--base-hsl);
   padding: 16px 32px;
   text-align: right;
-
-  &__heading {
-    font-size: 1rem;
-    font-weight: bold;
-    color: currentColor;
-  }
-
-  &__text { 
-    font-size: .9rem; 
-    color: $base-color;
-  }
-
-  &__image { padding: 16px 0; }
-  &__image figcaption { 
-    padding-top: 8px;
-    font-size: .8rem; 
-    color: $base-color;
-    font-size: italic;
-
-  }
 }
 
-.sidebar-content--orange .sidebar-content__heading { color: $orange; }
-.sidebar-content--teal .sidebar-content__heading   { color:   $teal; }
-.sidebar-content--yellow .sidebar-content__heading { color: $yellow; }
-.sidebar-content--red .sidebar-content__heading    { color:    $red; }
+.sidebar-content__heading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: hsla(var(--sidebar-content-heading-hsl), 1);
+}
+
+.sidebar-content__text { 
+  font-size: .9rem; 
+  color: hsla(var(--base-hsl), 1);
+}
+
+.sidebar-content__image { padding: 16px 0; }
+
+.sidebar-content__image figcaption { 
+  padding-top: 8px;
+  font-size: .8rem; 
+  color: hsla(var(--base-hsl), 1);
+  font-size: italic;
+}
+
+.sidebar-content--orange { --sidebar-content-heading-hsl: var(--orange-dark-hsl); }
+.sidebar-content--teal   { --sidebar-content-heading-hsl: var(--teal-dark-hsl);   }
+.sidebar-content--yellow { --sidebar-content-heading-hsl: var(--yellow-dark-hsl); }
+.sidebar-content--red    { --sidebar-content-heading-hsl: var(--red-hsl);         }
