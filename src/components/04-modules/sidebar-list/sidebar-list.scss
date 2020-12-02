@@ -31,7 +31,7 @@
     display: block;
     padding: 8px 4px;
     margin-right: 40px;
-    color: $black;
+    color: hsla(var(--base-hsl), 1);
   }
 
 // Structural Styles for the Expanded State
@@ -46,7 +46,7 @@
 // Cosmetic Styles
 .sidebar-list__item {
   > .sidebar-list { 
-    background-color: rgba($teal, 0.075);
+    background-color: hsla(var(--teal-hsl), 0.075);
     transition: max-height .4s ease; 
   }
 
@@ -54,11 +54,11 @@
     font-size: 1.2rem;
     transition: transform .1s ease;
     transform: rotate(0);
-    color: $teal;
+    color: hsla(var(--teal-hsl), 1);
   }
 
   &.sidebar-list--expanded {
-    > .sidebar-list { box-shadow: inset 0 0 4px rgba($teal, .1); }
+    > .sidebar-list { box-shadow: inset 0 0 4px hsla(var(--teal-hsl), .1); }
     > .sidebar-list__trigger > .material-icons { transform: rotate(45deg); }
   }
 }

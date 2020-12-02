@@ -86,8 +86,8 @@
 .registry-grant__amount { margin-bottom: 8; }
 .registry-grant__license a { margin-left: 32px; }
 .registry-grant__validation > i { vertical-align: -7px; }
-.registry-grant--validated > i { color: $teal; }
-.registry-grant--invalid > i { color: $red; }
+.registry-grant--validated > i { color: hsla(var(--teal-dark-hsl), 1); }
+.registry-grant--invalid > i { color: hsla(var(--red-hsl), 1); }
 
 .registry-grant__grant-n,
 .registry-grant__amount-n { font-size: 1.6rem; }
@@ -104,9 +104,9 @@
   display: inline-block;
 }
 
-.registry-grant--xls { color: hsla(var(--orange-hsl), 1); }
-.registry-grant--csv { color: hsla(var(--teal-hsl), 1); }
-.registry-grant--json { color: hsla(var(--yellow-hsl), 1);; }
+.registry-grant--xls { color: hsla(var(--orange-dark-hsl), 1); }
+.registry-grant--csv { color: hsla(var(--teal-dark-hsl), 1); }
+.registry-grant--json { color: hsla(var(--yellow-dark-hsl), 1);; }
 .registry-grant--ods { color: hsla(var(--red-hsl), 1);; }
 
 .license { opacity: .4; }  

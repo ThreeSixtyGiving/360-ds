@@ -32,7 +32,7 @@
 
 .subscribe-section input[type="submit"] {
   all: inherit;
-  color: $base-color;
+  color: hsla(var(--base-hsl), 1);
   display: inline-block;
   width: 100%; 
   margin-top: 8px;
