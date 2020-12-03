@@ -72,9 +72,9 @@ context:
         - "#D3EAED"
       text:
         values:
-          hex: "#3a8088"
-          rgba: "58, 128, 136"
-          hsl: "186, 40%, 38%"  
+          hex: "#2e666b"
+          rgba: "46, 102, 107"
+          hsl: "185, 40%, 30%"  
         vars:
           css_hsl: --teal-dark-hsl
           css_hsla: --color-teal-dark
