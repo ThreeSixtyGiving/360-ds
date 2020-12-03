@@ -99,9 +99,9 @@ context:
         - "#FBF0C9"
       text:
         values:
-          hex: "#8e7419"
-          rgba: "142, 116, 25"
-          hsl: "47, 70%, 33%"  
+          hex: "#8f730c"
+          rgba: "143, 116, 12"
+          hsl: "47, 85%, 30%"  
         vars:
           css_hsl: --yellow-dark-hsl
           css_hsla: --color-yellow-dark
