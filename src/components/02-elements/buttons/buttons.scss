@@ -35,12 +35,12 @@
 
   &.button--orange { 
     --border-color: var(--color-orange);
-    --text-color: var(--color-orange-dark);
+    --text-color: hsla(var(--orange-darker-hsl), 1);
   }
 
   &.button--teal { 
     --border-color: var(--color-teal);
-    --text-color: var(--color-teal-dark);
+    --text-color: hsla(var(--teal-darker-hsl), 1);
   }
 
   &.button--yellow { 
