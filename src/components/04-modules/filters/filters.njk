@@ -6,7 +6,7 @@
     
     <div class="filter-section__buttons filters">
       {% for filter in filters %}
-         <span class="filter filter--{{filter.slug }}" title="{{ filter.category }}">{{ filter.category }}</span>     
+         <span class="filter filter--{{filter.slug }}{% if filter.selected %} filter--selected{% endif %}" title="{{ filter.category }}">{{ filter.category }}</span>     
       {% endfor %}
     </div>
   </div>

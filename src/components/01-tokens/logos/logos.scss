@@ -22,7 +22,7 @@
   .button { margin-top: 24px; }
 
   .negative-logo {
-    background-color: $black;
+    background-color: hsla(var(--base-hsl), 1);
   }
 }
 

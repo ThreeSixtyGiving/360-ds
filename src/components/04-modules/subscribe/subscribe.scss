@@ -1,55 +1,52 @@
 .subscribe-section {
-  background-color: $yellow;
+  background-color: hsla(var(--yellow-hsl), 1);
   padding: 24px;
+}
 
-  &__wrapper {
-    @include wrapper;
-    @include breakpoint($large) { max-width: 700px; }
-  }
+.subscribe-section__wrapper {
+  @include wrapper;
+  @include breakpoint($large) { max-width: 700px; }
+}
 
-  &__form {
-    display: flex;
-    flex-direction: column;
-    @include breakpoint($medium-up) { flex-direction: row;  }
-    
-    width: 100%;
+.subscribe-section__form {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($medium-up) { flex-direction: row;  }
+  width: 100%;
+}
 
-    input[type="email"] { 
-      border-radius: 3px 0 0 3px;
-      flex: 1;
-      padding: 12px 24px;
-      width: 100%;
-      border: 0;
-      letter-spacing: .3px;
-      color: $white;
-      background-color: rgba($base-color, .1);
-      @include placeholder { color: rgba($base-color, .9); }
+.subscribe-section input[type="email"] { 
+  border-radius: 3px 0 0 3px;
+  flex: 1;
+  padding: 12px 24px;
+  width: 100%;
+  border: 0;
+  letter-spacing: .3px;
+  color: hsla(var(--white-hsl), 1);
+  background-color: hsla(var(--base-hsl), .1);
+  @include placeholder { color: hsla(var(--base-hsl), .9); }
 
-      &:focus { background-color: rgba($base-color, .2); }
-      &:hover { background-color: rgba($base-color, .3); }
+  &:focus { background-color: hsla(var(--base-hsl), .2); }
+  &:hover { background-color: hsla(var(--base-hsl), .3); }
+}
 
+.subscribe-section input[type="submit"] {
+  all: inherit;
+  color: hsla(var(--base-hsl), 1);
+  display: inline-block;
+  width: 100%; 
+  margin-top: 8px;
+  padding: 12px 24px;
+  background-color: hsla(var(--base-hsl), .15);
+  border-radius: 0 3px 3px 0;
+  text-align: center;
+  cursor: pointer;
 
-    }
-
-    input[type="submit"] {
-      all: inherit;
-      color: $base-color;
-      display: inline-block;
-      width: 100%; 
-      margin-top: 8px;
-      padding: 12px 24px;
-      background-color: rgba($base-color, .15);
-      border-radius: 0 3px 3px 0;
-      text-align: center;
-
-      @include breakpoint($medium-up) { 
-        max-width: 90px; 
-        margin-top: 0;
-
-      }
-
-      &:focus { background-color: rgba($base-color, .2); }
-      &:hover { background-color: rgba($base-color, .3); }
-    }
+  @include breakpoint($medium-up) { 
+    max-width: 90px; 
+    margin-top: 0;
   }
 }
+
+.subscribe-section input[type="submit"]:focus { background-color: hsla(var(--base-hsl), .2); }
+.subscribe-section input[type="submit"]:hover { background-color: hsla(var(--base-hsl), .3); }

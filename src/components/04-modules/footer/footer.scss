@@ -18,6 +18,9 @@
 
 // Footer Structure and Visuals
 .footer {
+  padding-top: 24px;
+  background-color: hsla(var(--base-hsl), 1);
+
   ul { 
     list-style-type: none; 
     padding: 0;
@@ -26,16 +29,13 @@
   }
 
   a {
-    color: rgba($white, .7);
+    color: hsla(var(--white-hsl), .7);
 
     &:hover {
-      color: rgba($white, 1);
+      color: hsla(var(--white-hsl), 1);
       text-decoration: underline;
     }
   }
-
-  padding-top: 24px;
-  background-color: $base-color;
 
   @include breakpoint($large) {
     padding-top: 48px;
@@ -43,7 +43,7 @@
 
   &__row:first-of-type { 
     padding-bottom: 36px;
-    border-bottom: 1px solid rgba($white, .2); 
+    border-bottom: 1px solid hsla(var(--white-hsl), .2); 
   }
 
   &__row {
@@ -52,7 +52,7 @@
   
   &__section {
     @include small_text;
-    color: rgba($white, .7);
+    color: hsla(var(--white-hsl), .7);
     padding: 24px 0 16px;
 
     & + & { 
@@ -66,7 +66,7 @@
     @include h4;
     font-weight: bold;
     letter-spacing: 1px;
-    color: $yellow;
+    color: hsla(var(--yellow-hsl), 1);
     margin-bottom: 16px;
   }
 
@@ -93,7 +93,7 @@
 
   &__tagline { 
     padding-bottom: 4px;
-    color: $white;
+    color: hsla(var(--white-hsl), 1);
     font-weight: 300;
     letter-spacing: 1px;
     font-size: 1rem;
@@ -114,13 +114,13 @@
 
   &__small-print {
     @include small_text;
-    border-top: 1px solid rgba($white, .2);
+    border-top: 1px solid hsla(var(--white-hsl), .2);
     padding-top: 16px;
     padding-bottom: 12px;
-    color: rgba($white, .7);
+    color: hsla(var(--white-hsl), .7);
   }
 
-  .edit-github { float:right; }
+  .edit-github { float: right; }
 
   &__policy-links {
     a { display: inline-block; } // To avoid line-breaks in the links
@@ -129,5 +129,5 @@
 }
 
 .footer {
-  p a:hover { color: rgba($white, 1); }
+  p a:hover { color: hsla(var(--white-hsl), 1); }
 }

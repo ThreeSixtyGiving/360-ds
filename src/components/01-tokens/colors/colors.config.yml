@@ -2,15 +2,15 @@ title: "Colours"
 status: ready
 context:
   main_colors:
-    - name: Black
+    - name: Base
       values:
         hex: "#153634"
         rgba: "21, 54, 52"
         hsl: "243, 75%,  6%"
       vars:
-        css_hsl: --black-hsl
-        css_hsla: --color-black
-        sass: "$black"
+        css_hsl: --base-hsl
+        css_hsla: --color-base
+        sass: "$base"
       alias: 
         - "--color-default"
       shades:
@@ -21,7 +21,6 @@ context:
         - "#506867"
         - "#8A9B99"
         - "#C5CDCC"
-        
 
     - name: Orange
       values:
@@ -42,6 +41,15 @@ context:
         - "#E6925C"
         - "#EFB793"
         - "#F7DBC9"
+      text:
+        values:
+          hex: "#A7531D"
+          rgba: "166, 84, 29"
+          hsl: "24, 70%, 38%"  
+        vars:
+          css_hsl: --orange-dark-hsl
+          css_hsla: --color-orange-dark
+          sass: "$orange-dark"
 
     - name: Teal
       values:
@@ -57,11 +65,20 @@ context:
       shades:
         - "#132B2D"
         - "#27565B"
-        - "#3A8188"
+        - "#3a8088"
       tints:
         - "#7AC1C8"
         - "#A6D6DA"
         - "#D3EAED"
+      text:
+        values:
+          hex: "#2e666b"
+          rgba: "46, 102, 107"
+          hsl: "185, 40%, 30%"  
+        vars:
+          css_hsl: --teal-dark-hsl
+          css_hsla: --color-teal-dark
+          sass: "$teal-dark"
 
     - name: Yellow
       values:
@@ -74,12 +91,21 @@ context:
         sass: "$yellow"
       shades:
         - "#3C310A"
-        - "#786114"
+        - "#8e7419"
         - "#B3921F"
       tints:
         - "#F3D25E"
         - "#F7E194"
         - "#FBF0C9"
+      text:
+        values:
+          hex: "#8f730c"
+          rgba: "143, 116, 12"
+          hsl: "47, 85%, 30%"  
+        vars:
+          css_hsl: --yellow-dark-hsl
+          css_hsla: --color-yellow-dark
+          sass: "$yellow-dark"
 
     - name: Red
       values:
@@ -108,7 +134,7 @@ context:
       vars:
         css_hsl: --success-green-hsl
         css_hsla: --color-success
-        sass: ""
+        sass: "$success"
 
     - name: Error Red
       values:
@@ -118,7 +144,7 @@ context:
       vars:
         css_hsl: --error-red-hsl
         css_hsla: --color-error
-        sass: ""
+        sass: "$error"
 
     - name: Warning Yellow
       values:
@@ -128,4 +154,4 @@ context:
       vars:
         css_hsl: --warning-yellow-hsl
         css_hsla: --color-warning
-        sass: ""
+        sass: "$warning"

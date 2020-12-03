@@ -1,7 +1,7 @@
 <h1 class="align-center">Colour Swatches</h1>
 
 <ul class="card-list wrapper">
-
+<h2 class="align-center">Main Colours</h2>
 {% for color in main_colors %}
 <li class="card-list__item">
   <article class="media-card media-card--none media-card--minimal swatch">
@@ -21,10 +21,41 @@ Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
 </li>
 {% endfor %}
 
-<li class="card-list__item ">
-  <div class="base-card base-card--none base-card--spacious tints">
-    <h2 class="align-center">Colour Shades and Tints</h2>
-    
+<h2 class="align-center margin-top:3">Text Colours</h2>
+
+{% for color in main_colors %}
+<li class="card-list__item">
+  <article class="media-card media-card--none media-card--minimal swatch">
+    <div class="media-card__image-wrapper">
+      <div class="swatch__color" style="background-color: #ffffff; color: {% if color.text %}{{ color.text.values.hex }}{% else %}{{ color.values.hex }}{% endif %}">
+        <h4>{{ color.name }}</h4>
+        <p style="margin: 0;font-size: 1.1rem;">
+          Some {{ color.name }} text.
+        </p>
+      </div>
+    </div>
+    <div class="media-card__content">
+      {% if color.text %}
+  <pre class="css"><code>hex: {{color.text.values.hex}}
+hsla({{color.text.values.hsl}}, 1)
+rgba({{color.text.values.rgba}})
+ Vars | {{color.text.vars.sass}}, {{color.text.vars.css_hsl}}, {{color.text.vars.css_hsla}}{% if color.text.alias %}
+Alias | {% for a in color.text.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
+    </div>
+    {% else %}
+  <pre class="css"><code>hex: {{color.values.hex}}
+hsla({{color.values.hsl}}, 1)
+rgba({{color.values.rgba}})
+ Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}
+Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
+    {% endif %}
+  </article>
+</li>
+{% endfor %}
+
+<li class="card-list__item">
+  <h2 class="align-center margin-top:3">Colour Shades and Tints</h2>
+  <div class="base-card base-card--none base-card--spacious tints">   
     <div class="color-variants">
       {% for color in main_colors %}
       <div class="color-variants__col">
@@ -44,7 +75,7 @@ Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
 </li>
 </ul>
 
-<h1 class="align-center" style="padding-top: 64px;">Secondary Colours</h1>
+<h2 class="align-center" style="padding-top: 64px;">Secondary Colours</h2>
 
 <ul class="card-list wrapper" style="padding-bottom: 64px;">
 {% for color in secondary_colors %}
@@ -56,7 +87,7 @@ Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
       </div>
     </div>
     <div class="media-card__content">
-  <pre class="css"><code>hex: {color.values.hex}}
+  <pre class="css"><code>hex: {{color.values.hex}}
 hsla({{color.values.hsl}}, 1)
 rgba({{color.values.rgba}})
  Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}

@@ -1,6 +1,10 @@
 .table {
+  --table-border-hsl: var(--base-hsl);
+  --table-text-hsl: var(--base-hsl);
+  --table-bg-hsl: var(--base-hsl);
+
   font-size: .9rem;
-  border: 1px solid rgba($base-color, .2);
+  border: 1px solid hsla(var(--table-border-hsl), .2);
   border-radius: 3px;
 
   table { margin: 0; }
@@ -8,7 +12,7 @@
   th, td {
     padding: 8px;
     vertical-align: top;
-    color: $base-color;
+    color: hsla(var(--table-text-hsl), 1);
     display: block;
     @include breakpoint($medium) { 
       display: table-cell; 
@@ -16,8 +20,8 @@
     }
   }
 
-  th { background-color: rgba($base-color, .1); }
-  tr + tr { border-top: 1px solid rgba($base-color, .2); }
+  th { background-color: hsla(var(--table-bg-hsl), .1); }
+  tr + tr { border-top: 1px solid hsla(var(--table-bg-hsl), .2); }
   
   th {
     display: none;
@@ -36,7 +40,7 @@
       content: attr(data-header);
       display: block;
       font-weight: 400;
-      background-color: rgba($base-color, .1);
+      background-color: hsla(var(--table-bg-hsl), .1);
       margin: -8px -8px 4px -8px;
       padding: 4px 8px;
     }
@@ -44,7 +48,7 @@
 }
 
 .table--zebra {
-  tr:nth-of-type(even) { background-color: rgba($base-color, .04); }
+  tr:nth-of-type(even) { background-color: hsla(var(--table-bg-hsl), .04); }
 }
 
 .table__lead-cell { 
@@ -56,5 +60,5 @@
   @include breakpoint($medium) { text-align: center; }
 }
 
-.table--true  { color: $teal; }
-.table--false { color: $red; }
+.table--true  { color: hsla(var(--teal-dark-hsl), 1); }
+.table--false { color: hsla(var(--red-hsl), 1);; }

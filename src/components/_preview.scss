@@ -1,4 +1,64 @@
-// General SCSS file
-// 
-// Example of usage: define global variables
-// 
+// These styles are for the Pattern Library only.
+
+:root { 
+  // Maintaining these Variables here, for the Fractal internal use. 
+  --colors-default: var(--color-base);
+  --colors-white: #FFFFFF;
+  --colors-orange: var(--color-orange);
+  --colors-teal: var(--color-teal);
+  --colors-yellow: var(--color-yellow);
+  --colors-red: var(--color-red);
+
+  --colors-alt: var(--colors-teal);
+  --colors-black: var(--colors-default);
+}
+
+.swatch {
+  padding-right: 8px;
+  
+  &__color { 
+    height: calc(100% - 16px);
+    margin: 8px 0 8px 8px;
+    padding: 24px 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  p { margin: 16px 0 0; }
+  
+  pre {
+    padding: 0;
+    margin: 8px 0;
+    height: 100%;
+    background-color: #F0F0F0;
+  }
+
+  code { padding: 16px 32px; }
+}
+
+// .tints { padding: 32px; }
+
+.color-variants {
+  display: flex;
+  font-weight: 400;
+}
+
+.color-variants__col {
+  flex: 1;
+  margin: 8px;
+}
+
+.color-variants__item {
+  padding: 24px 0;
+  color: white;
+  position: relative;
+} 
+
+.color-variants--tints { color: black; }
+
+.color-variants--main {
+  margin: 8px 0;
+  font-weight: bold;
+}
+

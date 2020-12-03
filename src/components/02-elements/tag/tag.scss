@@ -1,49 +1,60 @@
 .tag {
-  color: $base-color;
-  border: 2px solid $base-color;
+  --tag-border-hsl: var(--base-hsl);
+  --tag-text-hsl: var(--base-hsl);
+  --tag-bg-hsl: var(--white-hsl);
+
+  color: hsla(var(--tag-text-hsl), 1);
+  border: 2px solid hsla(var(--tag-border-hsl), 1);
   display: inline-block;
   padding: 2px 24px 4px;
   border-radius: 24px;
   font-size: 1rem;
   font-weight: 400;
+  background-color: hsla(var(--tag-bg-hsl), 1);
 }
+
+.tag:hover { cursor: pointer; }
 
 .tag--large {
   padding: 4px 24px 6px;
   font-weight: 600;
 
   &:hover {
-    cursor: pointer;
-    background-color: $base-color;
-    color: $white;
+    --tag-text-hsl:   var(--white-hsl);
+    --tag-bg-hsl:     var(--base-hsl);
   }
 
-  &.tag--data-wrangling:hover { background-color: $teal; }
-  &.tag--data-literacy:hover { background-color: $orange; }
-  &.tag--human-centered-design:hover { background-color: $red; }
+  &.tag--data-wrangling:hover { 
+    --tag-bg-hsl: var(--teal-hsl); 
+  }
+  
+  &.tag--data-literacy:hover {
+    --tag-bg-hsl: var(--orange-hsl); 
+  }
+  
+  &.tag--human-centered-design:hover { 
+    --tag-bg-hsl: var(--red-hsl); 
+  }
 }
 
 .tag--selected {
-  cursor: pointer;
-  background-color: $base-color;
-  color: $white;
+  --tag-border-hsl: var(--white-hsl);
+  --tag-bg-hsl:     var(--base-hsl);
 
-  &.tag--data-wrangling { background-color: $teal; color: $white; }
-  &.tag--data-literacy { background-color: $orange; color: $white; }
-  &.tag--human-centered-design { background-color: $red; color: $white; }
+  &.tag--data-wrangling        { --tag-bg-hsl: var(--teal-dark-hsl); }
+  &.tag--data-literacy         { --tag-bg-hsl: var(--orange-dark-hsl); }
+  &.tag--human-centered-design { --tag-bg-hsl: var(--red-hsl); }
 }
 
-.tag--data-wrangling {
-  color: $teal;
-  border-color: $teal;
+.tag--data-wrangling { 
+  --tag-text-hsl: var(--teal-dark-hsl);
+  --tag-border-hsl: var(--teal-hsl); 
 }
-
-.tag--data-literacy {
-  color: $orange;
-  border-color: $orange;
+.tag--data-literacy { 
+  --tag-text-hsl: var(--orange-dark-hsl);
+  --tag-border-hsl: var(--orange-hsl); 
 }
-
 .tag--human-centered-design {
-  color: $red;
-  border-color: $red;
+  --tag-text-hsl: var(--red-hsl); 
+  --tag-border-hsl: var(--red-hsl); 
 }

@@ -1,6 +1,7 @@
 .sidebar-section {
+  --sidebar-bg-hsl: var(--base-hsl);
   margin-top: 88px;
-  box-shadow: 4px 0 8px rgba($black, .1);
+  box-shadow: 4px 0 8px hsla(var(--base-hsl), .1);
   padding-top: 0;
   padding-bottom: 0;
   margin-right: 24px;
@@ -13,17 +14,16 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: $black;
+    background-color: hsla(var(--sidebar-bg-hsl), 1);
   }
 }
 
-
-.sidebar-section--fixed{
+.sidebar-section--fixed {
   top: 0;
   position: sticky;
 }
 
-.sidebar-section--orange:before { background-color: $orange; }
-.sidebar-section--teal:before   { background-color: $teal; }
-.sidebar-section--yellow:before { background-color: $yellow; }
-.sidebar-section--red:before    { background-color: $red; }
+.sidebar-section--orange { --sidebar-bg-hsl: var(--orange-dark-hsl); }
+.sidebar-section--teal   { --sidebar-bg-hsl: var(--teal-dark-hsl);   }
+.sidebar-section--yellow { --sidebar-bg-hsl: var(--yellow-dark-hsl); }
+.sidebar-section--red    { --sidebar-bg-hsl: var(--red-hsl);         }

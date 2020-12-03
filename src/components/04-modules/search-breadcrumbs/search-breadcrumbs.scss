@@ -1,5 +1,5 @@
 .search-breadcrumbs-section {
-  border-bottom: 1px solid rgba($base-color, .2);
+  border-bottom: 1px solid hsla(var(--base-hsl), .2);
   padding: 16px 0;
 
   @include breakpoint($small-only) {

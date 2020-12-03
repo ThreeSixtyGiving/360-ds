@@ -6,12 +6,14 @@
 
 .prose .box,
 .box {
-  background-color: rgba($black, .1);
+  --box-bg-hsl: var(--base-hsl);
+  --box-text-hsl: var(--base-hsl);
+  background-color: hsla(var(--box-bg-hsl), .1);
   position: relative;
   padding: 24px 24px 24px 24px;
 
   &:before {
-    background-color: $black;
+    background-color: hsla(var(--box-bg-hsl), 1);
     content: "";
     position: absolute;
     height: 100%;
@@ -25,7 +27,7 @@
     margin: 0 0 4px 0;
     font-size: 1rem;
     font-weight: 600;
-    color: $teal;
+    color: hsla(var(--box-text-hsl), 1);
   }
 }
 
@@ -34,29 +36,25 @@
 
 .prose .box.box--teal,
 .box--teal {
-  background-color: rgba($teal, .1);
-  &:before { background-color: $teal; }
-  .box__heading { color: $teal; }
+  --box-bg-hsl: var(--teal-hsl);
+  --box-text-hsl: var(--teal-dark-hsl);
 }
 
 .prose .box.box--orange,
 .box--orange {
-  background-color: rgba($orange, .1);
-  &:before { background-color: $orange; }
-  .box__heading { color: $orange; }
+  --box-bg-hsl: var(--orange-hsl);
+  --box-text-hsl: var(--orange-dark-hsl);
 }
 
 .prose .box.box--yellow,
 .box--yellow {
-  background-color: rgba($yellow, .1);
-  &:before { background-color: $yellow; }
-  .box__heading { color: $yellow; }
+  --box-bg-hsl: var(--yellow-hsl);
+  --box-text-hsl: var(--yellow-dark-hsl);
 }
 
 .prose .box.box--red,
 .box--red {
-  background-color: rgba($red, .1);
-  &:before { background-color: $red; }
-  .box__heading { color: $red; }
+  --box-bg-hsl: var(--red-hsl);
+  --box-text-hsl: var(--red-hsl);
 }
 
