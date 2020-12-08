@@ -1,5 +1,5 @@
 .prose__section,
-.prose__section > .section { 
+.prose__section .section { 
   > * + * { margin-top: 1rem; }
   .grid > * + * { margin-top: 0; } // Patches a conflict when a .grid is inserted inside a .prose__section
 
