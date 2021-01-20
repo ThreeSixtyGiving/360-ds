@@ -23,6 +23,12 @@
   > a {
     font-weight: 400;
     color: hsla(var(--teal-dark-hsl), 1);
+    text-decoration: underline;
+    text-underline-position: under;
+
+    &:hover {
+      background-color: hsl(var(--teal-hsl), 0.1);
+    }
   }
 }
 
