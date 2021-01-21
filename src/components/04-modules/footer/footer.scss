@@ -29,7 +29,9 @@
   }
 
   a {
-    color: hsla(var(--white-hsl), .7);
+    color: hsla(var(--white-hsl), 1);
+    text-decoration: underline;
+    text-underline-offset: under;
 
     &:hover {
       color: hsla(var(--white-hsl), 1);
