@@ -19,16 +19,21 @@
 .prose li,
 .p {
   @include text;
+}
 
-  > a {
-    font-weight: 400;
-    color: hsla(var(--teal-dark-hsl), 1);
-    text-decoration: underline;
-    text-underline-position: under;
+.prose a {
+  font-weight: inherit;
+  color: hsla(var(--teal-dark-hsl), 1);
+  text-decoration: underline;
+  text-underline-position: under;
 
-    &:hover {
-      background-color: hsl(var(--teal-hsl), 0.1);
-    }
+  &:hover {
+    background-color: hsl(var(--teal-hsl), 0.1);
+  }
+
+  &.button {
+    text-decoration: none;
+    color: var(--text-color);
   }
 }
 
