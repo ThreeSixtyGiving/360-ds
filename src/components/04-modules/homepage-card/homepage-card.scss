@@ -1,0 +1,18 @@
+.homepage-card {
+  text-align: center;
+
+  &__title {
+    font-weight: normal;
+  }
+
+  &__title-numbers {
+    color: $orange;
+    display: block;
+    font-size: 56px;
+    font-weight: 500;
+  }
+
+  &__description {
+
+  }
+}
