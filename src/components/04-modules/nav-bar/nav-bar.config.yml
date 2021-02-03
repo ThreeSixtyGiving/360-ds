@@ -1,0 +1,12 @@
+title: "Nav-bar"
+status: wip
+context:
+  nav_menu:
+    # These items will be shown in the top-bar, on the right side,
+    # and in the Off-canvas menu when users access it from a smaller screen
+    - name: About the data
+      url: '#'
+    - name: Get help
+      url: '#'
+    - name: About 360Giving
+      url: '#'
