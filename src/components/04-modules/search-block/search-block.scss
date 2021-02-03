@@ -1,0 +1,49 @@
+.search-block {
+  background: $orange;
+  text-align: center;
+  padding: 82px 2rem 67px;
+
+  &__description {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 48px;
+  }
+
+  form {
+    text-align: left;
+  }
+
+  &__form-item-label {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  &__form-group {
+    display: flex;
+
+    input[type="text"] {
+      border: none;
+      appearance: none;
+      font-size: 24px;
+      padding: 35px 18px;
+      margin: 0;
+      display: block;
+      border-radius: 3px 0px 0px 3px;
+      flex-grow: 2;
+      min-width: 160px;
+    }
+
+    input[type="submit"] {
+      border: none;
+      appearance: none;
+      background: $black;
+      color: $white;
+      padding: 28px 42px;
+      font-size: 24px;
+      font-weight: 500;
+      border-radius: 0px 3px 3px 0px;
+
+    }
+  }
+}
