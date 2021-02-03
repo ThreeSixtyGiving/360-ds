@@ -4,9 +4,13 @@
   padding: 82px 2rem 67px;
 
   &__description {
-    font-size: 35px;
+    font-size: 24px;
     font-weight: 400;
     margin-bottom: 48px;
+
+    @include breakpoint($medium) {
+      font-size: 35px;
+    }
   }
 
   form {
@@ -25,13 +29,28 @@
     input[type="text"] {
       border: none;
       appearance: none;
-      font-size: 24px;
-      padding: 35px 18px;
+      font-size: 20px;
+      padding: 22px 12px;
       margin: 0;
       display: block;
       border-radius: 3px 0px 0px 3px;
-      flex-grow: 2;
-      min-width: 160px;
+      flex-grow: 0;
+      min-width: 20px;
+      width: 100%;
+
+      @include breakpoint($medium) {
+        min-width: 100px;
+        font-size: 22px;
+        padding: 24px 16px;
+        flex-grow: 2;
+      }
+
+      @include breakpoint($regular) {
+        min-width: 160px;
+        font-size: 24px;
+        padding: 35px 18px;
+        flex-grow: 2;
+      }
     }
 
     input[type="submit"] {
@@ -39,10 +58,20 @@
       appearance: none;
       background: $black;
       color: $white;
-      padding: 28px 42px;
-      font-size: 24px;
+      font-size: 20px;
+      padding: 20px 30px;
       font-weight: 500;
       border-radius: 0px 3px 3px 0px;
+
+      @include breakpoint($medium) {
+        padding: 24px 36px;
+        font-size: 22px;
+      }
+
+      @include breakpoint($regular) {
+        padding: 28px 42px;
+        font-size: 24px;
+      }
 
       &:hover {
         cursor: pointer;
