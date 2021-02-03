@@ -1,13 +1,16 @@
 .main-logo {
-  --animation-delay: 0.2s;
-
   &--animated {
     #circle-1, #circle-2, #circle-3, #circle-4, #circle-5, #circle-6 {
       transform: scale(0, 0);
-      transform-origin: 50px center;
+      transform-origin: 20% center;
       animation: circleIn 0.25s ease;
       animation-fill-mode: forwards;
       animation-delay: 0.05s;
+
+      @media (prefers-reduced-motion) {
+        animation: none;
+        transform: scale(1, 1);
+      }
     }
 
     #circle-2 {
