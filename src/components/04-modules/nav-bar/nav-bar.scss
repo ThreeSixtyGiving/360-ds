@@ -1,7 +1,7 @@
 .nav-bar {
   display: flex;
   flex-direction: column;
-  padding: 0 24px;
+  padding: 8px 24px 14px;
 
   @include breakpoint($medium) {
     flex-direction: row;
