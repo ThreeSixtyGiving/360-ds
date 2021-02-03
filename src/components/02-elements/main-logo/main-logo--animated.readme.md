@@ -1,3 +1,5 @@
-The 360Giving logo animated and labelled elements.
+The 360Giving logo in svg with labelled elements so you can more easily manipulate them.
 
-Note: Add the `360giving-logo--animated` class for the animation to play.
+Don't use this on every page, use it sparingly such as on a homepage.  
+Add the `main-logo--animated` class for the animation to play.
+
