@@ -5,6 +5,14 @@
   box-shadow: 1px 4px 4px 4px rgba(0, 0, 0, 0.06);
   padding: 20px 24px;
 
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   @include breakpoint($medium) {
     flex-direction: row;
   }
@@ -38,6 +46,44 @@
         left: auto;
         right: 0;
       }
+    }
+  }
+
+  &__right-side {
+    padding-top: 12px;
+    padding-bottom: 6px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__date {
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  &__data-item {
+    margin-bottom: 6px;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    &--label {
+      font-weight: 700;
     }
   }
 }
