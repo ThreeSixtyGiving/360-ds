@@ -26,6 +26,10 @@
 
   // This is necessary to avoid underlining the icon
   &--anchor {
+    &:hover {
+      background: $yellow;
+    }
+
     &:focus {
       outline-offset: -2px;
     }

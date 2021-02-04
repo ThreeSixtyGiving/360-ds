@@ -1,10 +1,11 @@
 .export-data-button {
   &:hover, &:focus {
-    [class*=border-target] {
-      stroke: $orange;
+    [class*=background-fill1] {
+      fill: $teal-tint;
     }
-    [class*=fill-target] {
-      fill: $orange;
+
+    [class*=background-fill2] {
+      fill: $white;
     }
   }
 }
