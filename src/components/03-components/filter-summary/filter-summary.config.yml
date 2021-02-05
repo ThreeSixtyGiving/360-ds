@@ -1,0 +1,13 @@
+title:
+status:
+context:
+  clearUrl: '#'
+  filters:
+    - label: 'The Royal British Legion'
+      url: '#'
+    - label: 'Oxfordshire'
+      url: '#'
+    - label: '2019'
+      url: '#'
+    - label: 'University of Oxford'
+      url: '#'
