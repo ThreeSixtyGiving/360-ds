@@ -5,11 +5,13 @@
   background: $yellow-tint;
   font-size: 14px;
   font-weight: 400;
+  text-align: left;
 
   &__icon {
     display: inline-block;
     margin-right: 4px;
     margin-top: 3px;
+    margin-bottom: -3px;
     vertical-align: middle;
   }
 

@@ -3,10 +3,10 @@
     background: $orange;
   }
 
-  text-align: center;
   padding: 82px 1.5rem 67px;
 
   &__description {
+    text-align: center;
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 48px;
@@ -24,6 +24,7 @@
     font-weight: 500;
     font-size: 19px;
     margin-bottom: 6px;
+    margin-top: 10px;
   }
 
   &__form-group {
@@ -115,6 +116,18 @@
       @include breakpoint($regular) {
         padding: 18px 50px;
         font-size: 24px;
+      }
+    }
+
+    .search-block__label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 6px;
+
+      @include breakpoint($regular) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: baseline;
       }
     }
   }

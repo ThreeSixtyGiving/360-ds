@@ -20,8 +20,12 @@
     background: $orange-tint-light;
     font-size: 16px;
     font-weight: 500;
-    padding: 18px 10px;
+    padding: 4px 10px;
     border: 1px solid $orange-tint;
+
+    @include breakpoint($medium) {
+      padding: 18px 10px;
+    }
 
     .accordion-toggle-icon {
       transition: 0.2s;
