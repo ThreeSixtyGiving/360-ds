@@ -3,9 +3,10 @@
     #circle-1, #circle-2, #circle-3, #circle-4, #circle-5, #circle-6 {
       transform: scale(0, 0);
       transform-origin: 20% center;
-      animation: circleIn 0.25s ease;
+      animation: circleIn 0.25s;
       animation-fill-mode: forwards;
       animation-delay: 0.05s;
+      animation-timing-function: cubic-bezier(.48,.04,.89,1.37);
 
       @media (prefers-reduced-motion) {
         animation: none;
