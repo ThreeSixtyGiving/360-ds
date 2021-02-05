@@ -3,7 +3,9 @@
     <div class="search-block__description">{{ description }}</div>
 
     <div class="search-block__label">
-      {% render '@alert-tag' %}
+      {% block alert %}
+        {% render '@alert-tag' %}
+      {% endblock alert %}
       <label class="search-block__form-item-label" for="{{ search_name }}">{{ search_label }}</label>
     </div>
 
