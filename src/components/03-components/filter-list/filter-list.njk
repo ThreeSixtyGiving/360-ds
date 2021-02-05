@@ -1,0 +1,26 @@
+{% set length = filterItems.length %}
+
+
+<div class="filter-list">
+  <details {% if opened === true%} open{% endif %}>
+    <summary class="filter-list__label">
+      <div>{{ filterTypeLabel }}</div>
+      {% render '@accordion-toggle-icon' %}
+    </summary>
+    <div class="filter-list_contents-wrapper">
+      <ul class="filter-list__listing">
+        {% for filterItem in filterItems %}
+          <li>
+            <a class="filter-list__filter-item {% if filterItem.active %} active{% endif %}" href="{{ filterItem.url }}">
+              {{ filterItem.label }}
+
+              {% if filterItem.active %}
+                <span class="screen-reader-only">(active filter)</span>
+              {% endif%}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </details>
+</div>

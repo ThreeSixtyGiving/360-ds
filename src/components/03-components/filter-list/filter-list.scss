@@ -1,0 +1,118 @@
+.filter-list {
+  border: 1px solid $blue-tint;
+  border-radius: 3px;
+
+
+  & details[open] {
+    .accordion-toggle-icon {
+      &__vertical-line {
+        transform-origin: center;
+        transform: rotateZ(90deg);
+        transition: 0.1s;
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $blue-tint-light;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 4px 10px;
+
+    .accordion-toggle-icon {
+      transition: 0.2s;
+
+      &__vertical-line {
+        transform-origin: center;
+        transform: rotateZ(0deg);
+        transition: 0.1s;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .accordion-toggle-icon {
+        transform: scale(1.1, 1.1);
+        transition: 0.2s;
+      }
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__listing {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      &:last-of-type {
+        .filter-list__filter-item {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__filter-item {
+    display: block;
+    position: relative;
+    border-radius: 0;
+    padding: 4px 0;
+    padding-left: 34px;
+    border-bottom: 1px solid $blue-tint;
+    color: $black;
+
+    &::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 1px solid $black;
+      border-radius: 2px;
+      position: absolute;
+      left: 8px;
+      top: 9px;
+    }
+
+    &::after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: url('/images/checkmark-icon.svg') no-repeat;
+      border-radius: 2px;
+      position: absolute;
+      left: 11px;
+      top: 12px;
+      display: none;
+    }
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $black;
+      background: $orange-tint-light;
+    }
+
+    &:focus {
+      color: $black;
+      background: $orange-tint-light;
+    }
+
+    &.active {
+      background: $orange-tint-light;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
