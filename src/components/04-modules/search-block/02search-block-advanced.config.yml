@@ -1,0 +1,6 @@
+title: "Search block"
+status: ready
+context:
+  description: 'Search UK grants data'
+  form_action: '#'
+  submit_text: 'Search'

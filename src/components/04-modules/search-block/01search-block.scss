@@ -1,7 +1,10 @@
 .search-block {
-  background: $orange;
+  &--simple {
+    background: $orange;
+  }
+
   text-align: center;
-  padding: 82px 2rem 67px;
+  padding: 82px 1.5rem 67px;
 
   &__description {
     font-size: 24px;
@@ -18,8 +21,8 @@
   }
 
   &__form-item-label {
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 19px;
     margin-bottom: 6px;
   }
 
@@ -48,34 +51,35 @@
       @include breakpoint($regular) {
         min-width: 160px;
         font-size: 24px;
-        padding: 35px 18px;
+        padding: 28px 18px;
         flex-grow: 2;
       }
     }
 
-    input[type="submit"] {
-      border: none;
-      appearance: none;
-      background: $black;
-      color: $white;
-      font-size: 20px;
-      padding: 20px 30px;
-      font-weight: 500;
-      border-radius: 0px 3px 3px 0px;
+  }
 
-      @include breakpoint($medium) {
-        padding: 24px 36px;
-        font-size: 22px;
-      }
+  input[type="submit"] {
+    border: none;
+    appearance: none;
+    background: $black;
+    color: $white;
+    font-size: 20px;
+    padding: 20px 30px;
+    font-weight: 500;
+    border-radius: 0px 3px 3px 0px;
 
-      @include breakpoint($regular) {
-        padding: 28px 42px;
-        font-size: 24px;
-      }
+    @include breakpoint($medium) {
+      padding: 24px 36px;
+      font-size: 22px;
+    }
 
-      &:hover {
-        cursor: pointer;
-      }
+    @include breakpoint($regular) {
+      padding: 28px 42px;
+      font-size: 24px;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }

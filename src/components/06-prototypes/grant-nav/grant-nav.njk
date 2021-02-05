@@ -1,17 +1,14 @@
 {% extends '@layout--new' %}
 
-{% set description = 'Search, explore and download UK grants data published by funders in the 360Giving Data Standard.' %}
-{% set submit_text = 'Search' %}
-
 {% block header %}
-  {% include '@search-block' %}
+  {% render '@01search-block' %}
 {% endblock %}
 
 {% block main_content %}
   <div class="grid grid--three-columns">
-    {% include '@homepage-card' %}
-    {% include '@homepage-card' %}
-    {% include '@homepage-card' %}
+    {% render '@homepage-card' %}
+    {% render '@homepage-card' %}
+    {% render '@homepage-card' %}
   </div>
 {% endblock %}
 
