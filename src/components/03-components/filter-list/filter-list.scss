@@ -1,11 +1,11 @@
 .filter-list {
   border: 1px solid $blue-tint;
-  border-radius: 3px;
+  border-radius: 1px;
 
 
-  & details[open] {
-    .accordion-toggle-icon {
-      &__vertical-line {
+  &__accordion[open] {
+    .filter-list__label .accordion-toggle-icon {
+      .accordion-toggle-icon__vertical-line {
         transform-origin: center;
         transform: rotateZ(90deg);
         transition: 0.1s;
@@ -25,7 +25,7 @@
     .accordion-toggle-icon {
       transition: 0.2s;
 
-      &__vertical-line {
+      .accordion-toggle-icon__vertical-line {
         transform-origin: center;
         transform: rotateZ(0deg);
         transition: 0.1s;
@@ -114,5 +114,14 @@
         display: block;
       }
     }
+  }
+
+  &__expand-button {
+    display: block;
+    padding: 4px 12px;
+    text-align: center;
+    color: $black;
+    font-size: 15px;
+    font-weight: 500;
   }
 }

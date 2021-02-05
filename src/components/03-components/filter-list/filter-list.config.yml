@@ -1,7 +1,6 @@
 title: Filter type
 status: ready
 context:
-  opened: true
   filterTypeLabel: 'Recipient region'
   filterItems:
     - label: 'Oxford (321)'
@@ -16,13 +15,71 @@ context:
       url: '#'
     - label: 'London (32113)'
       url: '#'
-    - label: 'Paris (4123)'
-      url: '#'
-    - label: 'Marseille (7321)'
-      url: '#'
-    - label: 'Brussels (9321)'
-      url: '#'
-    - label: 'Geneva (8743)'
-      url: '#'
-    - label: 'Barcelona (8241)'
-      url: '#'
+variants:
+  - name: expanded
+    context:
+      opened: true
+      filterTypeLabel: 'Recipient city'
+      filterItems:
+        - label: 'Oxford (321)'
+          url: '#'
+          active: true
+        - label: 'Reading (1422)'
+          url: '#'
+        - label: 'Manchester (3141)'
+          url: '#'
+          active: true
+        - label: 'Birmingham (2132)'
+          url: '#'
+        - label: 'London (32113)'
+          url: '#'
+  - name: see-more
+    context:
+      opened: true
+      filterTypeLabel: 'Recipient district'
+      expand:
+        url: '#'
+        text: 'See more'
+      filterItems:
+        - label: 'Oxfordshire (321)'
+          url: '#'
+          active: true
+        - label: 'Readingshire (1422)'
+          url: '#'
+        - label: 'Manchestershire (3141)'
+          url: '#'
+          active: true
+        - label: 'Birminghamshire (2132)'
+          url: '#'
+        - label: 'Londonshire (32113)'
+          url: '#'
+  - name: see-less
+    context:
+      opened: true
+      filterTypeLabel: 'Recipient region'
+      expand:
+        url: '#'
+        text: 'See less'
+      filterItems:
+        - label: 'Oxford (321)'
+          url: '#'
+          active: true
+        - label: 'Reading (1422)'
+          url: '#'
+        - label: 'Manchester (3141)'
+          url: '#'
+          active: true
+        - label: 'Birmingham (2132)'
+          url: '#'
+        - label: 'London (32113)'
+          url: '#'
+        - label: 'Paris (4123)'
+          url: '#'
+        - label: 'Marseille (7321)'
+          url: '#'
+        - label: 'Brussels (9321)'
+          url: '#'
+        - label: 'Geneva (8743)'
+          url: '#'
+        - label: 'Barcelona (8241)'
+          url: '#'

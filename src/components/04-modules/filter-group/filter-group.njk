@@ -1,0 +1,12 @@
+<div class="filter-group">
+  <details class="filter-group__accordion" {% if opened === true%} open{% endif %}>
+    <summary class="filter-group__label">
+      <div>{{ label }}</div>
+      {% render '@accordion-toggle-icon' %}
+    </summary>
+    <div class="filter-group_contents-wrapper">
+      {% render '@filter-list' %}
+      {% render '@filter-list--see-more' %}
+    </div>
+  </details>
+</div>
