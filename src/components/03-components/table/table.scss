@@ -66,6 +66,7 @@
 /* Primary styling */
 .table--primary {
   border: none;
+  border-bottom: 1px solid $orange-tint-lighter;
 
   th {
     background: $orange-tint-lighter;
@@ -73,6 +74,20 @@
     font-weight: 700;
     padding: 16px 14px;
     border: none;
+  }
+
+  thead {
+    tr:first-of-type {
+      border-radius: 3px 3px 0px 0px;
+
+      th:first-of-type {
+        border-top-left-radius: 3px;
+      }
+
+      th:last-of-type {
+        border-top-right-radius: 3px;
+      }
+    }
   }
 
   tr {
@@ -100,20 +115,35 @@
 /* Secondary styling */
 .table--secondary {
   border: none;
+  border-bottom: 1px solid $yellow-tint-dark;
 
   th {
-    background: $yellow-tint-light;
+    background: $yellow-tint-dark;
     font-size: 16px;
     font-weight: 700;
     padding: 16px 14px;
     border: none;
   }
 
+  thead {
+    tr:first-of-type {
+      border-radius: 3px 3px 0px 0px;
+
+      th:first-of-type {
+        border-top-left-radius: 3px;
+      }
+
+      th:last-of-type {
+        border-top-right-radius: 3px;
+      }
+    }
+  }
+
   tr {
     border: none;
 
     td + td {
-      border-left: 1px solid $yellow-tint-light;
+      border-left: 1px solid $yellow-tint-dark;
     }
 
     &:nth-of-type(odd) {
