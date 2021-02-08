@@ -26,6 +26,7 @@
     font-weight: 500;
     padding: 4px 10px;
     border: 1px solid $orange-tint;
+    border-radius: 2px;
 
     @include breakpoint($medium) {
       padding: 18px 10px;

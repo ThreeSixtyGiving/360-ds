@@ -5,8 +5,19 @@
       {% render '@accordion-toggle-icon' %}
     </summary>
     <div class="filter-list__contents-wrapper">
-      {% block filterOption %}
-      {% endblock filterOption %}
+      {% block filterForm %}
+        <form class="filter-list__contents--form">
+          <div class="filter-list__contents--form-item">
+            <label for="smallest-number">Smallest (£)</label>
+            <input id="smallest-number" min="0" type="number">
+          </div>
+          <div class="filter-list__contents--form-item">
+            <label for="smallest-number">Largest (£)</label>
+            <input id="smallest-number" min="0" type="number">
+          </div>
+          <input class="filter-list__contents--form-submit" type="submit" value="Apply">
+        </form>
+      {% endblock filterForm %}
       <ul class="filter-list__listing">
         {% for filterItem in filterItems %}
           <li>
