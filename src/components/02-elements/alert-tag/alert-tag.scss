@@ -3,7 +3,7 @@
   border-radius: 6px;
   padding: 6px;
   background: $yellow-tint;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   text-align: left;
 
@@ -28,6 +28,8 @@
 
   // This is necessary to avoid underlining the icon
   &--anchor {
+    padding: 5px;
+
     &:hover {
       background: $yellow;
     }

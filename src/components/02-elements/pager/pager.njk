@@ -39,7 +39,7 @@
       {% else %}
         <li class="pager__item--page">
           {% if page.type == 'number' %}
-            <a href="{{ page.url }}">
+            <a {% if page.active === true %}class="active"{% endif %} href="{{ page.url }}">
               {{ page.label }}
             </a>
           {% endif %}

@@ -1,14 +1,6 @@
-.filter-group {
-  border-radius: 1px;
-  margin-bottom: 4px;
-
-  @include breakpoint($medium) {
-    margin-bottom: 20px;
-  }
-
-
-  &__accordion[open] {
-    .filter-group__label .accordion-toggle-icon {
+.filter-wrapper {
+  &[open] {
+    .filter-wrapper__summary .accordion-toggle-icon {
       .accordion-toggle-icon__vertical-line {
         transform-origin: center;
         transform: rotateZ(90deg);
@@ -17,22 +9,37 @@
     }
   }
 
-  &__label {
+  &__summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: $orange-tint-light;
+    background: $teal-dark;
     font-size: 16px;
     font-weight: 500;
     padding: 4px 10px;
-    border: 1px solid $orange-tint;
+    color: $white;
+    margin-bottom: 4px;
 
-    @include breakpoint($medium) {
-      padding: 18px 10px;
+    @include breakpoint($regular) {
+      color: $black;
+      background: none;
+      padding-left: 0;
+      margin-bottom: 6px;
+    }
+
+    &:focus {
+      @include breakpoint($regular) {
+        outline: none;
+      }
     }
 
     .accordion-toggle-icon {
       transition: 0.2s;
+      stroke: $white;
+
+      @include breakpoint($regular) {
+        display: none;
+      }
 
       &__vertical-line {
         transform-origin: center;
@@ -44,6 +51,10 @@
     &:hover {
       cursor: pointer;
 
+      @include breakpoint($regular) {
+        cursor: default;
+      }
+
       .accordion-toggle-icon {
         transform: scale(1.1, 1.1);
         transition: 0.2s;
@@ -53,16 +64,10 @@
     &::-webkit-details-marker {
       display: none;
     }
-  }
-  &_contents-wrapper {
-    padding: 4px 0;
 
-    > * {
-      margin-bottom: 4px;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
+    &--heading {
+      font-weight: 500;
+      font-size: 18px;
     }
   }
 }

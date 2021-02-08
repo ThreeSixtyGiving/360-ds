@@ -18,13 +18,11 @@ context:
     - label: '5'
       type: 'number'
       url: '#'
+      active: true
     - label: '6'
       type: 'number'
       url: '#'
     - label: '7'
-      type: 'number'
-      url: '#'
-    - label: '8'
       type: 'number'
       url: '#'
     - type: 'ellipsis'
@@ -38,15 +36,10 @@ variants:
   - name: First page
     context:
       pages:
-        - label: 'First'
-          type: 'first'
-          url: '#'
-        - label: 'Previous'
-          type: 'prev'
-          url: '#'
         - label: '1'
           type: 'number'
           url: '#'
+          active: true
         - label: '2'
           type: 'number'
           url: '#'
@@ -57,9 +50,6 @@ variants:
           type: 'number'
           url: '#'
         - label: '5'
-          type: 'number'
-          url: '#'
-        - label: '6'
           type: 'number'
           url: '#'
         - type: 'ellipsis'
