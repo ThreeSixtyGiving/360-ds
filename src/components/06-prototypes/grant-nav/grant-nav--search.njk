@@ -1,0 +1,75 @@
+{% extends '@layout--new' %}
+
+{% block header %}
+  {% render '@search-block--advanced' %}
+{% endblock %}
+
+{% block main_content %}
+  <div class="grantnav-search__wrapper">
+    <div class="grantnav-search__sidebar">
+      <h2 class="grantnav-search__sidebar--heading">Refine your search</h2>
+
+      <div class="inline-block">
+        {% include '@alert-tag--anchor' %}
+      </div>
+
+      <div class="grantnav-search__sidebar--filters">
+        {% render '@filter-wrapper' %}
+      </div>
+    </div>
+    <div class="grantnav-search__content">
+      {% render '@search-summary' %}
+
+      {% render '@results-title' %}
+
+      {% render '@filter-summary' %}
+
+      <section class="grantnav-search__content--filters">
+        {% render '@dropdown-filter' %}
+
+        <div class="export-wrapper">
+          <div class="export-label">Export search data:</div>
+
+          <div class="export-button">
+            {% render '@export-data-button' %}
+          </div>
+
+          <div class="export-button">
+            {% render '@export-data-button--json' %}
+          </div>
+        </div>
+      </section>
+
+      <section class="grantnav-search__content--results">
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+
+        {% render '@grant-search-result' %}
+      </section>
+
+      <section class="grantnav-search__content--footer">
+        {% render '@pager' %}
+      </section>
+    </div>
+  </div>
+{% endblock %}
+

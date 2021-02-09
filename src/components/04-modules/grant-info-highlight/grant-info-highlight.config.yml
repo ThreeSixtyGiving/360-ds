@@ -1,0 +1,10 @@
+title: 'Grant info highlight'
+status: ready
+context:
+  funder_url: '#'
+  funder_name: 'Sport England (GB-COH-RC000766)'
+  recipient_url: '#'
+  recipient_name: 'Angmering Table tennis Club (360G-SE-2010008706)'
+  amount: '£9,000'
+  date: '23 Nov 2019'
+  date_timestamp: '23-11-2019'

@@ -1,0 +1,14 @@
+title: Radio buttons
+status: ready
+context:
+  radioGroupName: 'search-filter'
+  radioItems:
+    - name: 'All the data'
+      value: 'all'
+      default: true
+    - name: 'Locations'
+      value: 'locations'
+    - name: 'Recipients'
+      value: 'recipients'
+    - name: 'Titles & Descriptions'
+      value: 'titledesc'

@@ -1,0 +1,36 @@
+{% extends '@layout--new' %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block main_content %}
+  <div class="grantnav-page__wrapper">
+    <div class="grantnav-page__content layout__content">
+      <div class="section">
+        {% render '@page-title' %}
+      </div>
+
+      <div class="section">
+        {% render '@grant-info-highlight' %}
+      </div>
+
+      <div class="section">
+        <p>There is no proven treatment, chemoprophylaxis or vaccine for COVID-19. This is the most serious pandemic emergency for 100 years. Healthcare workers are being affected disproportionately in the continuing epidemic threatening an imminent breakdown of health services. Chloroquine and hydroxychloroquine are safe and well-tolerated medications which can be taken for years without adverse effects.Both have significant antiviral activity against SARS-CoV-2 and there is emerging evidence from China and Europe of efficacy in treatment. Unfortunately there is also premature recommendation from countries such as India which now recommends low dose hydroxychloroquine for prophylaxis in health care workers. We propose conducting a multi-centre, multi-country randomised, double blind, placebo controlled assessment of the prophylactic efficacy of chloroquine (Asia) or hydroxychloroquine (Europe) in preventing COVID-19 illness in at-risk healthcare workers and other frontline staff. At least 40,000 participants in Asia and Europe will be randomised 1:1 to receive chloroquine or hydroxychloroquine or a matched film coated placebo as daily prophylaxis for three months. The study’s objectives are the prevention of symptomatic coronavirus disease (COVID-19) and the attenuation of the clinical severity.</p>
+      </div>
+
+      <div class="section">
+        {% render '@box' %}
+      </div>
+
+      <div class="section">
+        {% render '@table--primary' %}
+      </div>
+
+      <div class="section">
+        {% render '@table--secondary' %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

@@ -1,0 +1,16 @@
+title: "Search block"
+status: ready
+context:
+  description: 'Search, explore and download UK grants data published by funders in the 360Giving Data Standard.'
+  form_action: '#'
+  submit_text: 'Search'
+  search_name: 'search-view'
+  search_label: 'Enter a search term'
+variants:
+  - name: 'Advanced'
+    context:
+      description: 'Search UK grants data'
+      form_action: '#'
+      submit_text: 'Search'
+      search_name: 'search-view'
+      search_label: 'Enter a search term'

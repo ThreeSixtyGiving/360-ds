@@ -1,0 +1,9 @@
+<div class="dropdown-filter">
+  <label class="dropdown-filter__label" for="{{ id }}">{{ label }}</label>
+
+  <select class="dropdown-filter__select" name="{{ name }}" id="{{ id }}"{% if required === true %} required{% endif %}>
+    {% for option in options %}
+      <option value="{{ option.value }}"{% if option.disabled %} disabled{% endif %}>{{ option.label }}</option>
+    {% endfor %}
+  </select>
+</div>

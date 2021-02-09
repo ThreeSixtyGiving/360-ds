@@ -22,7 +22,7 @@
 
 .base-card {
   &__content {
-    padding: 16px;  
+    padding: 16px;
     @include breakpoint($large) { padding: 32px; }
   }
 
@@ -65,6 +65,38 @@
 
 .base-card--spacious {
   @include breakpoint($large) { padding: 24px 16px; }
+}
+
+.base-card--new {
+  --card-bg-hsl: var(--base-hsl);
+  background: hsla(var(--orange-hsl), 0.2);
+  border-left: 4px solid $orange;
+  border-right: 4px solid $orange;
+  padding-top: 32px;
+  padding-bottom: 58px;
+
+  /* I've opted to hide the before element and use borders for this instead.
+  I didn't want to update the other base cards as to not break anything
+  but I don't think a whole new element is needed. */
+  &::before {
+    content: none;
+  }
+
+  .base-card__title {
+    font-size: 33px;
+    margin-bottom: 32px;
+  }
+
+  .base-card__text:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .button {
+    &:hover {
+      color: $black;
+      border-color: $orange-dark;
+    }
+  }
 }
 
 a.base-card { color: currentColor; }

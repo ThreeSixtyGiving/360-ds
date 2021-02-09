@@ -1,0 +1,15 @@
+title: 'Dropdown filter'
+status: ready
+context:
+  label: 'Sort by:'
+  id: 'sort-view'
+  name: 'sort-by'
+  options:
+    - label: 'Best results'
+      value: 'best'
+    - label: 'Date ascending'
+      value: 'date-asc'
+    - label: 'Date descending'
+      value: 'date-desc'
+    - label: 'Title'
+      value: 'title'

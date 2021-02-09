@@ -1,0 +1,6 @@
+title: 'Search summary'
+status: ready
+context:
+  search_term: 'Museums'
+  results_number: '365'
+  search_group: 'Locations'

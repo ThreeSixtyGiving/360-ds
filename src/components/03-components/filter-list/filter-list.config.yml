@@ -1,0 +1,147 @@
+title: Filter type
+status: ready
+context:
+  filterTypeLabel: 'Recipient region'
+  filterItems:
+    - label: 'Oxford (321)'
+      url: '#'
+      active: true
+    - label: 'Reading (1422)'
+      url: '#'
+    - label: 'Manchester (3141)'
+      url: '#'
+      active: true
+    - label: 'Birmingham (2132)'
+      url: '#'
+    - label: 'London (32113)'
+      url: '#'
+variants:
+  - name: expanded
+    context:
+      opened: true
+      filterTypeLabel: 'Recipient city'
+      filterItems:
+        - label: 'Oxford (321)'
+          url: '#'
+          active: true
+        - label: 'Reading (1422)'
+          url: '#'
+        - label: 'Manchester (3141)'
+          url: '#'
+          active: true
+        - label: 'Birmingham (2132)'
+          url: '#'
+        - label: 'London (32113)'
+          url: '#'
+  - name: see-more
+    context:
+      opened: true
+      filterTypeLabel: 'Recipient district'
+      expand:
+        url: '#'
+        text: 'See more'
+      filterItems:
+        - label: 'Oxfordshire (321)'
+          url: '#'
+          active: true
+        - label: 'Readingshire (1422)'
+          url: '#'
+        - label: 'Manchestershire (3141)'
+          url: '#'
+          active: true
+        - label: 'Birminghamshire (2132)'
+          url: '#'
+        - label: 'Londonshire (32113)'
+          url: '#'
+  - name: see-less
+    context:
+      opened: true
+      filterTypeLabel: 'Recipient region'
+      expand:
+        url: '#'
+        text: 'See less'
+      filterItems:
+        - label: 'Oxford (321)'
+          url: '#'
+          active: true
+        - label: 'Reading (1422)'
+          url: '#'
+        - label: 'Manchester (3141)'
+          url: '#'
+          active: true
+        - label: 'Birmingham (2132)'
+          url: '#'
+        - label: 'London (32113)'
+          url: '#'
+        - label: 'Paris (4123)'
+          url: '#'
+        - label: 'Marseille (7321)'
+          url: '#'
+        - label: 'Brussels (9321)'
+          url: '#'
+        - label: 'Geneva (8743)'
+          url: '#'
+        - label: 'Barcelona (8241)'
+          url: '#'
+  - name: with-form
+    context:
+      opened: true
+      filterTypeLabel: 'Recipient city'
+      filterItems:
+        - label: 'Oxford (321)'
+          url: '#'
+          active: true
+        - label: 'Reading (1422)'
+          url: '#'
+        - label: 'Manchester (3141)'
+          url: '#'
+          active: true
+        - label: 'Birmingham (2132)'
+          url: '#'
+        - label: 'London (32113)'
+          url: '#'
+  - name: with-checkboxes
+    context:
+      opened: true
+      filterTypeLabel: 'Recipient Organisation'
+      formAction: '#'
+      radioId: 'exclusion'
+      radioItems:
+        - label: 'Include selected'
+          value: 'include'
+          checked: true
+        - label: 'Exclude selected'
+          value: 'exclude'
+      filterItems:
+        - label: 'Oxford (321)'
+          value: 'oxford'
+          url: '#'
+          checked: true
+        - label: 'Reading (1422)'
+          value: 'reading'
+          url: '#'
+        - label: 'Manchester (3141)'
+          value: 'manchester'
+          url: '#'
+          checked: true
+        - label: 'Birmingham (2132)'
+          value: 'birmingham'
+          url: '#'
+        - label: 'London (32113)'
+          value: 'london'
+          url: '#'
+        - label: 'Paris (4123)'
+          value: 'paris'
+          url: '#'
+        - label: 'Marseille (7321)'
+          value: 'marseille'
+          url: '#'
+        - label: 'Brussels (9321)'
+          value: 'brussels'
+          url: '#'
+        - label: 'Geneva (8743)'
+          value: 'geneva'
+          url: '#'
+        - label: 'Barcelona (8241)'
+          value: 'barcelona'
+          url: '#'
