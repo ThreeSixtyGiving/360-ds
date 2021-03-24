@@ -112,8 +112,8 @@
 
       @include breakpoint($large) {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 1rem;
+        top: -0.2rem;
       }
     }
   }
