@@ -1,0 +1,21 @@
+title: 'Search summary'
+status: ready
+context:
+  total_grants: '72,026'
+  total_value: '£1.5 million'
+  total_funders: '2,583'
+  total_recipients: '194,000'
+  another: '2,523'
+  first_graph_label: 'Award amount'
+  second_graph_label: 'Award date'
+  summaryFooterItems:
+    - label: 'Largest grant:'
+      value: '£100m to <a href="#">Youth Music</a> from <a href="#">Jack Drum Arts</a>.'
+    - label: 'Smallest grant:'
+      value: '£100m to <a href="#">Youth Music</a> from <a href="#">Jack Drum Arts</a>.'
+    - label: 'Most recent grant:'
+      value: '£100m to <a href="#">Youth Music</a> from <a href="#">Jack Drum Arts</a>.'
+    - label: 'Oldest grant:'
+      value: '£100m to <a href="#">Youth Music</a> from <a href="#">Jack Drum Arts</a>.'
+    - label: 'Most recent grant:'
+      value: '£100m to <a href="#">Youth Music</a> from <a href="#">Jack Drum Arts</a>.'
