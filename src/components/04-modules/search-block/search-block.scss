@@ -89,10 +89,11 @@
 /* Advanced variant styling */
 .search-block {
   &--advanced {
-    padding-top: 26px;
+    padding-top: 2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    background: $orange-tint;
+    padding-bottom: 2rem;
+    background: transparentize($color: $orange-tint, $amount: 0.26);
 
     .search-block__description {
       margin-bottom: 36px;
@@ -144,8 +145,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 22px;
-    margin-bottom: 22px;
+    margin-top: 16px;
+    margin-bottom: 32px;
 
     @include breakpoint($medium) {
       flex-direction: row;
