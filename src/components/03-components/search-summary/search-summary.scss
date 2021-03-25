@@ -109,11 +109,16 @@
       align-items: center;
       justify-content: center;
       padding: 0.5rem;
+      background: $yellow-tint-off;
+      border-top: 0.5rem solid $yellow-tint-dark;
 
       @include breakpoint($large) {
         position: absolute;
         right: 1rem;
         top: -0.2rem;
+
+        background: none;
+        border-top: none;
       }
     }
   }
