@@ -148,6 +148,7 @@
         margin-bottom: 0;
         font-weight: 400;
         font-size: 15px;
+        box-sizing: border-box;
       }
 
       input {
@@ -215,6 +216,7 @@
         position: relative;
         font-size: 15px;
         font-weight: 400;
+        box-sizing: border-box;
 
         &::before {
           content: '';
@@ -288,6 +290,7 @@
         width: 100%;
         font-size: 15px;
         font-weight: 400;
+        box-sizing: border-box;
 
         &:hover {
           text-decoration: dashed underline;

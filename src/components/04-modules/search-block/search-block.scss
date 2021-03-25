@@ -93,7 +93,6 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     background: $orange-tint;
-    border-top: 20px solid $orange;
 
     .search-block__description {
       margin-bottom: 36px;
@@ -101,7 +100,15 @@
 
     input[type="text"] {
       border-radius: 3px;
+      padding: 16px 12px;
 
+      @include breakpoint($medium) {
+        padding: 12px 16px;
+      }
+
+      @include breakpoint($regular) {
+        padding: 12px 18px;
+      }
     }
 
     input[type="submit"] {
