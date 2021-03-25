@@ -93,7 +93,7 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 2rem;
-    background: transparentize($color: $orange-tint, $amount: 0.64);
+    background: $orange-tint;
 
     .search-block__description {
       margin-bottom: 36px;
