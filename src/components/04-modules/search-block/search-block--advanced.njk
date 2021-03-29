@@ -1,6 +1,8 @@
 <div class="search-block search-block--advanced">
   <div class="wrapper">
-    <div class="search-block__description">{{ description }}</div>
+    {% if description %}
+      <div class="search-block__description">{{ description }}</div>
+    {% endif %}
 
     <div class="search-block__label">
       {% block alert %}

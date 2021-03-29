@@ -9,8 +9,8 @@ context:
 variants:
   - name: 'Advanced'
     context:
-      description: 'Search UK grants data'
+      description: null
       form_action: '#'
-      submit_text: 'Search'
+      submit_text: 'Search UK grants data'
       search_name: 'search-view'
       search_label: 'Enter a search term'
