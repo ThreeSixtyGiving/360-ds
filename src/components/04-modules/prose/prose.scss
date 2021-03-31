@@ -315,5 +315,10 @@
     z-index: 100000;
   /* Above WP toolbar. */
   }
+
+  img[class*="wp-image-"] {
+    height: auto;
+    width: auto;
+  }
 }
 
