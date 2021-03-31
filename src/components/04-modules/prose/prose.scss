@@ -17,6 +17,7 @@
 
 .prose p,
 .prose li,
+.prose table,
 .p {
   @include text;
 }
@@ -313,6 +314,11 @@
     width: auto;
     z-index: 100000;
   /* Above WP toolbar. */
+  }
+
+  img[class*="wp-image-"] {
+    height: auto;
+    width: auto;
   }
 }
 

@@ -9,6 +9,12 @@
 
   table { margin: 0; }
 
+  a {
+    font-weight: inherit;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+
   th, td {
     padding: 8px;
     vertical-align: top;
