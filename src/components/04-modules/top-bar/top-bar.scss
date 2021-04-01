@@ -165,7 +165,7 @@
 
   &--active { background-color: hsla(var(--active-color), .1); }
   
-  .submenu__list { background-color: var(--colors-white); }
+  .submenu__list { background-color: hsla(var(--white-hsl)); }
 }
 
 
