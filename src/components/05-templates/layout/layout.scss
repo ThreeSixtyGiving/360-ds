@@ -111,5 +111,9 @@
     .layout__content {
       flex: 1 1 auto;
     }
+
+    .layout__content-inner {
+      padding-top: 0px;
+    }
   }
 }
