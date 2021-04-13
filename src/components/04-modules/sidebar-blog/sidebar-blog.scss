@@ -16,6 +16,21 @@
 
 .categories-list {
   list-style: none;
+
+  &__item {
+
+    & > a {
+      font-weight: bold;
+    }
+
+    & > ul {
+      list-style: none;
+
+      & > li {
+        margin-top: 0.5rem;
+      }
+    }
+  }
 }
 
 .category {

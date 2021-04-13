@@ -1,0 +1,21 @@
+{% extends '@layout--docs' %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block header %}
+{% render '@nav-bar' %}
+{% endblock %}
+
+{% block main_content %}
+  <div>
+    {% render '@prose--left' %}
+  </div>
+  
+{% endblock %}
+
+{% block sidebar %}
+  
+  {% render '@sidebar-blog' %}
+
+{% endblock %}

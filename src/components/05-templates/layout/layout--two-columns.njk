@@ -1,5 +1,7 @@
 <div class="layout layout--two-columns">
-  {% render '@top-bar' %}
+  {% block navbar %}
+    {% render '@top-bar' %}
+  {% endblock %}
   <header class="layout__header">
     {% block header %}
       {% render '@hero' %}
