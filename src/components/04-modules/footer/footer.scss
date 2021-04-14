@@ -87,7 +87,7 @@
   }
 
   &__logo { 
-    opacity: .3; 
+    opacity: .5; 
     @include breakpoint($small-only) {
       margin-bottom: 16px;
     }
@@ -127,6 +127,13 @@
   &__policy-links {
     a { display: inline-block; } // To avoid line-breaks in the links
     @include breakpoint($medium-up) { text-align: right; }
+  }
+
+  &--compact {
+    padding-top: 12px;
+    .footer__small-print {
+      border-top: 0;
+    }
   }
 }
 
