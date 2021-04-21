@@ -48,6 +48,10 @@
     // background: linear-gradient(90deg, hsla(var(--base-hsl), 0) 0%, hsla(var(--base-hsl), .1) 100%);
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   &--active {
     background-color: hsla(var(--teal-hsl), 0.2);
     // background: linear-gradient(90deg, hsla(var(--teal-hsl), 0) 0%, hsla(var(--base-hsl), .3) 100%);
