@@ -18,6 +18,10 @@
       margin-bottom: 0;
       min-width: calc(330px - 24px);
     }
+    @media print {
+      float: right;
+      min-width: initial;
+    }
   }
 
   &__title {
@@ -32,6 +36,11 @@
 
     & a {
       color: inherit;
+    }
+
+    @media print{
+      margin-left: 0px;
+      margin-right: 0px;
     }
   }
 
@@ -75,5 +84,13 @@
         padding: 16px 6px;
       }
     }
+
+    @media print{
+      display: none;
+    }
+  }
+
+  @media print{
+    @include reset_print;
   }
 }

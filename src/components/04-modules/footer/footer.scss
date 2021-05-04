@@ -37,6 +37,10 @@
       color: hsla(var(--white-hsl), 1);
       text-decoration: underline;
     }
+
+    @media print {
+      color: hsl(var(--base-hsl), 1);
+    }
   }
 
   @include breakpoint($large) {
@@ -46,10 +50,17 @@
   &__row:first-of-type { 
     padding-bottom: 36px;
     border-bottom: 1px solid hsla(var(--white-hsl), .2); 
+    @media print {
+      padding-bottom: inherit;
+    }
   }
 
   &__row {
     padding: 16px 0;
+
+    @media print {
+      @include reset_print;
+    }
   }
   
   &__section {
@@ -91,6 +102,14 @@
     @include breakpoint($small-only) {
       margin-bottom: 16px;
     }
+    @media print {
+      img {
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+        margin-bottom: 0.5cm;
+        opacity: 1;
+      }
+    }
   }
 
   &__tagline { 
@@ -120,6 +139,9 @@
     padding-top: 16px;
     padding-bottom: 12px;
     color: hsla(var(--white-hsl), .7);
+    @media print {
+      color: hsl(var(--base-hsl), 1);
+    }
   }
 
   .edit-github { float: right; }
@@ -127,6 +149,9 @@
   &__policy-links {
     a { display: inline-block; } // To avoid line-breaks in the links
     @include breakpoint($medium-up) { text-align: right; }
+    @media print {
+      text-align: left;
+    }
   }
 
   &--compact {
@@ -134,6 +159,12 @@
     .footer__small-print {
       border-top: 0;
     }
+  }
+
+  @media print {
+    border-top: 4px solid hsl(var(--base-hsl), 1);
+    background-color: inherit;
+    page-break-inside: avoid;
   }
 }
 

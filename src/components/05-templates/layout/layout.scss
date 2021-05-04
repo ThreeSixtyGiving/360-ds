@@ -118,4 +118,22 @@
       }
     }
   }
+  @media print{
+    @include reset_print;
+
+    .layout__header,
+    .layout__body,
+    .layout__sidebar,
+    .layout__content,
+    &--single-column,
+    &--two-columns {
+      @include reset_print;
+    }
+    .layout__sidebar {
+      display: none;
+    }
+    .layout__body > * {
+      overflow: auto;
+    }
+  }
 }

@@ -35,6 +35,15 @@
     text-decoration: none;
     color: var(--text-color);
   }
+
+  @media print {
+    font-weight: bolder;
+    text-decoration: none;
+    
+    &[href^=http]:after {
+        content:" (" attr(href) ")";
+    }
+  }
 }
 
 .prose__author {
@@ -140,9 +149,7 @@
       }
     }
   }
-}
-
-.prose {
+  
   max-width: 800px;
   margin: 0 auto;
 
@@ -172,6 +179,12 @@
     margin-bottom: 1.4rem;
     margin-top: 1.4rem;
   }
+
+  @media print {
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
 }
 
 .prose blockquote,
@@ -193,6 +206,17 @@
     top: -50px;
     color: hsla(var(--orange-hsl), .2);
     z-index: -1;
+  }
+
+  @media print {
+    &:before {
+      content: "";
+    }
+
+    margin-left: 5mm;
+    padding-left: 5mm;
+    font-style: italic;
+    border-left: 3px solid hsla(var(--orange-hsl), .2);
   }
 }
 

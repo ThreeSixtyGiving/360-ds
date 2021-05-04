@@ -70,19 +70,31 @@
     flex: 1;
     padding: 48px;
     @include breakpoint($large) { padding: 32px 48px 32px 48px; }
+
+    @media print {
+      padding: 0;
+      display: block;
+    }
   }
    
   &__image-wrapper {
     width: 30%;
     max-width: 320px;
+    min-height: 320px;
   }
 
-  &__image {
+  div.media-card__image {
     height: 0;
     width: 100%;
     padding-bottom: 100%;
     background-position: center;
     background-size: cover;
+  }
+
+  img.media-card__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   &__byline {
