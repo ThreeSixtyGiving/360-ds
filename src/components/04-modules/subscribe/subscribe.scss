@@ -1,6 +1,10 @@
 .subscribe-section {
   background-color: hsla(var(--yellow-hsl), 1);
   padding: 24px;
+
+  @media print {
+    display: none;
+  }
 }
 
 .subscribe-section__wrapper {

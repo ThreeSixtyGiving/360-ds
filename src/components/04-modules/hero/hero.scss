@@ -17,6 +17,10 @@
       max-width: 320px; 
       max-height: 150px;
     }
+    @media print {
+      float: right;
+      width: 320px; 
+    }
   }
 
   // &__image img {}
@@ -27,6 +31,9 @@
     padding-left: 32px;
 
     @include breakpoint($medium) { margin: 0; }
+    
+    @media print {
+    }
   }
 
   &__title {
@@ -55,6 +62,16 @@
     &__lead { 
       margin-left: 40px; 
       flex: 4;
+    }
+  }
+
+  @media print {
+    @include reset_print;
+
+    &__lead {
+      padding-left: 0;
+      border: 0;
+      margin-left: 0;
     }
   }
 }

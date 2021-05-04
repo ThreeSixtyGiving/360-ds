@@ -16,8 +16,34 @@
 
     @include breakpoint($medium) {
       margin-bottom: 0;
+      min-width: calc(330px - 24px);
+    }
+    @media print {
+      float: right;
+      min-width: initial;
     }
   }
+
+  &__title {
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    @include breakpoint($medium) {
+      margin-left: 2rem;
+      margin-right: auto;
+    }
+
+    & a {
+      color: inherit;
+    }
+
+    @media print{
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
   &__nav-menu {
     ul {
       list-style: none;
@@ -58,5 +84,13 @@
         padding: 16px 6px;
       }
     }
+
+    @media print{
+      display: none;
+    }
+  }
+
+  @media print{
+    @include reset_print;
   }
 }

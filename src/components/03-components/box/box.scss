@@ -20,6 +20,10 @@
     width: 4px;
     left: 0;
     top: 0;
+
+    @media print {
+      display: none;
+    }
   }
 
   h3, 
@@ -39,6 +43,14 @@
     &:hover {
       background-color: hsl(var(--box-bg-hsl), 0.1);
     }
+  }
+
+  @media print {
+    break-inside: avoid;
+    padding-left: 0;
+    padding-right: 0;
+    border-top: 4px solid hsl(var(--box-bg-hsl), 1);
+    border-bottom: 4px solid hsl(var(--box-bg-hsl), 1);
   }
 }
 

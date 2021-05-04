@@ -1,0 +1,30 @@
+<div class="nav-bar">
+  <a class="nav-bar__home-button" href="/">
+    {# TO DO: REFACTOR LOGO INTO COMPONENT #}
+    {% include '@main-logo--animated' %}
+
+    <span class="screen-reader-only">Home</span>
+  </a>
+  <h1 class="nav-bar__title">
+    <a class="" href="/">Site title</a>
+  </h1>
+
+  <nav class="nav-bar__nav-menu">
+    <ul>
+      {% for item in nav_menu %}
+        <li class="nav-menu__item">
+          {# If you want to disable a nav item, please don't use an anchor,
+          make it another element instead #}
+          <a class="nav-menu__button"
+            href="{{ item.url }}"
+            {% if item.target %} target="{{ item.target }}"{% endif %}
+            {% if item.isexternal %} rel="noopener noreferrer"{% endif %}>
+            {{ item.name }}
+            {% if item.target %}<span class="screen-reader-only">(opens in a new tab)</span>{% endif %}
+            {# I've ommitted the title attribute because it's not great for accessibility #}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

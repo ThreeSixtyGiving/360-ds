@@ -15,8 +15,7 @@
   }
 }
 
-.prose p,
-.prose li,
+.prose,
 .prose table,
 .p {
   @include text;
@@ -35,6 +34,15 @@
   &.button {
     text-decoration: none;
     color: var(--text-color);
+  }
+
+  @media print {
+    font-weight: bolder;
+    text-decoration: none;
+    
+    &[href^=http]:after {
+        content:" (" attr(href) ")";
+    }
   }
 }
 
@@ -141,13 +149,22 @@
       }
     }
   }
-}
-
-.prose {
+  
   max-width: 800px;
   margin: 0 auto;
 
-  h1 { margin-bottom: 2rem; }
+  &--left {
+    margin: 0 2rem;
+
+    & ol {
+      margin-left: 42px;
+    }
+  }
+
+  h1 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
 
   h2, h3, h4, h5, h6, .intro {
     margin-top: 3rem;
@@ -161,6 +178,12 @@
   .box {
     margin-bottom: 1.4rem;
     margin-top: 1.4rem;
+  }
+
+  @media print {
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
   }
 }
 
@@ -184,6 +207,17 @@
     color: hsla(var(--orange-hsl), .2);
     z-index: -1;
   }
+
+  @media print {
+    &:before {
+      content: "";
+    }
+
+    margin-left: 5mm;
+    padding-left: 5mm;
+    font-style: italic;
+    border-left: 3px solid hsla(var(--orange-hsl), .2);
+  }
 }
 
 .prose blockquote {
@@ -191,12 +225,6 @@
 }
 
 .prose {
-  h2 {
-    color: hsla(var(--teal-dark-hsl), 1);
-    font-weight: bold;
-    font-size: 1.3rem;
-    margin-bottom: 0;
-  }
 
   &__h1-long {
     margin-bottom: 1.5rem;
