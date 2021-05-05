@@ -10,8 +10,8 @@
   "author": "Arthur A. Bergamaschi <arthurbergmz@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "@frctl/fractal": "^1.5.3",
-    "@frctl/nunjucks": "^2.0.7",
+    "@frctl/fractal": "^1.5.6",
+    "@frctl/nunjucks": "^2.0.10",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-notify": "^3.2.0",
