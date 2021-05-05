@@ -196,15 +196,17 @@
 }
 
 .prose blockquote {
+  padding-left: 4rem;
+
   &:before {
     content: "format_quote";
-    transform: scaleX(-1);
+    transform: scaleX(-0.9);
     font-size: 10rem;
     @extend .u-material-icons; 
     position: absolute;
-    left: -50px;
+    left: -65px;
     top: -50px;
-    color: hsla(var(--orange-hsl), .2);
+    color: hsla(var(--orange-hsl), .15);
     z-index: -1;
   }
 
