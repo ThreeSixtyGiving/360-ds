@@ -1,4 +1,4 @@
-.publication-years-chart {
+.years-chart {
   --block-size: 42px;
   --label-colour: #A3A3A3;
   --separator-colour: #F0F0F0;
@@ -30,6 +30,9 @@
       background-color: rgba($orange, var(--transparency));
       width: var(--block-size);
       height: 100%;
+      font-size: 0.75rem;
+      text-align: center;
+      padding-top: 0.5rem;
     }
   }
 
