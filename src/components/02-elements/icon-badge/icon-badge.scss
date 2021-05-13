@@ -1,0 +1,26 @@
+.icon-badge {
+  display: inline-block;
+  $icon-size: 16px;
+  border: solid 2px $black;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0;
+
+  &__overlaid-text {
+    font-size: $icon-size / 2;
+    font-weight: 700;
+    color: $white;
+    background: $teal;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 2px;
+    min-width: 4rem;
+    vertical-align: middle;
+  }
+
+  &__icon {
+    font-size: $icon-size;
+    color: $teal;
+    vertical-align: bottom;
+  }
+}
