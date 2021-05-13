@@ -1,0 +1,35 @@
+<div class="dashboard-publisher-result">
+  <div class="dashboard-publisher-result__head">
+    <div class="dashboard-publisher-result__left-side">
+      <a class="dashboard-publisher-result__title">
+        {{ title }}
+      </a>
+    </div>
+
+    <div class="dashboard-publisher-result__right-side">
+      <div class="dashboard-publisher-result__date">
+        {# Using datetime, make sure your timestamp is valid https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values #}
+        Last update <time datetime="{{ date_timestamp }}">{{ date }}</time>
+      </div>
+    </div>
+  </div>
+
+  {% for badge in badges %}
+    <span class="dashboard-publisher-result__badge">
+      {% render '@icon-badge', badge %}
+    </span>
+  {% endfor %}
+
+  {% render '@spacer' %}
+
+  <h5>Grants awarded</h5>
+  <div>
+    {% render '@years-chart' %}
+  </div>
+
+  {% render '@spacer' %}
+
+  <div>
+    <a href="#" class="button">See More</a>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+title: Dashboard Publisher Result
+status: wip
+context:
+  title: 'AB Charitable Trust'
+  date: '22 Aug 2017'
+  date_timestamp: '2017-08-22'
+  badges:
+    - icon_name: location_on
+      label: Includes recipient locations
+    - icon_name: money
+      label: Includes charity or company numbers
+    - overlaid_text: xlsx
+      label: XLSX files
+    - overlaid_text: json
+      label: JSON files
+    - overlaid_text: csv
+      label: CSV files
