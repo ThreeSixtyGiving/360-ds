@@ -1,0 +1,5 @@
+context:
+  nav_menu:
+    - name: Based on data published by UK grantmakers in the 360Giving Data Standard
+      url: '#'
+  product_name: Registry
