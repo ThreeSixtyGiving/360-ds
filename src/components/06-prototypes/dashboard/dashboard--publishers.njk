@@ -4,9 +4,10 @@
   <div class="layout__content dashboard-page">
     {% render '@cards-section--dashboard-stats' %}
 
-    <div class="dashboard__tabs">
+    <div class="dashboard-page__tabs">
       {% render '@tab', { label: 'Overview' } -%}
       {%- render '@tab--inactive', { label: 'Publishers' } %}
+      <span class="dashboard-page__tabs-empty-bar">
     </div>
 
     {% for ii in range (1, 7) %}

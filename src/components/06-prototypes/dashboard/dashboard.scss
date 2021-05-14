@@ -1,4 +1,15 @@
 .dashboard-page {
+  &__tabs {
+    display: flex;
+    margin-bottom: 1rem;
+
+    &-empty-bar {
+      display: inline-block;
+      flex-grow: 1;
+      border-bottom: solid 1px #e0e0e0;
+    }
+  }
+
   &__pager {
     display: flex;
     justify-content: center;
