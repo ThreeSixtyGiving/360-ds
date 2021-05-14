@@ -1,0 +1,34 @@
+<div class="file-summary grid grid--three-columns">
+  <div class="grid__1">
+    {{ description }}
+  </div>
+  <div class="grid__1 align-right">
+    <span class="file-summary__label">Records</span>
+    <span class="file-summary__stat">{{ num_records }}</span>
+  </div>
+  <div class="grid__1 align-right">
+    <span class="file-summary__label">Total Grants &pound;</span>
+    <span class="file-summary__stat">{{ grant_total_shorthand }}</span>
+  </div>
+  <div class="grid__1">
+    <span class="tag file-summary__specs">{{ file_type }} &ndash; {{ file_size }}</span>
+  </div>
+  <div class="grid__1 align-right">
+    <span class="file-summary__label">Valid data</span>
+    {% if valid_data %}
+      {% render '@icon', { icon_name: 'check_circle_outline' } %}
+    {% else %}
+      {% render '@icon', { icon_name: 'priority_high' } %}
+    {% endif %}
+  </div>
+  <div class="grid__1 align-right">
+    <span class="file-summary__label">Licence</span>
+    {% if licence == 'cc' %}
+      <span class="file-summary__native-icon">
+        {% render '@cc-licence' %}
+      </span>
+    {% else %}
+      <span class="file-summary__stat">{{ licence }}</span>
+    {% endif %}
+  </div>
+</div>

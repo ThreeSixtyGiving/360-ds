@@ -29,3 +29,16 @@
     margin-bottom: 16px;
   }
 }
+
+.dashboard-publisher-result-wrapper {
+  .dashboard-publisher-result {
+    // Nested card elements in the detail view have headings with their own margins
+    padding-top: 1px;
+  }
+
+  &__external-buttons {
+    a:last-child {
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{% extends '@layout--slim' %}
+
+{% block main_content %}
+  <div class="layout__content dashboard-page">
+    {% render '@cards-section--dashboard-stats' %}
+
+    <div class="spacer-4"></div>
+
+    <a href="/components/preview/dashboard--publishers" class="dashboard-page__back-link">
+      {% render '@icon', { icon_name: 'arrow_back' } %}
+      Back to Publishers
+    </a>
+
+   <div class="spacer-2"></div>
+
+    {% render '@dashboard-publisher-result--detail' %}
+  </div>
+{% endblock %}

@@ -15,3 +15,7 @@ context:
       label: JSON files
     - overlaid_text: csv
       label: CSV files
+variants:
+  - name: detail
+    context:
+      files_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor enim, elit placerat sed fermentum elit, id non.'

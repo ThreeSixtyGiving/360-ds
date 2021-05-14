@@ -14,9 +14,16 @@
     vertical-align: middle;
   }
 
-  &__mat-icon {
+  &__mat-icon, &__mat-icon-black {
     font-size: $icon-size;
-    color: $teal;
     vertical-align: bottom;
+  }
+
+  &__mat-icon {
+    color: $teal;
+  }
+
+  &__mat-icon-black {
+    color: $black;
   }
 }

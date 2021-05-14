@@ -6,6 +6,12 @@ variants:
     context:
       icon_name: 'add_location'
       label: 'Includes recipient locations'
+  - name: default
+    label: Material Icon in Black
+    context:
+      icon_name: 'add_location'
+      label: 'Includes recipient locations'
+      black: true
   - name: Overlaid Text
     context:
       overlaid_text: CSV
