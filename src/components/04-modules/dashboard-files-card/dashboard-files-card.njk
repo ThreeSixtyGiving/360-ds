@@ -1,0 +1,25 @@
+<div class="dashboard-files-card">
+  <div class="dashboard-files-card__head">
+    <div class="dashboard-files-card__left-side">
+      <h3 class="dashboard-files-card__title">Files</h3>
+      <p class="dashboard-files-card__description">Grants with location data can be used to map grants, and help people understand where the money goes.</p>
+    </div>
+
+    <div class="dashboard-files-card__right-side">    
+      {% render '@alert-tag--general' %}
+    </div>
+  </div>
+
+  <div class="dashboard-files-card__groups">
+      <div class="dashboard-files-card__group">
+        <span>{% render '@icon', { icon_name: 'reorder' } %}</span>
+        <span>Include metadata</span>
+        <span class="dashboard-files-card__value">64%</span>
+      </div>
+
+      <div class="dashboard-files-card__group dashboard-files-card__graph">
+        <div class="graph-label">Types of Files</div>
+        {% include '@placeholder-graph1' %}
+      </div>
+  </div>
+</div>

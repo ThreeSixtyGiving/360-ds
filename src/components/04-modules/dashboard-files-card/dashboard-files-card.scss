@@ -1,4 +1,4 @@
-.dashboard-stats-card {
+.dashboard-files-card {
   border-left: 4px solid $teal;
 
   &--grant {
@@ -60,5 +60,10 @@
   &__value {
     font-size: 1.2rem;
     font-weight: 700;
+  }
+
+  &__graph {
+    flex-grow: 1;
+    max-width: 100%;
   }
 }

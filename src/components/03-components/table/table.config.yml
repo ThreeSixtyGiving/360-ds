@@ -67,7 +67,7 @@ variants:
           items:
             - icon:
                 icon_name: tag
-              label: Include charity or company no
+              label: Include charity or company number
               value: 64%
             - icon:
                 icon_name: confirmation_number

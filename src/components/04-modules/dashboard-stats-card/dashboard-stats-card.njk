@@ -10,12 +10,12 @@
     </div>
   </div>
 
-  <div class="dashboard-stats-card__values">
+  <div class="dashboard-stats-card__groups">
     {% for stat in stats %}
-      <div class="dashboard-stats-card__value">
+      <div class="dashboard-stats-card__group">
         <span>{% render '@icon', { icon_name: stat.icon_name } %}</span>
         <span>{{ stat.label }}</span>
-        <span>{{ stat.value }}</span>
+        <span class="dashboard-stats-card__value">{{ stat.value }}</span>
       </div>
     {% endfor %}
   </div>
