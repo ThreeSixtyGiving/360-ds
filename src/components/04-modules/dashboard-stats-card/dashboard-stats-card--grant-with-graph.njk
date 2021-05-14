@@ -1,0 +1,33 @@
+<div class="dashboard-stats-card dashboard-stats-card--grant">
+  <div class="dashboard-stats-card__head">
+    <div class="dashboard-stats-card__left-side">
+      <h3 class="dashboard-stats-card__title">{{ title }}</h3>
+      <p class="dashboard-stats-card__description">{{ description }}</p>
+    </div>
+
+    <div class="dashboard-stats-card__right-side">    
+      {% render '@alert-tag--general' %}
+    </div>
+  </div>
+
+  <div class="dashboard-stats-card__values">
+    {% for stat in stats %}
+      <div class="dashboard-stats-card__value">
+        <span>{% render '@icon--orange', { icon_name: stat.icon_name } %}</span>
+        <span>{{ stat.label }}</span>
+        <span>{{ stat.value }}</span>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="spacer-2"></div>
+
+  {% if graph_description %}
+    {% render '@separator' %}
+
+    <div class="graph-label">{{ graph_description }}</div>
+    <div class="graph-container">
+      {% include '@placeholder-graph1' %}
+    </div>
+  {% endif %}
+</div>

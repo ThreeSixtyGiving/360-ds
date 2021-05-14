@@ -90,7 +90,7 @@ variants:
         - heading: Files
           items:
             - icon:
-                icon_name: table_rows
+                icon_name: reorder
               label: Include metadata
               value: 81%
             - icon:

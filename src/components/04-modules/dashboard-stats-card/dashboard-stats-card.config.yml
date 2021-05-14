@@ -1,0 +1,24 @@
+context:
+  title: Location
+  description: |
+    Grants with location data can be used to map grants, and help people understand where the money goes.
+  stats:
+    - icon_name: person_pin_circle
+      label: Include recipient locations
+      value: 64%
+    - icon_name: edit_location
+      label: Include grant location names
+      value: 37%
+    - icon_name: add_location
+      label: Include grant location codes
+      value: 64%
+variants:
+  - name: default
+    label: 'Publisher'
+  - name: with-graph
+    label: 'Publisher With Graph'
+    context:
+      graph_description: 'Count of publishers for each 10% band, % of recipients with external identifier'
+  - name: grant-with-graph
+    context:
+      graph_description: '% of recipients by Org-ID prefix types, above 5% threshold'
