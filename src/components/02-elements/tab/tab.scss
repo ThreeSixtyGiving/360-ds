@@ -3,9 +3,14 @@
   display: inline-block;
 
   &__inner {
+    color: inherit;
     display: inline-block;
     padding: 1rem;
     border: solid 1px $light-border-colour;
+
+    &:hover {
+      color: inherit;
+    }
   }
 
   &--active {
