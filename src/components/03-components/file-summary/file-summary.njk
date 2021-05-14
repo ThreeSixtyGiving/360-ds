@@ -16,9 +16,9 @@
   <div class="grid__1 align-right">
     <span class="file-summary__label">Valid data</span>
     {% if valid_data %}
-      {% render '@icon', { icon_name: 'check_circle_outline', black: true } %}
+      {% render '@icon--black', { icon_name: 'check_circle_outline' } %}
     {% else %}
-      {% render '@icon', { icon_name: 'priority_high', black: true } %}
+      {% render '@icon--black', { icon_name: 'priority_high' } %}
     {% endif %}
   </div>
   <div class="grid__1 align-right">
