@@ -1,0 +1,16 @@
+<div class="nav-bar">
+  <a class="nav-bar__home-button" href="/">
+    {% include '@main-logo--graphic-only' %}
+    <span class="nav-bar__product-name">{{ product_name }}</span>
+  </a>
+
+  <nav class="nav-bar__nav-menu">
+    <ul>
+      <li class="nav-menu__item">
+        {{ product_summary }}
+      </li>
+    </ul>
+  </nav>
+</div>
+
+{% render '@separator' %}
