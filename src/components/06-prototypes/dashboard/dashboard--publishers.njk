@@ -2,6 +2,8 @@
 
 {% block main_content %}
   <div class="layout__content dashboard-page">
+    {% render '@cards-section--dashboard-stats' %}
+
     {% for ii in range (1, 7) %}
       {% render '@dashboard-publisher-result' %}
     {% endfor %}
