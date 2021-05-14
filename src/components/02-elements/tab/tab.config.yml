@@ -1,0 +1,10 @@
+title: "Tab"
+collated: true
+variants:
+  - name: default
+    label: Active
+    context:
+      label: Active Section
+  - name: Inactive
+    context:
+      label: Another Section

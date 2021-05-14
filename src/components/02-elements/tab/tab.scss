@@ -1,0 +1,22 @@
+.tab {
+  $light-border-colour: #e0e0e0;
+  display: inline-block;
+
+  &__inner {
+    display: inline-block;
+    padding: 1rem;
+    border: solid 1px $light-border-colour;
+  }
+
+  &--active {
+    border-top: 4px solid $teal;
+
+    .tab__inner {
+      border-width: 0 1px;
+    }
+  }
+
+  &--inactive {
+    background: hsla(var(--gray-10-hsl), 1);
+  }
+}
