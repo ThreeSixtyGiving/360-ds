@@ -76,7 +76,7 @@ variants:
         - heading: Grant Information
           items:
             - icon:
-                icon_name: timer
+                icon_name: event_note
               label: Include grant duration
               value: 57%
             - icon:
@@ -84,7 +84,7 @@ variants:
               label: Include grant programme names
               value: 56%
             - icon:
-                icon_name: category
+                icon_name: label
               label: Include grant classifications
               value: 55%
         - heading: Files

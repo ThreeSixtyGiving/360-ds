@@ -1,2 +1,48 @@
-<p>All dashboard designs live in named variants for now.</p>
-<!-- TODO designate one of the other variants 'default' when all ready, and drop this -->
+{# This is 'Overview By Publisher' – the default variant. #}
+
+{% extends '@layout--slim' %}
+
+{% block main_content %}
+  <div class="layout__content dashboard-page">
+    {% render '@cards-section--dashboard-stats' %}
+
+    {% render '@tab-bar' %}
+
+    <div class="spacer-2"></div>
+
+    <div class="dashboard-page__section-radios">
+      {% render '@radio-buttons', { radioGroupName: 'view', radioItems: view_radios } %}
+    </div>
+
+    <div class="spacer-2 clearfix"></div>
+
+    {% render '@dashboard-stats-card', {
+      title: location_title,
+      description: location_description,
+      stats: location_stats
+    } %}
+
+    {% render '@dashboard-stats-card', {
+      title: organisation_title,
+      description: organisation_description,
+      stats: organisation_stats,
+      graph_description: organisation_graph_description
+    } %}
+
+    {% render '@dashboard-stats-card', {
+      title: grant_info_title,
+      description: grant_info_description,
+      stats: grant_info_stats
+    } %}
+
+    {% render '@dashboard-files-card' %}
+
+    {% render '@dashboard-stats-card', {
+      title: up_to_date_title,
+      description: up_to_date_description,
+      stats: up_to_date_stats,
+      graph_description: up_to_date_graph_description
+    } %}    
+
+  </div>
+{% endblock %}

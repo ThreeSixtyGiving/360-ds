@@ -1,0 +1,46 @@
+{% extends '@layout--slim' %}
+
+{% block main_content %}
+  <div class="layout__content dashboard-page">
+    {% render '@cards-section--dashboard-stats' %}
+
+    {% render '@tab-bar' %}
+
+    <div class="spacer-2"></div>
+
+    <div class="dashboard-page__section-radios">
+      {% render '@radio-buttons', { radioGroupName: 'view', radioItems: view_radios } %}
+    </div>
+
+    <div class="spacer-2 clearfix"></div>
+
+    {% render '@dashboard-stats-card--grant', {
+      title: location_title,
+      description: location_description,
+      stats: location_stats
+    } %}
+
+    {% render '@dashboard-stats-card--grant', {
+      title: organisation_title,
+      description: organisation_description,
+      stats: organisation_stats,
+      graph_description: organisation_graph_description
+    } %}
+
+    {% render '@dashboard-stats-card--grant', {
+      title: grant_info_title,
+      description: grant_info_description,
+      stats: grant_info_stats
+    } %}
+
+    {% render '@dashboard-files-card--grant' %}
+
+    {% render '@dashboard-stats-card--grant', {
+      title: up_to_date_title,
+      description: up_to_date_description,
+      stats: up_to_date_stats,
+      graph_description: up_to_date_graph_description
+    } %}    
+
+  </div>
+{% endblock %}
