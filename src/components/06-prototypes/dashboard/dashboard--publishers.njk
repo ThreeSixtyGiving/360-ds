@@ -6,6 +6,12 @@
 
     {% render '@tab-bar--publishers-active' %}
 
+    <div class="spacer-4"></div>
+
+    {% render '@collapsed-publishers-table' %}
+
+    <div class="spacer-4"></div>
+
     {% for ii in range (1, 7) %}
       {% render '@dashboard-publisher-result' %}
     {% endfor %}

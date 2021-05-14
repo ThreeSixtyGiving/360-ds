@@ -1,0 +1,67 @@
+// Adapted with tweaks from Search Summary
+.collapsed-table {
+  &__details {
+    &[open] {
+      summary {
+        .summary-icon {
+          svg {
+            transform: rotateX(180deg);
+          }
+        }
+
+        &:hover {
+          .summary-icon {
+            svg {
+              transform: translateY(-2px) rotateX(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $orange-tint-lighter;
+    padding: 0.8rem 1rem;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .summary-icon {
+        svg {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+
+  .summary-label {
+    font-size: 1rem;
+    line-height: 130%;
+    font-weight: 700;
+  }
+
+  .summary-icon {
+    border: 1px solid $black;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0px);
+    transition: transform 0.2s ease;
+    margin-left: 12px;
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+  }
+}

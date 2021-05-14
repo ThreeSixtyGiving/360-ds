@@ -117,6 +117,19 @@
   }
 }
 
+.table--primary-light {
+  table {
+    border: solid 1px $orange-tint-light;
+  }
+
+  th {
+    background: $orange-tint-lightest;
+  }
+
+  td {
+    border: solid 1px $orange-tint-light;
+  }
+}
 
 /* Secondary styling */
 .table--secondary {

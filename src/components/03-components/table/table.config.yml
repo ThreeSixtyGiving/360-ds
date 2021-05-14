@@ -45,3 +45,69 @@ context:
         cell2: When was the decision to award this grant made. The date should be written as YYYY-MM-DD, or in full date-time format.  
         cell3: string
         cell4: True
+variants:
+  - name: Publishers
+    context:
+      sections:
+        - heading: Location
+          items:
+            - icon:
+                icon_name: add_location
+              label: Include recipient locations
+              value: 64%
+            - icon:
+                icon_name: add_location
+              label: Include grant location names
+              value: 63%
+            - icon:
+                icon_name: add_location
+              label: Include grant location codes
+              value: 62%
+        - heading: Organisation Information
+          items:
+            - icon:
+                icon_name: tag
+              label: Include charity or company no
+              value: 64%
+            - icon:
+                icon_name: confirmation_number
+              label: Include external identifiers
+              value: 45%
+        - heading: Grant Information
+          items:
+            - icon:
+                icon_name: timer
+              label: Include grant duration
+              value: 57%
+            - icon:
+                icon_name: format_quote
+              label: Include grant programme names
+              value: 56%
+            - icon:
+                icon_name: category
+              label: Include grant classifications
+              value: 55%
+        - heading: Files
+          items:
+            - icon:
+                icon_name: table_rows
+              label: Include metadata
+              value: 81%
+            - icon:
+                overlaid_text: json
+              label: Publish using JSON
+              value: 75%
+            - icon:
+                overlaid_text: xlsx
+              label: Publish using spreadsheets
+              value: 79%
+        - heading: Up To Date
+          items:
+            - icon:
+                icon_name: event_available
+              label: Published data in the last year
+              value: 91%
+            - icon:
+                icon_name: event_available
+              label: Published data in the last month 
+              value: 88%

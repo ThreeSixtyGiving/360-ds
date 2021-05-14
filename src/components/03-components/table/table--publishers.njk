@@ -1,0 +1,22 @@
+<div class="table table--zebra table--primary-light">
+  <table>
+    {% for section in sections %}
+    <thead>
+      <th colspan="3">{{ section.heading }}</th>
+    </thead>
+    <tbody>
+      <tr>
+        {% for item in section.items %}
+        <td
+          class="table__lead-cell"
+          data-header="{{ header.th1 }}"
+        >
+          {% render '@icon', item.icon %}
+          {{ item.label }}: <strong>{{ item.value }}</strong>
+        </td>
+        {% endfor %}
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+</div>
