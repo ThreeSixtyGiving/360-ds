@@ -1,0 +1,12 @@
+status: ready
+collated: true
+variants:
+  - name: default
+    label: Material Icon
+    context:
+      icon_name: 'add_location'
+      label: 'Includes recipient locations'
+  - name: Overlaid Text
+    context:
+      overlaid_text: CSV
+      label: CSV files
