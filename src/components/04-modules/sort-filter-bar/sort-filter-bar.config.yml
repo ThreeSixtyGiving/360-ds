@@ -1,0 +1,13 @@
+label: Sort &amp; Filter Bar
+context:
+  filters:
+    - label: Alphabetically
+      active: true
+    - label: Filter by recipient
+      active: false
+    - label: Filter by data feature
+      active: false
+    - label: Filter by data file
+      active: false
+    - label: Filter by data file
+      active: false

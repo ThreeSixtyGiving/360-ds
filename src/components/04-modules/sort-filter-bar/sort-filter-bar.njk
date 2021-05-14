@@ -1,0 +1,13 @@
+<h4>Sort:</h4>
+
+<div class="sort-filters">
+  {% for f in filters %}
+  <div class="sort-filters__select-wrapper">
+    <select
+      {% if f.active %} class="sort-filters__filter-active" {% endif %}
+    >
+      <option value="">{{ f.label }}</option>
+    </select>
+  </div>
+  {% endfor %}
+</div>
