@@ -11,11 +11,11 @@
   </div>
 
   <div class="dashboard-stats-card__groups">
-    {% for stat in stats %}
+    {% for ii in range(stats.length) %}
       <div class="dashboard-stats-card__group">
-        <span>{% render '@icon--orange', { icon_name: stat.icon_name } %}</span>
-        <span>{{ stat.label }}</span>
-        <span class="dashboard-stats-card__value">{{ stat.value }}</span>
+        <span>{% render '@icon--orange', { icon_name: stats[ii].icon_name } %}</span>
+        <span id="stat-{{ ii }}">{{ stats[ii].label }}</span>
+        <span aria-labelledby="stat-{{ ii }}" class="dashboard-stats-card__value">{{ stats[ii].value }}</span>
       </div>
     {% endfor %}
   </div>
