@@ -10,8 +10,6 @@
     display: flex;
     flex-direction: column;
 
-    font-size: 80%;
-
     @include breakpoint($regular) {
       flex-direction: row;
     }
