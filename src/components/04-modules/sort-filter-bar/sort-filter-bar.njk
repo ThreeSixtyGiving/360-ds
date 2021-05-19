@@ -4,9 +4,15 @@
   {% for f in filters %}
   <div class="sort-filters__select-wrapper">
     <select
-      {% if f.active %} class="sort-filters__filter-active" {% endif %}
+      {% if f.active %}
+        class="sort-filters__filter-active"
+        aria-label="{{ f.status }}"
+      {% endif %}
     >
       <option value="">{{ f.label }}</option>
+      {% if f.selected_item %}
+        <option selected value="{{ f.selected_item }}">{{ f.selected_item }}</option>
+      {% endif %}
     </select>
   </div>
   {% endfor %}
