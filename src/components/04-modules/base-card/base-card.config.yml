@@ -3,3 +3,6 @@ context:
   value: 987
   label: Custom Labelled Things
   cta_text: More about Things
+variants:
+  - name: dynamic
+    status: ready

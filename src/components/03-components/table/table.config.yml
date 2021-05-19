@@ -47,6 +47,7 @@ context:
         cell4: True
 variants:
   - name: Publishers
+    status: ready
     context:
       sections:
         - heading: Location

@@ -1,2 +1,5 @@
 context:
   label: Learn more about this
+variants:
+  - name: general
+    status: ready

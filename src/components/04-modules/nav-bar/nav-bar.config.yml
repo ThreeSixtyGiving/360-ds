@@ -12,3 +12,6 @@ context:
       url: '#'
     - name: About 360Giving
       url: '#'
+variants:
+  - name: minimal
+    status: ready

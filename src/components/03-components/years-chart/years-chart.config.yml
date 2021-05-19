@@ -1,5 +1,5 @@
 title: "Years Chart"
-status: wip
+status: ready
 context:
   chart:
     - label: Older data
