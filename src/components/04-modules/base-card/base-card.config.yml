@@ -1,0 +1,5 @@
+context:
+  custom_class: base-card--red
+  value: 987
+  label: Custom Labelled Things
+  cta_text: More about Things

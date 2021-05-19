@@ -1,0 +1,15 @@
+{% if custom_class %}
+<div class="base-card {{ custom_class }}">
+{% else %}
+<div class="base-card">
+{% endif %}
+  <div class="base-card__content">
+    <h2 class="base-card__title">{{ value }}</h2>
+    <p class="base-card__text">{{ label }}</p>
+    {% if cta_text %}
+    <p class="base-card__text">
+      <a href="#" class="button">{{ cta_text }}</a>
+    </p>
+    {% endif %}
+  </div>
+</div>
