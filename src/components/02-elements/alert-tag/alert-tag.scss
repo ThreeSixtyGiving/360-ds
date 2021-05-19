@@ -1,7 +1,7 @@
 .alert-tag {
   display: block;
   border-radius: 6px;
-  padding: 6px;
+  padding: 6px 10px;
   background: $yellow-tint;
   font-size: 13px;
   font-weight: 400;
@@ -28,8 +28,6 @@
 
   // This is necessary to avoid underlining the icon
   &--anchor {
-    padding: 5px;
-
     &:hover {
       background: $yellow;
     }
