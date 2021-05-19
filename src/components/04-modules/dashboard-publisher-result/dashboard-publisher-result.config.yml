@@ -6,21 +6,17 @@ context:
   date_timestamp: '2017-08-22'
   badges:
     - icon_name: location_on
-      label: Includes recipient locations
+      label: Include recipient location codes
     - icon_name: money
-      label: Includes charity or company numbers
+      label: Include charity or company nos.
     - overlaid_text: xlsx
-      label: XLSX files
-    - overlaid_text: json
-      label: JSON files
-    - overlaid_text: csv
-      label: CSV files
+      label: Publish using spreadsheets
 variants:
   - name: few-badges
     context:
       badges:
       - icon_name: location_on
-        label: Includes recipient locations
+        label: Include recipient location codes
   - name: many-badges
     context:
       badges:
