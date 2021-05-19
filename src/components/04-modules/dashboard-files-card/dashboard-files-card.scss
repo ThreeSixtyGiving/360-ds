@@ -13,8 +13,11 @@
     display: flex;
   }
 
-  &__left-side {
-    flex-grow: 1;
+  &__right-side {
+    min-width: 40%;
+    @include breakpoint($medium) {
+      min-width: 25%;
+    }
   }
 
   &__title {
