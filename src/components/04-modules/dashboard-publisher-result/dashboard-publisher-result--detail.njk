@@ -32,14 +32,15 @@
   <div class="spacer-3"></div>
 
   <div class="dashboard-publisher-result">
-    <h4 class="dashboard-publisher-result__title">Grants Awarded</h4>
+    <h4 class="dashboard-publisher-result__title">Total grants published</h4>
+    <p>The number of grants published by award year for the past 10 years, with the total grants published that were awarded 11 or more years ago.</p>
     <div>
       {% render '@years-chart' %}
     </div>
   </div>
 
   <div class="dashboard-publisher-result">
-    <h4 class="dashboard-publisher-result__title">Grants Files</h4>
+    <h4 class="dashboard-publisher-result__title">Datasets</h4>
     <p>{{ files_description }}</p>
     {% for ii in range(1, 6) %}
       {% render '@file-summary' %}

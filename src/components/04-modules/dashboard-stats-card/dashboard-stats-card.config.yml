@@ -1,7 +1,8 @@
 context:
-  title: Location
+  title: Location data
   description: |
     Grants with location data can be used to map grants, and help people understand where the money goes.
+  info_label: Learn more about location data
   stats:
     - icon_name: person_pin_circle
       label: Include recipient locations

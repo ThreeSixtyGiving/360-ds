@@ -2,7 +2,7 @@ title: "Years Chart"
 status: wip
 context:
   chart:
-    - label: Older Data
+    - label: Older data
       value: 0.15
       value_text: 1.5k
       detail: 1.5k grants awarded before 2011

@@ -1,12 +1,12 @@
 <div class="dashboard-files-card">
   <div class="dashboard-files-card__head">
     <div class="dashboard-files-card__left-side">
-      <h3 class="dashboard-files-card__title">Files</h3>
-      <p class="dashboard-files-card__description">Grants with location data can be used to map grants, and help people understand where the money goes.</p>
+      <h3 class="dashboard-files-card__title">Metadata</h3>
+      <p class="dashboard-files-card__description">Metadata is data about the data which helps users to understand more about the data and how it might be useful in a particular case.</p>
     </div>
 
     <div class="dashboard-files-card__right-side">    
-      {% render '@alert-tag--general' %}
+      {% render '@alert-tag--general', { label: 'Learn more about metadata' } %}
     </div>
   </div>
 
@@ -19,8 +19,8 @@
 
       <div class="dashboard-files-card__group dashboard-files-card__graph">
         {# Consider using this or equivalent when the graph doesn't have an embedded title? #}
-        {# <div class="graph-label">Types of Files</div> #}
-        <img src="assets/images/dashboard-samples/overview-graph-files.png" alt="Files by type">
+        {# <div class="graph-label">Types of Metadata</div> #}
+        <img src="assets/images/dashboard-samples/overview-graph-files.png" alt="Metadata by type">
       </div>
   </div>
 </div>

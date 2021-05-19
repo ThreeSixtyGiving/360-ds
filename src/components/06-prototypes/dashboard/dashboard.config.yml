@@ -1,51 +1,65 @@
 context:
-  product_name: Registry
+  product_name: 360Registry
   product_summary: Based on data published by UK grantmakers in the 360Giving Data Standard
   view_radios:
     - name: Publisher
       default: true
     - name: Grant
-      location_title: Location
+  location_title: Location data
   location_description: |
-    Grants with location data can be used to map grants, and help people understand where the money goes.
+    Location data helps users to understand where grants go.
+    Location codes allow grants data to be visualised in maps and to be
+    linked to official statistics.
+  location_info_label: Learn more about location data
   location_stats:
     - icon_name: person_pin_circle
-      label: Include recipient locations
-      value: 64%
+      label: Include recipient location codes
+      value: 84%
     - icon_name: edit_location
       label: Include grant location names
-      value: 37%
+      value: 64%
     - icon_name: add_location
       label: Include grant location codes
-      value: 64%
-  organisation_title: Organisation Information
+      value: 37%
+  organisation_title: Organisation identifiers
   organisation_description: |
-    High-quality organisation information helps data users know exactly who's involved in each grant.
+    Org IDs help users to understand who is involved in each grant. External
+    org IDs are used to show when funders give grants to the same
+    recipient and allow grants data to be linked to official sources of
+    organisation data.
+  organisation_info_label: Learn more about organisation identifiers
   organisation_stats:
     - icon_name: tag
-      label: Include charity or company numbers
-      value: 52%
+      label: Include charity or company nos.
+      value: 64%
     - icon_name: confirmation_number
-      label: Include external identifiers for at least 50% of recipients
-      value: 90%
+      label: Include external org IDs for at least 50% of recipients
+      value: 37%
   organisation_graph_description: |
-    Count of publishers for each 10% band, % of recipients with external identifier
-  grant_info_title: Grant Information
-  grant_info_description: |
-    Grants with location data can be used to map grants, and help people understand where the money goes.
-  grant_info_stats:
+    Percentage of recipients with external org IDs
+  grant_data_title: Grant data
+  grant_data_description: |
+    All 360Giving data includes information about award amounts,
+    award dates and the purpose of each grant. Information about the grant
+    duration, grant programmes names and classifications help users to
+    understand more context for each grant.
+  grant_data_info_label: Learn more about grant data
+  grant_data_stats:
     - icon_name: event_note
       label: Include grant duration
       value: 37%
     - icon_name: format_quote
-      label: Include grant programme names
+      label: Include programme names
       value: 64%
     - icon_name: label
-      label: Have Grant classification
+      label: Include classifications
       value: 64%
-  up_to_date_title: Up-to-date
+  up_to_date_title: Data updates
   up_to_date_description: |
-    Grants with location data can be used to map grants, and help people understand where the money goes.
+    Timely updates provide users with an up-to-date picture of grantmaking.
+    Publishers make updates at different frequencies; annual, biannual, quarterly, monthly
+    or some publish in real-time.
+  up_to_date_info_label: Learn more about data updates
   up_to_date_stats:
     - icon_name: event_available
       label: Have published in the last year
@@ -53,7 +67,9 @@ context:
     - icon_name: event_available
       label: Have published in the last month
       value: 90%
-  up_to_date_graph_description: '% of publishers with grants awarded in each of past 10 years'
+  up_to_date_graph_description: |
+    Publishers with grants awarded in
+    each of the past 10 years
 variants:
   - name: default
     label: Overview By Publisher
@@ -63,3 +79,17 @@ variants:
         - name: Publisher
         - name: Grant
           default: true
+      organisation_stats:
+        - icon_name: tag
+          label: Include charity or company nos.
+          value: 64%
+        - icon_name: confirmation_number
+          label: Include external org IDs
+          value: 53%
+      up_to_date_stats:
+        - icon_name: event_available
+          label: Include grants awarded in the last year
+          value: 52%
+        - icon_name: event_available
+          label: Include grants awarded in the last month
+          value: 10%

@@ -53,11 +53,11 @@ variants:
           items:
             - icon:
                 icon_name: add_location
-              label: Include recipient locations
+              label: Include recipient location codes
               value: 64%
             - icon:
                 icon_name: add_location
-              label: Include grant location names
+              label: Include grant location name
               value: 63%
             - icon:
                 icon_name: add_location
@@ -67,11 +67,11 @@ variants:
           items:
             - icon:
                 icon_name: tag
-              label: Include charity or company number
+              label: Include charity or company nos.
               value: 64%
             - icon:
                 icon_name: confirmation_number
-              label: Include external identifiers
+              label: Include external org IDs
               value: 45%
         - heading: Grant Information
           items:
@@ -81,11 +81,11 @@ variants:
               value: 57%
             - icon:
                 icon_name: format_quote
-              label: Include grant programme names
+              label: Include programme names
               value: 56%
             - icon:
                 icon_name: label
-              label: Include grant classifications
+              label: Include classifications
               value: 55%
         - heading: Files
           items:

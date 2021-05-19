@@ -17,20 +17,23 @@
     {% render '@dashboard-stats-card--grant', {
       title: location_title,
       description: location_description,
+      info_label: location_info_label,
       stats: location_stats
     } %}
 
     {% render '@dashboard-stats-card--grant', {
       title: organisation_title,
       description: organisation_description,
+      info_label: organisation_info_label,
       stats: organisation_stats,
       graph_description: organisation_graph_description
     } %}
 
     {% render '@dashboard-stats-card--grant', {
-      title: grant_info_title,
-      description: grant_info_description,
-      stats: grant_info_stats
+      title: grant_data_title,
+      description: grant_data_description,
+      info_label: grant_data_info_label,
+      stats: grant_data_stats
     } %}
 
     {% render '@dashboard-files-card--grant' %}
@@ -38,6 +41,7 @@
     {% render '@dashboard-stats-card--grant', {
       title: up_to_date_title,
       description: up_to_date_description,
+      info_label: up_to_date_info_label,
       stats: up_to_date_stats,
       graph_description: up_to_date_graph_description
     } %}    
