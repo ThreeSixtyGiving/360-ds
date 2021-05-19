@@ -3,6 +3,12 @@
   flex-direction: column;
   padding: 8px 24px 14px;
 
+  &--minimal {
+    padding: 14px 24px;
+    // Offset `@separator`'s top margin.
+    margin-bottom: -1rem;
+  }
+
   @include breakpoint($medium) {
     flex-direction: row;
     justify-content: space-between;
