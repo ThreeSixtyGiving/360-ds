@@ -10,12 +10,9 @@
   max-width: 100%;
   flex-wrap: wrap;
 
-  &__item {
-    flex-grow: 1;
-  }
 
   &__block {
-    padding: 0 1rem;
+    padding: 0 1px;
     border: solid 1px var(--separator-colour);
     border-left-width: 0;
     border-collapse: collapse;
@@ -41,5 +38,13 @@
     color: --label-colour;
     text-align: center;
     font-size: 0.8rem;
+  }
+
+  // Fill the row space on larger viewports but don't needlessly
+  // vary block size when multiple rows are likely.
+  @include breakpoint($medium) {
+    &__item {
+      flex-grow: 1;
+    }
   }
 }
