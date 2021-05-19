@@ -1,5 +1,5 @@
 title: Dashboard Publisher Result
-status: wip
+status: ready
 context:
   title: 'AB Charitable Trust'
   date: '22 Aug 2017'
@@ -16,6 +16,36 @@ context:
     - overlaid_text: csv
       label: CSV files
 variants:
+  - name: few-badges
+    context:
+      badges:
+      - icon_name: location_on
+        label: Includes recipient locations
+  - name: many-badges
+    context:
+      badges:
+        - icon_name: location_on
+          label: Include recipient location codes
+        - icon_name: edit_location
+          label: Include grant location name
+        - icon_name: add_location
+          label: Include grant location codes
+        - icon_name: money
+          label: Include charity or company nos.
+        - icon_name: confirmation_number
+          label: Include external org IDs
+        - icon_name: event_note
+          label: Include grant duration
+        - icon_name: format_quote
+          label: Include programme names
+        - icon_name: label
+          label: Include classifications
+        - overlaid_text: xlsx
+          label: Publish using spreadsheets
+        - icon_name: reorder
+          label: Include metadata
+        - icon_name: event_available
+          label: Published data in the last year
   - name: detail
     context:
       files_description: |

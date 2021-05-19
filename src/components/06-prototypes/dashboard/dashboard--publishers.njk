@@ -16,7 +16,13 @@
 
     <div class="spacer-4"></div>
 
-    {% for ii in range(7) %}
+    {% render '@dashboard-publisher-result' %}
+    <div class="spacer-1"></div>
+    {% render '@dashboard-publisher-result--many-badges' %}
+    <div class="spacer-1"></div>
+    {% render '@dashboard-publisher-result--few-badges' %}
+    <div class="spacer-1"></div>
+    {% for ii in range(4) %}
       {% render '@dashboard-publisher-result' %}
       <div class="spacer-1"></div>
     {% endfor %}
