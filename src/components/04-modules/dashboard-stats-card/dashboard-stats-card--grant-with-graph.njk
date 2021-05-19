@@ -25,9 +25,10 @@
   {% if graph_description %}
     {% render '@separator' %}
 
-    <div class="graph-label">{{ graph_description }}</div>
+    {# Consider using this or equivalent when the graph doesn't have an embedded title? #}
+    {# <div class="graph-label">{{ graph_description }}</div> #}
     <div class="graph-container">
-      {% include '@placeholder-graph1' %}
+      <img src="assets/images/dashboard-samples/overview-graph-publishers-with-ids.png" alt="Publishers with IDs">
     </div>
   {% endif %}
 </div>
