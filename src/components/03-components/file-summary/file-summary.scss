@@ -16,6 +16,9 @@
   }
 
   &__native-icon {
+    position: relative;
+    top: 5px;
+
     svg {
       width: 22px;
       height: auto;
