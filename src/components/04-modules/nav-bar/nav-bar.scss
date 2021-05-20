@@ -9,7 +9,7 @@
     margin-bottom: -1rem;
   }
 
-  @include breakpoint($medium) {
+  @include breakpoint($regular) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -19,10 +19,18 @@
     display: block;
     margin: 2px; // margin on this helps keep the focus outline within the viewport
     margin-bottom: 22px;
+    width: 100%;
 
-    @include breakpoint($medium) {
+    img {
+      max-width: 50vw;
+    }
+
+    @include breakpoint($regular) {
       margin-bottom: 0;
-      min-width: calc(330px - 24px);
+
+      img {
+        width: calc(330px - 24px);
+      }
     }
     @media print {
       float: right;
@@ -33,10 +41,16 @@
   &__product-name {
     display: inline-block;
     vertical-align: top;
-    margin-top: 1rem;
-    font-size: 2rem;
     font-weight: 400;
     color: $black;
+
+    font-size: 7vw;
+    margin-top: 7vw;
+
+    @include breakpoint($regular) {
+      font-size: 46px;
+      margin-top: 40px;
+    }
   }
 
   &__title {
@@ -44,7 +58,7 @@
     margin-top: 12px;
     margin-bottom: 12px;
 
-    @include breakpoint($medium) {
+    @include breakpoint($regular) {
       margin-left: 2rem;
       margin-right: auto;
     }
@@ -70,7 +84,7 @@
       justify-content: flex-start;
       margin-bottom: 20px;
 
-      @include breakpoint($medium) {
+      @include breakpoint($regular) {
         flex-direction: row;
         align-items: center;
         margin-bottom: 0;
@@ -95,7 +109,7 @@
         text-decoration: underline dashed;
         text-underline-offset: 2px;
       }
-      @include breakpoint($medium) {
+      @include breakpoint($regular) {
         padding: 16px 6px;
       }
     }
