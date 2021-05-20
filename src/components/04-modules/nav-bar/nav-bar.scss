@@ -22,15 +22,11 @@
     width: 100%;
 
     img {
-      max-width: 50vw;
+      width: 190px;
     }
 
     @include breakpoint($regular) {
       margin-bottom: 0;
-
-      img {
-        width: calc(330px - 24px);
-      }
     }
     @media print {
       float: right;
@@ -44,13 +40,8 @@
     font-weight: 400;
     color: $black;
 
-    font-size: 7vw;
-    margin-top: 7vw;
-
-    @include breakpoint($regular) {
-      font-size: 46px;
-      margin-top: 40px;
-    }
+    font-size: 30px;
+    margin-top: 24px;
   }
 
   &__title {
