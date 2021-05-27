@@ -100,35 +100,16 @@
   }
   
   ol {
-    list-style: none;
-    counter-reset: ol-counter;
-
-
-
     > li {
-      counter-increment: ol-counter;
-      position: relative;
-
-      &::before {
-        font-size: 85%;
-        position: absolute;
-        left: -44px;
-        content: counter(ol-counter);
-        font-weight: 400;
+      margin-left: 24px;
+      &::marker {
         color: hsla(var(--teal-dark-hsl), 1);
-        border: 1px solid hsla(var(--teal-hsl), 1);
-        background-color: hsla(var(--white-hsl), 1);
-        padding: 2px 0;
-        border-radius: 50%;
-        height: 32px;
-        width: 32px;
-        text-align: center;
       }
     }
   }
   
   ul {
-    li {
+    > li {
       margin-left: 24px;
       &::marker {
         color: hsla(var(--teal-hsl), 1);
