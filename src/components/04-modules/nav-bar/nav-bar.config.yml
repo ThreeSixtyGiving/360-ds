@@ -1,6 +1,11 @@
 title: "Nav-bar"
 status: wip
 context:
+  product_name: Registry
+  auxiliary_name: Dashboard
+  product_logo_svg: 360registry-color.svg
+  product_logo_alt: 360Registry
+  product_summary: Based on data published by UK grantmakers in the 360Giving Data Standard
   nav_menu:
     # These items will be shown in the top-bar, on the right side,
     # and in the Off-canvas menu when users access it from a smaller screen
@@ -10,3 +15,6 @@ context:
       url: '#'
     - name: About 360Giving
       url: '#'
+variants:
+  - name: minimal
+    status: ready

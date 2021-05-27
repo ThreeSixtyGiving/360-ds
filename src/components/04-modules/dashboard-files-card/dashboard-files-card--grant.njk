@@ -1,0 +1,26 @@
+<div class="dashboard-files-card dashboard-files-card--grant">
+  <div class="dashboard-files-card__head">
+    <div class="dashboard-files-card__left-side">
+      <h3 class="dashboard-files-card__title">Metadata</h3>
+      <p class="dashboard-files-card__description">Metadata is data about the data which helps users to understand more about the data and how it might be useful in a particular case.</p>
+    </div>
+
+    <div class="dashboard-files-card__right-side">    
+      {% render '@alert-tag--general', { label: 'Learn more about metadata' } %}
+    </div>
+  </div>
+
+  <div class="dashboard-files-card__groups">
+      <div class="dashboard-files-card__group">
+        <span>{% render '@icon', { icon_name: 'reorder' } %}</span>
+        <span id="stat-metadata">Include metadata</span>
+        <span aria-labelledby="stat-metadata" class="dashboard-files-card__value">64%</span>
+      </div>
+
+      <div class="dashboard-files-card__group dashboard-files-card__graph">
+        {# Consider using this or equivalent when the graph doesn't have an embedded title? #}
+        {# <div class="graph-label">Types of Metadata</div> #}
+        <img src="assets/images/dashboard-samples/overview-graph-files.png" alt="Metadata by type">
+      </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="cards-section">
+  <section class="grid grid--four-columns">
+    <div class="grid__1">
+      {% render '@base-card--dynamic', {
+        custom_class: 'base-card--yellow',
+        value: '1,589',
+        label: 'Grants'
+      } %}
+    </div>
+    <div class="grid__1">
+      {% render '@base-card--dynamic', {
+        custom_class: 'base-card--orange',
+        value: '790',
+        label: 'Recipients'
+      } %}
+    </div>
+    <div class="grid__1">
+      {% render '@base-card--dynamic', {
+        custom_class: 'base-card--teal',
+        value: '1',
+        label: 'Funder'
+      } %}
+    </div>
+    <div class="grid__1">
+      {% render '@base-card--dynamic', {
+        custom_class: 'base-card--red',
+        value: '£1,345,234',
+        label: 'Total'
+      } %}
+    </div>
+  </section>
+
+  <div class="grid-aligned align-right">
+    <small>last updated: 4 am 21st April 2021</small>
+  </div>
+</div>

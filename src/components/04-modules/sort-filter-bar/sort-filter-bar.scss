@@ -1,0 +1,53 @@
+// Custom select approach mostly inspired by https://moderncss.dev/custom-select-styles-with-pure-css/
+.sort-filters {
+  $border-arrow-colour: hsla(var(--gray-30-hsl), 1);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 10px;
+
+  &__select-wrapper {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    width: 100%;
+
+    border: solid 1px $border-arrow-colour;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #fff;
+    cursor: pointer;
+
+    &:after {
+      grid-area: select;
+      justify-self: end;
+
+      content: "";
+      width: 0.8rem;
+      height: 0.5rem;
+      background-color: $border-arrow-colour;
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
+  }
+
+  select {
+    grid-area: select;
+
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1rem 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+
+    color: $border-arrow-colour;
+
+    &.sort-filters__filter-active {
+      color: $black;
+    }
+  }
+}

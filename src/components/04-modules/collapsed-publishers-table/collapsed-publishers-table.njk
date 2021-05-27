@@ -1,0 +1,12 @@
+  <section class="collapsed-table">
+    <details class="collapsed-table__details" {% if opened == true %} open{% endif %}>
+      <summary>
+        <span class="summary-label">All publishers data</span>
+        <span class="summary-icon" aria-hidden="true">{% include '@chevron-down' %}</span>
+      </summary>
+      <div class="collapsed-table--content">
+        {% render '@table--publishers' %}
+      </div>
+    </details>
+  </footer>
+</section>

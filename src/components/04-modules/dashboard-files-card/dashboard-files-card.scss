@@ -1,0 +1,70 @@
+.dashboard-files-card {
+  border-left: 4px solid $teal;
+
+  &--grant {
+    border-left-color: $orange;
+  }
+
+  box-shadow: 1px 4px 4px 4px rgba(0, 0, 0, 0.06);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+
+  &__head {
+    display: flex;
+  }
+
+  &__right-side {
+    min-width: 40%;
+    @include breakpoint($medium) {
+      min-width: 25%;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__groups {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__group {
+    max-width: 100%;
+    padding: 2rem 0;
+    border-bottom: solid 1px $blue-tint-dark;
+
+    @include breakpoint($medium) {
+      max-width: 20%;
+      padding: 0 2rem;
+      border-bottom-width: 0;
+      border-right: solid 1px $blue-tint-dark;
+    }
+
+    &:last-child {
+      border-width: 0;
+    }
+  }
+
+  &__value {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__graph {
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}

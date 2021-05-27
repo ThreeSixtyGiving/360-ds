@@ -1,8 +1,7 @@
 <div class="nav-bar">
   <a class="nav-bar__home-button" href="/">
-    {# TO DO: REFACTOR LOGO INTO COMPONENT #}
-    {% include '@main-logo--animated' %}
-
+    {% include '@main-logo--graphic-only' %}
+    <span class="nav-bar__product-name">{{ product_name }}</span>
     <span class="screen-reader-only">Home</span>
   </a>
   <h1 class="nav-bar__title">

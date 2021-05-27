@@ -1,0 +1,57 @@
+.dashboard-modal {
+  background: $white;
+  padding: 1rem;  
+
+  h3 {
+    margin-top: 0;
+  }
+
+  &__groups {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($regular) {
+      flex-direction: row;
+    }
+  }
+
+  &__group:first-child {
+    max-width: 100%;
+
+    @include breakpoint($regular) {
+      max-width: 20%;
+    }
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.5rem;
+    border: solid 1px hsla(var(--gray-30-hsl));
+    margin: 0 0 1rem 0; // Mobile
+
+    @include breakpoint($regular) {
+      margin: 0 1rem 0 0;
+    }
+
+    span {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-value-placeholder {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: hsla(var(--gray-30-hsl), 1);
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    margin: 0 0 4px 0;
+  }
+}

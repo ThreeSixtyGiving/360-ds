@@ -1,0 +1,34 @@
+<div class="dashboard-stats-card">
+  <div class="dashboard-stats-card__head">
+    <div class="dashboard-stats-card__left-side">
+      <h3 class="dashboard-stats-card__title">{{ title }}</h3>
+      <p class="dashboard-stats-card__description">{{ description }}</p>
+    </div>
+
+    <div class="dashboard-stats-card__right-side">
+      {% render '@alert-tag--general', { label: info_label } %}
+    </div>
+  </div>
+
+  <div class="dashboard-stats-card__groups">
+    {% for ii in range(stats.length) %}
+      <div class="dashboard-stats-card__group">
+        <span>{% render '@icon', { icon_name: stats[ii].icon_name } %}</span>
+        <span id="stat-{{ ii }}">{{ stats[ii].label }}</span>
+        <span aria-labelledby="stat-{{ ii }}" class="dashboard-stats-card__value">{{ stats[ii].value }}</span>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="spacer-2"></div>
+
+  {% if graph_description %}
+    {% render '@separator' %}
+
+    {# Consider using this or equivalent when the graph doesn't have an embedded title? #}
+    {# <div class="graph-label">{{ graph_description }}</div> #}
+    <div class="graph-container">
+      <img src="assets/images/dashboard-samples/overview-graph-publishers-with-ids.png" alt="Publishers with IDs">
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,12 @@
+status: ready
+collated: true
+variants:
+  - name: default
+    label: Active
+    context:
+      href: '#'
+      label: Active Section
+  - name: Inactive
+    context:
+      href: '#'
+      label: Another Section

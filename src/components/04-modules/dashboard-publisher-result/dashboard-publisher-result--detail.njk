@@ -1,0 +1,52 @@
+<div class="dashboard-publisher-result-wrapper">
+  <div class="dashboard-publisher-result__head">
+    <div class="dashboard-publisher-result__left-side">
+      <div class="dashboard-publisher-result__title">
+        {{ title }}
+      </div>
+    </div>
+
+    <div class="dashboard-publisher-result__right-side">
+      <div class="dashboard-publisher-result__date">
+        {# Using datetime, make sure your timestamp is valid https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values #}
+        Last update <time datetime="{{ date_timestamp }}">{{ date }}</time>
+      </div>
+    </div>
+  </div>
+
+  {% for badge in badges %}
+    <span class="dashboard-publisher-result__badge">
+      {% render '@icon-badge', badge %}
+    </span>
+  {% endfor %}
+  
+  {% render '@separator' %}
+
+  <div class="spacer-1"></div>
+
+  <div class="dashboard-publisher-result-wrapper__external-buttons align-right">
+    <a href="#" class="button">See in GrantNav</a>
+    <a href="#" class="button button--black">See in 360Insights</a>
+  </div>
+
+  <div class="spacer-3"></div>
+
+  <div class="dashboard-publisher-result">
+    <h4 class="dashboard-publisher-result__title">Total grants published</h4>
+    <p>The number of grants published by award year for the past 10 years, with the total grants published that were awarded 11 or more years ago.</p>
+    <div>
+      {% render '@years-chart' %}
+    </div>
+  </div>
+
+  <div class="dashboard-publisher-result">
+    <h4 class="dashboard-publisher-result__title">Datasets</h4>
+    <p>{{ files_description }}</p>
+    {% for ii in range(6) %}
+      {% render '@file-summary' %}
+      {% if ii < 5 %}
+        {% render '@separator' %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

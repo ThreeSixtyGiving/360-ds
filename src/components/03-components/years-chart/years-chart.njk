@@ -1,0 +1,15 @@
+<ul class="years-chart">
+  {% for item in chart %}
+  <li
+    class="years-chart__item"
+    style="--opacity: {{ item.value }};"
+  >
+    <div
+      class="years-chart__block"
+      aria-label="{{ item.detail }}"
+      title="{{ item.detail }}"
+    ><span>{{ item.value_text }}</span></div>
+    <div class="years-chart__label">{{ item.label }}</div>
+  </li>
+  {% endfor %}
+</ul>

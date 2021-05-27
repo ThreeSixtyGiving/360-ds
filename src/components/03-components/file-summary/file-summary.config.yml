@@ -1,0 +1,9 @@
+status: ready
+context:
+  description: Grants from Jan 2013 to Jan 2021
+  num_records: 783
+  grant_total_shorthand: 12.8m
+  file_type: XLSX
+  file_size: 194kB
+  valid_data: true
+  licence: cc

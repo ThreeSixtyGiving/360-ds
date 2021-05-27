@@ -1,0 +1,5 @@
+variants:
+  - name: dashboard-stats
+    status: ready
+  - name: dashboard-publisher-stats
+    status: ready

@@ -1,0 +1,20 @@
+.dashboard-page {
+  &__section-radios {
+    float: right;
+
+    label {
+      min-width: 6rem;
+      text-align: center;
+    }
+  }
+
+  &__back-link {
+    color: $black;
+  }
+
+  &__pager {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="nav-bar nav-bar--minimal">
+  <a class="nav-bar__home-button" href="/">
+    <img src="assets/images/360-logos/{{product_name | lower }}/{{ product_logo_svg }}" alt="{{ product_logo_alt }}">
+    <span class="nav-bar__product-name">{{ auxiliary_name }}</span>
+  </a>
+
+  <nav class="nav-bar__nav-menu">
+    <ul>
+      <li class="nav-menu__item">
+        {{ product_summary }}
+      </li>
+    </ul>
+  </nav>
+</div>
+
+{% render '@separator' %}

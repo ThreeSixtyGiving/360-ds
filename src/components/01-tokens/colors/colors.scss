@@ -34,6 +34,7 @@ $yellow-tint-off: #F9E6AC;
 $orange-tint: #E6925C;
 $orange-tint-lighter: #EFB793;
 $orange-tint-light: #F7DBC9;
+$orange-tint-lightest: #FFEEE7;
 $orange-tint-fade: #FCF0E8;
 $blue-tint: #A6D5DA;
 $blue-tint-light: #D3EAED;
@@ -104,6 +105,8 @@ $blue-tint-dark: #2B666A;
   --color-teal:     hsla(var(--teal-hsl),   1);
   --color-yellow:   hsla(var(--yellow-hsl), 1);
   --color-red:      hsla(var(--red-hsl),    1);
+  --color-black:    hsla(var(--black-hsl),   1);
+  --color-white:    hsla(var(--white-hsl),   1);
 
   --color-orange-dark: hsla(var(--orange-dark-hsl), 1);
   --color-teal-dark:   hsla(var(--teal-dark-hsl),   1);

@@ -1,0 +1,36 @@
+{% extends '@layout--slim' %}
+
+{% block main_content %}
+  <div class="layout__content dashboard-page">
+    {% render '@cards-section--dashboard-stats' %}
+
+    {% render '@tab-bar--publishers-active' %}
+
+    <div class="spacer-4"></div>
+
+    {% render '@collapsed-publishers-table' %}
+
+    <div class="spacer-2"></div>
+
+    {% render '@sort-filter-bar' %}
+
+    <div class="spacer-4"></div>
+
+    {% render '@dashboard-publisher-result' %}
+    <div class="spacer-1"></div>
+    {% render '@dashboard-publisher-result--many-badges' %}
+    <div class="spacer-1"></div>
+    {% render '@dashboard-publisher-result--few-badges' %}
+    <div class="spacer-1"></div>
+    {% for ii in range(4) %}
+      {% render '@dashboard-publisher-result' %}
+      <div class="spacer-1"></div>
+    {% endfor %}
+
+    <div class="spacer-3"></div>
+
+    <div class="dashboard-page__pager">
+      {% render '@pager' %}
+    </div>
+  </div>
+{% endblock %}
