@@ -100,52 +100,20 @@
   }
   
   ol {
-    list-style: none;
-    counter-reset: ol-counter;
-
-
-
     > li {
-      counter-increment: ol-counter;
-      position: relative;
-
-      &::before {
-        font-size: 85%;
-        position: absolute;
-        left: -44px;
-        content: counter(ol-counter);
-        font-weight: 400;
+      margin-left: 24px;
+      &::marker {
         color: hsla(var(--teal-dark-hsl), 1);
-        border: 1px solid hsla(var(--teal-hsl), 1);
-        background-color: hsla(var(--white-hsl), 1);
-        padding: 2px 0;
-        border-radius: 50%;
-        height: 32px;
-        width: 32px;
-        text-align: center;
       }
     }
   }
   
   ul {
-    margin-left: 0;
-
-    li {
-      list-style-type: none;
-      padding-bottom: 0;
-      padding-left: 16px;
-      position: relative;
-
-      &:before {
-        content: "";
-        width: 10px;
-        height: 10px;
-        border-left: 6px solid hsla(var(--teal-hsl), 1);
-        border-bottom: 6px solid transparent;
-        border-top: 6px solid transparent;
-        position: absolute;
-        left: 0;
-        top: 6px;
+    > li {
+      margin-left: 24px;
+      &::marker {
+        color: hsla(var(--teal-hsl), 1);
+        font-size: 1.3rem;
       }
     }
   }
