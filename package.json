@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
   },
+  "engines": {
+    "node": "12"
+  },
   "author": "Arthur A. Bergamaschi <arthurbergmz@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
