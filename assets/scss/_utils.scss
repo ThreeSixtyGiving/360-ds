@@ -55,7 +55,7 @@
   }
 
   @include breakpoint($large) {
-    max-width: 960px;
+    max-width: $single-column;
     margin-left: auto;
     margin-right: auto;
   }
