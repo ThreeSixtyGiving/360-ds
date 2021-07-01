@@ -2,12 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');
 
-@import 'hsl';
-@import 'variables';
-@import 'mixins';
-@import 'reset';
-@import 'utils';
-@import 'print';
+@import 'pre/hsl';
+@import 'pre/variables';
+@import 'pre/mixins';
+@import 'pre/reset';
+@import 'pre/utils';
+@import 'pre/print';
 
 @import '../../src/components/**/*.scss';
 
