@@ -20,7 +20,7 @@ function customPlumber(errTitle) {
 }
 
 gulp.task('sass', function() {
-    return gulp.src('assets/scss/**/*.scss')
+    return gulp.src('project-styles/360-ds/main.scss')
     .pipe(customPlumber('Error running Sass'))
     .pipe(sassGlob())
     .pipe(sass())
@@ -76,3 +76,11 @@ gulp.task('fractal:build', function(){
 
 gulp.task('build', gulp.series('sass', 'images', 'js', 'fractal:build'));
 gulp.task('default', gulp.series('sass', 'images', 'js', 'fractal:start', 'watch'));
+
+gulp.task('sass-grantnav', function() {
+    return gulp.src('project-styles/grantnav/main.scss')
+    .pipe(customPlumber('Error running Sass'))
+    .pipe(sassGlob())
+    .pipe(sass())
+    .pipe(gulp.dest('../grantnav/frontend/static/css/'))
+})
