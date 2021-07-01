@@ -29,5 +29,7 @@ There is also a requirement for project specific paths baked into the generated 
 For example, to build styles for grantnav run:
 
 ```bash
+npm run sass-grantnav
+# or
 npx gulp sass-grantnav
 ```
