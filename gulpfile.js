@@ -84,3 +84,11 @@ gulp.task('sass-grantnav', function() {
     .pipe(sass())
     .pipe(gulp.dest('../grantnav/frontend/static/css/'))
 })
+
+gulp.task('sass-grantnav-local', function() {
+    return gulp.src('src/project-styles/grantnav/main.scss')
+    .pipe(customPlumber('Error running Sass'))
+    .pipe(sassGlob())
+    .pipe(sass())
+    .pipe(gulp.dest('grantnav-css/'))
+})

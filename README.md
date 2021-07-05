@@ -26,10 +26,16 @@ The associated command can be added to `gulpfile.js`.
 This allows the addition of project specific overrides and keeps all style code in once place.
 There is also a requirement for project specific paths baked into the generated css files.
 
-For example, to build styles for grantnav run:
+For example, to build and copy styles into grantnav run:
 
 ```bash
 npm run sass-grantnav
-# or
-npx gulp sass-grantnav
+```
+
+This will generated the compiled CSS and copy it to the [static assets](https://github.com/ThreeSixtyGiving/grantnav/tree/master/grantnav/frontend/static/css) folder in Grantnav.
+
+If you wish to build the styles locally you can use:
+
+```bash
+npm run sass-grantnav-local
 ```
