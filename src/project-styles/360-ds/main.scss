@@ -1,11 +1,4 @@
 // Unfortunately we can't use globbing for all of these as the import order is important!
 @import './360-ds.scss';
-@import '../../scss/pre/print';
-@import '../../scss/pre/variables';
-@import '../../scss/pre/hsl';
-@import '../../scss/pre/mixins';
-@import '../../scss/pre/reset';
-@import '../../scss/pre/utils';
-@import '../../scss/pre/colors';
-@import '../../scss/pre/layout';
+@import '../../scss/pre.scss';
 @import '../../components/**/*.scss';
