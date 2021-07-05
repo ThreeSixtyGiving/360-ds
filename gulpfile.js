@@ -9,6 +9,8 @@ const plumber      = require('gulp-plumber');
 const notify       = require('gulp-notify');
 const path         = require('path');
 const concat       = require('gulp-concat');
+const argv         = require('yargs').argv;
+
 
 function customPlumber(errTitle) {
     return plumber({
@@ -77,18 +79,13 @@ gulp.task('fractal:build', function(){
 gulp.task('build', gulp.series('sass', 'images', 'js', 'fractal:build'));
 gulp.task('default', gulp.series('sass', 'images', 'js', 'fractal:start', 'watch'));
 
-gulp.task('sass-grantnav', function() {
-    return gulp.src('src/project-styles/grantnav/main.scss')
-    .pipe(customPlumber('Error running Sass'))
-    .pipe(sassGlob())
-    .pipe(sass())
-    .pipe(gulp.dest('../grantnav/frontend/static/css/'))
-})
 
-gulp.task('sass-grantnav-local', function() {
-    return gulp.src('src/project-styles/grantnav/main.scss')
+const project = (argv.project === undefined) ? '360-ds/' : argv.project;
+const outputPath = (argv.path === undefined) ? `${project}/css/` : argv.path;
+gulp.task('compile-sass', function() {
+    return gulp.src(`src/project-styles/${project}/main.scss`)
     .pipe(customPlumber('Error running Sass'))
     .pipe(sassGlob())
     .pipe(sass())
-    .pipe(gulp.dest('grantnav-css/'))
+    .pipe(gulp.dest(outputPath))
 })

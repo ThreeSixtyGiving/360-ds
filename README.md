@@ -21,21 +21,16 @@ npm start
 
 ## Project Styles
 
-We can build styles specific to a project using the `main.scss` files located in the `project-styles` folder, under the relevant project.
-The associated command can be added to `gulpfile.js`.
-This allows the addition of project specific overrides and keeps all style code in once place.
-There is also a requirement for project specific paths baked into the generated css files.
+### Generating styles
 
-For example, to build and copy styles into grantnav run:
+The following describes how to generate the compiled CSS.
+You can compile the CSS for any project in `src/project-styles/` by passing the project/folder name to the `compile-css` command using the `--project` parameter.
+This will output the file to a folder at the root of this project. 
 
-```bash
-npm run sass-grantnav
-```
-
-This will generated the compiled CSS and copy it to the [static assets](https://github.com/ThreeSixtyGiving/grantnav/tree/master/grantnav/frontend/static/css) folder in Grantnav.
-
-If you wish to build the styles locally you can use:
+Alternatively, you can pass a path to the `--path` parameter which will output the compiled CSS file to an appropriate location.
 
 ```bash
-npm run sass-grantnav-local
+# The following example will generate the CSS based on the Grantnav project and output it into the given path
+# This is the correct path when 360-ds is loaded as a submodule at the root of the Grantnav codebase 
+npm run compile-css -- --project 'grantnav' --path '../grantnav/frontend/static/css/'
 ```
