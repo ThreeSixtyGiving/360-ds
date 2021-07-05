@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
-    "sass-grantnav": "gulp sass-grantnav",
-    "sass-grantnav-local": "gulp sass-grantnav"
+    "compile-sass": "gulp compile-sass"
   },
   "engines": {
     "node": "12"
@@ -25,5 +24,8 @@
     "gulp-sass-glob": "^1.1.0",
     "xmlhttprequest-ssl": ">=1.6.2",
     "node-notifier": ">=8.0.1"
+  },
+  "devDependencies": {
+    "yargs": "^17.0.1"
   }
 }
