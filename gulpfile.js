@@ -78,7 +78,7 @@ gulp.task('build', gulp.series('sass', 'images', 'js', 'fractal:build'));
 gulp.task('default', gulp.series('sass', 'images', 'js', 'fractal:start', 'watch'));
 
 gulp.task('sass-grantnav', function() {
-    return gulp.src('project-styles/grantnav/main.scss')
+    return gulp.src('src/project-styles/grantnav/main.scss')
     .pipe(customPlumber('Error running Sass'))
     .pipe(sassGlob())
     .pipe(sass())
