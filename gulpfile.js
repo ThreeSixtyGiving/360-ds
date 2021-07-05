@@ -20,7 +20,7 @@ function customPlumber(errTitle) {
 }
 
 gulp.task('sass', function() {
-    return gulp.src('project-styles/360-ds/main.scss')
+    return gulp.src('src/project-styles/360-ds/main.scss')
     .pipe(customPlumber('Error running Sass'))
     .pipe(sassGlob())
     .pipe(sass())
