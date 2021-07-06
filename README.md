@@ -32,5 +32,5 @@ Alternatively, you can pass a path to the `--path` parameter which will output t
 ```bash
 # The following example will generate the CSS based on the Grantnav project and output it into the given path
 # This is the correct path when 360-ds is loaded as a submodule at the root of the Grantnav codebase 
-npm run compile-css -- --project 'grantnav' --path '../grantnav/frontend/static/css/'
+npm run compile-sass -- --project 'grantnav' --path '../grantnav/frontend/static/css/'
 ```
