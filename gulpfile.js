@@ -81,7 +81,7 @@ gulp.task('default', gulp.series('sass', 'images', 'js', 'fractal:start', 'watch
 
 
 const project = (argv.project === undefined) ? '360-ds/' : argv.project;
-const outputPath = (argv.path === undefined) ? `${project}/css/` : argv.path;
+const outputPath = (argv.path === undefined) ? `build/${project}/css/` : argv.path;
 gulp.task('compile-sass', function() {
     return gulp.src(`src/project-styles/${project}/main.scss`)
     .pipe(customPlumber('Error running Sass'))

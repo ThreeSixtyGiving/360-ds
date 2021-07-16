@@ -18,6 +18,18 @@ npm start
 
 [Fractal](https://fractal.build/guide/) should serve the library at [localhost:3000](http://localhost:3000/).
 
+## Generating full design system CSS
+
+If you wish to generate the compiled CSS file for the entire design system to integrate into your application, please use the following example:
+
+```bash
+npm run compile-sass
+```
+
+This will output the generated CSS file to `build/360-ds/css/main.css`.
+
+Alternatively, if you have run `npm start`, the compiled CSS will be located at `public/css/main.css`. 
+
 
 ## Project Styles
 
