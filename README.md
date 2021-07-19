@@ -20,7 +20,7 @@ npm start
 
 ## Generating full design system CSS
 
-If you wish to generate the compiled CSS file for the entire design system to integrate into your application, please use the following example:
+If you wish to generate the compiled CSS file for the entire design system, please use the following example:
 
 ```bash
 npm run compile-sass
