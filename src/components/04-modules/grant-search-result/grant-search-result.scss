@@ -53,6 +53,10 @@
   &__right-side {
     padding-top: 12px;
     padding-bottom: 6px;
+    width: 100%;
+    @include breakpoint($medium) {
+      width: 30%;
+    }
   }
 
   &__title {
