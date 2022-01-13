@@ -189,3 +189,8 @@ ul.dataset-select>li {
     visibility: visible;
     z-index: 10;
 }
+
+.inactive-bar span {
+    background-color: unset !important;
+    border: 1px solid var(--color-orange);
+}
