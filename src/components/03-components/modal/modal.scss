@@ -23,6 +23,7 @@
   
   &__close { 
     all: unset; // Resets button native styles
+    cursor: pointer;
     float: right;
     &:after {
       @extend .u-material-icons;
