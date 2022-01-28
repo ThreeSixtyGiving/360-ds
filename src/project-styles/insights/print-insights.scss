@@ -18,6 +18,8 @@
   blockquote:first-line,
   li:first-line {
       color: #000 !important;
+      -webkit-print-color-adjust: exact;
+      color-adjust: exact;
       box-shadow: none !important;
       text-shadow: none !important;
   }
