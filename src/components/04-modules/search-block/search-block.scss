@@ -3,6 +3,15 @@
     background: $orange;
   }
 
+  &--recipients {
+    background:#fac710 !important
+  }
+
+
+  &--funders {
+    background:#4dacb6 !important
+  }
+
   padding: 82px 1.5rem 67px;
 
   &__description {
