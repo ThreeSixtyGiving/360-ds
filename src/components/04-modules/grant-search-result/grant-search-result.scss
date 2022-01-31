@@ -6,6 +6,15 @@
   padding: 20px 24px;
   margin-bottom: 20px;
 
+  &__recipients {
+      border-left: 4px solid #fac710 !important;
+  }
+
+  &__funders {
+      border-left: 4px solid #4dacb6 !important;
+  }
+
+  
   a {
     text-decoration: underline;
 
@@ -89,6 +98,22 @@
 
     &--label {
       font-weight: 700;
+    }
+  }
+  &__box_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  &__box {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    @include breakpoint($large) {
+      width: 20%;
     }
   }
 }
