@@ -138,10 +138,14 @@ ul.dataset-select>li {
         page-break-inside: avoid;
     }
     input {
-        display: none
+        display: none;
     }
     .bar-chart {
         overflow: hidden;
+    }
+    .print-grid {
+        display: flex;
+        flex-direction: row;
     }
 }
 
