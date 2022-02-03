@@ -43,6 +43,12 @@
 
   &__blurb { font-size: 1.25rem; }
   &__title + &__blurb { margin-top: 16px; }
+
+  &__center {
+    width: 50%;
+    margin: auto;
+  }
+
 }
 
 // Hero Grid
