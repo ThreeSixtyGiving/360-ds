@@ -9,21 +9,23 @@
   z-index: 10000;
   width: 100vw;
   height: 100vh;
-  
+
   &__overlay {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    position: fixed;  
+    position: fixed;
     background-color: hsla(var(--white-hsl), .4);
   }
-  
+
   &__trigger { cursor: pointer; }
-  
-  &__close { 
-    all: unset; // Resets button native styles
+
+  &__close {
     cursor: pointer;
+    background-color: unset;
+    padding: unset;
+    border: unset;
     float: right;
     &:after {
       @extend .u-material-icons;
