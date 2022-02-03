@@ -178,3 +178,52 @@
     }
   }
 }
+
+
+.table--small {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $orange-tint-lighter;
+
+  th {
+    background: $orange-tint-lighter;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 14px;
+    border: none;
+  }
+
+  thead {
+    tr:first-of-type {
+      border-radius: 3px 3px 0px 0px;
+
+      th:first-of-type {
+        border-top-left-radius: 3px;
+      }
+
+      th:last-of-type {
+        border-top-right-radius: 3px;
+      }
+    }
+  }
+
+  tr {
+    border: none;
+
+    td + td {
+      border-left: 1px solid $orange-tint-lighter;
+    }
+
+    &:nth-of-type(odd) {
+      background: $orange-tint-fade;
+    }
+
+    &:nth-of-type(even) {
+      background: $orange-tint-light;
+    }
+
+    + tr {
+      border: none;
+    }
+  }
+}

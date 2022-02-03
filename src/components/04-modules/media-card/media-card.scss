@@ -76,6 +76,12 @@
       display: block;
     }
   }
+
+  &__content_no_image { 
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+  }
    
   &__image-wrapper {
     width: 30%;
@@ -120,6 +126,25 @@
     border-radius: 2px;
 
     & + & { margin-left: .3rem; }
+  }
+
+  &__box_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  &__box {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 33%;
+    font-size: 15px;
+    text-align: center;
+    @include breakpoint($large) {
+      width: 20%;
+    }
   }
 }
 
