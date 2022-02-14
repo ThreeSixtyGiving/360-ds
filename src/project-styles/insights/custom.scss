@@ -133,6 +133,11 @@ ul.dataset-select>li {
     margin: 0;
 }
 
+.underline-text a {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 @media print {
     .base-card {
         page-break-inside: avoid;
