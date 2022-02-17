@@ -106,6 +106,7 @@ ul.dataset-select>li {
 
 .bar-chart {
    max-height: 400px;
+   min-height: 400px;
    overflow-y: auto;
    overflow-x: hidden;
 }
