@@ -1,0 +1,39 @@
+<head>
+    <!-- Matomo -->
+    <script type="text/javascript">
+      var _paq = window._paq = window._paq || [];
+      var siteID = null;
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['requireCookieConsent']); // Don't use cookies unless we have consent
+      _paq.push(['setCookieDomain', '*.threesixtygiving.org']);
+      _paq.push(['setDomains', '*.threesixtygiving.org']);
+      _paq.push(['setDownloadExtensions', "json|csv|xlsx"]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://analytics.threesixtygiving.org/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        if(!siteID) throw new Error("siteID not set");
+        _paq.push(['setSiteId', siteID]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+
+<body>
+    <div class="base-card base-card--new cookie-consent">
+      <div class="base-card__content">
+          <h2 class="base-card__title">Allow analytics cookies? <br/>
+            <a class="base-card__text" href="https://www.threesixtygiving.org/privacy/"> More Information & Privacy Policy</a>
+          </h2>
+          <p class="base-card__text">
+              <a href="#" onclick="_paq.push(['rememberCookieConsentGiven']);" class="button">Yes</a>
+              <a href="#" class="button">No</a>
+              <a href="#" onclick="_paq.push(['optUserOut']);" class="button">Disable Analytics</a>
+          </p>
+          <p style="font-style: italic;">360Giving uses privacy-respecting analytics. If you don't accept cookies, we will track only basic information about your visit. Click "Disable Analytics" if you don't want us to track at all. </p>
+      </div>
+    </div>
+</body>

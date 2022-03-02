@@ -1,0 +1,1 @@
+`siteID` variable needs to be set in `cookie-consent.njk`.
