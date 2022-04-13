@@ -24,9 +24,9 @@
     <script type="text/javascript">
         function hideCookieConsentDialog(hide){
           if (hide){
-            document.getElementsByClassName("cookie-consent")[0].style.display = 'none';
+            document.getElementsByClassName("cookie-consent")[0].style.setProperty("display", "none", "important");
           } else {
-            document.getElementsByClassName("cookie-consent")[0].style.display = 'block';
+            document.getElementsByClassName("cookie-consent")[0].style.setProperty("display", "block", "important");
           }
         }
 
