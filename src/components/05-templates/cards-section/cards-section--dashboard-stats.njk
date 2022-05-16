@@ -1,5 +1,5 @@
 <div class="cards-section">
-  <section class="grid grid--four-columns">
+  <section class="grid grid--five-columns">
     <div class="grid__1">
       {% render '@base-card--dynamic', {
         custom_class: 'base-card--yellow',
@@ -18,6 +18,13 @@
       {% render '@base-card--dynamic', {
         custom_class: 'base-card--teal',
         value: '172',
+        label: 'Publishers'
+      } %}
+    </div>
+    <div class="grid__1">
+      {% render '@base-card--dynamic', {
+        custom_class: 'base-card--black',
+        value: '202',
         label: 'Funders'
       } %}
     </div>
