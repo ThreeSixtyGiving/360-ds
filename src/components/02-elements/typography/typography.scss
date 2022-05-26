@@ -173,5 +173,10 @@ p {
   }
 }
 
+p > a {
+  text-decoration: underline;
+}
 
-
+ul > li > a {
+  text-decoration: underline;
+}
