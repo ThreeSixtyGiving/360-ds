@@ -1,0 +1,51 @@
+form {
+  label {
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    font-weight: 400;
+    display: block;
+    margin-top: 1.3rem;
+    margin-bottom: 0rem;
+  }
+
+  input,
+  textarea,
+  select {
+    &[type=checkbox] {
+      margin-left: 8px;
+      display: initial;
+      min-width: initial;
+    }
+
+    &[type=submit] {
+      display: initial;
+      min-width: initial;
+    }
+
+    &:focus {
+      outline: 2px solid hsl(var(--yellow-hsl), 1);
+      outline-offset: 0;
+      -webkit-box-shadow: inset 0 0 0 2px;
+      box-shadow: inset 0 0 0 2px;
+    }
+
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    margin-top: 5px;
+    padding: 5px;
+    width: auto;
+    min-width: 25%;
+    border: 2px solid hsl(var(--base-hsl), 1);
+    color: hsl(var(--base-hsl), 1);
+    background-color: #fff;
+    display: block;
+
+    &::placeholder {
+      color: hsl(var(--base-hsl), 0.7);
+    }
+
+    .full-width {
+      width: 100%;
+    }
+  }
+}
