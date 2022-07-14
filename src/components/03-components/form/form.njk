@@ -1,4 +1,4 @@
-<form action="" method="">
+<form action="" method="" class="generic-form">
   <input name="" type="hidden" value="00D5t0000008hdL"/>
   <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text"/>
   <label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text"/>
@@ -135,4 +135,10 @@
   <input name="recordType" type="hidden" value="0125t0000008fRO"/></label>
 <div class="g-recaptcha" data-sitekey="6LcNGYogAAAAADclFYm-xwcrTnUt4WhGW9yckdnG"></div>
 <label><input name="submit" type="submit" class="button button--orange"/></label>
+</form>
+
+<form class="generic-form">
+{% for inputtype in inputtypes %}
+  <label for="input-{{ inputtype }}">{{ inputtype }}</label><input id="title" maxlength="40" name="title" size="20" type="{{ inputtype }}" placeholder="test placeholder"/>
+{% endfor %}
 </form>

@@ -1,17 +1,22 @@
-.button {
-  --border-color: hsla(var(--base-hsl), 1);
-  --text-color: hsla(var(--base-hsl), 1);
-  --bg-color: transparent;
+@mixin button {
   border: 2px solid var(--border-color);
   color: var(--text-color);
   display: inline-block;
   border-radius: 3px;
-  padding: 6px 24px 8px;
+  padding: 6px 24px 6px;
   font-size: 1rem;
   font-weight: 400;
   background-color: var(--bg-color);
   text-decoration: none;
   cursor: pointer;
+
+}
+
+.button {
+  --border-color: hsla(var(--base-hsl), 1);
+  --text-color: hsla(var(--base-hsl), 1);
+  --bg-color: transparent;
+  @include button;
 
   &.button--small {
     padding: 2px 16px 2px;
@@ -20,7 +25,7 @@
   }
 
   &.button--large {
-    padding: 10px 32px 12px;
+    padding: 10px 32px 10px;
     border-width: 3px;
     font-size: 1.3rem;
   }
@@ -30,29 +35,34 @@
     padding: 0;
   }
 
-  &.button--white { 
+  &.button--white {
     --border-color: hsla(var(--white-hsl), 1);
     --text-color: hsla(var(--white-hsl), 1);
+    --bg-color: transparent;
   }
 
-  &.button--orange { 
+  &.button--orange {
     --border-color: var(--color-orange);
     --text-color: hsla(var(--orange-dark-hsl), 1);
+    --bg-color: transparent;
   }
 
-  &.button--teal { 
+  &.button--teal {
     --border-color: var(--color-teal);
     --text-color: hsla(var(--teal-dark-hsl), 1);
+    --bg-color: transparent;
   }
 
-  &.button--yellow { 
+  &.button--yellow {
     --border-color: var(--color-yellow);
     --text-color: var(--color-yellow-dark);
+    --bg-color: transparent;
   }
 
-  &.button--red { 
+  &.button--red {
     --border-color: var(--color-red);
     --text-color: var(--color-red);
+    --bg-color: transparent;
   }
 
   &.button--black {
@@ -61,9 +71,8 @@
     --text-color: var(--color-white);
   }
 
-  &.button--disabled { 
+  &.button--disabled {
     opacity: .3 !important;
     pointer-events: none !important;
   }
-
 }
