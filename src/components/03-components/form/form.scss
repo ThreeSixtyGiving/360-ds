@@ -1,4 +1,4 @@
-form {
+form.generic-form {
   label {
     font-size: 1.1875rem;
     line-height: 1.3157894737;
@@ -8,19 +8,21 @@ form {
     margin-bottom: 0rem;
   }
 
-  input,
+  input[type=text],
+  input[type=email],
+  input[type=url],
+  input[type=search],
+  input[type=tel],
+  input[type=number],
+  input[type=date],
+  input[type=datetime-local],
+  input[type=week],
+  input[type=time],
+  input[type=password],
+  input[type=month],
+  input[type=file],
   textarea,
   select {
-    &[type=checkbox] {
-      margin-left: 8px;
-      display: initial;
-      min-width: initial;
-    }
-
-    &[type=submit] {
-      display: initial;
-      min-width: initial;
-    }
 
     &:focus {
       outline: 2px solid hsl(var(--yellow-hsl), 1);
@@ -47,5 +49,21 @@ form {
     .full-width {
       width: 100%;
     }
+  }
+
+  input[type=button],
+  input[type=reset],
+  button {
+    --border-color: hsla(var(--orange-hsl), 1);
+    --bg-color: #fff;
+    --text-color: hsla(var(--orange-hsl), 1);
+    @include button;
+  }
+
+  input[type=submit] {
+    --border-color: hsla(var(--orange-hsl), 1);
+    --text-color: #fff;
+    --bg-color: hsla(var(--orange-hsl), 1);
+    @include button;
   }
 }
