@@ -10,6 +10,7 @@ form.generic-form {
 
   input[type=text],
   input[type=email],
+  input[type=color],
   input[type=url],
   input[type=search],
   input[type=tel],
@@ -48,6 +49,174 @@ form.generic-form {
 
     .full-width {
       width: 100%;
+    }
+  }
+
+  input[type=search] {
+    border-radius: 8px;
+  }
+
+  input[type=color] {
+    width: 80px;
+    min-width: initial;
+    height: 38px;
+    padding: 2px;
+  }
+
+  /*********** Baseline, reset styles ***********/
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  /* Removes default focus */
+  input[type="range"]:focus {
+    outline: none;
+  }
+
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: hsl(var(--teal-hsl), 1);
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+
+  /* slider thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    margin-top: -4px;
+    /* Centers thumb on the track */
+    background-color: hsl(var(--base-hsl), 1);
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 3px solid hsl(var(--yellow-hsl), 1);
+    outline-offset: 0.125rem;
+  }
+
+  /*********** Firefox styles ***********/
+  /* slider track */
+  input[type="range"]::-moz-range-track {
+    background-color: hsl(var(--teal-hsl), 1);
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+
+  /* slider thumb */
+  input[type="range"]::-moz-range-thumb {
+    background-color: hsl(var(--base-hsl), 1);
+    border: none;
+    /*Removes extra border that FF applies*/
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  input[type="range"]:focus::-moz-range-thumb {
+    outline: 3px solid hsl(var(--yellow-hsl), 1);
+    outline-offset: 0.125rem;
+  }
+
+  .checkbox,
+  .radio {
+    display: block;
+    position: relative;
+    min-height: 40px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    clear: left;
+
+    input[type=checkbox],
+    input[type=radio] {
+      cursor: pointer;
+      position: absolute;
+      z-index: 1;
+      top: -2px;
+      left: -2px;
+      width: 44px;
+      height: 44px;
+      margin: 0;
+      opacity: 0;
+    }
+
+    label::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 34px;
+      height: 34px;
+      border: 2px solid hsl(var(--base-hsl), 1);
+      margin-right: 0.5rem;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    input[type=checkbox]:checked+label::after,
+    input[type=radio]:checked+label::after {
+      opacity: 1;
+    }
+
+    label {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 5px 6px 5px;
+      cursor: pointer;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+    }
+
+    label::after {
+      content: "";
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      top: 12px;
+      left: 7px;
+      width: 19px;
+      height: 9px;
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      border: solid;
+      border-top-color: currentcolor;
+      border-top-width: medium;
+      border-right-width: medium;
+      border-bottom-width: medium;
+      border-left-width: medium;
+      border-width: 0 0 5px 5px;
+      border-top-color: rgba(0, 0, 0, 0);
+      opacity: 0;
+      background: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .radio {
+    label::before {
+      border-radius: 50%;
+    }
+
+    label::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 0;
+      height: 0;
+      border: 9px solid currentcolor;
+      border-radius: 50%;
+      opacity: 0;
+      background: currentcolor;
     }
   }
 
