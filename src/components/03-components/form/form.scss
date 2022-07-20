@@ -61,6 +61,12 @@ form.generic-form {
     color: hsl(var(--red-hsl), 1);
   }
 
+  .note {
+    display: block;
+    margin-top: 0.3rem;
+    color: hsl(var(--base-hsl), 0.7);
+  }
+
   input[type=search] {
     border-radius: 8px;
   }
