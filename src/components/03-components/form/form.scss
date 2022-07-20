@@ -30,6 +30,10 @@ form.generic-form {
       outline-offset: 0;
       -webkit-box-shadow: inset 0 0 0 2px;
       box-shadow: inset 0 0 0 2px;
+
+      &:required {
+        outline: 2px solid hsl(var(--orange-hsl), 1);
+      }
     }
 
     font-size: 1.1875rem;
@@ -50,6 +54,11 @@ form.generic-form {
     .full-width {
       width: 100%;
     }
+  }
+
+  label.required::after {
+    content: " *";
+    color: hsl(var(--red-hsl), 1);
   }
 
   input[type=search] {
