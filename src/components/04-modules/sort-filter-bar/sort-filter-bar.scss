@@ -3,7 +3,7 @@
   $border-arrow-colour: hsla(var(--gray-30-hsl), 1);
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: 1fr 1fr 100px;
   grid-gap: 10px;
 
   &__select-wrapper {
@@ -50,4 +50,10 @@
       color: $black;
     }
   }
+}
+
+.clear-all {
+  border: none;
+  height: 35px;
+  width: 100px;
 }
