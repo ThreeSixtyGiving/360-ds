@@ -8,6 +8,29 @@ form.generic-form {
     margin-bottom: 0rem;
   }
 
+  &.fixed-width {
+
+    input[type=text],
+    input[type=email],
+    input[type=color],
+    input[type=url],
+    input[type=search],
+    input[type=tel],
+    input[type=number],
+    input[type=date],
+    input[type=datetime-local],
+    input[type=week],
+    input[type=time],
+    input[type=password],
+    input[type=month],
+    input[type=file],
+    textarea,
+    select {
+      width: 450px;
+      max-width: 100%;
+    }
+  }
+
   input[type=text],
   input[type=email],
   input[type=color],
