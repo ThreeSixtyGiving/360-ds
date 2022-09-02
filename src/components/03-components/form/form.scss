@@ -74,7 +74,7 @@ form.generic-form {
       color: hsl(var(--base-hsl), 0.7);
     }
 
-    .full-width {
+    &.full-width {
       width: 100%;
     }
   }
