@@ -13,6 +13,10 @@
 
   padding: 82px 1.5rem 67px;
 
+  &--no-padding {
+    padding: 0;
+  }
+
   &__description {
     text-align: center;
     font-size: 24px;

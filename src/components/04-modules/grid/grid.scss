@@ -22,9 +22,18 @@
   &--five-columns {
     @include breakpoint($medium) { grid-template-columns: repeat(5, 1fr); }
   }
+  &--six-columns {
+    @include breakpoint($medium) { grid-template-columns: repeat(6, 1fr); }
+  }
+  &--seven-columns {
+    @include breakpoint($medium) { grid-template-columns: repeat(7, 1fr); }
+  }
 
   &__2 { grid-column: auto / span 2; }
   &__3 { grid-column: auto / span 3; }
+  &__4 { grid-column: auto / span 4; }
   &__5 { grid-column: auto / span 5; }
+  &__6 { grid-column: auto / span 6; }
+  &__7 { grid-column: auto / span 7; }
   &__all { grid-column: 1 / -1; }
 }
