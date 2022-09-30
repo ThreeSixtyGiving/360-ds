@@ -5,13 +5,5 @@ context:
     - label: Alphabetically
       active: true
       status: Sorting alphabetically
-    - label: Filter by recipient
-      active: false
-    - label: Filter by data feature
-      active: true
-      selected_item: Include charity or company nos.
-      status: 'Filtering by: Include charity or company nos.'
-    - label: Filter by data file
-      active: false
-    - label: Filter by data file
+    - label: Filter by publisher
       active: false
