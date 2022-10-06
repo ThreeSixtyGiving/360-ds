@@ -34,6 +34,17 @@
   float: right;
 }
 
+.table-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-title__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
 // Horizontal description lists
 //
 // Defaults to being stacked without any of the below styles applied, until the
