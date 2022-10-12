@@ -45,24 +45,44 @@
     --border-color: var(--color-orange);
     --text-color: hsla(var(--orange-dark-hsl), 1);
     --bg-color: transparent;
+
+    &.button--solid {
+      --text-color: hsla(var(--white-hsl), 1);
+      --bg-color: var(--color-orange);
+    }
   }
 
   &.button--teal {
     --border-color: var(--color-teal);
     --text-color: hsla(var(--teal-dark-hsl), 1);
     --bg-color: transparent;
+
+    &.button--solid {
+      --text-color: hsla(var(--white-hsl), 1);
+      --bg-color: var(--color-teal);
+    }
   }
 
   &.button--yellow {
     --border-color: var(--color-yellow);
     --text-color: var(--color-yellow-dark);
     --bg-color: transparent;
+
+    &.button--solid {
+      --text-color: hsla(var(--base-hsl), 1);
+      --bg-color: var(--color-yellow);
+    }
   }
 
   &.button--red {
     --border-color: var(--color-red);
     --text-color: var(--color-red);
     --bg-color: transparent;
+    
+    &.button--solid {
+      --text-color: hsla(var(--white-hsl), 1);
+      --bg-color: var(--color-red);
+    }
   }
 
   &.button--black {
@@ -74,5 +94,10 @@
   &.button--disabled {
     opacity: .3 !important;
     pointer-events: none !important;
+
+    &.button--solid {
+      --text-color: hsla(var(--base-hsl), 1);
+      --bg-color: var(--base-hsl);
+    }
   }
 }
