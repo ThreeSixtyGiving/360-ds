@@ -100,4 +100,8 @@
       --bg-color: var(--base-hsl);
     }
   }
+
+  &.bold {
+    font-weight: bold;
+  }
 }
