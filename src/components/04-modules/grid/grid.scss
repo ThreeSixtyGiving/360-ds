@@ -36,4 +36,8 @@
   &__6 { grid-column: auto / span 6; }
   &__7 { grid-column: auto / span 7; }
   &__all { grid-column: 1 / -1; }
+
+  &.max-width__100 {
+    max-width: 100%;
+  }
 }
