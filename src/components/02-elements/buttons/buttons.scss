@@ -63,6 +63,17 @@
     }
   }
 
+  &.button--teal-dark {
+    --border-color: var(--color-teal-dark);
+    --text-color: hsla(var(--teal-dark-hsl), 1);
+    --bg-color: transparent;
+
+    &.button--solid {
+      --text-color: hsla(var(--white-hsl), 1);
+      --bg-color: var(--color-teal-dark);
+    }
+  }
+
   &.button--yellow {
     --border-color: var(--color-yellow);
     --text-color: var(--color-yellow-dark);
