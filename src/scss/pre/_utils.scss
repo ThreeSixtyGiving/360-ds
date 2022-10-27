@@ -78,6 +78,7 @@
   white-space: nowrap; 
 }
 
+.margin-top\:0    { margin-top: 0 !important; }
 .margin-top\:05    { margin-top: .5rem !important; }
 .margin-top\:1     { margin-top:  1rem !important; }
 .margin-top\:2     { margin-top:  2rem !important; }
@@ -133,3 +134,11 @@
 .padding-bottom\:3  { padding-bottom:  3rem  !important; }
 .padding-bottom\:4  { padding-bottom:  4rem  !important; }
 .padding-bottom\:5  { padding-bottom:  5rem  !important; }
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.white-wash {
+  background-color: white !important;
+}
