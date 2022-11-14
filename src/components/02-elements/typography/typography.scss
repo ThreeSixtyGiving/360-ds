@@ -159,7 +159,6 @@ p {
   font-weight: 400;
   color: hsla(var(--base-hsl), 1);
   margin-bottom: 0;
-  // & + & { margin-top: 1rem; }
 
   @include breakpoint($large) { font-size: 1.2rem; }
 }
@@ -171,12 +170,4 @@ p {
     font-weight: 400;
     color: var(--color-teal-dark);
   }
-}
-
-p > a {
-  text-decoration: underline;
-}
-
-ul > li > a {
-  text-decoration: underline;
 }

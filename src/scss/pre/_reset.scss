@@ -130,17 +130,14 @@ sup {
 
 a {
   color: var(--color-accent);
-  text-decoration: none;
   -webkit-text-decoration-skip: objects;
 
   &:hover, &:focus {
     color: var(--color-accent);
-    text-decoration: none;
   }
 
   &:active {
     color: var(--color-orange);
-    text-decoration: none;
   }
 }
 
