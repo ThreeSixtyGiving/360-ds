@@ -106,3 +106,42 @@
     }
   }
 }
+
+// DataTables pagination styling
+.dt-pager-container {
+  .pager {
+    margin: 64px auto 0 auto;
+    padding: 12px 18px;
+  }
+
+  .dataTables_paginate {
+    .ellipsis {
+      padding: 0 12px;
+    }
+  }
+
+  .paginate_button {
+    margin: 0 4px;
+    padding: 6px;
+
+    &.current {
+      font-weight: bold;
+    }
+
+    &.previous {
+      margin-right: 20px;
+      padding: 0 6px;
+      text-decoration: none;
+    }
+
+    &.next {
+      margin-left: 20px;
+      padding: 0 6px;
+      text-decoration: none;
+    }
+  
+    &.disabled {
+      display: none;
+    }
+  }
+}
