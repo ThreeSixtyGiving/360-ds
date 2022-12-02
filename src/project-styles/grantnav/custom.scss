@@ -572,3 +572,58 @@ select.front_search {
   border-color: #ecf0f1;
   color: #000;
 }
+
+// DataTables pagination styling
+.pager-container {
+    display: flex;
+    justify-content: center;
+  
+    .pager {
+      margin: 64px auto 0 auto;
+      padding: 12px 18px;
+    }
+  
+    .dataTables_paginate {
+      .ellipsis {
+        padding: 0 12px;
+      }
+    }
+  
+    .paginate_button {
+      margin: 0 4px;
+      padding: 6px;
+  
+      &.current {
+        font-weight: bold;
+      }
+  
+      &.previous {
+        margin-right: 20px;
+        padding: 0 6px;
+        text-decoration: none;
+        
+        &:hover {
+          svg {
+            stroke: $orange;
+          }
+        }
+      }
+  
+      &.next {
+        margin-left: 20px;
+        padding: 0 6px;
+        text-decoration: none;
+        
+        &:hover {
+          svg {
+            stroke: $orange;
+          }
+        }
+      }
+    
+      &.disabled {
+        display: none;
+      }
+    }
+  }
+  
