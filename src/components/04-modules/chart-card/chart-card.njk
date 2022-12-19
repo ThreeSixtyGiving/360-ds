@@ -8,9 +8,9 @@
 
     <ul class="bar-chart">
       {% for i in chart %}
-      <li class="bar-chart__item" style="--value: {{ i.value }}; --width: {{ i.width }};">
+      <li class="bar-chart__item" style="--width: {{ i.width }};">
         <div class="bar-chart__label">£2,001 - £5,000</div>
-        <div class="bar-chart__bar"><span></span></div>
+        <div class="bar-chart__bar"><span data-val="{{ i.value }}"></span></div>
       </li>
       {% endfor %}
     </ul>

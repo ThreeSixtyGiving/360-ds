@@ -1,8 +1,8 @@
 <ul class="bar-chart">
   {% for item in chart %}
-  <li class="bar-chart__item" style="--value: {{ item.value }}; --width: {{ item.width }};">
+  <li class="bar-chart__item"  style="--width: {{ item.width }};">
     <div class="bar-chart__label">{{ item.label }}</div>
-    <div class="bar-chart__bar"><span></span></div>
+    <div class="bar-chart__bar"><span data-val="{{ item.value }}"></span></div>
   </li>
   {% endfor %}
 </ul>
