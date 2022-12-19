@@ -6,7 +6,6 @@
   --bar-bg-color: hsla(var(--yellow-hsl), 1);
 
   &__item {
-    --value: 0;
     display: flex;
     padding-bottom: 8px;
   }
@@ -27,8 +26,7 @@
     }
 
     > span:after {
-      counter-reset: value var(--value);
-      content: counter(value);
+      content: attr(data-val);
       position: absolute;
       left: calc(100% + 8px);
     }
