@@ -110,7 +110,8 @@ ul.dataset-select>li {
    overflow-x: hidden;
 }
 
-.bar-chart:not(.non-interactive) li, label {
+.bar-chart:not(.non-interactive) li,
+.bar-chart:not(.non-interactive) label {
     cursor: pointer;
 }
 
