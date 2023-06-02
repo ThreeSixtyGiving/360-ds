@@ -1,0 +1,10 @@
+.sidebar-adjacent-content {
+  // offset margins to fit beside sidebar (320px sidebar + 32px padding) / 2
+  margin-left:-176px;
+  margin-right:176px;
+  
+  @media (max-width: 1690px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
