@@ -7,3 +7,8 @@ a {
   &:hover { color: hsla(var(--orange-dark-hsl), 1);; }
   &:active { color: hsla(var(--yellow-dark-hsl), 1);; }
 }
+
+a[target="_blank"]::after {
+  content: " (Opens in new tab)";
+  visibility: hidden;
+}
