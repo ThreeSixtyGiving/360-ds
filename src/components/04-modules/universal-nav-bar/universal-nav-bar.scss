@@ -1,0 +1,157 @@
+// global nav bar
+:root {
+  // this will likely change per project
+  --top-nav-max-width: 1440px;
+  // this variable can be used to set heights or top positioning for other elements on the page
+  --top-nav-height: 40px;
+}
+
+.threesixty-global-nav {
+  --gap: 16px;
+  --colour-base: #2E666B;
+  --colour-teal: #4DACB6;
+  background: var(--colour-base);
+  color: #fff;
+  display: block;
+  font: normal 500 16px/24px 'Roboto', sans-serif;
+  padding: 8px 0;
+
+  > ul {
+    display: flex;
+    gap: var(--gap);
+    justify-content: flex-end;
+    list-style: none;
+    max-width: var(--top-nav-max-width);
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 0;
+    width: calc(100% - (var(--gap)*2));
+
+    // we add a custom discreet scrollbar to the nav
+    --scrollbar-bg: #fff;
+    --thumb-bg: var(--colour-teal);
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      background-color: var(--scrollbar-bg);
+      height: 4px;
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: var(--thumb-bg);
+    }
+
+    li {
+      margin: 0;
+
+      a {
+        align-items: center;
+        color: #fff;
+        display: flex;
+        gap: 4px;
+        text-decoration-thickness: 0;
+        text-decoration-color: var(--colour-base);
+
+        &:hover,
+        &:focus {
+          text-decoration-color: currentColor;
+          text-decoration-thickness: 2px;
+        }
+      }
+      &.threesixty-global-nav__current a {
+        text-decoration-color: currentColor;
+        text-decoration-thickness: 2px;
+      }
+      svg {
+        margin: 0;
+      }
+    }
+    li:first-child {
+      // the first item links to 360giving.org, we want this one left aligned while the rest are right aligned
+      margin-right: auto;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  // decreases gap between the items so that we can continue to fit them all in
+  .threesixty-global-nav {
+    > ul {
+      width: calc(100% - 2 * var(--gap));
+    }
+  }
+}
+@media (max-width: 800px) {
+  // reduces the font size to ensure they continue to fit
+  .threesixty-global-nav {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 724px) {
+  // reduces the font size event more to ensure they continue to fit
+  .main-header .container {
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+  .threesixty-global-nav {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 665px) {
+  // reduces the font size event more to ensure they continue to fit
+  // if there is a current item, we also hide it to give more horizontal space
+  .threesixty-global-nav {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 0;
+
+    > ul {
+      padding: 8px;
+    }
+    > ul li.threesixty-global-nav__current {
+      display: none;
+    }
+  }
+}
+@media (max-width: 544px) {
+  // big changes here, items don't fit nicely in one line anymore
+  // we place the icons above the text and hence the top nav height changes, we update the var in case it's needed elsewhere
+  :root {
+    --top-nav-height: 72px;
+  }
+
+  .threesixty-global-nav {
+    > ul {
+      justify-content: space-between;
+      width: 100%;
+    }
+    > ul li:first-child {
+      margin-right: 0;
+    }
+    > ul li {
+      flex: 0 0 64px;
+    }
+    > ul li.threesixty-global-nav__wider-container {
+      flex: 0 0 72px;
+    }
+  }
+  .threesixty-global-nav > ul li {
+    a {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 370px) {
+  // final breakpoint, we reduce the padding on the ul to ensure the items fit, left align them all as well
+  .threesixty-global-nav > ul {
+    justify-content: flex-start;
+    padding: 8px 0 8px 8px;
+  }
+};
