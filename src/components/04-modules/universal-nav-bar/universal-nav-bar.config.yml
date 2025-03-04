@@ -1,0 +1,11 @@
+title: 'Global-nav-bar'
+status: ready
+context:
+  product_name: Registry
+  auxiliary_name: Dashboard
+  product_logo_svg: 360registry-color.svg
+  product_logo_alt: 360Registry
+  product_summary: Based on the new 360giving.org website
+variants:
+  - name: item-highlighted
+    status: ready
