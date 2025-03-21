@@ -115,3 +115,36 @@
   @include x_small_text;
 }
 
+p, ol, ul {
+  margin-bottom: $s-6;
+	margin-top: $s-6;
+}
+
+$headings: 'h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6';
+$headingsByClass: ".h1, .h2, .h3, .h4, .h5, .h6";
+
+:where(#{$headings}) {
+	margin-bottom: $s-2;
+	margin-top: $s-10;
+
+	& + :is(p:not(.h1, .h2, .h3, .h4, .h5, .h6), ol, ul) {
+    margin-top: $s-3;
+  }
+
+	& + :is(#{$headings}) {
+    margin-top: $s-3
+  }
+}
+
+.small-text:is(p, h1, h2, h3, h4, h5, h6, ul, ol) {
+  margin-bottom: $s-3;
+  margin-top: $s-3;
+
+	&:first-child {
+    margin-top: 0
+  }
+
+	&:last-child {
+    margin-bottom: 0
+  }
+}
