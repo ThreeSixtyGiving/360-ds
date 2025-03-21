@@ -139,7 +139,9 @@ $headingsByClass: ".h1, .h2, .h3, .h4, .h5, .h6";
 .small-text:is(p, h1, h2, h3, h4, h5, h6, ul, ol) {
   margin-bottom: $s-3;
   margin-top: $s-3;
+}
 
+:where(#{$headings}, p, ol, ul) {
 	&:first-child {
     margin-top: 0
   }
