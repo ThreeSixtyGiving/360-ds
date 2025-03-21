@@ -1,5 +1,5 @@
 <head>
-	<script type="text/javascript">
+  <script type="text/javascript">
 		const CookieConsent360 = {
 			// domain: window.location.host, // get the current domain in www.threesixtygiving.org format
 			domain: window.location.hostname, // get the current domain in www.threesixtygiving.org format
@@ -234,34 +234,30 @@
 		};
 
 		CookieConsent360.init();
-	</script>
+  </script>
 </head>
 <body>
-	<div
-		role="dialog"
-		aria-labelledby="cookie-dialog-title"
-		aria-describedby="cookie-dialog-desc"
-		class="cookie-consent">
-		<div class="cookie-consent__content">
-			<p class="cookie-consent__title" id="cookie-dialog-title">
-				Allow analytics cookies?
-				<br />
-				<a class="cookie-consent__text" href="https://www.threesixtygiving.org/privacy/"
-					>More Information &amp; Privacy Policy</a
-				>
-			</p>
-			<p class="cookie-consent__text">
-				<button onclick="CookieConsent360.giveCookieConsent();" class="button">Yes</button>
-				<button onclick="CookieConsent360.giveCookieLessConsent();" class="button">No</button>
-				<button onclick="CookieConsent360.disableAnalytics();" class="button">
-					Disable Analytics
-				</button>
-			</p>
-			<p id="cookie-dialog-desc" class="cookie-consent__description">
-				360Giving uses privacy-respecting analytics. If you don't accept cookies, we will track only
-				basic information about your visit. Click "Disable Analytics" if you don't want us to track
-				at all.
-			</p>
-		</div>
-	</div>
+  <div role="dialog"
+       aria-labelledby="cookie-dialog-title"
+       aria-describedby="cookie-dialog-desc"
+       class="box cookie-consent">
+    <div class="cookie-consent__content">
+      <p class="cookie-consent__title" id="cookie-dialog-title">
+        Allow analytics cookies?
+        <br />
+        <a class="cookie-consent__text"
+           href="https://www.threesixtygiving.org/privacy/">More Information &amp; Privacy Policy</a>
+      </p>
+      <p class="cookie-consent__text">
+        <button onclick="CookieConsent360.giveCookieConsent();" class="button">Yes</button>
+        <button onclick="CookieConsent360.giveCookieLessConsent();" class="button">No</button>
+        <button onclick="CookieConsent360.disableAnalytics();" class="button">Disable Analytics</button>
+      </p>
+      <p id="cookie-dialog-desc" class="cookie-consent__description">
+        360Giving uses privacy-respecting analytics. If you don't accept cookies, we will track only
+        basic information about your visit. Click "Disable Analytics" if you don't want us to track
+        at all.
+      </p>
+    </div>
+  </div>
 </body>

@@ -1,46 +1,42 @@
 .cookie-consent {
-  background: #f9e1d3 !important;
-  border: 0 solid #DE6E26;
-  border-left-width: 4px;
-  border-right-width: 4px;
-  box-shadow: 0px 4px 8px rgba(21, 55, 53, 0.15);
-  bottom: 0;
-  color: var(--base-hsl);
-  display: none !important;
-  font-family: normal 400 16px/24px var(--fonts-primary);
-  left: 16px;
-  padding: 32px 16px;
-  position: fixed !important;
-  text-align: center;
-  max-width: 450px;
-  width: calc(100vw - 38px);
-  z-index: 99;
+	box-shadow: 0px 4px 8px rgba(21, 55, 53, 0.15);
+	bottom: 0;
+	color: var(--base-hsl);
+	display: none !important;
+	font-family: normal 400 16px/24px var(--fonts-primary);
+	left: 16px;
+	padding: 32px 16px;
+	position: fixed !important;
+	text-align: center;
+	max-width: 450px;
+	width: calc(100vw - 38px);
+	z-index: 99;
 
-  :is(button, a) {
-    color: var(--base-hsl);
-  }
+	:is(button, a) {
+		color: var(--base-hsl);
+	}
 
-  .button {
-    @include button;
-  }
+	.button {
+		@include button;
+	}
 }
 
 .cookie-consent__title {
-  font: normal 500 28px/42px var(--fonts-primary);
-  font-weight: 500;
-  font-size: 28px;
-  letter-spacing: 0;
-  line-height: 42px;
+	font: normal 500 28px/42px var(--fonts-primary);
+	font-weight: 500;
+	font-size: 28px;
+	letter-spacing: 0;
+	line-height: 42px;
 
-  @include breakpoint($small-only) {
-    font-size: 24px;
-    line-height: 30px;
-  }
+	@include breakpoint($small-only) {
+		font-size: 24px;
+		line-height: 30px;
+	}
 }
 .cookie-consent__text {
-  font: normal 400 16px/24px var(--fonts-primary);
+	font: normal 400 16px/24px var(--fonts-primary);
 }
 
 .cookie-consent__description {
-  font-style: italic;
+	font-style: italic;
 }
