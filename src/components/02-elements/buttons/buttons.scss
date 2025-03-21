@@ -20,6 +20,10 @@
 	text-decoration: none;
 	transition: all .2s ease-in-out;
 
+  &:is(button) {
+    cursor: default;
+  }
+
   &:hover,
 	&:hover:visited,
 	&:focus {
@@ -118,7 +122,8 @@
       }
     }
   }
-  &.button--disabled {
+
+  &:where(.button--disabled, [disabled]) {
     cursor: not-allowed;
     opacity: .6 !important;
     pointer-events: none !important;
