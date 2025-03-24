@@ -1,0 +1,8 @@
+<div class="radio-buttons--bull">
+  {% for radioItem in radioItems %}
+    <label for="{{ radioItem.value }}">
+      <input type="radio" id="{{ radioItem.value }}" name="radioGroupName" value="{{ radioItem.value }}"{% if radioItem.default === true %} checked{% endif %}>
+      {{ radioItem.name }}
+    </label>
+  {% endfor %}
+</div>
