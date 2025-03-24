@@ -1,118 +1,147 @@
 @mixin button {
-  border: 2px solid var(--border-color);
-  color: var(--text-color);
-  display: inline-block;
-  border-radius: 3px;
-  padding: 6px 24px 6px;
-  font-size: 1rem;
-  font-weight: 400;
-  background-color: var(--bg-color);
-  text-decoration: none;
-  cursor: pointer;
+  --bg-color: var(--teal-hsl);
+  --bg-hover-color: var(--teal-hsl);
+  --bg-opacity: 1;
+  --bg-hover-opacity: 0.9;
+  --text-color: hsla(var(--black-hsl), 1);
 
+  align-items: center;
+	background: hsla(var(--bg-color), var(--bg-opacity));
+	border-radius: 4px;
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+	border: 0;
+	color: var(--text-color);
+	cursor: pointer;
+	display: inline-flex;
+  font: normal 500 16px/1.5 var(--fonts-primary);
+  gap: 12px;
+	padding: 12px 24px;
+	text-align: center;
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+
+  &:is(button) {
+    cursor: default;
+  }
+
+  &:hover,
+	&:hover:visited,
+	&:focus {
+    background: hsla(var(--bg-hover-color), var(--bg-hover-opacity));
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06), 0px 4px 6px 0px rgba(0, 0, 0, 0.10);
+    color: var(--text-color);
+		outline: none;
+		text-decoration: none;
+  }
+
+	&:focus-visible {
+    box-shadow: inset 0px 0px 0 2px #000;
+		outline: 4px solid var(--warning-yellow-hsl) !important;
+		outline-offset: 0;
+  }
 }
 
 .button {
-  --border-color: hsla(var(--base-hsl), 1);
-  --text-color: hsla(var(--base-hsl), 1);
-  --bg-color: transparent;
   @include button;
 
   &.button--small {
-    padding: 2px 16px 2px;
-    border-width: 1px;
-    font-size: .9rem;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 6px 1.125rem 5px;
   }
 
-  &.button--large {
-    padding: 10px 32px 10px;
-    border-width: 3px;
-    font-size: 1.3rem;
-  }
-
-  &.button--unstyled {
-    border: 0;
-    padding: 0;
-  }
-
-  &.button--white {
-    --border-color: hsla(var(--white-hsl), 1);
+  &.button--dark-teal {
+    --bg-color: var(--teal-dark-hsl);
+    --bg-hover-color: 185, 40%, 24%;
+    --bg-hover-opacity: 1;
     --text-color: hsla(var(--white-hsl), 1);
-    --bg-color: transparent;
-  }
-
-  &.button--orange {
-    --border-color: var(--color-orange);
-    --text-color: hsla(var(--orange-dark-hsl), 1);
-    --bg-color: transparent;
-
-    &.button--solid {
-      --text-color: hsla(var(--white-hsl), 1);
-      --bg-color: var(--color-orange);
-    }
   }
 
   &.button--teal {
-    --border-color: var(--color-teal);
-    --text-color: hsla(var(--teal-dark-hsl), 1);
-    --bg-color: transparent;
-
-    &.button--solid {
-      --text-color: hsla(var(--white-hsl), 1);
-      --bg-color: var(--color-teal);
-    }
+    --bg-color: var(--teal-hsl);
+    --bg-hover-color: var(--teal-hsl);
   }
 
-  &.button--teal-dark {
-    --border-color: var(--color-teal-dark);
-    --text-color: hsla(var(--teal-dark-hsl), 1);
-    --bg-color: transparent;
-
-    &.button--solid {
-      --text-color: hsla(var(--white-hsl), 1);
-      --bg-color: var(--color-teal-dark);
-    }
+  &.button--orange {
+    --bg-color: var(--orange-hsl);
+    --bg-hover-color: var(--orange-hsl);
   }
 
   &.button--yellow {
-    --border-color: var(--color-yellow);
-    --text-color: var(--color-yellow-dark);
-    --bg-color: transparent;
-
-    &.button--solid {
-      --text-color: hsla(var(--base-hsl), 1);
-      --bg-color: var(--color-yellow);
-    }
+    --bg-color: var(--yellow-hsl);
+    --bg-hover-color: var(--yellow-hsl);
   }
 
   &.button--red {
-    --border-color: var(--color-red);
-    --text-color: var(--color-red);
-    --bg-color: transparent;
-    
-    &.button--solid {
-      --text-color: hsla(var(--white-hsl), 1);
-      --bg-color: var(--color-red);
-    }
+    --bg-color: var(--red-hsl);
+    --bg-hover-color: 2, 66%, 38%;
+    --bg-hover-opacity: 1;
+    --text-color: hsla(var(--white-hsl), 1);
+  }
+
+  &.button--green {
+    --bg-color: var(--success-green-hsl);
+    --bg-hover-color: 140, 100%, 15%;
+    --bg-hover-opacity: 1;
+    --text-color: hsla(var(--white-hsl), 1);
   }
 
   &.button--black {
-    --border-color: var(--color-black);
-    --bg-color: var(--color-black);
-    --text-color: var(--color-white);
+    --bg-color: var(--black-hsl);
+    --bg-hover-color: var(--black-hsl);
+    --bg-hover-opacity: 1.1;
+    --text-color: hsla(var(--white-hsl), 1);
   }
 
-  &.button--disabled {
-    opacity: .3 !important;
-    pointer-events: none !important;
+  &.button--arrow-right {
+    padding-right: 20px;
 
-    &.button--solid {
-      --text-color: hsla(var(--base-hsl), 1);
-      --bg-color: var(--base-hsl);
+    &.button--small {
+      padding-right: 16px;
+    }
+
+    &:after {
+      background: currentColor;
+      mask-image: url(/components/raw/buttons/arrow-right.svg);
+      mask-repeat: no-repeat;
+      content: "";
+      display: block;
+      flex-shrink: 0;
+      height: 12px;
+      position: relative;
+      transition: transform .1s ease-in;
+      width: 12px;
+    }
+
+    &:is(:hover, :focus) {
+      &:after {
+        transform: translateX(4px);
+        transition: transform .1s ease-out;
+      }
     }
   }
 
-  &.bold {
-    font-weight: bold;
+  &:where(.button--disabled, [disabled]) {
+    cursor: not-allowed;
+    opacity: .6 !important;
+    pointer-events: none !important;
   }
+}
+
+
+// just for styling
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: calc(100% - 24px);
+}
+
+.wp-block-buttons {
+  align-items: baseline;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }

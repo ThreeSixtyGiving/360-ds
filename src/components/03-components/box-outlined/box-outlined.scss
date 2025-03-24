@@ -1,0 +1,24 @@
+.box-outlined {
+  --box-outlined-colour-hsl: var(--base-hsl);
+  background-color: hsla(var(--box-outlined-colour-hsl), .1);
+  border: hsla(var(--box-outlined-colour-hsl), 1) solid 1px;
+  position: relative;
+  padding: 24px 24px 24px 24px;
+}
+
+.box-outlined--teal {
+  --box-outlined-colour-hsl: var(--teal-hsl);
+}
+
+.box-outlined--orange {
+  --box-outlined-colour-hsl: var(--orange-hsl);
+}
+
+.box-outlined--yellow {
+  --box-outlined-colour-hsl: var(--yellow-hsl);
+}
+
+.box-outlined--red {
+  --box-outlined-colour-hsl: var(--red-hsl);
+}
+

@@ -1,0 +1,152 @@
+:root {
+  --text-base-size: 1rem;
+  --text-base-line-height: 1.62;
+
+  --fonts-primary: 'Roboto', sans-serif;
+
+  @include breakpoint($regular) {
+      // Edited this variable from 1.25rem.
+      --text-base-size: 1rem;
+  }
+}
+
+@mixin big_lead {
+  font: normal 300 1.3125rem/1.667 var(--fonts-primary);
+  letter-spacing: 0
+}
+
+@mixin h1 {
+  font: normal 400 2.25rem/1.6667 var(--fonts-primary);
+	letter-spacing: -0.01em;
+
+  @include breakpoint($medium) {
+    font-size: 3.5rem;
+    line-height: 4.125rem;
+  }
+}
+
+@mixin h2 {
+  font: normal 400 1.75rem/2.125rem var(--fonts-primary);
+  letter-spacing: -0.01em;
+
+  @include breakpoint($medium) {
+    font-size: 2.625rem;
+    line-height: 3.25rem;
+  }
+}
+
+@mixin h3 {
+  font: normal 500 1.5rem/1.25 var(--fonts-primary);
+  letter-spacing: 0;
+
+  @include breakpoint($medium) {
+    font-size: 1.75rem;
+    line-height: 1.5;
+  }
+}
+
+@mixin h4 {
+  font: normal 500 1.3125rem/1.75rem var(--fonts-primary);
+  letter-spacing: 0;
+}
+
+@mixin h5 {
+  font: normal 500 1.125rem/1.5rem var(--fonts-primary);
+  letter-spacing: 0;
+}
+
+@mixin h6 {
+  font: normal 500 1rem/1.3125rem var(--fonts-primary);
+  letter-spacing: 0.02em;
+}
+
+@mixin text {
+  font: normal 400 1.125rem/1.75rem var(--fonts-primary);
+  letter-spacing: 0;
+}
+
+@mixin small_text {
+  font: normal 400 1rem/1.5rem var(--fonts-primary);
+  letter-spacing: 0;
+}
+
+@mixin x_small_text {
+  font: normal 400 0.875rem/1.125rem var(--fonts-primary);
+  letter-spacing: 0;
+}
+
+:where(h1, .h1) {
+  @include h1;
+}
+
+:where(h2, .h2) {
+  @include h2;
+}
+
+:where(h3, .h3) {
+  @include h3;
+}
+
+:where(h4, .h4) {
+  @include h4;
+}
+
+:where(h5, .h5) {
+  @include h5;
+}
+
+:where(h6, .h6) {
+  @include h6;
+}
+
+.intro {
+  @include big-lead;
+}
+
+.p {
+  @include text;
+}
+
+.small-text {
+  @include small_text;
+}
+
+.x-small-text {
+  @include x_small_text;
+}
+
+p, ol, ul {
+  margin-bottom: $s-6;
+	margin-top: $s-6;
+}
+
+$headings: 'h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6';
+$headingsByClass: ".h1, .h2, .h3, .h4, .h5, .h6";
+
+:where(#{$headings}) {
+	margin-bottom: $s-2;
+	margin-top: $s-10;
+
+	& + :is(p:not(.h1, .h2, .h3, .h4, .h5, .h6), ol, ul) {
+    margin-top: $s-3;
+  }
+
+	& + :is(#{$headings}) {
+    margin-top: $s-3
+  }
+}
+
+.small-text:is(p, h1, h2, h3, h4, h5, h6, ul, ol) {
+  margin-bottom: $s-3;
+  margin-top: $s-3;
+}
+
+:where(#{$headings}, p, ol, ul) {
+	&:first-child {
+    margin-top: 0
+  }
+
+	&:last-child {
+    margin-bottom: 0
+  }
+}

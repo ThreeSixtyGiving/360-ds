@@ -1,9 +1,13 @@
-a {
-  font-weight: 400;
-  color: hsla(var(--teal-dark-hsl), 1);
-  text-decoration: underline;
-  text-underline-position: under;
+:where(a) {
+	color: currentColor;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	text-decoration-thickness: 1px;
+	transition: all 0.1s;
+	word-break: break-word;
 
-  &:hover { color: hsla(var(--orange-dark-hsl), 1);; }
-  &:active { color: hsla(var(--yellow-dark-hsl), 1);; }
+	&:hover,
+	&:focus {
+		text-decoration-thickness: 2px;
+  }
 }
