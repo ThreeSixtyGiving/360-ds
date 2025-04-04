@@ -1,64 +1,263 @@
 <head>
-    <!-- Matomo -->
-    <script type="text/javascript">
-      var _paq = window._paq = window._paq || [];
-      var siteID = null;
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['requireCookieConsent']); // Don't use cookies unless we have consent
-      _paq.push(['setCookieDomain', '*.threesixtygiving.org']);
-      _paq.push(['setDownloadExtensions', "json|csv|xlsx"]);
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="https://analytics.threesixtygiving.org/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        if(!siteID) throw new Error("siteID not set");
-        _paq.push(['setSiteId', siteID]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <!-- End Matomo Code -->
+  <script type="text/javascript">
+		const CookieConsent360 = {
+			// domain: window.location.host, // get the current domain in www.threesixtygiving.org format
+			domain: window.location.hostname, // get the current domain in www.threesixtygiving.org format
+			matomo_site_id: null,           // change this to the site ID for the current site
+			google_id: null,                // change this to the GTM for the current site
+			debug: true,	  								// set to false to disable debug messages and the automatic creation of a cookie-clearing button
+			hideDialog() {
+				document
+					.getElementsByClassName('cookie-consent')[0]
+					.style.setProperty('display', 'none', 'important');
+			},
 
-    <script type="text/javascript">
-        function hideCookieConsentDialog(hide){
-          if (hide){
-            document.getElementsByClassName("cookie-consent")[0].style.setProperty("display", "none", "important");
-          } else {
-            document.getElementsByClassName("cookie-consent")[0].style.setProperty("display", "block", "important");
-          }
-        }
+			showDialog() {
+				document
+					.getElementsByClassName('cookie-consent')[0]
+					.style.setProperty('display', 'block', 'important');
+			},
 
-        function noCookieConsent() {
-          document.cookie = "noEnhancedAnalytics=1 ;max-age=2592000 ;domain=threesixtygiving.org";
-        }
+			embedMatomo() {
+				if (!this.matomo_site_id) {
+					return;
+				}
 
-        document.addEventListener('DOMContentLoaded', function(){
-          if (document.cookie.indexOf("mtm_cookie_consent") > -1 ||
-              document.cookie.indexOf("mtm_consent_removed") > -1 ||
-              document.cookie.indexOf("noEnhancedAnalytics") > -1) {
-            hideCookieConsentDialog(true);
-          } else {
-            hideCookieConsentDialog(false);
-          }
-        });
-    </script>
+				if (this.debug) {
+					console.log('embedMatomo', this.domain, this.matomo_site_id);
+				}
+				window._paq = window._paq || [];
+
+				/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+				window._paq.push(['requireCookieConsent']); // Don't use cookies unless we have consent
+				window._paq.push(['setCookieDomain', this.domain]);
+				window._paq.push(['setDownloadExtensions', 'json|csv|xlsx']);
+				window._paq.push(['trackPageView']);
+				window._paq.push(['enableLinkTracking']);
+
+				(function (matomo_site_id = null, debug = false) {
+					if (debug) {
+						console.log('embedMatomo site', {matomo_site_id});
+					}
+
+					var u = 'https://analytics.threesixtygiving.org/';
+					window._paq.push(['setTrackerUrl', u + 'matomo.php']);
+					window._paq.push(['setSiteId', matomo_site_id]);
+					var d = document,
+						g = d.createElement('script'),
+						s = d.getElementsByTagName('script')[0];
+					g.type = 'text/javascript';
+					g.async = true;
+					g.src = u + 'matomo.js';
+					s.parentNode.insertBefore(g, s);
+				})(this.matomo_site_id, this.debug);
+			},
+
+			gtag() {
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push(arguments);
+			},
+
+			embedGA(forceOn = false) {
+				if (this.debug) {
+					console.log('embedGA', this.google_id);
+				}
+
+				if (!this.google_id) {
+					return;
+				}
+
+				if (!forceOn && !this.hasCookieConsent()) {
+					return;
+				}
+
+				// embed gtag
+				(function (w, d, s, l, cookieconsent) {
+					w[l] = w[l] || [];
+					w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+					var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s),
+						dl = l != 'dataLayer' ? '&l=' + l : '';
+					j.async = true;
+					j.src = 'https://www.googletagmanager.com/gtag/js?id=' + cookieconsent.google_id;
+
+					// once it's done run the dataLayer
+					j.onload = function () {
+						console.log(this)
+						this.gtag('js', new Date());
+						this.gtag('config', cookieconsent.google_id);
+					}.bind(cookieconsent);
+
+					f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', this);
+			},
+
+			setCookie(name, value, days) {
+				if (this.debug) {
+					console.log('setCookie', {name, value, days});
+				}
+				let expires = '';
+				if (days) {
+					const date = new Date();
+					date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+					expires = '; expires=' + date.toUTCString();
+				}
+				domain = this.domain;
+				console.log({domain});
+				domain = domain ? '; domain=' + domain : '';
+				document.cookie = name + '=' + (value || '') + expires + '; path=/' + domain;
+			},
+
+			deleteCookie(name) {
+				if (this.debug) {
+					console.log('deleteCookie', {name});
+				}
+				this.setCookie(name, '', -1);
+			},
+
+			getCookie(name) {
+				const value = `; ${document.cookie}`;
+				const parts = value.split(`; ${name}=`);
+				if (parts.length === 2) {
+					const value = parts.pop().split(';').shift();
+
+					if (this.debug) {
+						console.log('cookie found', {name, value});
+					}
+					return value;
+				}
+
+				if(this.debug) {
+					console.log('cookie not found', {name});
+				}
+
+				return null;
+			},
+
+			giveCookieConsent() {
+				if (this.debug) {
+					console.log('giveCookieConsent');
+				}
+				this.setCookie('mtm_cookie_consent', '1', 365);
+				this.deleteCookie('noEnhancedAnalytics');
+				this.deleteCookie('mtm_consent_removed');
+
+				if (window._paq) {
+					window._paq.push(['rememberCookieConsentGiven']);
+				}
+
+				this.hideDialog();
+				this.embedGA(true);
+			},
+
+			giveCookieLessConsent() {
+				if (this.debug) {
+					console.log('giveCookieLessConsent');
+				}
+				this.deleteCookie('mtm_cookie_consent');
+				this.deleteCookie('mtm_consent_removed');
+				this.setCookie('noEnhancedAnalytics', '1', 365);
+
+				if (window._paq) {
+					// allow matomo without cookies
+					_paq.push(['forgetCookieConsentGiven']);
+				}
+
+				this.hideDialog();
+			},
+
+			disableAnalytics() {
+				if (this.debug) {
+					console.log('disableAnalytics');
+				}
+				// remove mtm_cookie_consent noEnhancedAnalytics cookies
+				this.deleteCookie('mtm_cookie_consent');
+				this.deleteCookie('noEnhancedAnalytics');
+				this.setCookie('mtm_consent_removed', '1', 365);
+
+				if (window._paq) {
+					_paq.push(['optUserOut']);
+				}
+
+				this.hideDialog();
+			},
+
+			hasCookieConsent() {
+				return this.getCookie('mtm_cookie_consent');
+			},
+
+			hasCookieLessConsent() {
+				return this.getCookie('mtm_consent_removed');
+			},
+
+			hasNoConsent() {
+				return this.getCookie('noEnhancedAnalytics');
+			},
+
+			buildClearCookiesButton() {
+				const button = document.createElement('button');
+				button.innerHTML = 'Clear Banner Cookies';
+				button.onclick = () => {
+					this.deleteCookie('mtm_cookie_consent');
+					this.deleteCookie('noEnhancedAnalytics');
+					this.deleteCookie('mtm_consent_removed');
+					this.showDialog();
+				};
+
+				document.body.appendChild(button);
+			},
+
+			init() {
+				document.addEventListener('DOMContentLoaded', () => {
+					if (!this.matomo_site_id && !this.google_id && !this.debug) {
+						this.hideDialog();
+						return;
+					} else if (this.debug) {
+						console.log('init', {
+							matomo_site_id: this.matomo_site_id,
+							google_id: this.google_id,
+						});
+
+						this.buildClearCookiesButton();
+					}
+
+					if (this.hasCookieConsent() || this.hasCookieLessConsent() || this.hasNoConsent()) {
+						this.hideDialog();
+						this.embedMatomo();
+						this.embedGA();
+					} else {
+						this.embedMatomo();
+						this.showDialog();
+					}
+				});
+			},
+		};
+
+		CookieConsent360.init();
+  </script>
 </head>
-
 <body>
-  <div role="dialog" aria-labelledby="cookie-dialog-title" aria-describedby="cookie-dialog-desc">
-    <div class="base-card base-card--new cookie-consent">
-      <div class="base-card__content">
-          <h2 class="base-card__title" id="cookie-dialog-title">Allow analytics cookies? <br/>
-            <a class="base-card__text" href="https://www.threesixtygiving.org/privacy/"> More Information &amp; Privacy Policy</a>
-          </h2>
-          <p class="base-card__text">
-              <a href="#" onclick="_paq.push(['rememberCookieConsentGiven']); hideCookieConsentDialog(true);" class="button">Yes</a>
-              <a href="#" onclick="noCookieConsent(); hideCookieConsentDialog(true);" class="button">No</a>
-              <a href="#" onclick="_paq.push(['optUserOut']); hideCookieConsentDialog(true);" class="button">Disable Analytics</a>
-          </p>
-          <p id="cookie-dialog-desc" style="font-style: italic;">360Giving uses privacy-respecting analytics. If you don't accept cookies, we will track only basic information about your visit. Click "Disable Analytics" if you don't want us to track at all. </p>
-      </div>
+  <div role="dialog"
+       aria-labelledby="cookie-dialog-title"
+       aria-describedby="cookie-dialog-desc"
+       class="box box--teal cookie-consent">
+    <div class="cookie-consent__content">
+      <p class="cookie-consent__title" id="cookie-dialog-title">
+        Allow analytics cookies?
+        <br />
+        <a class="cookie-consent__text"
+           href="https://www.threesixtygiving.org/privacy/">More Information &amp; Privacy Policy</a>
+      </p>
+      <p class="cookie-consent__text">
+        <button onclick="CookieConsent360.giveCookieConsent();" class="button button--teal">Yes</button>
+        <button onclick="CookieConsent360.giveCookieLessConsent();" class="button button--teal">No</button>
+        <button onclick="CookieConsent360.disableAnalytics();" class="button button--teal">Disable Analytics</button>
+      </p>
+      <p id="cookie-dialog-desc" class="cookie-consent__description">
+        360Giving uses privacy-respecting analytics. If you don't accept cookies, we will track only
+        basic information about your visit. Click "Disable Analytics" if you don't want us to track
+        at all.
+      </p>
     </div>
-   </div>
+  </div>
 </body>

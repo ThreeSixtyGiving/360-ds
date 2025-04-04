@@ -1,22 +1,76 @@
+:root {
+	--side-gutter: 16px;
+
+	@media (min-width: 1024px) {
+		--side-gutter: min(120px, 5vw)
+  }
+}
+
 .breadcrumbs {
-  padding: 8px 0;
+	background: #fff;
+	color: #193B39;
+	clear: both;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 0;
+	max-width: 100%;
+	width: 100%;
 
-  a { color: var(--color-teal-dark);}
-
-  &__item,
-  &__arrow {
-    vertical-align: middle;
-    margin-top: -16px;
-    margin-right: 6px;
+	:where(ol, ul) {
+    display: flex;
+		list-style: none;
+		margin: 0 auto;
+		padding: 12px 0;
+		overflow: hidden;
+		overflow-x: auto;
+		white-space: nowrap;
+		width: calc(100% - (var(--side-gutter)*2));
   }
 
-  &__item { color: hsla(var(--black-hsl), .7); }
+	li {
+    flex: 0 1 0;
+		margin: 0;
+		padding: 0;
 
-  &__arrow {
-    @extend .u-material-icons;
-    margin-bottom: -18px;
-    color: hsla(var(--base-hsl), .4);
+		&:not(:first-child)::before {
+      background: url(/components/raw/breadcrumbs/crumb.svg) 50% 50% no-repeat;
+      color: #858788;
+      display: inline-block;
+      content: '';
+      height: 9px;
+      width: 9px;
+      margin: 0 12px;
+      padding: 0;
+      vertical-align: middle;
+    }
+
+		&:last-child {
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 400px;
+    }
   }
 
-  &__item:last-of-type { color: hsla(var(--black-hsl), 1); }
+
+	:is(a, span) {
+    color: var(--default-hsl);
+		display: inline-block;
+		font-size: 13px;
+		min-width: 30px;
+		padding: 0 0 2px;
+  }
+
+	a {
+    color: var(--default-hsl);
+		text-decoration: underline;
+
+		&:is(:hover,:focus) {
+      color: var(--default-hsl);
+      text-decoration: none
+    }
+  }
+
 }
