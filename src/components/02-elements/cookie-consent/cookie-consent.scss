@@ -12,12 +12,8 @@
 	width: calc(100vw - 38px);
 	z-index: 99;
 
-	:is(button, a) {
+	:is(a) {
 		color: var(--base-hsl);
-	}
-
-	.button {
-		@include button;
 	}
 }
 
