@@ -1,0 +1,54 @@
+.box--clickable {
+	--clickable-shadow-color: 147, 242, 178;
+	position: relative;
+	overflow: visible;
+
+	a.button {
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 21px;
+		padding: 6px $s-4 5px;
+	}
+
+	// only make it fully clickable if it doesn't contain links not styled as buttons
+	&:not(:has(a:not(.button))) {
+		box-shadow: inset 4px 0 0 0 hsla(var(--box-bg-hsl), 1), 0px 4px 12px 0px rgba(21, 55, 53, 0.15);
+		transition: box-shadow 0.2s ease-out;
+
+		a,
+		a:hover,
+		a:focus {
+			text-underline-offset: 2px;
+			text-decoration-thickness: 1px;
+		}
+
+		a:before {
+			content: '';
+			inset: 0;
+			position: absolute;
+			z-index: 2;
+		}
+	}
+
+	&:has(a:hover, a:focus-visible):not(:has(a:not(.button))) {
+		box-shadow: inset 8px 0 0 0 hsla(var(--box-bg-hsl), 1),
+			0 4px 16px 0 rgba(var(--clickable-shadow-color), 0.4);
+	}
+}
+
+.box--teal {
+	--clickable-shadow-color: 147, 242, 178;
+}
+
+.box--orange {
+	--clickable-shadow-color: 221, 195, 130;
+}
+
+.box--yellow {
+	--clickable-shadow-color: 235, 255, 111;
+}
+
+.box--red {
+	--clickable-shadow-color: 184, 114, 108;
+}

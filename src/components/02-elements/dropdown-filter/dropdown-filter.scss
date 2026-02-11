@@ -1,24 +1,29 @@
 .dropdown-filter {
+  align-items: baseline;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  @include breakpoint($medium) {
-    flex-wrap: nowrap;
-  }
+  gap: 12px;
+  white-space: nowrap;
 
   &__label {
-    flex-shrink: 0;
-    align-self: flex-start;
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: 12px;
-    margin-right: 10px;
+    @include h6;
+    margin: 0;
   }
 
   &__select {
-    font-weight: 400;
-    font-size: 16px;
-    padding: 2px 4px;
+    appearance: none;
+    @include small-text;
+    background: #fff url(/components/raw/dropdown-filter/drop-arrow.svg) right 0.5rem center no-repeat;
+    background-size: 8px 6px;
+    border: 1px solid	hsla(var(--base-hsl), 0.7);
+    cursor: pointer;
+    border-radius: 4px;
+    height: 40px;
+    padding: 0 2em 0 6px;
+
+    &:focus {
+      box-shadow: 0 0 0 4px hsl(var(--yellow-hsl)), inset 0 0 0 2px hsl(var(--base-hsl));
+      outline: 4px solid transparent;
+      outline-offset: 4px;
+    }
   }
 }

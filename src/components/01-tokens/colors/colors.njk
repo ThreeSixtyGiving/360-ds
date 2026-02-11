@@ -14,7 +14,7 @@
   <pre class="css"><code>hex: {{color.values.hex}}
 hsla({{color.values.hsl}}, 1)
 rgba({{color.values.rgba}})
- Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}
+Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}
 Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
     </div>
   </article>
@@ -39,14 +39,14 @@ Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
   <pre class="css"><code>hex: {{color.text.values.hex}}
 hsla({{color.text.values.hsl}}, 1)
 rgba({{color.text.values.rgba}})
- Vars | {{color.text.vars.sass}}, {{color.text.vars.css_hsl}}, {{color.text.vars.css_hsla}}{% if color.text.alias %}
+Vars | {{color.text.vars.sass}}, {{color.text.vars.css_hsl}}, {{color.text.vars.css_hsla}}{% if color.text.alias %}
 Alias | {% for a in color.text.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
     </div>
     {% else %}
   <pre class="css"><code>hex: {{color.values.hex}}
 hsla({{color.values.hsl}}, 1)
 rgba({{color.values.rgba}})
- Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}
+Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}
 Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
     {% endif %}
   </article>
@@ -55,14 +55,14 @@ Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
 
 <li class="card-list__item">
   <h2 class="align-center margin-top:3">Colour Shades and Tints</h2>
-  <div class="base-card base-card--none base-card--spacious tints">   
+  <div class="base-card base-card--none base-card--spacious tints">
     <div class="color-variants">
       {% for color in main_colors %}
       <div class="color-variants__col">
         {% for shade in color.shades %}
         <div class="color-variants__item color-variants--shades" style="background-color: {{shade}}">{{shade}}</div>
         {% endfor %}
-        
+
         <div class="color-variants__item color-variants--main" style="background-color: {{color.values.hex}}">{{color.values.hex}}</div>
 
         {% for tint in color.tints %}
@@ -90,7 +90,7 @@ Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
   <pre class="css"><code>hex: {{color.values.hex}}
 hsla({{color.values.hsl}}, 1)
 rgba({{color.values.rgba}})
- Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}
+Vars | {{color.vars.sass}}, {{color.vars.css_hsl}}, {{color.vars.css_hsla}}{% if color.alias %}
 Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
     </div>
   </article>
@@ -98,7 +98,7 @@ Alias | {% for a in color.alias %}{{ a }}{% endfor %}{% endif %}</code></pre>
 {% endfor %}
 </ul>
 
-{# 
+{#
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js">
   new ClipboardJS('.js-clipboard');
 </script>
